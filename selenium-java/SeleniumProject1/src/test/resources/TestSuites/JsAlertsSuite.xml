@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="JsAlertSuite" verbose="1">
+	<test name="JsAlertTest">
+		<classes>
+			<class name="test.main.JsAlertTest" />
+		</classes>
+	</test>
+</suite>

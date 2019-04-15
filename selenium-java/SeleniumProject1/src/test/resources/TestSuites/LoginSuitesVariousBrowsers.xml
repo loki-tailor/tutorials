@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="LogInTestSuite" verbose="1">
+	<test name="LogIn Chrome">
+		<parameter name="browser" value="chrome" />
+		<classes><class name="test.main.LoginTest" /></classes>
+	</test>
+	<test name="LogIn Firefox">
+		<parameter name="browser" value="firefox" />
+		<classes><class name="test.main.LoginTest" /></classes>
+	</test>
+	<test name="LogIn Edge">
+		<parameter name="browser" value="edge" />
+		<classes><class name="test.main.LoginTest" /></classes>
+	</test>
+	<test name="LogIn IE">
+		<parameter name="browser" value="ie" />
+		<classes><class name="test.main.LoginTest" /></classes>
+	</test>
+	<test name="LogIn DEFAULT BROWSER">
+		<parameter name="browser" value="DEFAULT BROWSER" />
+		<classes><class name="test.main.LoginTest" /></classes>
+	</test>
+</suite>
