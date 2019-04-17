@@ -1,0 +1,8 @@
+com\herokuapp\theinternet\base\BasePageObject.class
+com\herokuapp\theinternet\pages\SecureAreaPage.class
+com\herokuapp\theinternet\base\BaseTest.class
+com\herokuapp\theinternet\pages\HomePage.class
+com\herokuapp\theinternet\pages\EmailSentPage.class
+com\herokuapp\theinternet\pages\LoginPage.class
+com\herokuapp\theinternet\base\BaseBrowserFactory.class
+com\herokuapp\theinternet\pages\ForgotPasswordPage.class

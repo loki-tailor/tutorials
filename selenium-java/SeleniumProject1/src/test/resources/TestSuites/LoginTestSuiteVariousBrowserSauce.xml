@@ -1,0 +1,37 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "LoginTestVariousBrowserSauce" verbose="1">
+	
+	<parameter name="environment" value="sauce" />
+
+	<test name="LoginTestVariousBrowserSauce Chrome">
+		<parameter name="browser" value="chrome" />
+		<parameter name="platform" value="Windows 7" />
+		<classes>
+			<class name="test.main.LoginTest"/>
+		</classes>
+	</test>
+
+	<test name="LoginTestVariousBrowserSauce FF">
+		<parameter name="browser" value="firefox" />
+		<parameter name="platform" value="macOS 10.13" />
+		<classes>
+			<class name="test.main.LoginTest"/>
+		</classes>
+	</test>
+
+	<test name="LoginTestVariousBrowserSauce FF-Linux">
+		<parameter name="browser" value="firefox" />
+		<parameter name="platform" value="linux" />
+		<classes>
+			<class name="test.main.LoginTest"/>
+		</classes>
+	</test>
+
+	<test name="LoginTestVariousBrowserSauce Internet Explorer">
+		<parameter name="browser" value="Internet Explorer" />
+		<classes>
+			<class name="test.main.LoginTest"/>
+		</classes>
+	</test>
+	
+</suite>

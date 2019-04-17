@@ -8,9 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 public class RegistrationTest extends BaseTest
 {
 	@Test
@@ -117,11 +114,5 @@ public class RegistrationTest extends BaseTest
 
 		we_submitBtn.click();
 		Thread.sleep(60000);
-	}
-
-	public String getTime()
-	{
-		SimpleDateFormat dateFormat = new SimpleDateFormat("ddMMyyhhmmss");
-		return dateFormat.format(new Date());
 	}	
 }

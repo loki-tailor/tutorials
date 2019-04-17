@@ -1,0 +1,3 @@
+com\herokuapp\theinternet\login\tests\NegativeLoginTests.class
+com\herokuapp\theinternet\login\tests\PositiveLoginTests.class
+com\herokuapp\theinternet\forgotpassword\tests\ForgotPasswordTests.class

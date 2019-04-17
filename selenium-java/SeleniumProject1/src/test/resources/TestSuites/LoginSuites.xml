@@ -1,7 +1,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="LogInTestSuite" verbose="1">
+	<parameter name="environment" value="sauce" />
 	<test name="LogInTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="platform" value="Linux" />
 		<classes>
 			<class name="test.main.LoginTest" />
 		</classes>

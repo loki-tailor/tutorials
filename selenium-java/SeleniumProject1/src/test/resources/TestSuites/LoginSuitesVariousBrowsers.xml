@@ -1,5 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="LogInTestSuite" verbose="1">
+	<parameter name="environment" value="grid" />
 	<test name="LogIn Chrome">
 		<parameter name="browser" value="chrome" />
 		<classes><class name="test.main.LoginTest" /></classes>
@@ -17,7 +18,7 @@
 		<classes><class name="test.main.LoginTest" /></classes>
 	</test>
 	<test name="LogIn DEFAULT BROWSER">
-		<parameter name="browser" value="DEFAULT BROWSER" />
+		<parameter name="browser" value="internet explorer" />
 		<classes><class name="test.main.LoginTest" /></classes>
 	</test>
 </suite>
