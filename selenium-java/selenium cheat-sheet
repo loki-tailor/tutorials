@@ -1,0 +1,46 @@
+Locator Strategies:
+Trial'n'Error: https://try.jsoup.org/
+--------------------
+By ID:
+css defined by "#" and xpath defined by "[@id='example']"
+str = "<input id='f101' .. />"; 
+cssPath = "input#f101" or "#f101";
+--------------------
+By Class:
+css defined by "." and xpath defined by "[@class='example']"
+str = "//div class="disco"//a"; 
+cssPath = "div.disco a";
+--------------------
+By Attribute (single): 
+cssPath = ele_name[<attb_name> = '<val>']
+cssPath = input[name='fName'];
+--------------------
+By Attribute (multiple):
+cssPath = "ele_name[<attb1_name> = '<val>'] [<attb2_name> = '<val>']"
+cssPath = "div[class='ajax_enabled'] [style='display:block']";
+--------------------
+By nth-child:
+css = ele_name:nth-child(index) where 'ele_name' is optional
+str = "//div/ul/li_1/li_2/li_3";
+cssPath = "ul#id li:nth-child(3)"; // gives li_3
+--------------------
+By nth-of-type:
+css = ele_name:nth-of-type(index)
+str = "//div/ul/li1/p1/li2/p2/li3";
+cssPath = "ul#id p:nth-of-type(2)"; // gives p2
+--------------------
+Direct child:
+css defined by ">" and xpath defined by "/"
+str = "//div/a"; 
+cssPath = "div>a";
+--------------------
+Child or subchild:
+css defined by whitespace and xpath defined by "//"
+str = "//div//a"; 
+cssPath = "div a";
+--------------------
+Next Sibling:
+css defined using '+'
+str = "<div><input class='uName'/><p.../></div>"
+cssPath = "div.uName+p";
+--------------------
