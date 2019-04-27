@@ -19,6 +19,20 @@ By Attribute (multiple):
 cssPath = "ele_name[<attb1_name> = '<val>'] [<attb2_name> = '<val>']"
 cssPath = "div[class='ajax_enabled'] [style='display:block']";
 --------------------
+By sub-string matches:
+css defined by "^=" matches a prefix
+css defined by "$=" matches a suffix
+css defined by "*=" matches a substring
+str = "<div id="123_randomId_456"/>";
+cssPath = "div[id^='123_']";
+cssPath = "div[id$='_456']";
+cssPath = "div[id*='_randomId_']";
+--------------------
+By inner text:
+css defined by ":contains()"
+str = "<p>This is <a href="http://jsoup.org/">jsoup</a>.</p>";
+cssPath = "a:contains(jsoup)"
+--------------------
 By nth-child:
 css = ele_name:nth-child(index) where 'ele_name' is optional
 str = "//div/ul/li_1/li_2/li_3";
@@ -43,4 +57,36 @@ Next Sibling:
 css defined using '+'
 str = "<div><input class='uName'/><p.../></div>"
 cssPath = "div.uName+p";
+--------------------
+Scenario: Attribute NOT contains a specific value:
+str1 = "<div class='abc-12'/>";
+str2 = "<div class='def-12'/>";
+str3 = "<div class='ghi-34'/>";
+str = str1+str2+str3;
+cssPath = "div:not([class$='-12'])"; // op of class ghi-34
+--------------------
+Scenario: Tag and ID
+css = tag#id
+str = "<input id="hodor"/>"
+cssPath = input#hodor
+--------------------
+Scenario: Tag and Class
+css = tag.class
+str = "<input class="iron island"/>"
+cssPath = "input.iron.island";
+--------------------
+Scenario: Tag and Attribute
+css = tag[attb='val']
+str = "<input value="the wall"/>";
+cssPath = "input[value='the wall']";
+--------------------
+Scenario: Tag, ID and Attribute
+css = tag#id[attb='val']
+str = "<li id='3' value='dragons' />";
+cssPath = "li#3[value='dragons']";
+--------------------
+Scenario: Tag, Class and Attribute
+css = tag.class[attb='val']
+str = "<li class='stark' value='house'/>";
+cssPath = "li.stark[value='house']";
 --------------------
