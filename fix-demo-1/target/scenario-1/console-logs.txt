@@ -1,0 +1,74 @@
+######################################### config-initiator.cfg #########################################
+
+SenderCompID=initiator-loki
+TargetCompID=acceptor-exchange 
+initiator-port: 12000 
+
+######################################### acceptor #########################################
+
+[acceptor] quickfix.Application initialized
+
+[acceptor] quickfix.SessionSettings initialized with file - C:\Users\lokeshwar.tailor\Desktop\fix_workspace\fix-demo-1\src\resources\config-acceptor.cfg
+
+[acceptor] quickfix.MessageStoreFactory initialized with 'settings'
+
+[acceptor] quickfix.LogFactory initialized with 'settings'
+
+[acceptor] quickfix.MessageFactory initialized with 'settings'
+
+[acceptor] successfully called onCreate() for sessionId: FIX.4.2:acceptor-exchange->initiator-loki
+
+[aceptor] quickfix.SocketAcceptor initialized with - 'application', 'messageStoreFactory', 'setttings', 'messageFactory'
+
+May 14, 2019 3:32:11 PM quickfix.mina.acceptor.AbstractSocketAcceptor startAcceptingConnections
+INFO: Listening for connections at 0.0.0.0/0.0.0.0:12000
+[acceptor] socketAcceptor.start() called
+
+May 14, 2019 3:32:19 PM quickfix.mina.acceptor.AcceptorIoHandler sessionCreated
+INFO: MINA session created: /127.0.0.1:60717
+[acceptor] successfully called fromAdmin() for sessionId: FIX.4.2:acceptor-exchange->initiator-loki
+
+[acceptor] Inside toAdmin()
+
+[acceptor] successfully logged on for sessionId: FIX.4.2:acceptor-exchange->initiator-loki
+
+May 14, 2019 3:32:23 PM quickfix.mina.AbstractIoHandler exceptionCaught
+SEVERE: socket exception (/127.0.0.1:60717): An existing connection was forcibly closed by the remote host
+[acceptor] successfully logged out for sessionId: FIX.4.2:acceptor-exchange->initiator-loki
+
+######################################### acceptor #########################################
+
+
+
+######################################### initiator #########################################
+
+[initiator] quickfix.Application initialized
+
+[initiator] quickfix.SessionSettings initialized with file - C:\Users\lokeshwar.tailor\Desktop\fix_workspace\fix-demo-1\src\resources\config-initiator.cfg
+
+[initiator] quickfix.MessageStoreFactory initialized with 'settings'
+
+[initiator] quickfix.LogFactory initialized with 'settings'
+
+[initiator] quickfix.MessageFactory initialized with 'settings'
+
+[initiator] successfully called onCreate() for sessionId: FIX.4.2:initiator-loki->acceptor-exchange
+
+[initiator] quickfix.SocketAcceptor initialized with - 'application', 'messageStoreFactory', 'setttings', 'messageFactory'
+
+[initiator] socketInitiator.start() called
+
+[initiator] Wait for 5 seconds after socketInitiator.start()
+May 14, 2019 3:32:19 PM quickfix.mina.initiator.InitiatorIoHandler sessionCreated
+INFO: MINA session created: /127.0.0.1:60717
+[initiator] Inside toAdmin()
+
+[initiator] successfully called fromAdmin() for sessionId: FIX.4.2:initiator-loki->acceptor-exchange
+
+[initiator] successfully logged on for sessionId: FIX.4.2:initiator-loki->acceptor-exchange
+
+
+[initiator] Fetched sessionId from 'socketInitiator' as: FIX.4.2:initiator-loki->acceptor-exchange
+
+######################################### initiator #########################################
+

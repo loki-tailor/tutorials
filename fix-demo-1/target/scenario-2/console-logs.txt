@@ -1,0 +1,77 @@
+######################################### config-initiator.cfg #########################################
+
+SocketConnectPort=9878
+SocketConnectHost=localhost
+SenderCompID=BANZAI
+TargetCompID=FIXIMULATOR
+
+######################################### config-initiator.cfg #########################################
+
+
+
+######################################### fiximulator console logs #########################################
+
+
+C:\Users\lokeshwar.tailor\Downloads\Fiximulator\FIXimulator_0.41>fiximulator.bat
+<20190514-10:06:46, FIX.4.2:FIXIMULATOR->BANZAI, event> (Session FIX.4.2:FIXIMULATOR->BANZAI schedule is daily, 00:00:00 UTC - 00:00:00 UTC (daily, 00:00:00 UTC - 00:00:00 UTC))
+<20190514-10:06:46, FIX.4.2:FIXIMULATOR->BANZAI, event> (Created session: FIX.4.2:FIXIMULATOR->BANZAI)
+May 14, 2019 3:36:47 PM quickfix.mina.acceptor.AbstractSocketAcceptor startAcceptingConnections
+INFO: Listening for connections at 0.0.0.0/0.0.0.0:9878
+May 14, 2019 3:38:30 PM quickfix.mina.acceptor.AcceptorIoHandler sessionCreated
+INFO: MINA session created: /127.0.0.1:60808
+<20190514-10:08:31, FIX.4.2:FIXIMULATOR->BANZAI, incoming> (8=FIX.4.29=7835=A34=149=BANZAI52=20190514-10:08:31.75556=FIXIMULATOR98=0108=30141=Y10=061)
+<20190514-10:08:31, FIX.4.2:FIXIMULATOR->BANZAI, event> (Accepting session FIX.4.2:FIXIMULATOR->BANZAI from /127.0.0.1:60808)
+<20190514-10:08:31, FIX.4.2:FIXIMULATOR->BANZAI, event> (Acceptor heartbeat set to 30 seconds)
+<20190514-10:08:31, FIX.4.2:FIXIMULATOR->BANZAI, event> (Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1)
+<20190514-10:08:31, FIX.4.2:FIXIMULATOR->BANZAI, event> (Received logon request)
+<20190514-10:08:31, FIX.4.2:FIXIMULATOR->BANZAI, outgoing> (8=FIX.4.29=7835=A34=149=FIXIMULATOR52=20190514-10:08:31.91656=BANZAI98=0108=30141=Y10=060)
+<20190514-10:08:31, FIX.4.2:FIXIMULATOR->BANZAI, event> (Responding to logon request)
+<20190514-10:09:02, FIX.4.2:FIXIMULATOR->BANZAI, outgoing> (8=FIX.4.29=6035=034=249=FIXIMULATOR52=20190514-10:09:02.62256=BANZAI10=214)
+<20190514-10:09:02, FIX.4.2:FIXIMULATOR->BANZAI, incoming> (8=FIX.4.29=6035=034=249=BANZAI52=20190514-10:09:02.62556=FIXIMULATOR10=217)
+May 14, 2019 3:39:18 PM quickfix.mina.AbstractIoHandler exceptionCaught
+SEVERE: socket exception (/127.0.0.1:60808): An existing connection was forcibly closed by the remote host
+<20190514-10:09:18, FIX.4.2:FIXIMULATOR->BANZAI, event> (Disconnecting)
+
+C:\Users\lokeshwar.tailor\Downloads\Fiximulator\FIXimulator_0.41>
+
+######################################### fiximulator console logs #########################################
+
+
+
+######################################### initiator console logs #########################################
+
+[initiator] quickfix.Application initialized
+
+[initiator] quickfix.SessionSettings initialized with file - C:\Users\lokeshwar.tailor\Desktop\fix_workspace\fix-demo-1\src\resources\config-initiator.cfg
+
+[initiator] quickfix.MessageStoreFactory initialized with 'settings'
+
+[initiator] quickfix.LogFactory initialized with 'settings'
+
+[initiator] quickfix.MessageFactory initialized with 'settings'
+
+[initiator] successfully called onCreate() for sessionId: FIX.4.2:BANZAI->FIXIMULATOR
+
+[initiator] quickfix.SocketAcceptor initialized with - 'application', 'messageStoreFactory', 'setttings', 'messageFactory'
+
+[initiator] socketInitiator.start() called
+
+[initiator] Wait for 5 seconds after socketInitiator.start()
+May 14, 2019 3:38:31 PM quickfix.mina.initiator.InitiatorIoHandler sessionCreated
+INFO: MINA session created: /127.0.0.1:60808
+[initiator] Inside toAdmin()
+
+[initiator] successfully called fromAdmin() for sessionId: FIX.4.2:BANZAI->FIXIMULATOR
+
+[initiator] successfully logged on for sessionId: FIX.4.2:BANZAI->FIXIMULATOR
+
+
+[initiator] Fetched sessionId from 'socketInitiator' as: FIX.4.2:BANZAI->FIXIMULATOR
+[initiator] successfully called fromAdmin() for sessionId: FIX.4.2:BANZAI->FIXIMULATOR
+
+[initiator] Inside toAdmin()
+
+######################################### initiator console logs #########################################
+
+
+
