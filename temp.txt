@@ -1,0 +1,964 @@
+##########################################################################################################################################################################################################################################
+You have several problems here.
+
+First, each channel in a SSH connection is independent of the other ones, and the command in each exec channel is executed in its own shell (command line interpreter). So any changes you are doing in one channel have no effect at all to the other channels. You also can't do stuff like this:
+
+runSshCommand("cd Documents", session);
+runSshCommand("ls -l", session);
+(Actually you can do this, but it will not show the contents of the Documents directory, but of the home directory.)
+
+For cd, you can work around by passing both commands as one "command", to be used in the same exec channel:
+
+runSshCommand("cd Documents; ls -l");
+(Instead of the ; you can also use a line break \n to separate the commands, or whatever else your shell accepts.)
+
+For su this will not work, where we come to the second problem.
+
+su is not a command which changes the state of the current shell (like cd), but a command which opens a new shell inside the existing one. It will only return to the outer shell when you leave the shell started by su (e.g. by exit, logout or end-of-file), and then you are again the same user as before.
+
+To pass commands to the "inner shell", you'll have to pass them to the shells input. Or use the -c (--command) argument of su:
+
+runSshCommand("su -c 'tail -1 ~/mylog.log' - john ",session);
+You might then run in the third problem: su will ask for john's password, and might refuse to read it from the standard input, but try to read it from the terminal. And your channel has no pseudo-terminal. You can try to use cannel.setPty(true) and then actually write your password to the output stream, though I'm not sure that this will work.
+
+Alternatives: Instead of su -c you can use sudo, which can be configured not to ask for a password for certain commands and users (otherwise you'll have the same terminal problem again). Or you could directly log in as john, or make the logfile readable for tom. (Also, I hope your real password is better than the one in your source code.)
+
+shareimprove this answer
+answered May 11 '13 at 16:26
+
+Paulo Ebermann
+62k14126185
+add a comment
+
+##########################################################################################################################################################################################################################################
+Idea regarding sudo su - user - in jsch
+
+Stack Overflow
+Search…
+Log in Sign up
+By using our site, you acknowledge that you have read and understand our Cookie Policy, Privacy Policy, and our Terms of Service.
+
+Home
+PUBLIC
+Stack Overflow
+Tags
+Users
+Jobs
+Teams
+Q&A for work
+Learn More
+Idea regarding sudo su - user - in jsch
+Ask Question
+
+2
+
+
+I am having problems with using sudo su in jsch, below is my post(exec.java):
+
+package com.test;
+
+import com.jcraft.jsch.*;
+import java.awt.*;
+import javax.swing.*;
+import java.io.*;
+
+public class Exec{
+  public static void main(String[] arg){
+    try{
+      JSch jsch=new JSch();  
+
+      String host=null;
+      if(arg.length>0){
+        host=arg[0];
+      }
+      else{
+        host=JOptionPane.showInputDialog("Enter username@hostname",
+                                         "username"+
+                                         "@hostName"); 
+      }
+      String user=host.substring(0, host.indexOf('@'));
+      host=host.substring(host.indexOf('@')+1);
+
+      Session session=jsch.getSession(user, host, 22);
+
+      /*
+      String xhost="127.0.0.1";
+      int xport=0;
+      String display=JOptionPane.showInputDialog("Enter display name", 
+                                                 xhost+":"+xport);
+      xhost=display.substring(0, display.indexOf(':'));
+      xport=Integer.parseInt(display.substring(display.indexOf(':')+1));
+      session.setX11Host(xhost);
+      session.setX11Port(xport+6000);
+      */
+
+      // username and password will be given via UserInfo interface.
+      UserInfo ui=new MyUserInfo();
+      session.setUserInfo(ui);
+      session.connect();
+      String command = "cd bin";
+
+      System.out.println(command);
+      Channel channel=session.openChannel("exec");
+      channel.setInputStream(null);
+      ((ChannelExec)channel).setErrStream(System.err);
+
+      InputStream in=channel.getInputStream();
+
+      channel.connect();
+      ((ChannelExec)channel).setCommand("sudo su - user -");
+
+      byte[] tmp=new byte[1024];
+      while(true){
+        while(in.available()>0){
+          int i=in.read(tmp, 0, 1024);
+          if(i<0)break;
+          System.out.print(new String(tmp, 0, i));
+
+        }
+        if(channel.isClosed()){
+          System.out.println("exit-status: "+channel.getExitStatus());
+          break;
+        }
+        try{Thread.sleep(1000);}catch(Exception ee){}
+        System.out.println("te");
+      }
+
+      channel.disconnect();
+      session.disconnect();
+    }
+    catch(Exception e){
+      System.out.println(e);
+    }
+  }
+
+  public static class MyUserInfo implements UserInfo, UIKeyboardInteractive{
+    public String getPassword(){ return passwd; }
+    public boolean promptYesNo(String str){
+      Object[] options={ "yes", "no" };
+      int foo=JOptionPane.showOptionDialog(null, 
+             str,
+             "Warning", 
+             JOptionPane.DEFAULT_OPTION, 
+             JOptionPane.WARNING_MESSAGE,
+             null, options, options[0]);
+       return foo==0;
+    }
+
+    String passwd;
+    JTextField passwordField=(JTextField)new JPasswordField(20);
+
+    public String getPassphrase(){ return null; }
+    public boolean promptPassphrase(String message){ return true; }
+    public boolean promptPassword(String message){
+      Object[] ob={passwordField}; 
+      int result=
+        JOptionPane.showConfirmDialog(null, ob, message,
+                                      JOptionPane.OK_CANCEL_OPTION);
+      if(result==JOptionPane.OK_OPTION){
+        passwd=passwordField.getText();
+        return true;
+      }
+      else{ 
+        return false; 
+      }
+    }
+    public void showMessage(String message){
+      JOptionPane.showMessageDialog(null, message);
+    }
+    final GridBagConstraints gbc = 
+      new GridBagConstraints(0,0,1,1,1,1,
+                             GridBagConstraints.NORTHWEST,
+                             GridBagConstraints.NONE,
+                             new Insets(0,0,0,0),0,0);
+    private Container panel;
+    public String[] promptKeyboardInteractive(String destination,
+                                              String name,
+                                              String instruction,
+                                              String[] prompt,
+                                              boolean[] echo){
+      panel = new JPanel();
+      panel.setLayout(new GridBagLayout());
+
+      gbc.weightx = 1.0;
+      gbc.gridwidth = GridBagConstraints.REMAINDER;
+      gbc.gridx = 0;
+      panel.add(new JLabel(instruction), gbc);
+      gbc.gridy++;
+
+      gbc.gridwidth = GridBagConstraints.RELATIVE;
+
+      JTextField[] texts=new JTextField[prompt.length];
+      for(int i=0; i<prompt.length; i++){
+        gbc.fill = GridBagConstraints.NONE;
+        gbc.gridx = 0;
+        gbc.weightx = 1;
+        panel.add(new JLabel(prompt[i]),gbc);
+
+        gbc.gridx = 1;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.weighty = 1;
+        if(echo[i]){
+          texts[i]=new JTextField(20);
+        }
+        else{
+          texts[i]=new JPasswordField(20);
+        }
+        panel.add(texts[i], gbc);
+        gbc.gridy++;
+      }
+
+      if(JOptionPane.showConfirmDialog(null, panel, 
+                                       destination+": "+name,
+                                       JOptionPane.OK_CANCEL_OPTION,
+                                       JOptionPane.QUESTION_MESSAGE)
+         ==JOptionPane.OK_OPTION){
+        String[] response=new String[prompt.length];
+        for(int i=0; i<prompt.length; i++){
+          response[i]=texts[i].getText();
+        }
+    return response;
+      }
+      else{
+        return null;  // cancel
+      }
+    }
+  }
+}
+Normal sudo su is good but I want to run multiple commands after sudo su, some of the points which might be informative.
+
+login to server and sudo with user
+sudo su - user - is without password
+perform some commands
+regards,
+
+icr
+
+java shell sudo jsch
+shareimprove this question
+asked Aug 30 '13 at 14:06
+
+icr
+11119
+I am having problems with using sudo su in jsch what problems? – Philipp Sander Aug 30 '13 at 14:11 
+Hi, I am not able to run multiple commands after using sudo su - username -, I tried using Sudo.java in jsch but still its not working. – icr Aug 30 '13 at 14:22
+are you getting an exception? then please post the stacktrace – Philipp Sander Aug 30 '13 at 14:47
+Hi, I didn't get any exception. once I hit the command sudo su - user -; ls -lrt and then it doesn't do anything except executing the sudo command, i.e. ls -lrt is not executed. – icr Aug 30 '13 at 15:24
+@icr: How you sloved this problem , am too struckup here. – Mohan May 6 '14 at 10:25
+add a comment
+2 Answers
+active oldest votes
+
+1
+
+second way is that you need to redirect providing second password.
+
+Try to use sudo -S -p.
+
+In the past I had the same problem but solved. To save your time here is my code:
+
+SudoExec class
+
+public abstract class SudoExec {
+
+private String mHost;
+private static String passwd;
+private SSHObserverItf mObserver = null;
+protected boolean isForceStop = false;
+protected boolean isAsIs = false;
+protected Timer mTimer = null;
+
+
+
+//default constructor
+public SudoExec(String hostName,String userName,String password){
+    setHost(userName+"@"+hostName);
+    setPassword(password);
+}
+
+public void init(int timeToWait) {
+
+    mTimer = new Timer();
+
+
+    new Thread(){       
+        public  void run(){
+            execCMD();
+        }           
+    }.start();
+
+    mTimer.doWait(timeToWait);
+
+    isForceStop = true;
+}
+
+
+private void execCMD (){
+
+    isForceStop = false;        
+
+    try{
+        JSch jsch=new JSch();  
+
+        String host=getHost();
+
+
+        String user=host.substring(0, host.indexOf('@'));
+        host=host.substring(host.indexOf('@')+1);
+
+        Session session=jsch.getSession(user, host, 22);
+
+
+
+        // username and password will be given via UserInfo interface.
+        UserInfo ui=new MyUserInfo();
+        session.setUserInfo(ui);
+        session.connect();
+
+        String command=getCmd();
+
+        Channel channel=session.openChannel("exec");
+
+        ((ChannelExec)channel).setPty(true);
+
+        if(isAsIs == true){
+            ((ChannelExec)channel).setCommand(command);
+            }
+        else{
+            ((ChannelExec)channel).setCommand("sudo -S -p '' " + command);
+        }
+
+        InputStream in=channel.getInputStream();
+          OutputStream out=channel.getOutputStream();
+          ((ChannelExec)channel).setErrStream(System.err);
+
+          channel.connect();
+
+          out.write((passwd+"\n").getBytes());
+          out.flush();
+
+        byte[] tmp=new byte[1024];
+        while( isForceStop == false ){              
+            while(in.available()>0 ){
+                int i=in.read(tmp, 0, 1024);
+                if(i<0)break;
+
+                mObserver.onResponse((new String(tmp, 0, i)));
+
+            }
+            if(channel.isClosed()){
+                mObserver.onResponse("exit-status: "+channel.getExitStatus());
+                mTimer.doNotify();
+                break;
+            }
+
+
+            try{Thread.sleep(100);}catch(Exception ee){}
+        }
+
+        mObserver.onResponse("close channel ... ");         
+        channel.disconnect();
+        mObserver.onResponse("close session ... ");
+        session.disconnect();
+    }
+    catch(Exception e){
+        System.out.println(e);
+        mObserver.onErrorResponse(e.getMessage());
+    }
+
+
+
+}
+
+
+
+public static class MyUserInfo implements UserInfo, UIKeyboardInteractive{
+    public String getPassword(){
+        return passwd;
+    }
+
+    public boolean promptYesNo(String str){
+        return true;
+    }
+
+
+
+    public String getPassphrase(){ return null; }
+    public boolean promptPassphrase(String message){ return true; }
+    public boolean promptPassword(String message){
+        return true;
+    }
+
+    public void showMessage(String message){
+    }
+
+    @Override
+    public String[] promptKeyboardInteractive(String arg0, String arg1,
+            String arg2, String[] arg3, boolean[] arg4) {
+        return null;
+    }
+}
+
+public void setPassword(String password){
+    passwd=password;
+}
+
+public void setHost(String hostname){
+    mHost=hostname;
+}
+
+public String getPassword(){
+    return passwd;
+}
+
+
+public String getHost(){
+    return mHost;
+}
+
+protected abstract String getCmd();
+
+public void setObserver(SSHObserverItf observer) {
+    mObserver = observer;
+}   
+} 
+SSHObserverItf interface
+
+public interface SSHObserverItf {
+public void onResponse(String line);
+public void onErrorResponse(String line);
+}
+SomeTask
+
+public class SomeTask extends SudoExec implements SSHObserverItf{
+
+private static String command = "";
+private static String hostname = "";
+private static String user = "";
+private static String pass = "";
+private static Boolean isError=false;
+
+private static String wait = "300";
+
+
+
+static public void main(String args[]) throws IOException, ParseException, NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
+
+
+    new SomeTask(hostname,user,pass);
+
+    if (isError == true){
+        System.out.println("Test failed");
+    }   
+    else{
+        System.out.println("\nSucceeded to invoke command : " + command);
+    }   
+
+}
+
+
+
+public CopyPeriodMergeToExternal(String hostName, String userName, String password) throws IOException, ParseException {
+
+    super(hostName, userName, password);
+
+    SSHObserverItf observer = this;
+
+    super.setObserver(observer);
+
+    super.init(Integer.parseInt(wait) * 1000);
+
+}
+
+
+
+
+@Override
+protected String getCmd() {
+
+    isAsIs = true;
+
+
+    command="rm -f somescript.sh";
+
+
+    System.out.println("Run followed command : " + command);
+
+    return command;
+}
+
+@Override
+public void onResponse(String line) {
+    System.out.println(line);       
+}
+
+@Override
+public void onErrorResponse(String line) {
+    System.out.println(line);
+    System.out.println("Error has occured");        
+    isError = true;
+}
+}
+The main part in SudoExec class is:
+
+public static class MyUserInfo implements UserInfo, UIKeyboardInteractive{
+    public String getPassword(){ //     <---
+        return passwd;
+    }
+
+    public boolean promptYesNo(String str){
+        return true;  //     <---
+    }
+Hope it will solve your problem
+
+[EDIT]
+
+After you got first response, you close the session.
+
+Therefore next command starts as not super user.
+
+My suggestion is to do not create session but run each command with sudo preffix
+
+shareimprove this answer
+edited Jul 20 '14 at 19:44
+answered Aug 30 '13 at 14:21
+
+Maxim Shoustin
+68.8k26182210
+Hi, I did read the post, but I don't required password. – icr Aug 30 '13 at 14:23
+Sure, when you run su aka superuser you must provide password once more, right? – Maxim Shoustin Aug 30 '13 at 14:25
+Yeah, but in my case it doesn't require password. :( – icr Aug 30 '13 at 14:30
+See my edit above at the end of post – Maxim Shoustin Aug 30 '13 at 14:30
+Hi, its ask for password and I am not having any password or how is the prefix added? – icr Aug 30 '13 at 15:51
+show 2 more comments
+ 
+1
+
+I also have to ssh on a remote server, then sudo with diffrent user and finally execute a command, what I did is:
+
+package oracle.idaas.changelog.util;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import org.apache.log4j.Logger;
+
+import com.jcraft.jsch.ChannelExec;
+import com.jcraft.jsch.JSch;
+import com.jcraft.jsch.Session;
+
+public class Test {
+final static Logger logger = Logger.getLogger(Test.class);
+
+public static void main(String[] args) {
+    try {
+
+        JSch jsch = new JSch();
+
+        String user = "opc";
+        String host = "101.252.109.112";
+        String password = "NotMyPassword"
+        int port = 22;
+
+        Session session = jsch.getSession(user, host, port);
+        System.out.println("session created.");
+        session.setConfig("StrictHostKeyChecking", "no");
+        session.setPassword(password);
+        session.connect();
+
+        ChannelExec channel=(ChannelExec) session.openChannel("exec");
+        BufferedReader in=new BufferedReader(new InputStreamReader(channel.getInputStream()));
+        channel.setCommand("sudo su - oracle -c \"pwd\";");
+        channel.connect();
+
+        String msg=null;
+        List<String> lines = new ArrayList<>();
+        while((msg=in.readLine())!=null){
+            System.out.println(msg);
+            lines.add(msg);
+        }
+
+        channel.disconnect();
+        session.disconnect();
+    } catch(Exception e){
+        logger.fatal("Remote BTU Process FAILED" + e);
+    }
+}
+
+}
+If you see sudo su - oracle -c "your-command" will solve your problem.
+
+shareimprove this answer
+answered Apr 2 '16 at 7:39
+
+Manoj Shekhawat
+1391110
+add a comment
+Your Answer
+Sign up or log in
+ Sign up using Google
+ Sign up using Facebook
+ Sign up using Email and Password
+Post as a guest
+Name
+Email
+Required, but never shown
+
+Post Your Answer
+By clicking “Post Your Answer”, you agree to our terms of service, privacy policy and cookie policy
+
+Not the answer you're looking for? Browse other questions tagged java shell sudo jsch or ask your own question.
+asked
+
+5 years, 9 months ago
+
+viewed
+
+7,259 times
+
+active
+
+1 year, 8 months ago
+
+Featured on Meta
+Unicorn Meta Zoo #4: What makes for a healthy community?
+Linked
+1
+jsch multiple command using sudo
+Related
+794
+How do I use sudo to redirect output to a location I don't have permission to write to?
+529
+sudo echo “something” >> /etc/privilegedFile doesn't work
+278
+Why does sudo change the PATH?
+1278
+How does the vim “write with sudo” trick work?
+368
+How to keep environment variables when using sudo
+3
+jsch and running “sudo su -”
+1153
+npm throws error without sudo
+345
+How to fix 'sudo: no tty present and no askpass program specified' error?
+2
+jsch sudo no password required
+-1
+Java Jsch sudo as user and execute a script
+Hot Network Questions
+In The Incredibles 2, why does Screenslaver's name use a pun on something that doesn't exist in the 1950s pastiche?
+Why does there seem to be an extreme lack of public trashcans in Taiwan?
+Am I allowed to determine tenets of my contract as a warlock?
+Add leading zeroes to a user's input but is being transformed with printf
+Approach sick days in feedback meeting
+Why is my Taiyaki (Cake that looks like a fish) too hard and dry?
+Fastest way from 8 to 7
+What publication claimed that Michael Jackson died in a nuclear holocaust?
+Why are ambiguous grammars bad?
+The best in flight meal option for those suffering from reflux
+How to represent jealousy in a cute way?
+Can an open source licence be revoked if it violates employer's IP?
+Placement of positioning lights on A320 winglets
+Part of my house is inexplicably gone
+Realistic, logical way for men with medieval-era weaponry to compete with much larger and physically stronger foes
+Is it a good security practice to force employees hide their employer to avoid being targeted?
+Dedicated bike GPS computer over smartphone
+What is the theme of analysis?
+What game uses dice with engraved faces, weapon symbols, double weapon symbols and object symbols?
+Purpose of cylindrical attachments on Power Transmission towers
+My parent's claim they claim they cannot pay for my college education, what are my options?
+Was the Lonely Mountain, where Smaug lived, a volcano?
+Can Mage Hand be used to indirectly trigger an attack?
+Are athlete's college degrees discounted by employers and graduate school admissions?
+ Question feed
+
+STACK OVERFLOW
+Questions
+Jobs
+Developer Jobs Directory
+Salary Calculator
+Help
+Mobile
+Disable Responsiveness
+PRODUCTS
+Teams
+Talent
+Advertising
+Enterprise
+COMPANY
+About
+Press
+Work Here
+Legal
+Privacy Policy
+Contact Us
+STACK EXCHANGE
+NETWORK
+Technology
+Life / Arts
+Culture / Recreation
+Science
+Other
+Blog
+Facebook
+Twitter
+LinkedIn
+site design / logo © 2019 Stack Exchange Inc; user contributions licensed under cc by-sa 3.0 with attribution required. rev 2019.6.12.33953
+
+##########################################################################################################################################################################################################################################
+
+##########################################################################################################################################################################################################################################
+
+##########################################################################################################################################################################################################################################
+
+##########################################################################################################################################################################################################################################
+
+jsch-users@lists.sourceforge.net 
+Search…
+Discussion:
+Help with su in jsch..
+(too old to reply)
+Sheokand, Sumeet 14 years ago
+Permalink Hi All,
+I have successfully been able to use the ChannelExec to send commands to the host and get the replies. I am facing a problem, when I have to do these steps.
+
+- Login as myself
+- su to another user
+- run some commands.
+
+I cannot seem to get past the 2nd step. I can send the 'su' command, but can't figure out how to provide the password.
+
+Is it at all possible using ChannelExec or do I need to use ChannelShell?
+
+Any help (with code?) would be greatly appreciated.
+
+-Sumeet.
+Kevin Kane 14 years ago
+Permalink
+Post by Sheokand, Sumeet
+I have successfully been able to use the ChannelExec to send commands to the
+host and get the replies. I am facing a problem, when I have to do these
+steps.
+Post by Sheokand, Sumeet
+- Login as myself
+- su to another user
+- run some commands.
+I cannot seem to get past the 2nd step. I can send the 'su' command, but can't
+figure out how to provide the password.
+Is it at all possible using ChannelExec or do I need to use ChannelShell?
+The su command generally doesn't read from stdin (security precaution). Instead,
+it opens the tty device for your terminal screen and reads directly from it. I
+haven't used ChannelShell so I don't know if it can handle this or not....
+-Kevin
+Eric DECORNOD 14 years ago
+Permalink
+Post by Kevin Kane
+The su command generally doesn't read from stdin (security precaution).
+Instead, it opens the tty device for your terminal screen and reads
+directly from it. I haven't used ChannelShell so I don't know if it can
+handle this or not.... -Kevin
+You could have a look at « expect ». I think it's the kind of method samba use
+to talk with the passwd in some old fashioned config style.
+--
+Eric DÉCORNOD
+Ingénieur en Développement d'Applications
+ULP Multimédia
+courriel: ***@ulpmm.u-strasbg.fr
+Sheokand, Sumeet 14 years ago
+Permalink Hi Kevin,
+Thanks for the quick reply. So, I tried using ChannelShell as the stock example allows me to 'su', provide the password and carry on. I tried simulating that with sending the 'su' command followed by the password string inside the stream and that didn't work. The input stream seems to be hung after the 'su' command expecting the password.
+
+any ides?
+
+Hasn't anyone attempted to run a 'su' or 'sudo' command through this library?
+
+-Sumeet
+
+-----Original Message-----
+From: jsch-users-***@lists.sourceforge.net
+[mailto:jsch-users-***@lists.sourceforge.net]On Behalf Of Kevin Kane
+Sent: Tuesday, February 08, 2005 10:01 AM
+To: jsch-***@lists.sourceforge.net
+Subject: Re: [JSch-users] Help with su in jsch..
+Post by Sheokand, Sumeet
+I have successfully been able to use the ChannelExec to send commands to the
+host and get the replies. I am facing a problem, when I have to do these
+steps.
+Post by Sheokand, Sumeet
+- Login as myself
+- su to another user
+- run some commands.
+I cannot seem to get past the 2nd step. I can send the 'su' command, but can't
+figure out how to provide the password.
+Is it at all possible using ChannelExec or do I need to use ChannelShell?
+The su command generally doesn't read from stdin (security precaution). Instead,
+it opens the tty device for your terminal screen and reads directly from it. I
+haven't used ChannelShell so I don't know if it can handle this or not....
+-Kevin
+
+
+
+-------------------------------------------------------
+SF email is sponsored by - The IT Product Guide
+Read honest & candid reviews on hundreds of IT Products from real users.
+Discover which products truly live up to the hype. Start reading now.
+http://ads.osdn.com/?ad_id=6595&alloc_id=14396&op=click
+j***@diroussel.xsmail.com 14 years ago
+Permalink If it works in the example then use a debugger to find out what happens,
+or add some logging and recompile jsch.
+
+
+
+
+----- Original message -----
+From: "Sheokand, Sumeet" <***@experian.com>
+To: "Kevin Kane" <***@umich.edu>, jsch-***@lists.sourceforge.net
+Date: Tue, 8 Feb 2005 11:39:37 -0800
+Subject: RE: [JSch-users] Help with su in jsch..
+
+Hi Kevin,
+Thanks for the quick reply. So, I tried using ChannelShell as the stock
+example allows me to 'su', provide the password and carry on. I tried
+simulating that with sending the 'su' command followed by the password
+string inside the stream and that didn't work. The input stream seems to
+be hung after the 'su' command expecting the password.
+
+any ides?
+
+Hasn't anyone attempted to run a 'su' or 'sudo' command through this
+library?
+
+-Sumeet
+
+-----Original Message-----
+From: jsch-users-***@lists.sourceforge.net
+[mailto:jsch-users-***@lists.sourceforge.net]On Behalf Of Kevin Kane
+Sent: Tuesday, February 08, 2005 10:01 AM
+To: jsch-***@lists.sourceforge.net
+Subject: Re: [JSch-users] Help with su in jsch..
+Post by Sheokand, Sumeet
+I have successfully been able to use the ChannelExec to send commands to the
+host and get the replies. I am facing a problem, when I have to do these
+steps.
+Post by Sheokand, Sumeet
+- Login as myself
+- su to another user
+- run some commands.
+I cannot seem to get past the 2nd step. I can send the 'su' command, but can't
+figure out how to provide the password.
+Is it at all possible using ChannelExec or do I need to use ChannelShell?
+The su command generally doesn't read from stdin (security precaution).
+Instead,
+it opens the tty device for your terminal screen and reads directly from
+it. I
+haven't used ChannelShell so I don't know if it can handle this or
+not....
+-Kevin
+
+
+
+-------------------------------------------------------
+SF email is sponsored by - The IT Product Guide
+Read honest & candid reviews on hundreds of IT Products from real users.
+Discover which products truly live up to the hype. Start reading now.
+http://ads.osdn.com/?ad_id=6595&alloc_id=14396&op=click
+_______________________________________________
+JSch-users mailing list
+JSch-***@lists.sourceforge.net
+https://lists.sourceforge.net/lists/listinfo/jsch-users
+
+
+-------------------------------------------------------
+SF email is sponsored by - The IT Product Guide
+Read honest & candid reviews on hundreds of IT Products from real users.
+Discover which products truly live up to the hype. Start reading now.
+http://ads.osdn.com/?ad_ide95&alloc_id396&op=click
+Atsuhiko Yamanaka 14 years ago
+Permalink Hi,
+
++-From: "Sheokand, Sumeet" <***@experian.com> --
+|_Date: Tue, 8 Feb 2005 09:34:41 -0800 _____________________
+|
+|Hi All,
+|I have successfully been able to use the ChannelExec to send
+|commands to the host and get the replies. I am facing a problem,
+|when I have to do these steps.
+|- Login as myself
+|- su to another user
+|- run some commands.
+|I cannot seem to get past the 2nd step. I can send the 'su' command,
+|but can't figure out how to provide the password.
+
+You can do that by using ChannelExec, but you have to modify it
+in the current implemntation.
+FYI, modify 'com/jcraft/jsch/ChannelExec.java' as follows,
+
+public void start(){
+try{
+Request request;
+if(xforwading){
+request=new RequestX11();
+request.request(session, this);
+}
+request=new RequestPtyReq(); // add this line
+request.request(session, this); // add this line
+request=new RequestExec(command);
+//((RequestExec)request).setCommand(command);
+request.request(session, this);
+}
+
+Then, in your program, for example,...
+
+String command="/bin/su root -c date -s /bin/sh";
+
+Channel channel=session.openChannel("exec");
+((ChannelExec)channel).setCommand(command);
+
+OutputStream out=channel.getOutputStream();
+InputStream in=channel.getInputStream();
+
+channel.connect();
+
+byte[] tmp=new byte[1024];
+while(1){
+int i=in.read(tmp, 0, tmp.length);
+System.out.print(new String(tmp, 0, i));
+
+// wait for the string "assword:"
+}
+
+byte[] passwd="XXXXXX".getBytes();
+out.write(passwd, 0, passwd.length); // send passwd for root
+byte[] foo={0x0d}; // return key
+out.write(foo, 0, 1);
+
+// results
+while(1){
+int i=in.read(tmp, 0, tmp.length);
+System.out.print(new String(tmp, 0, i));
+}
+
+
+In the next release, I'll add methods to use 'RequestPtyReq' without
+modifying ChannelExec class.
+
+
+Thanks,
+--
+ymnk
+
+5 Replies
+705 Views 
+Switch to linear view 
+Disable enhanced parsing 
+Permalink to this page 
+
+Thread Navigation
+Sheokand, Sumeet 14 years ago
+Kevin Kane 14 years ago
+Eric DECORNOD 14 years ago
+Sheokand, Sumeet 14 years ago
+j***@diroussel.xsmail.com 14 years ago
+Atsuhiko Yamanaka 14 years ago
+about - legalese
