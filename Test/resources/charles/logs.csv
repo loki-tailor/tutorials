@@ -1,0 +1,11 @@
+seq_id,event_name,status_code,_requestTimeMillis
+25347,install_clicked,200,1569594140865
+25347,download_started,200,1569594143783
+25347,download_started,200,1569594145866
+25347,download_failed,200,1569594147756
+
+25347,install_clicked,200,1569594210108
+25347,download_started,200,1569594212553
+25347,download_started,200,1569594214759
+25347,download_failed,200,1569594217151
+
