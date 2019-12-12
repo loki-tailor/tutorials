@@ -3,12 +3,11 @@ package com.logics;
 /**
 *	@author lokeshwar created @ 4-12-19
 *	practice from https://stackoverflow.com/q/17966406/7415499
+*	ref: https://stackoverflow.com/questions/36276451/java-coding-eclipse-showing-compile-time-error-on-line-4-only-why?noredirect=1&lq=1
+*	ref: https://stackoverflow.com/questions/129178/difference-between-int-array-and-int-array
 */
 
 public class CompilationSequenceCheck {
-
-	// TOOD: https://stackoverflow.com/questions/36276451/java-coding-eclipse-showing-compile-time-error-on-line-4-only-why?noredirect=1&lq=1
-	// TODO: https://stackoverflow.com/questions/129178/difference-between-int-array-and-int-array
 
 	public static void main(String[] args) {
 
