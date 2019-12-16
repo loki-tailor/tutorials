@@ -1,5 +1,36 @@
 package com.temp;
 
+
+public class Temp {
+
+}
+// ########################################################################################################################################
+
+/*
+
+// static import java.lang.Integer.*;
+// Below compile error comes when above is uncommented and compiled
+// com/temp/Temp.java:3: error: class, interface, or enum expected
+// static import java.lang.Integer.*;
+//        ^
+
+import static java.lang.Integer.*;
+
+class Temp_StaticImportDemo {
+
+	public static void main (String[] args) {
+		System.out.println(MAX_VALUE);
+		System.out.println(toHexString(16));
+	}
+
+} // end of class
+
+*/
+
+// ########################################################################################################################################
+
+/*
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -9,10 +40,12 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
-public class Temp {
+class Temp_OLD {
+
+
 
     public static void main(String[] args) {
-	packageFromBannerAppsDb();
+	packageFromBannerAppsDb();	
     }
 
     public static void packageFromBannerAppsDb() {
@@ -88,3 +121,6 @@ public class Temp {
     }
 
 }
+*/
+
+// ########################################################################################################################################

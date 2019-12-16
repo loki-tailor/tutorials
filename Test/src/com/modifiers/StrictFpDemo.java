@@ -39,7 +39,7 @@ public class StrictFpDemo {
 	// error: modifier abstract not allowed here
 	// public abstract StrictFpDemo() {}
 	
-	public static void main(String args[]) {
+	static public void main(String... custom) {
 		sum();
 		normalSum();
 	} // end of main()
