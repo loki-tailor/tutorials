@@ -6,10 +6,10 @@ package com.modifiers;
 	TODO: Understand JNI - https://stackoverflow.com/a/30635871/7415499
 */
 
-public class NativeDemo {
+public class TU_NativeDemo {
 	public native int square (int i);
 	public static void main (String[] args) {
 		System.loadLibrary("Main");
-		System.out.println(new Main().square(2));
+		// System.out.println(new Main().square(2));
 	}
 } // end of class

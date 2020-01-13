@@ -1,4 +1,4 @@
-package com.modifiers.pkg;
+package com.modifiers.pkg1;
 
 public class Beverage {
 
@@ -7,7 +7,7 @@ public class Beverage {
 		new Beverage().bm();
 	}
 
-	public void bm() {
+	public void bm() {	
 		System.out.println("bm method of Beverage");
 	}
 }
