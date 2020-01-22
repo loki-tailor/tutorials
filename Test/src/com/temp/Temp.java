@@ -4,31 +4,6 @@ package com.temp;
 
 // ########################################################################################################################################
 
-/************ Demonstration of Interface ***************/
-interface DemoInterface {
-
-	// Interface methods are by default 'public' & 'abstract'
-	void method1();	
-	static int x = 99;
-	static void staticMethod(String var) { System.out.println("Hello " + var); }
-	default int defaultMethod(int a) { return a*a; }
-}
-public class Temp implements DemoInterface { 
-
-	// Inheriting method should be implemented as public, otherwise compile time error comes
-	public void method1() { 		
-		System.out.println("Inside overriden method - method1()"); 
-		System.out.println("Value of x = " + x);
-	} 
-	public static void main (String[] args) {
-		new Temp().method1();
-		System.out.println("Square = " + new Temp().defaultMethod(2));
-	}
-} // end of class
-
-
-// ########################################################################################################################################
-
 /*
 
 // static import java.lang.Integer.*;

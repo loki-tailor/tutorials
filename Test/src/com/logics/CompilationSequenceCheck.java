@@ -11,28 +11,28 @@ public class CompilationSequenceCheck {
 
 	public static void main(String[] args) {
 /*
-		Syste.out.rintln("Hello"); 
+		// Syste.out.rintln("Hello"); 
 		// no.1 - comes in CLI
 		// package Syste does not exist
 
-		Syste.Out.rintln("Hello");		
+		// Syste.Out.rintln("Hello");		
 		// no.2 - comes in CLI with no.1
 		// package Syste does not exist
 		// as per SO, this should not be printed on CLI, however it's getting printed, TO POST
 
-		Lokeshwar.add();
+		// Lokeshwar.add();
 		// no.3 -  comes in CLI with no.1 and no.2
 		// error: cannot find symbol
 
-		Lokeshwar.add()();
+		// Lokeshwar.add()();
 		// no.4 - The very 1st error precludes all the above errors. no.1, no.2 and no.3 don't come at all.
 		// error: ';' expected
 
-		if();
+		// if();
 		// no.5 - This comes with no.4 only on CLI, others no.1-3 don't come at all
 		// error: illegal start of expression
 
-		try { int i = 10/0; }
+		// try { int i = 10/0; }
 		// no.6 - This comes with no.4 & no.5 on CLI. 
 		// error: 'try' without 'catch', 'finally' or resource declarations, others no.1-3 don't come at all
 */
