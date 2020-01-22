@@ -1,6 +1,6 @@
 package com.modifiers.pkg2;
 
-import com.temp.cert.*;
+import com.modifiers.pkg1.*;
 
 public class Tea {
 	public static void main (String[] args) {

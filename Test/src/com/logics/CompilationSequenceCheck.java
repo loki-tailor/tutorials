@@ -10,7 +10,7 @@ package com.logics;
 public class CompilationSequenceCheck {
 
 	public static void main(String[] args) {
-
+/*
 		Syste.out.rintln("Hello"); 
 		// no.1 - comes in CLI
 		// package Syste does not exist
@@ -35,7 +35,7 @@ public class CompilationSequenceCheck {
 		try { int i = 10/0; }
 		// no.6 - This comes with no.4 & no.5 on CLI. 
 		// error: 'try' without 'catch', 'finally' or resource declarations, others no.1-3 don't come at all
-
+*/
 	} // end of main
 
 } // end of class

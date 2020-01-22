@@ -1,4 +1,4 @@
-package com.modifiers.pkg;
+package com.modifiers.pkg1;
 
 public class Beverage {
 
