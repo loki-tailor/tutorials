@@ -1,4 +1,4 @@
-package com.temp;
+package com.logics.sierra_book;
 
 /**
 	@author = lokeshwar, created @ 16-12-19
@@ -6,7 +6,7 @@ package com.temp;
 	Demonstration of Abstract Class and overriding concerete and abstract methods
 
 */
-import com.temp.food.Fruit;
+import com.logics.sierra_book.food.Fruit;
 
 class Apple extends Fruit {
 
