@@ -24,7 +24,7 @@ public class ValidInvalidArrDeclaration {
 		java.util.Date[] dates[] = new java.util.Date[2][]; // valid
 
 		// #3
-		String beans[] = new beans[6]; // invalid
+		//String beans[] = new beans[6]; // invalid
 
 		// #4
 		//int[][] java = new int[][]; // invalid
