@@ -94,7 +94,7 @@ print(" ".join(str(n) for n in l2))
 # Python code to demonstrate copy operations
 
 # importing "copy" for copy operations
-import copy
+from demos import copy
 
 # initializing list 1
 li1 = [1, 2, [3,5], 4]
