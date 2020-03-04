@@ -1,0 +1,6 @@
+Espresso Device settings to check:
+1. view inspection
+2. pointer
+3. co-ordinates
+4. stayawake
+5. developer mode on

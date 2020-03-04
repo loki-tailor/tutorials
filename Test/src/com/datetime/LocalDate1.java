@@ -8,7 +8,7 @@ package com.datetime;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class LocalDateTimeDemo1 {
+public class LocalDate1 {
 
 	public static void main(String[] args) {
 		LocalDate date = LocalDate.parse("2018-04-30",DateTimeFormatter.ISO_LOCAL_DATE);
