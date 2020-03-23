@@ -10,7 +10,7 @@ import com.logics.sierra_book.food.Fruit;
 
 class Apple extends Fruit {
 
-	public void abstractDisplay() { System.out.println("Inside App overidden method"); };
+	public void abstractDisplay() { System.out.println("Inside Appple overidden method"); };
 
 	public static void main (String[] args) { nonAbstractDisplay(); new Apple().abstractDisplay(); }
 }
