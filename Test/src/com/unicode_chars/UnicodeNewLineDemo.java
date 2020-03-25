@@ -6,19 +6,24 @@
 package com.unicode_chars;
 
 public class UnicodeNewLineDemo {
+    
+    /**
 
 	public static void main(String[] args) throws Exception {
+	    
 		// \u000A is a unicode escape for the line feed (LF)
 	        // \u0055 is a Unicode escape for the capital U character (U)
 		System.out.println("Hello \u0055nicode");
 		System.out.println("Hello \u0055nicode".length());
 		System.out.println("'\\u0055' is a Unicode escape for the capital U character (U)");
+		
+	
 	}
 
 
-	/*-	NOTES:
+	/***	NOTES:
 
-		* Unicode escapes start with \u and the compiler expects four hexadecimal digits to be followed. 
+		* Unicode escapes start with \\u and the compiler expects four hexadecimal digits to be followed. 
 		  When this rule is not met, the compiler will throw an error.
 
 		* ABOVE CODE WILL GET COMPILED IN BELOW MANNER:

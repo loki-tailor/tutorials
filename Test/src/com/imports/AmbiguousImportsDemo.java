@@ -19,6 +19,6 @@ public class AmbiguousImportsDemo {
 		1 error
 		*/
 		//compile error, since ambiguous imports for MAX_VALUE
-		System.out.println("MAX_VALUE = " + MAX_VALUE);
+		// System.out.println("MAX_VALUE = " + MAX_VALUE);
 	}
 }

@@ -15,15 +15,20 @@ class Convertible extends SportsCar {
 		SportsCar sc = new SportsCar();
 		// sc.goFast(); // compile error as "goFast() has private access in SportsCar"		
 	}
-	public void doMore() { doFast(); } // error = cannot find symbol doFast() in class Convertible
+	
+	// error = cannot find symbol doFast() in class Convertible
+	// public void doMore() { doFast(); } 
 }
 
 class Driver {
 	public void doDriverStuff() {
 		SportsCar car = new SportsCar();
-		car.goFast(); compile error as "goFast() has private access in SportsCar"		
+		
+		// compile error as "goFast() has private access in SportsCar"
+		// car.goFast(); 		
 
 		Convertible con = new Convertible();
-		con.goFast(); // error = cannot find symbol doFast() in class Convertible
+		// error = cannot find symbol doFast() in class Convertible
+		// con.goFast(); 
 	}
 }

@@ -51,7 +51,7 @@ public class InterfaceStaticMethods implements StaticIface {
 		// new InterfaceStaticMethods().defaultMethodWithStatic(); 
 
 		// illegal
-		defaultMethodWithStatic();
+		//defaultMethodWithStatic();
 
 		// legal
 		StaticIface.defaultMethodWithStatic();

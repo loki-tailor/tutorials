@@ -19,7 +19,7 @@ public class Demo5 {
 	private static void check(Climb climb, int height) {
 		if(climb.isTooHigh(height,10)) 
 			System.out.println("too high");
-		elsew
+		else
 			System.out.println("ok");
 	}
 }

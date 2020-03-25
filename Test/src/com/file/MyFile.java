@@ -110,9 +110,9 @@ public class MyFile {
 
 	    final File file = new File(filePath);
 	    if (file.exists() && file.delete()) {
-		//System.out.println("Deleted File:" + file.getAbsolutePath());
+		System.out.println("Deleted File:" + file.getAbsolutePath());
 	    } else {
-		//System.out.println("Couldn't delete file:" + file.getAbsolutePath());
+		System.out.println("Couldn't delete file:" + file.getAbsolutePath());
 	    }
 	} catch (Exception e) {
 	    e.printStackTrace();
