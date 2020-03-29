@@ -26,16 +26,17 @@ public class ShopCLI {
 		System.out.println("Press 1 to continue or 2 to exit");
 		int sandwich = sc.nextInt();
 
-		System.out.println("Outer Options are Bun, Bread or Brioche");
-		String inputOuter = sc.next();
-
-		System.out.println("Inner options are Ham, Cheese or Cucumber");
-		String inputInner = sc.next();
-
-		System.out.println("Sauce options are Mayo, Butter, or Marmite");
-		String inputSauce = sc.next();
-
 		if(sandwich == 1) {
+
+			System.out.println("Outer Options are Bun, Bread or Brioche");
+			String inputOuter = sc.next();
+
+			System.out.println("Inner options are Ham, Cheese or Cucumber");
+			String inputInner = sc.next();
+
+			System.out.println("Sauce options are Mayo, Butter, or Marmite");
+			String inputSauce = sc.next();
+
 			ord.add(new Order(1, inputOuter, inputInner, inputSauce, 0));
 			System.out.println("You Made a " + inputInner + " with " + inputSauce + " sandwich on " + inputOuter);
 			System.out.println("That will cost you " + ord.get(0).getCost());
@@ -80,6 +81,7 @@ class Order extends Sandwich {
 		super(outer,inner,sauce);
 		this.orderId = orderId;
 		this.cost = cost;
+		setOrder();
 	} // end of constructor
 
 	// getter, setter
@@ -89,11 +91,7 @@ class Order extends Sandwich {
 	public void setCost(double cost) { this.cost = cost; }
 
 	// methods
-	public void setOrder(int orderId, String outer, String inner, String sauce) {
-		this.orderId = orderId;
-		this.outer = outer;
-		this.inner = inner;
-		this.sauce = sauce;
+	public void setOrder() {
 
 		double calCost = 0;
 		double outerCost = 0.0;
@@ -101,13 +99,13 @@ class Order extends Sandwich {
 		double sauceCost = 0.0;
 
 		// outer cost
-		if(outer == "Bun") {
+		if(outer.equals("Bun")) {
 			outerCost = 0.5;
 		}
-		else if (outer == "Bread") {
+		else if (outer.equals("Bread")) {
 			outerCost = 0.25;
 		}
-		else if (outer == "Brioche") {
+		else if (outer.equals("Brioche")) {
 			outerCost = 0.75;
 		} 
 		else {
@@ -115,13 +113,13 @@ class Order extends Sandwich {
 		}
 
 		// inner cost
-		if (inner == "Ham") {
+		if (inner.equals("Ham")) {
 			innerCost = 0.5;
 		}
-		else if (inner == "Cheese") {
+		else if (inner.equals("Cheese")) {
 			innerCost = 0.25;
 		}
-		else if (inner == "Cucumber") {
+		else if (inner.equals("Cucumber")) {
 			innerCost = 0.75;
 		}
 		else {
@@ -129,13 +127,13 @@ class Order extends Sandwich {
 		}
 
 		// sauce cost
-		if (sauce == "Mayo") {
+		if (sauce.equals("Mayo")) {
 			sauceCost = 0.5;
 		} 
-		else if(sauce == "Butter") {
+		else if(sauce.equals("Butter")) {
 			sauceCost = 0.25;
 		} 
-		else if (sauce == "Marmite") {
+		else if (sauce.equals("Marmite")) {
 			sauceCost = 0.75;
 		}
 		else {
@@ -147,4 +145,4 @@ class Order extends Sandwich {
 		this.cost = calCost;
 		
 	} // end of method
-} // end of class order
+} // end of class order	
