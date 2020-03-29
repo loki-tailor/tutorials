@@ -15,8 +15,10 @@ class Child extends Parent {
 	// RUN 2
 	public void testIt() {
 		System.out.println("x is " + x);
+		
 		Parent p = new Parent();
-		System.out.println("X in parent is " + p.x);
+		// compile error will come when using 'x' usnig reference of Parent
+		// System.out.println("X in parent is " + p.x);
 	} // end of method
 
 } // end of class

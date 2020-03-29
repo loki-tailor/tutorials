@@ -7,6 +7,7 @@ package com.logics.sierra_book.cert2;
 
 class Cloo extends Roo {
 	public void testCloo() {
-		System.out.println(doRooThings());
+	    // compile error since doRooThings() is private in Roo.java
+	    // System.out.println(doRooThings());
 	}
 }

@@ -9,9 +9,10 @@ import com.inheritance.demo3.certification.Parent;
 
 public class Child extends Parent {
 	public void testIt() {
-		System.out.println("x is " + x); 
+	    	// compile error will come when using x
+		// System.out.println("x is " + x); 
 		Parent p = new Parent();
-		System.out.println("X in parent is " + p.x);
+		// System.out.println("X in parent is " + p.x);
 	} // end of method
 } // end of class
 

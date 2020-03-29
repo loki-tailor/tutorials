@@ -11,7 +11,7 @@ class AccessClass {
 	static public void main(String[] args) {
 		OtherClass o = new OtherClass();
 		
-		o.testIt();
+		// o.testIt();
 
 		// above will give below compilation error, when OtherClass.testIt() has default access specifier 
 		// & we try to user it here using instance of Otherclass:
