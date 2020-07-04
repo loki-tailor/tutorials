@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persons>
+	<person>
+		<age>20</age>
+		<uname>person-1</uname>
+		<dob>22/06/2000</dob>
+	</person>
+	<person>
+		<age>21</age>
+		<uname>person-2</uname>
+		<dob>22/06/1999</dob>
+	</person>
+	<person>
+		<age>22</age>
+		<uname>person-3</uname>
+		<dob>22/06/1998</dob>
+	</person>
+	<person>
+		<age>23</age>
+		<uname>person-4</uname>
+		<dob>22/06/1997</dob>
+	</person>
+</persons>
