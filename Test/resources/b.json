@@ -1,0 +1,2988 @@
+{
+	"collections": [{
+		"_id": "5df91cad30acfd89eea08ba3",
+		"status": "enabled",
+		"name": "ધમાકેદાર એપ્સ",
+		"subtitle": "લોકપ્રિય એપ્સ",
+		"tags": ["All", "ધમાકેદાર_એપ્સ"],
+		"universe": "samsung",
+		"rank": 20,
+		"provider": "embedded",
+		"data": {
+			"packages": [{
+				"seq_id": 144493,
+				"hero_image": "https://mofirst.pc.cdn.bitgravity.com/heroimage/Likee_23_April.gif",
+				"banner_image_url": "https://mofirst.pc.cdn.bitgravity.com/top_banner/video.like_09_April.webp",
+				"source": "indus",
+				"title": "લાઇક - ફોર્મલી લાઇક વિડિઓ",
+				"icon": "preview_images/f1da7649969d8fae299f44ff257147e2.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3a0",
+					"seq_id": 102,
+					"icon": "102.png",
+					"status": true,
+					"type": 1,
+					"downloads": 9635115,
+					"name": "મનોરંજન"
+				},
+				"developer": {
+					"_id": "59c3b007072c976c413c0041",
+					"phone": "",
+					"address": "391B Orchard road #15-05 Ngee Ann City , Singapore(238874)",
+					"name": {
+						"display": "BIGO TECHNOLOGY PTE. LTD.",
+						"first": "BIGO TECHNOLOGY PTE. LTD.",
+						"last": "BIGO TECHNOLOGY PTE. LTD."
+					}
+				},
+				"package": "video.like",
+				"versions": [{
+					"version": 2938,
+					"label": "3.28.2",
+					"size": 72760890,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5e985347b0d79c04aa831f96",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"_id": "5e985347b0d79c04aa831f95",
+						"heading": "Camera",
+						"description": "take pictures and record video"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5e985347b0d79c04aa831f94",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5e985347b0d79c04aa831f93",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.RECORD_AUDIO"],
+						"_id": "5e985347b0d79c04aa831f92",
+						"heading": "Microphone",
+						"description": "record audio"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5e985347b0d79c04aa831f91",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"_id": "5e985347b0d79c04aa831f90",
+						"heading": "Contacts",
+						"description": "access your contacts"
+					}]
+				}],
+				"app_rating": 4.351477449455676,
+				"amount": 0,
+				"languages": ["kn", "gu", "ta", "te", "as", "ml", "ur", "bn", "mr", "hi", "or", "en", "pa"],
+				"udate": "2020-04-28T09:26:36.770Z"
+			}, {
+				"seq_id": 62222,
+				"hero_image": "https://mofirstsub.pc.cdn.bitgravity.com/preview_images/d9bb00c3a161ed529fcc05b09b0b4bd7.png",
+				"banner_image_url": "https://mofirst.pc.cdn.bitgravity.com/top_banner/com.phonepe.app_09_April.webp",
+				"source": "indus",
+				"title": "ફોનપે - યુપીઆઈ પેમેન્ટ્સ, રીચાર્જેસ એન્ડ મની ટ્રાન્સફર",
+				"icon": "preview_images/d2480b45b4797e92f8b2350c6b198dfd.webp",
+				"category": {
+					"_id": "581c34d579297587fb911af6",
+					"seq_id": 100,
+					"icon": "122.png",
+					"status": true,
+					"type": 1,
+					"downloads": 7248237,
+					"name": "જરુરી એપ્સ"
+				},
+				"developer": {
+					"_id": "58b574a7ea9c84d172b7bd02",
+					"phone": "91-8046467777",
+					"address": "Postal Code: 110044",
+					"name": {
+						"display": "PhonePe",
+						"first": "PhonePe",
+						"last": "Ltd"
+					}
+				},
+				"package": "com.phonepe.app",
+				"versions": [{
+					"version": 400311,
+					"label": "4.0.08",
+					"size": 66350624,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5e983a072db9ef045828fa42",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"_id": "5e983a072db9ef045828fa41",
+						"heading": "Contacts",
+						"description": "access your contacts"
+					}, {
+						"permissions": ["android.permission.READ_CELL_BROADCASTS", "android.permission.READ_SMS", "android.permission.RECEIVE_MMS", "android.permission.RECEIVE_SMS", "android.permission.RECEIVE_WAP_PUSH", "android.permission.SEND_SMS"],
+						"_id": "5e983a072db9ef045828fa40",
+						"heading": "SMS",
+						"description": "send and view SMS messages"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5e983a072db9ef045828fa3f",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5e983a072db9ef045828fa3e",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.RECORD_AUDIO"],
+						"_id": "5e983a072db9ef045828fa3d",
+						"heading": "Microphone",
+						"description": "record audio"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"_id": "5e983a072db9ef045828fa3c",
+						"heading": "Camera",
+						"description": "take pictures and record video"
+					}, {
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5e983a072db9ef045828fa3b",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}]
+				}],
+				"app_rating": 4.553142565150741,
+				"amount": 0,
+				"languages": ["kn", "hi", "bn", "ur", "or", "te", "mr", "ml", "as", "ta", "pa", "gu", "en"],
+				"udate": "2020-04-16T10:57:12.734Z"
+			}, {
+				"seq_id": 151402,
+				"hero_image": "https://mofirst.pc.cdn.bitgravity.com/heroimage/spotify-app-detail_23_April.jpg",
+				"banner_image_url": "https://mofirst.pc.cdn.bitgravity.com/top_banner/com.spotify.music_15_April.webp",
+				"source": "indus",
+				"title": "સ્પોટીફાય: લિસન ટુ ન્યૂ મ્યુઝિક, પોડકાસ્ટ, એન્ડ સોંગ્સ",
+				"icon": "preview_images/spotify-icon.gif",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3bc",
+					"seq_id": 103,
+					"icon": "115.png",
+					"status": true,
+					"type": 1,
+					"downloads": 1289941,
+					"name": "સંગીત અને વિડિઓઝ"
+				},
+				"developer": {
+					"_id": "59f86ec575bcc3676ba118e0",
+					"phone": "",
+					"address": "Spotify Ltd\nc/o Goodwille Ltd\nSt James House\n13 Kensington Square\nLondon W8 5HD\nGreat Britain",
+					"name": {
+						"display": "Spotify Ltd.",
+						"first": "Spotify Ltd.",
+						"last": "Spotify Ltd."
+					}
+				},
+				"package": "com.spotify.music",
+				"versions": [{
+					"version": 49027453,
+					"label": "8.5.18.932",
+					"size": 32424970,
+					"permissions": []
+				}],
+				"app_rating": 4.719512195121951,
+				"amount": 0,
+				"languages": ["en", "kn", "gu", "ml", "ur", "bn", "or", "mr", "hi", "pa", "as", "te", "ta"],
+				"udate": "2020-03-03T07:16:20.582Z"
+			}, {
+				"seq_id": 160615,
+				"source": "indus",
+				"title": "ઓડિબલ સુનો",
+				"icon": "preview_images/eb75567f28fa5fe750764db3bc23bc84.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3bc",
+					"seq_id": 103,
+					"icon": "115.png",
+					"status": true,
+					"type": 1,
+					"downloads": 1289941,
+					"name": "સંગીત અને વિડિઓઝ"
+				},
+				"developer": {
+					"_id": "5df367fbb7e115d3dfc3e4db",
+					"phone": "",
+					"address": "",
+					"name": {
+						"display": "Audible, Inc",
+						"first": "Audible, Inc",
+						"last": " "
+					}
+				},
+				"package": "com.audible.universal",
+				"versions": [{
+					"version": 136,
+					"label": "1.1.0",
+					"size": 40486717,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"heading": "Internet",
+						"description": "use your internet connection",
+						"_id": "5e66469b63412c5134eb60b3"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device",
+						"_id": "5e66469b63412c5134eb60b2"
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"heading": "Contacts",
+						"description": "access your contacts",
+						"_id": "5e66469b63412c5134eb60b1"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"heading": "Phone",
+						"description": "make and manage phone calls",
+						"_id": "5e66469b63412c5134eb60b0"
+					}]
+				}],
+				"app_rating": 4.857142857142857,
+				"amount": 0,
+				"languages": ["en", "ta", "hi", "mr", "bn", "pa", "gu", "ml", "or", "kn", "ur", "as", "te"],
+				"udate": "2020-03-09T13:37:31.884Z"
+			}, {
+				"seq_id": 150374,
+				"source": "indus",
+				"title": "ક્વાઇ ગો - વિડિઓ સોશિયલ નેટવર્ક",
+				"icon": "preview_images/0972ccafdd0692ac9f6f7876ed9fee60.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3a0",
+					"seq_id": 102,
+					"icon": "102.png",
+					"status": true,
+					"type": 1,
+					"downloads": 9635115,
+					"name": "મનોરંજન"
+				},
+				"developer": {
+					"_id": "5ba0b212539b20171ba51d05",
+					"phone": "86-13810609453",
+					"address": "Postal Code: 409051",
+					"name": {
+						"display": "KWAI XYZ STUDIO",
+						"first": "Kwai",
+						"last": "Growth"
+					}
+				},
+				"package": "com.kwai.global.video.social.kwaigo",
+				"versions": [{
+					"version": 1000576,
+					"label": "2.7.3.1000576",
+					"size": 40732665,
+					"permissions": [{
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"_id": "5e945e265e624904c832911e",
+						"heading": "Contacts",
+						"description": "access your contacts"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5e945e265e624904c832911d",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.RECORD_AUDIO"],
+						"_id": "5e945e265e624904c832911c",
+						"heading": "Microphone",
+						"description": "record audio"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5e945e265e624904c832911b",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"_id": "5e945e265e624904c832911a",
+						"heading": "Camera",
+						"description": "take pictures and record video"
+					}, {
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5e945e265e624904c8329119",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5e945e265e624904c8329118",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}]
+				}],
+				"app_rating": 4.853658536585366,
+				"amount": 0,
+				"languages": ["kn", "bn", "ur", "or", "te", "mr", "ml", "as", "pa", "gu", "hi", "en", "ta"],
+				"udate": "2020-04-13T12:42:15.354Z"
+			}, {
+				"seq_id": 152469,
+				"banner_image_url": "https://mofirst.pc.cdn.bitgravity.com/homepage_banner/Callbreak_Superstar.webp",
+				"source": "indus",
+				"title": "કૉલબ્રેક મલ્ટિપ્લેયર: કાર્ડ ગેમ",
+				"icon": "preview_images/689214250da628fa1ac3fa6a1afce351.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc392",
+					"seq_id": 101,
+					"icon": "101.png",
+					"status": true,
+					"type": 1,
+					"downloads": 4088226,
+					"name": "મનોરંજક ખેલ"
+				},
+				"developer": {
+					"_id": "579fbc234c04329954cb7073",
+					"phone": "91-9971110910",
+					"address": "Noida, India",
+					"name": {
+						"display": "🌟BlackLight Studio Games 🌟",
+						"first": "🌟BlackLight Studio Games 🌟",
+						"last": "🌟BlackLight Studio Games 🌟"
+					}
+				},
+				"package": "com.blacklight.callbreak",
+				"versions": [{
+					"version": 267,
+					"label": "5.9.0",
+					"size": 20542440,
+					"permissions": []
+				}],
+				"app_rating": 4.833333333333333,
+				"amount": 0,
+				"languages": ["en", "kn", "gu", "ta", "te", "as", "ml", "ur", "bn", "or", "mr", "hi", "pa"],
+				"udate": "2020-03-03T07:14:14.006Z"
+			}, {
+				"seq_id": 144786,
+				"hero_image": "https://mofirst.pc.cdn.bitgravity.com/homepage_banner/Indiabulls_Dhani,_hero.webp",
+				"banner_image_url": "https://mofirst.pc.cdn.bitgravity.com/top_banner/com.indiaBulls_09_April.webp",
+				"source": "indus",
+				"title": "ધની: ઈન્સ્ટન્ટ પર્સનલ લોન, ક્રેડિટ લાઈન એન્ડ વૉલેટ",
+				"icon": "preview_images/a4cadac3c2d5ed0f56ea8a39e5105b6d.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3ca",
+					"seq_id": 116,
+					"icon": "116.png",
+					"status": true,
+					"type": 1,
+					"downloads": 8002240,
+					"name": "સાધનો અને ઉપયોગિતાઓ"
+				},
+				"developer": {
+					"_id": "5bd1fec0c7336c121b936b5e",
+					"phone": "",
+					"address": "",
+					"name": {
+						"display": "Indiabulls Ventures Limited",
+						"first": "Indiabulls Ventures Limited",
+						"last": "Indiabulls Ventures Limited"
+					}
+				},
+				"package": "com.indiaBulls",
+				"versions": [{
+					"version": 20003,
+					"label": "2.0.3",
+					"size": 11680314,
+					"permissions": []
+				}],
+				"app_rating": 4.506329113924051,
+				"amount": 0,
+				"languages": ["kn", "hi", "bn", "ur", "or", "te", "mr", "ml", "as", "ta", "pa", "gu", "en"],
+				"udate": "2020-03-03T07:13:42.158Z"
+			}, {
+				"seq_id": 64308,
+				"hero_image": "https://mofirst.pc.cdn.bitgravity.com/heroimage/Alt_Balaji_promotion.webp",
+				"banner_image_url": "https://mofirst.pc.cdn.bitgravity.com/top_banner/ALTBalaji_banner_6thdec.webp",
+				"source": "indus",
+				"title": "અલ્ટબાલાજી - વૉચ વેબ સિરીઝ, ઓરિજનલ્સ એન્ડ મૂવીઝ",
+				"icon": "preview_images/d9e55b30d5ac80fffd1cd2e86b48ef57.webp",
+				"category": {
+					"_id": "581c34d579297587fb911af6",
+					"seq_id": 100,
+					"icon": "122.png",
+					"status": true,
+					"type": 1,
+					"downloads": 7248237,
+					"name": "જરુરી એપ્સ"
+				},
+				"developer": {
+					"_id": "593a80acf3d6225359ac4ee4",
+					"phone": "",
+					"address": "C-13, Balaji House\nDalia Industrial Estate\nNew Link Road\nAndheri (West)\nMumbai,  400053\nIndia, Postal Code: 400053",
+					"name": {
+						"display": "ALT Digital Media Entertainment Ltd",
+						"first": "ALT Digital Media Entertainment",
+						"last": "Ltd"
+					}
+				},
+				"package": "com.balaji.alt",
+				"versions": [{
+					"version": 6785,
+					"label": "2.1.9",
+					"size": 20433639,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5e9ef98ff6c6820499e6a83e",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5e9ef98ff6c6820499e6a83d",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5e9ef98ff6c6820499e6a83c",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"_id": "5e9ef98ff6c6820499e6a83b",
+						"heading": "Contacts",
+						"description": "access your contacts"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5e9ef98ff6c6820499e6a83a",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}]
+				}],
+				"app_rating": 4.346534653465347,
+				"amount": 0,
+				"languages": ["bn", "ml", "hi", "ur", "kn", "mr", "te", "ta", "or", "as", "en", "gu", "pa"],
+				"udate": "2020-04-21T13:47:59.861Z"
+			}, {
+				"seq_id": 150452,
+				"hero_image": "https://mofirstsub.pc.cdn.bitgravity.com/preview_images/18ddfb3218929f953da6e26ef9589799.jpeg",
+				"banner_image_url": "https://mofirst.pc.cdn.bitgravity.com/top_banner/com.vid007.videobuddy_09_April.webp",
+				"source": "indus",
+				"title": "વિડિઓબડ્ડી — ફાસ્ટ ડાઉનલોડર, વિડિઓ ડિટેક્ટર",
+				"icon": "preview_images/ba57523a2a3d027dfc7c7c72d0a719ee.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3a0",
+					"seq_id": 102,
+					"icon": "102.png",
+					"status": true,
+					"type": 1,
+					"downloads": 9635115,
+					"name": "મનોરંજન"
+				},
+				"developer": {
+					"_id": "5bc5f80de964a0b726629a5e",
+					"phone": "",
+					"address": "India, Mumbai, Maharashtra, India",
+					"name": {
+						"display": "Jasper Studio",
+						"first": "Jasper Studio",
+						"last": "."
+					}
+				},
+				"package": "com.vid007.videobuddy",
+				"versions": [{
+					"version": 13152,
+					"label": "1.31.13152",
+					"size": 14072773,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5e9416545a9933049a813b15",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5e9416545a9933049a813b14",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"_id": "5e9416545a9933049a813b13",
+						"heading": "Contacts",
+						"description": "access your contacts"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5e9416545a9933049a813b12",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5e9416545a9933049a813b11",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.READ_CALENDAR", "android.permission.WRITE_CALENDAR"],
+						"_id": "5e9416545a9933049a813b10",
+						"heading": "Calendar",
+						"description": "access your calendar"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"_id": "5e9416545a9933049a813b0f",
+						"heading": "Camera",
+						"description": "take pictures and record video"
+					}, {
+						"permissions": ["android.permission.READ_CELL_BROADCASTS", "android.permission.READ_SMS", "android.permission.RECEIVE_MMS", "android.permission.RECEIVE_SMS", "android.permission.RECEIVE_WAP_PUSH", "android.permission.SEND_SMS"],
+						"_id": "5e9416545a9933049a813b0e",
+						"heading": "SMS",
+						"description": "send and view SMS messages"
+					}, {
+						"permissions": ["android.permission.RECORD_AUDIO"],
+						"_id": "5e9416545a9933049a813b0d",
+						"heading": "Microphone",
+						"description": "record audio"
+					}, {
+						"permissions": ["android.permission.BODY_SENSORS", "android.permission.USE_FINGERPRINT"],
+						"_id": "5e9416545a9933049a813b0c",
+						"heading": "Body Sensors",
+						"description": "access sensor data about your vital signs "
+					}]
+				}],
+				"app_rating": 3.9651360544217686,
+				"amount": 0,
+				"languages": ["en", "gu", "pa", "hi", "mr", "ur", "te", "kn", "or", "bn", "as", "ml", "ta"],
+				"udate": "2020-04-13T07:35:48.665Z"
+			}, {
+				"seq_id": 111574,
+				"source": "indus",
+				"title": "નોનોલાઇવ - લાઇવ સ્ટ્રીમિંગ",
+				"icon": "preview_images/9da4b494a1806068e891c0af48a877c4.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3a0",
+					"seq_id": 102,
+					"icon": "102.png",
+					"status": true,
+					"type": 1,
+					"downloads": 9635115,
+					"name": "મનોરંજન"
+				},
+				"developer": {
+					"_id": "59f8700575bcc3676ba25ace",
+					"phone": "",
+					"address": "RM 1903, 19/F LEE GARDEN ONE 33 HYSAN AVENUE CAUSEWAY BAY\nHONG KONG",
+					"name": {
+						"display": "DOYU HONGKONG LIMITED",
+						"first": "DOYU HONGKONG LIMITED",
+						"last": "DOYU HONGKONG LIMITED"
+					}
+				},
+				"package": "com.nono.android",
+				"versions": [{
+					"version": 208,
+					"label": "6.5.1",
+					"size": 27315873,
+					"permissions": []
+				}],
+				"app_rating": 4.333333333333333,
+				"amount": 0,
+				"languages": ["kn", "hi", "bn", "ur", "or", "te", "mr", "ml", "as", "ta", "pa", "gu", "en"],
+				"udate": "2020-03-03T07:32:01.089Z"
+			}],
+			"metadata": {
+				"image_cdn": "https://mofirstsub.pc.cdn.bitgravity.com"
+			}
+		},
+		"target": "home",
+		"languages": ["gu-IN"],
+		"type": "default",
+		"secondaryRank": 0
+	}, {
+		"_id": "5e9ecbc57c5f6e7b9e7fdc44",
+		"status": "enabled",
+		"name": "ભારતીયો માટે બનાવેલ",
+		"subtitle": "તમારા લાભ માટે આ એપ્સનું અન્વેષણ કરો",
+		"tags": ["All", "ભારતીયો_માટે_બનાવેલ"],
+		"universe": "samsung",
+		"rank": 40,
+		"provider": "embedded",
+		"data": {
+			"packages": [{
+				"seq_id": 586493,
+				"hero_image": "https://mofirst.pc.cdn.bitgravity.com/heroimage/arogya-setu-app-detail_23_April.jpg",
+				"banner_image_url": "https://mofirst.pc.cdn.bitgravity.com/top_banner/arogya-setu-top_banner.png",
+				"source": "indus",
+				"title": "આરોગ્ય સેતુ",
+				"icon": "preview_images/image.png",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3ca",
+					"seq_id": 116,
+					"icon": "116.png",
+					"status": true,
+					"type": 1,
+					"downloads": 8002240,
+					"name": "સાધનો અને ઉપયોગિતાઓ"
+				},
+				"developer": {
+					"_id": "5e85c4924e030f95d4357aaa",
+					"phone": "",
+					"address": "NIC",
+					"name": {
+						"display": "NIC eGov Mobile Apps",
+						"first": "NIC eGov Mobile Apps",
+						"last": " "
+					}
+				},
+				"package": "nic.goi.aarogyasetu",
+				"versions": [{
+					"version": 1042,
+					"label": "1.0.6",
+					"size": 3819727,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5e9feee4d3d2a4048a4825da",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5e9feee4d3d2a4048a4825d9",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}]
+				}],
+				"app_rating": 4.74245939675174,
+				"amount": 0,
+				"languages": ["en", "ta", "gu", "or", "bn", "hi", "mr", "pa", "te", "kn", "ml", "ur", "as"],
+				"udate": "2020-04-22T07:14:44.720Z"
+			}, {
+				"seq_id": 586204,
+				"hero_image": "https://mofirstsub.pc.cdn.bitgravity.com/preview_images/6073624edc59d522094ee8ef99e0895a.png",
+				"source": "indus",
+				"title": "સીઓવીએ",
+				"icon": "preview_images/53f36e631a0b9d8a79a430e30a4742c4.webp",
+				"category": {
+					"_id": "581c34d579297587fb911af6",
+					"seq_id": 100,
+					"icon": "122.png",
+					"status": true,
+					"type": 1,
+					"downloads": 7248237,
+					"name": "જરુરી એપ્સ"
+				},
+				"developer": {
+					"_id": "5e6a106d649868e33299a5b6",
+					"phone": "",
+					"address": "",
+					"name": {
+						"display": "Government of Punjab",
+						"first": "Government of Punjab",
+						"last": " "
+					}
+				},
+				"package": "in.gov.punjab.cova",
+				"versions": [{
+					"version": 18,
+					"label": "1.2.6",
+					"size": 7772447,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5ea7d211b38c3204381c15a9",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5ea7d211b38c3204381c15a8",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5ea7d211b38c3204381c15a7",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"_id": "5ea7d211b38c3204381c15a6",
+						"heading": "Camera",
+						"description": "take pictures and record video"
+					}]
+				}],
+				"app_rating": 0,
+				"amount": 0,
+				"languages": ["en", "ta", "bn", "gu", "hi", "mr", "or", "pa", "te"],
+				"udate": "2020-04-24T13:11:57.128Z"
+			}, {
+				"seq_id": 586364,
+				"hero_image": "https://mofirstsub.pc.cdn.bitgravity.com/preview_images/b268099fcdb406d5d98a89828ba53d59.jpeg",
+				"source": "indus",
+				"title": "કોવિડ19 ફીડબેક",
+				"icon": "preview_images/ee5080c9fae3a7898a4ca18ea6b4312d.webp",
+				"category": {
+					"_id": "581c34d579297587fb911af6",
+					"seq_id": 100,
+					"icon": "122.png",
+					"status": true,
+					"type": 1,
+					"downloads": 7248237,
+					"name": "જરુરી એપ્સ"
+				},
+				"developer": {
+					"_id": "5e79fb3583cab8a6e48210ca",
+					"phone": "",
+					"address": "",
+					"name": {
+						"display": "MeitY, Government Of India",
+						"first": "MeitY, Government Of India",
+						"last": " "
+					}
+				},
+				"package": "com.NIC.covid19",
+				"versions": [{
+					"version": 21,
+					"label": "1.0",
+					"size": 44320249,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"heading": "Internet",
+						"description": "use your internet connection",
+						"_id": "5e79fd326438340945cc61a8"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device",
+						"_id": "5e79fd326438340945cc61a7"
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"heading": "Contacts",
+						"description": "access your contacts",
+						"_id": "5e79fd326438340945cc61a6"
+					}]
+				}],
+				"app_rating": 0,
+				"amount": 0,
+				"languages": ["en", "bn", "gu", "hi", "ta", "mr", "pa", "or", "te"],
+				"udate": "2020-03-24T12:53:07.828Z"
+			}, {
+				"seq_id": 586415,
+				"hero_image": "https://mofirstsub.pc.cdn.bitgravity.com/preview_images/faedcc84d684877bef8d78c77e6bebf8.png",
+				"source": "indus",
+				"title": "સીઓવીએ-પંજાબ",
+				"icon": "preview_images/059962775b98545bae780d293a6f0f73.webp",
+				"category": {
+					"_id": "581c34d579297587fb911af6",
+					"seq_id": 100,
+					"icon": "122.png",
+					"status": true,
+					"type": 1,
+					"downloads": 7248237,
+					"name": "જરુરી એપ્સ"
+				},
+				"developer": {
+					"_id": "5e6a106d649868e33299a5b6",
+					"phone": "",
+					"address": "",
+					"name": {
+						"display": "Government of Punjab",
+						"first": "Government of Punjab",
+						"last": " "
+					}
+				},
+				"package": "in.gov.punjab.cova.punjab",
+				"versions": [{
+					"version": 9,
+					"label": "1.0.7",
+					"size": 6403141,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5e8b1f3e247c5304a0aa63bb",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5e8b1f3e247c5304a0aa63ba",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5e8b1f3e247c5304a0aa63b9",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}]
+				}],
+				"app_rating": 0,
+				"amount": 0,
+				"languages": ["en", "ta", "bn", "or", "pa", "gu", "hi", "mr", "te"],
+				"udate": "2020-04-06T12:23:26.984Z"
+			}, {
+				"seq_id": 587490,
+				"source": "indus",
+				"title": "જન આપૂર્તિ - ઉત્તરાખંડ",
+				"icon": "preview_images/7e3083df038533c39c9a5f069ef61c81.webp",
+				"category": {
+					"_id": "581c34d579297587fb911af6",
+					"seq_id": 100,
+					"icon": "122.png",
+					"status": true,
+					"type": 1,
+					"downloads": 7248237,
+					"name": "જરુરી એપ્સ"
+				},
+				"developer": {
+					"_id": "5ea00f7f77012d64207c202a",
+					"phone": "",
+					"address": "",
+					"name": {
+						"display": "Food, Civil Supplies & Consumer Affairs",
+						"first": "Food, Civil Supplies & Consumer Affairs",
+						"last": " "
+					}
+				},
+				"package": "com.callippus.wfppds",
+				"versions": [{
+					"version": 3,
+					"label": "3.0",
+					"size": 36466299,
+					"permissions": [{
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5ea0117b11c10304cf6f8d44",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}, {
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5ea0117b11c10304cf6f8d43",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5ea0117b11c10304cf6f8d42",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5ea0117b11c10304cf6f8d41",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"_id": "5ea0117b11c10304cf6f8d40",
+						"heading": "Contacts",
+						"description": "access your contacts"
+					}]
+				}],
+				"app_rating": 0,
+				"amount": 0,
+				"languages": ["en", "ta", "or", "gu", "te", "mr", "bn", "hi", "pa"],
+				"udate": "2020-04-22T09:49:52.922Z"
+			}, {
+				"seq_id": 586486,
+				"hero_image": "https://mofirstsub.pc.cdn.bitgravity.com/preview_images/0490b875409d28e6eb5915e8bcf664bf.png",
+				"source": "indus",
+				"title": "જીસીસી - કોરોના મોનિટરિંગ",
+				"icon": "preview_images/86242804aa1d88e2137811cf81573cfb.webp",
+				"category": {
+					"_id": "581c34d579297587fb911af6",
+					"seq_id": 100,
+					"icon": "122.png",
+					"status": true,
+					"type": 1,
+					"downloads": 7248237,
+					"name": "જરુરી એપ્સ"
+				},
+				"developer": {
+					"_id": "5e858fce67b2e016db2a42c4",
+					"phone": "",
+					"address": "",
+					"name": {
+						"display": "GCC - Greater Chennai Corporation",
+						"first": "GCC - Greater Chennai Corporation",
+						"last": " "
+					}
+				},
+				"package": "com.gcc.smartcity",
+				"versions": [{
+					"version": 15,
+					"label": "1.5.0",
+					"size": 7612055,
+					"permissions": [{
+						"permissions": ["android.permission.CAMERA"],
+						"_id": "5e9fee1611c10304cf6f8c71",
+						"heading": "Camera",
+						"description": "take pictures and record video"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5e9fee1611c10304cf6f8c70",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5e9fee1611c10304cf6f8c6f",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5e9fee1611c10304cf6f8c6e",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}]
+				}],
+				"app_rating": 4,
+				"amount": 0,
+				"languages": ["en", "ta", "gu", "or", "bn", "hi", "mr", "pa", "te"],
+				"udate": "2020-04-22T07:11:19.283Z"
+			}, {
+				"seq_id": 587492,
+				"source": "indus",
+				"title": "ઝારખંડ સહાયતા",
+				"icon": "preview_images/15a9fc6c2b64f158bd7d99b48ba36fe4.webp",
+				"category": {
+					"_id": "581c34d579297587fb911af6",
+					"seq_id": 100,
+					"icon": "122.png",
+					"status": true,
+					"type": 1,
+					"downloads": 7248237,
+					"name": "જરુરી એપ્સ"
+				},
+				"developer": {
+					"_id": "5ea00f7f77012d64207c202e",
+					"phone": "",
+					"address": "",
+					"name": {
+						"display": "Jharkhand Space Applications Center",
+						"first": "Jharkhand Space Applications Center",
+						"last": " "
+					}
+				},
+				"package": "in.nic.jhk.mukhyamantrisahayata",
+				"versions": [{
+					"version": 2,
+					"label": "1.12",
+					"size": 12671286,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5ea012689a9627048237d815",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5ea012689a9627048237d814",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5ea012689a9627048237d813",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5ea012689a9627048237d812",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"_id": "5ea012689a9627048237d811",
+						"heading": "Camera",
+						"description": "take pictures and record video"
+					}]
+				}],
+				"app_rating": 0,
+				"amount": 0,
+				"languages": ["en", "ta", "or", "gu", "te", "mr", "bn", "hi", "pa"],
+				"udate": "2020-04-22T09:49:19.864Z"
+			}, {
+				"seq_id": 587015,
+				"hero_image": "https://mofirstsub.pc.cdn.bitgravity.com/preview_images/b4efbff5950aa825994a9ca0196372ff.jpeg",
+				"source": "indus",
+				"title": "હરિયાણા સહાયક",
+				"icon": "preview_images/eb78e3b512b2ceabe340cf149d7ed5cb.webp",
+				"category": {
+					"_id": "581c34d579297587fb911af6",
+					"seq_id": 100,
+					"icon": "122.png",
+					"status": true,
+					"type": 1,
+					"downloads": 7248237,
+					"name": "જરુરી એપ્સ"
+				},
+				"developer": {
+					"_id": "5e4694a6d9ab84f2edb1304a",
+					"phone": "",
+					"address": "",
+					"name": {
+						"display": "E&IT Department, Haryana",
+						"first": "E&IT Department, Haryana",
+						"last": " "
+					}
+				},
+				"package": "hr.gov.covid19.sahayak",
+				"versions": [{
+					"version": 6,
+					"label": "0.0.6",
+					"size": 19681409,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5e99739c374bcc04c8d8ee56",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5e99739c374bcc04c8d8ee55",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5e99739c374bcc04c8d8ee54",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}]
+				}],
+				"app_rating": 1,
+				"amount": 0,
+				"languages": ["en", "ta", "gu", "hi", "mr", "or", "bn", "te", "pa"],
+				"udate": "2020-04-17T10:21:19.362Z"
+			}, {
+				"seq_id": 587491,
+				"source": "indus",
+				"title": "તેલંગણા કોવિડ19 ટ્રેકર",
+				"icon": "preview_images/5224ee1bc8c76802770b0a3192cb4bbd.webp",
+				"category": {
+					"_id": "581c34d579297587fb911af6",
+					"seq_id": 100,
+					"icon": "122.png",
+					"status": true,
+					"type": 1,
+					"downloads": 7248237,
+					"name": "જરુરી એપ્સ"
+				},
+				"developer": {
+					"_id": "5ea00f7f77012d64207c202c",
+					"phone": "",
+					"address": "Director General Of Police\nTelagana State Police Head Quarters\nLakdikapool\nHyderabad",
+					"name": {
+						"display": "IT Cell Telangana State Police",
+						"first": "IT Cell Telangana State Police",
+						"last": " "
+					}
+				},
+				"package": "com.corona.tscovid_19",
+				"versions": [{
+					"version": 2,
+					"label": "1.0",
+					"size": 6813593,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5ea012ecc881e30489de68fc",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5ea012ecc881e30489de68fb",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5ea012ecc881e30489de68fa",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}]
+				}],
+				"app_rating": 0,
+				"amount": 0,
+				"languages": ["en", "ta", "or", "gu", "te", "mr", "bn", "hi", "pa"],
+				"udate": "2020-04-22T09:49:34.405Z"
+			}, {
+				"seq_id": 586507,
+				"hero_image": "https://mofirstsub.pc.cdn.bitgravity.com/preview_images/17e45e0d232eb2c72ca3ee519fe92346.png",
+				"source": "indus",
+				"title": "એમપી સીઓવીઆઈડી રિસ્પોન્સ એપ",
+				"icon": "preview_images/f0af7805aa49f995204e5c4ebb34da66.webp",
+				"category": {
+					"_id": "581c34d579297587fb911af6",
+					"seq_id": 100,
+					"icon": "122.png",
+					"status": true,
+					"type": 1,
+					"downloads": 7248237,
+					"name": "જરુરી એપ્સ"
+				},
+				"developer": {
+					"_id": "5e8702cc9d734f2a083e7448",
+					"phone": "",
+					"address": "National Health Mission, 8 Arera Hills, Old Jail Road, Bhopal, Madhya Pradesh - 462011",
+					"name": {
+						"display": "National Health Mission",
+						"first": "National Health Mission",
+						"last": " "
+					}
+				},
+				"package": "com.covidmp.coronago",
+				"versions": [{
+					"version": 4,
+					"label": "1.3",
+					"size": 4236031,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5ea6e815d60d82047eccee7b",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5ea6e815d60d82047eccee7a",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5ea6e815d60d82047eccee79",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5ea6e815d60d82047eccee78",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}]
+				}],
+				"app_rating": 0,
+				"amount": 0,
+				"languages": ["en", "ta", "pa", "or", "mr", "hi", "gu", "bn", "te"],
+				"udate": "2020-04-27T14:11:34.282Z"
+			}],
+			"metadata": {
+				"image_cdn": "https://mofirstsub.pc.cdn.bitgravity.com"
+			}
+		},
+		"target": "home",
+		"languages": ["gu-IN"],
+		"type": "default",
+		"secondaryRank": 0
+	}, {
+		"_id": "5df91caf30acfd89eea08ba6",
+		"status": "enabled",
+		"name": "સામાજિક એપ્સ",
+		"subtitle": "તમારા મિત્રો સાથે જોડાઓ",
+		"tags": ["All", "સામાજિક_એપ્સ"],
+		"universe": "samsung",
+		"rank": 60,
+		"provider": "embedded",
+		"data": {
+			"packages": [{
+				"seq_id": 153067,
+				"banner_image_url": "https://mofirst.pc.cdn.bitgravity.com/top_banner/com.asiainno.uplive.aiglamour_09_April.webp",
+				"source": "indus",
+				"title": "લેમોર લવ ઓલ ઓવર ધ વર્લ્ડ",
+				"icon": "preview_images/4f14e22dd04059b4d47e9eaae815099f.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3ca",
+					"seq_id": 116,
+					"icon": "116.png",
+					"status": true,
+					"type": 1,
+					"downloads": 8002240,
+					"name": "સાધનો અને ઉપયોગિતાઓ"
+				},
+				"developer": {
+					"_id": "5d3597ee4634133bd3141dc9",
+					"phone": "",
+					"address": "C/O Genpro Consulting (Belize) Limited 60 Market Square",
+					"name": {
+						"display": "Beijing Dongxin Network Technology Co. Ltd.",
+						"first": "Beijing Dongxin Network Technology Co. Ltd.",
+						"last": " "
+					}
+				},
+				"package": "com.asiainno.uplive.aiglamour",
+				"versions": [{
+					"version": 2820,
+					"label": "1.8.2",
+					"size": 48051764,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5e85964ba6f02104b150dc1c",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5e85964ba6f02104b150dc1b",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5e85964ba6f02104b150dc1a",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.RECORD_AUDIO"],
+						"_id": "5e85964ba6f02104b150dc19",
+						"heading": "Microphone",
+						"description": "record audio"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5e85964ba6f02104b150dc18",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"_id": "5e85964ba6f02104b150dc17",
+						"heading": "Camera",
+						"description": "take pictures and record video"
+					}]
+				}],
+				"app_rating": 4.297297297297297,
+				"amount": 0,
+				"languages": ["en", "kn", "gu", "ml", "ur", "bn", "or", "mr", "hi", "pa", "ta", "te", "as"],
+				"udate": "2020-04-02T07:37:48.539Z"
+			}, {
+				"seq_id": 150097,
+				"hero_image": "https://mofirst.pc.cdn.bitgravity.com/heroimage/helo-app-detail_23_April.jpg",
+				"banner_image_url": "https://mofirst.pc.cdn.bitgravity.com/top_banner/app.buzz.share_09_April.webp",
+				"source": "indus",
+				"title": "હેલો - ડિસ્કવર, શેર એન્ડ કોમ્યુનિકેટ",
+				"icon": "preview_images/ec543176b07e396913f29894eab91371.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3a0",
+					"seq_id": 102,
+					"icon": "102.png",
+					"status": true,
+					"type": 1,
+					"downloads": 9635115,
+					"name": "મનોરંજન"
+				},
+				"developer": {
+					"_id": "5bd34687e964a0b72662a337",
+					"phone": "",
+					"address": "Vistra Corporate Services Centre, Wickhams Cay II, Road Town, Tortola, VG1110, British Virgin Islands",
+					"name": {
+						"display": "TikTok Pte. Ltd.",
+						"first": "TikTok Pte. Ltd.",
+						"last": "."
+					}
+				},
+				"package": "app.buzz.share",
+				"versions": [{
+					"version": 31602,
+					"label": "3.1.6.02",
+					"size": 43445839,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5e8de158ece05d049464d403",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5e8de158ece05d049464d402",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5e8de158ece05d049464d401",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"_id": "5e8de158ece05d049464d400",
+						"heading": "Camera",
+						"description": "take pictures and record video"
+					}, {
+						"permissions": ["android.permission.RECORD_AUDIO"],
+						"_id": "5e8de158ece05d049464d3ff",
+						"heading": "Microphone",
+						"description": "record audio"
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"_id": "5e8de158ece05d049464d3fe",
+						"heading": "Contacts",
+						"description": "access your contacts"
+					}]
+				}],
+				"app_rating": 4.375081116158339,
+				"amount": 0,
+				"languages": ["gu", "bn", "ml", "ur", "kn", "pa", "mr", "te", "ta", "or", "as", "en", "hi"],
+				"udate": "2020-04-15T11:59:08.165Z"
+			}, {
+				"seq_id": 150374,
+				"source": "indus",
+				"title": "ક્વાઇ ગો - વિડિઓ સોશિયલ નેટવર્ક",
+				"icon": "preview_images/0972ccafdd0692ac9f6f7876ed9fee60.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3a0",
+					"seq_id": 102,
+					"icon": "102.png",
+					"status": true,
+					"type": 1,
+					"downloads": 9635115,
+					"name": "મનોરંજન"
+				},
+				"developer": {
+					"_id": "5ba0b212539b20171ba51d05",
+					"phone": "86-13810609453",
+					"address": "Postal Code: 409051",
+					"name": {
+						"display": "KWAI XYZ STUDIO",
+						"first": "Kwai",
+						"last": "Growth"
+					}
+				},
+				"package": "com.kwai.global.video.social.kwaigo",
+				"versions": [{
+					"version": 1000576,
+					"label": "2.7.3.1000576",
+					"size": 40732665,
+					"permissions": [{
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"_id": "5e945e265e624904c832911e",
+						"heading": "Contacts",
+						"description": "access your contacts"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5e945e265e624904c832911d",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.RECORD_AUDIO"],
+						"_id": "5e945e265e624904c832911c",
+						"heading": "Microphone",
+						"description": "record audio"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5e945e265e624904c832911b",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"_id": "5e945e265e624904c832911a",
+						"heading": "Camera",
+						"description": "take pictures and record video"
+					}, {
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5e945e265e624904c8329119",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5e945e265e624904c8329118",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}]
+				}],
+				"app_rating": 4.853658536585366,
+				"amount": 0,
+				"languages": ["kn", "bn", "ur", "or", "te", "mr", "ml", "as", "pa", "gu", "hi", "en", "ta"],
+				"udate": "2020-04-13T12:42:15.354Z"
+			}, {
+				"seq_id": 144493,
+				"hero_image": "https://mofirst.pc.cdn.bitgravity.com/heroimage/Likee_23_April.gif",
+				"banner_image_url": "https://mofirst.pc.cdn.bitgravity.com/top_banner/video.like_09_April.webp",
+				"source": "indus",
+				"title": "લાઇક - ફોર્મલી લાઇક વિડિઓ",
+				"icon": "preview_images/f1da7649969d8fae299f44ff257147e2.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3a0",
+					"seq_id": 102,
+					"icon": "102.png",
+					"status": true,
+					"type": 1,
+					"downloads": 9635115,
+					"name": "મનોરંજન"
+				},
+				"developer": {
+					"_id": "59c3b007072c976c413c0041",
+					"phone": "",
+					"address": "391B Orchard road #15-05 Ngee Ann City , Singapore(238874)",
+					"name": {
+						"display": "BIGO TECHNOLOGY PTE. LTD.",
+						"first": "BIGO TECHNOLOGY PTE. LTD.",
+						"last": "BIGO TECHNOLOGY PTE. LTD."
+					}
+				},
+				"package": "video.like",
+				"versions": [{
+					"version": 2938,
+					"label": "3.28.2",
+					"size": 72760890,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5e985347b0d79c04aa831f96",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"_id": "5e985347b0d79c04aa831f95",
+						"heading": "Camera",
+						"description": "take pictures and record video"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5e985347b0d79c04aa831f94",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5e985347b0d79c04aa831f93",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.RECORD_AUDIO"],
+						"_id": "5e985347b0d79c04aa831f92",
+						"heading": "Microphone",
+						"description": "record audio"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5e985347b0d79c04aa831f91",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"_id": "5e985347b0d79c04aa831f90",
+						"heading": "Contacts",
+						"description": "access your contacts"
+					}]
+				}],
+				"app_rating": 4.351477449455676,
+				"amount": 0,
+				"languages": ["kn", "gu", "ta", "te", "as", "ml", "ur", "bn", "mr", "hi", "or", "en", "pa"],
+				"udate": "2020-04-28T09:26:36.770Z"
+			}, {
+				"seq_id": 145082,
+				"hero_image": "https://mofirst.pc.cdn.bitgravity.com/heroimage/sharechat-app-detail_23_April.jpg",
+				"banner_image_url": "https://mofirst.pc.cdn.bitgravity.com/top_banner/in.mohalla.sharechat_09_April.webp",
+				"source": "indus",
+				"title": "શેરચેટ - મેક ફ્રેંડ્સ, વૉટ્સએપ સ્ટેટસ એન્ડ વિડિઓઝ",
+				"icon": "preview_images/a0df0b525074dc02e453a285b4283d02.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3a0",
+					"seq_id": 102,
+					"icon": "102.png",
+					"status": true,
+					"type": 1,
+					"downloads": 9635115,
+					"name": "મનોરંજન"
+				},
+				"developer": {
+					"_id": "5a3376b53bbc31a805e05f64",
+					"phone": "",
+					"address": "",
+					"name": {
+						"display": "ShareChat",
+						"first": "ShareChat",
+						"last": "."
+					}
+				},
+				"package": "in.mohalla.sharechat",
+				"versions": [{
+					"version": 4857,
+					"label": "emarti_11.3.0",
+					"size": 34012528,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5e8e960da52e2a0496958ace",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"_id": "5e8e960da52e2a0496958acd",
+						"heading": "Contacts",
+						"description": "access your contacts"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5e8e960da52e2a0496958acc",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"_id": "5e8e960da52e2a0496958acb",
+						"heading": "Camera",
+						"description": "take pictures and record video"
+					}, {
+						"permissions": ["android.permission.RECORD_AUDIO"],
+						"_id": "5e8e960da52e2a0496958aca",
+						"heading": "Microphone",
+						"description": "record audio"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5e8e960da52e2a0496958ac9",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5e8e960da52e2a0496958ac8",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}]
+				}],
+				"app_rating": 4.382990550305726,
+				"amount": 0,
+				"languages": ["te", "kn", "gu", "bn", "ml", "ur", "pa", "mr", "en", "or", "as", "hi", "ta"],
+				"udate": "2020-04-09T03:27:10.392Z"
+			}, {
+				"seq_id": 147983,
+				"source": "indus",
+				"title": "લીવયુ: મીટ ન્યૂ પીપલ એન્ડ વિડિઓ ચેટ વિથ સ્ટ્રેન્જર્સ",
+				"icon": "preview_images/86ec99c011e049b8de1c3125b6ab9a8d.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3a0",
+					"seq_id": 102,
+					"icon": "102.png",
+					"status": true,
+					"type": 1,
+					"downloads": 9635115,
+					"name": "મનોરંજન"
+				},
+				"developer": {
+					"_id": "5bbb36b1c7336c121b936513",
+					"phone": "",
+					"address": "India, Mumbai, Maharashtra, India",
+					"name": {
+						"display": "LivU Team",
+						"first": "LivU Team",
+						"last": "LivU Team"
+					}
+				},
+				"package": "com.videochat.livu",
+				"versions": [{
+					"version": 10128001,
+					"label": "01.01.28",
+					"size": 38322387,
+					"permissions": []
+				}],
+				"app_rating": 4.846153846153846,
+				"amount": 0,
+				"languages": ["en", "kn", "hi", "bn", "ur", "or", "te", "mr", "ml", "as", "pa", "gu", "ta"],
+				"udate": "2020-03-03T07:31:29.213Z"
+			}, {
+				"seq_id": 25347,
+				"banner_image_url": "https://mofirst.pc.cdn.bitgravity.com/homepage_banner/Facebook_Lite.webp",
+				"source": "indus",
+				"title": "ફેસબુક લાઇટ",
+				"icon": "preview_images/1486f7c4475ce316310162485db13691.webp",
+				"category": {
+					"_id": "581c34d579297587fb911af6",
+					"seq_id": 100,
+					"icon": "122.png",
+					"status": true,
+					"type": 1,
+					"downloads": 7248237,
+					"name": "જરુરી એપ્સ"
+				},
+				"developer": {
+					"_id": "59c3aee1072c976c413bafbf",
+					"phone": "",
+					"address": "1 Hacker Way Menlo Park, CA 94025, New Delhi, Delhi, India",
+					"name": {
+						"display": "Facebook",
+						"first": "Facebook",
+						"last": "Facebook"
+					}
+				},
+				"package": "com.facebook.lite",
+				"versions": [{
+					"version": 210075256,
+					"label": "195.0.0.9.119",
+					"size": 1584524,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5ea6e0b6eeec6604c583725d",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5ea6e0b6eeec6604c583725c",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5ea6e0b6eeec6604c583725b",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"_id": "5ea6e0b6eeec6604c583725a",
+						"heading": "Camera",
+						"description": "take pictures and record video"
+					}, {
+						"permissions": ["android.permission.READ_CALENDAR", "android.permission.WRITE_CALENDAR"],
+						"_id": "5ea6e0b6eeec6604c5837259",
+						"heading": "Calendar",
+						"description": "access your calendar"
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"_id": "5ea6e0b6eeec6604c5837258",
+						"heading": "Contacts",
+						"description": "access your contacts"
+					}, {
+						"permissions": ["android.permission.RECORD_AUDIO"],
+						"_id": "5ea6e0b6eeec6604c5837257",
+						"heading": "Microphone",
+						"description": "record audio"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5ea6e0b6eeec6604c5837256",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}]
+				}],
+				"app_rating": 4.530298172491183,
+				"amount": 0,
+				"languages": ["as", "bn", "gu", "hi", "kn", "ml", "mr", "ta", "te", "ur", "or", "en", "pa"],
+				"udate": "2020-04-27T13:40:06.818Z"
+			}, {
+				"seq_id": 145662,
+				"hero_image": "https://mofirst.pc.cdn.bitgravity.com/homepage_banner/TikTok_hero.webp",
+				"banner_image_url": "https://mofirst.pc.cdn.bitgravity.com/homepage_banner/TikTok.webp",
+				"source": "indus",
+				"title": "ટિકટોક",
+				"icon": "preview_images/03c7b3daf68578799de2098c0d8d912f.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3a0",
+					"seq_id": 102,
+					"icon": "102.png",
+					"status": true,
+					"type": 1,
+					"downloads": 9635115,
+					"name": "મનોરંજન"
+				},
+				"developer": {
+					"_id": "5bcee621e964a0b726629e41",
+					"phone": "",
+					"address": "10 ANSON ROAD #10-08 INTERNATIONAL PLAZA SINGAPORE（079903）",
+					"name": {
+						"display": "TikTok Pte. Ltd.",
+						"first": "TikTok Pte. Ltd.",
+						"last": "TikTok Pte. Ltd."
+					}
+				},
+				"package": "com.zhiliaoapp.musically",
+				"versions": [{
+					"version": 2021401050,
+					"label": "14.1.5",
+					"size": 76458346,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"heading": "Internet",
+						"description": "use your internet connection",
+						"_id": "5dfb330127cb38524eff5ab7"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device",
+						"_id": "5dfb330127cb38524eff5ab6"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"heading": "Camera",
+						"description": "take pictures and record video",
+						"_id": "5dfb330127cb38524eff5ab5"
+					}, {
+						"permissions": ["android.permission.RECORD_AUDIO"],
+						"heading": "Microphone",
+						"description": "record audio",
+						"_id": "5dfb330127cb38524eff5ab4"
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"heading": "Contacts",
+						"description": "access your contacts",
+						"_id": "5dfb330127cb38524eff5ab3"
+					}]
+				}],
+				"app_rating": 4.5032021957914,
+				"amount": 0,
+				"languages": ["bn", "kn", "as", "ta", "pa", "ml", "mr", "te", "ur", "gu", "or", "hi", "en"],
+				"udate": "2020-03-03T07:13:06.856Z"
+			}, {
+				"seq_id": 25349,
+				"banner_image_url": "https://mofirst.pc.cdn.bitgravity.com/homepage_banner/Instagram.webp",
+				"source": "indus",
+				"title": "ઇન્સ્ટાગ્રામ",
+				"icon": "preview_images/9e0176797f0d63381919a89a8035fb8f.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3a0",
+					"seq_id": 102,
+					"icon": "102.png",
+					"status": true,
+					"type": 1,
+					"downloads": 9635115,
+					"name": "મનોરંજન"
+				},
+				"developer": {
+					"_id": "59c3af2f072c976c413bc633",
+					"phone": "",
+					"address": "",
+					"name": {
+						"display": "Instagram",
+						"first": "Instagram",
+						"last": "Instagram"
+					}
+				},
+				"package": "com.instagram.android",
+				"versions": [{
+					"version": 210180512,
+					"label": "138.0.0.28.117",
+					"size": 29761793,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5ea01bfbd3d2a4048a4826d6",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"_id": "5ea01bfbd3d2a4048a4826d5",
+						"heading": "Contacts",
+						"description": "access your contacts"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"_id": "5ea01bfbd3d2a4048a4826d4",
+						"heading": "Camera",
+						"description": "take pictures and record video"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5ea01bfbd3d2a4048a4826d3",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.RECORD_AUDIO"],
+						"_id": "5ea01bfbd3d2a4048a4826d2",
+						"heading": "Microphone",
+						"description": "record audio"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5ea01bfbd3d2a4048a4826d1",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5ea01bfbd3d2a4048a4826d0",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}]
+				}],
+				"app_rating": 4.6595284670029855,
+				"amount": 0,
+				"languages": ["as", "bn", "gu", "hi", "ml", "mr", "ta", "te", "ur", "pa", "or", "kn", "en"],
+				"udate": "2020-04-22T10:27:07.800Z"
+			}, {
+				"seq_id": 153247,
+				"source": "indus",
+				"title": "પેરાયુ પ્રો: મોસ્ટ પોપ્યુલર સોશિયલ એપ ઍન્ડ મેક ફ્રેંડ્સ",
+				"icon": "preview_images/9784e1fe62cb8e5055365d53474a60c8.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3a0",
+					"seq_id": 102,
+					"icon": "102.png",
+					"status": true,
+					"type": 1,
+					"downloads": 9635115,
+					"name": "મનોરંજન"
+				},
+				"developer": {
+					"_id": "5d0b7512463413633511f297",
+					"phone": "",
+					"address": "7a Wing Wah Industrial Building 31 Chong Yip St",
+					"name": {
+						"display": "ParaU Team",
+						"first": "ParaU Team",
+						"last": "."
+					}
+				},
+				"package": "com.parau.pro.videochat",
+				"versions": [{
+					"version": 2,
+					"label": "1.0.3851",
+					"size": 54896803,
+					"permissions": []
+				}],
+				"app_rating": 0,
+				"amount": 0,
+				"languages": ["en", "kn", "gu", "ml", "ur", "bn", "or", "mr", "hi", "pa", "ta", "as", "te"],
+				"udate": "2020-03-03T08:54:00.544Z"
+			}],
+			"metadata": {
+				"image_cdn": "https://mofirstsub.pc.cdn.bitgravity.com"
+			}
+		},
+		"target": "home",
+		"languages": ["gu-IN"],
+		"type": "default",
+		"secondaryRank": 0
+	}, {
+		"_id": "5dd28fc47076494cd7268f92",
+		"status": "enabled",
+		"name": "ગુજરાતી સમાચાર",
+		"subtitle": "નવાં સમાચારો સાથે જોડાયેલાં રહો",
+		"tags": ["All", "ગુજરાતી_સમાચાર"],
+		"universe": "samsung",
+		"rank": 80,
+		"provider": "embedded",
+		"data": {
+			"packages": [{
+				"seq_id": 65599,
+				"source": "indus",
+				"title": "દિવ્ય ભાસ્કર: ફ્રી ગુજરાતી લોકલ ન્યૂઝ એન્ડ ઇપેપર",
+				"icon": "preview_images/a65b8d20686fce6291c4afbba53fe0d7.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3ae",
+					"seq_id": 114,
+					"icon": "114.png",
+					"status": true,
+					"type": 1,
+					"downloads": 1945531,
+					"name": "સમાચાર અને પુસ્તકો"
+				},
+				"developer": {
+					"_id": "59c3aeb5072c976c413ba36b",
+					"phone": "",
+					"address": "India, New Delhi, Delhi, India",
+					"name": {
+						"display": "D.B. Corp. ltd.",
+						"first": "D.B. Corp. ltd.",
+						"last": "D.B. Corp. ltd."
+					}
+				},
+				"package": "com.ak.ta.divya.bhaskar.activity",
+				"versions": [{
+					"version": 92,
+					"label": "5.0.2",
+					"size": 16090207,
+					"permissions": []
+				}],
+				"app_rating": 4.5,
+				"amount": 0,
+				"languages": ["en", "gu", "hi", "ml", "or", "kn", "ur", "as", "te", "mr", "ta", "bn", "pa"],
+				"udate": "2020-03-03T08:07:12.814Z"
+			}, {
+				"seq_id": 144714,
+				"source": "indus",
+				"title": "સંદેશ ગુજરાતી ન્યુઝ",
+				"icon": "preview_images/9bbbd3c0df8e7c80189c29cf13fb3fce.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3ae",
+					"seq_id": 114,
+					"icon": "114.png",
+					"status": true,
+					"type": 1,
+					"downloads": 1945531,
+					"name": "સમાચાર અને પુસ્તકો"
+				},
+				"developer": {
+					"_id": "59c3af94072c976c413be1ed",
+					"phone": "",
+					"address": "India, New Delhi, Delhi, India",
+					"name": {
+						"display": "Winjit Technologies",
+						"first": "Winjit Technologies",
+						"last": "Winjit Technologies"
+					}
+				},
+				"package": "com.sandesh.news",
+				"versions": [{
+					"version": 1048611,
+					"label": "5.0.2",
+					"size": 12184583,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"heading": "Internet",
+						"description": "use your internet connection",
+						"_id": "5df229b027cb38524efdafb8"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device",
+						"_id": "5df229b027cb38524efdafb7"
+					}]
+				}],
+				"app_rating": 0,
+				"amount": 0,
+				"languages": ["en", "gu"],
+				"udate": "2020-03-03T09:24:15.151Z"
+			}, {
+				"seq_id": 146099,
+				"source": "indus",
+				"title": "ટીવી9 ગુજરાતી",
+				"icon": "preview_images/24be38e2de925af8ad116796ea33b118.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3ae",
+					"seq_id": 114,
+					"icon": "114.png",
+					"status": true,
+					"type": 1,
+					"downloads": 1945531,
+					"name": "સમાચાર અને પુસ્તકો"
+				},
+				"developer": {
+					"_id": "5a1e791fa7286f3831dc0c42",
+					"phone": "",
+					"address": "India, Mumbai, Maharashtr, India",
+					"name": {
+						"display": "Associated Broadcasting Company Private Limited",
+						"first": "Associated Broadcasting Company Private Limited",
+						"last": "Associated Broadcasting Company Private Limited"
+					}
+				},
+				"package": "com.apps.tv9live.tv9gujaratiliveapp",
+				"versions": [{
+					"version": 16,
+					"label": "2.6",
+					"size": 11170116,
+					"permissions": []
+				}],
+				"app_rating": 4.466666666666667,
+				"amount": 0,
+				"languages": ["en", "gu", "ml", "or", "kn", "ur", "as", "te", "hi", "mr", "ta", "bn", "pa"],
+				"udate": "2020-03-03T08:05:08.611Z"
+			}, {
+				"seq_id": 151669,
+				"source": "indus",
+				"title": "ઇટીવી ભારત",
+				"icon": "preview_images/913d262d75683bd29f5f3fcb533ffece.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3ae",
+					"seq_id": 114,
+					"icon": "114.png",
+					"status": true,
+					"type": 1,
+					"downloads": 1945531,
+					"name": "સમાચાર અને પુસ્તકો"
+				},
+				"developer": {
+					"_id": "5c98961e3a5f27a01e1a473c",
+					"phone": "",
+					"address": "India, Bangalore, Karnataka, India, Postal Code: 00000",
+					"name": {
+						"display": "ETV Bharat",
+						"first": "ETV Bharat",
+						"last": "."
+					}
+				},
+				"package": "com.etvbharat.android",
+				"versions": [{
+					"version": 106,
+					"label": "1.0.9",
+					"size": 31538119,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"heading": "Internet",
+						"description": "use your internet connection",
+						"_id": "5e2ed901a638603a34b4a29f"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device",
+						"_id": "5e2ed901a638603a34b4a29e"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"heading": "Location",
+						"description": "access this device\"s location ",
+						"_id": "5e2ed901a638603a34b4a29d"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"heading": "Phone",
+						"description": "make and manage phone calls",
+						"_id": "5e2ed901a638603a34b4a29c"
+					}]
+				}],
+				"app_rating": 4.416666666666667,
+				"amount": 0,
+				"languages": ["en", "kn", "gu", "ml", "ur", "bn", "or", "mr", "hi", "pa", "ta"],
+				"udate": "2020-03-03T08:22:58.934Z"
+			}, {
+				"seq_id": 586359,
+				"hero_image": "https://mofirstsub.pc.cdn.bitgravity.com/preview_images/1b05f7e66e603006b79e635fcc9324b8.png",
+				"source": "indus",
+				"title": "ગુજરાતી ન્યૂઝ લાઇવ ટીવી 24*7 | ગુજરાતી ન્યૂઝ પેપર્સ",
+				"icon": "preview_images/40122bb85ef2ad3edc24d6afbf84215b.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3ae",
+					"seq_id": 114,
+					"icon": "114.png",
+					"status": true,
+					"type": 1,
+					"downloads": 1945531,
+					"name": "સમાચાર અને પુસ્તકો"
+				},
+				"developer": {
+					"_id": "5e78a0767944a538f85dbd2b",
+					"phone": "",
+					"address": "",
+					"name": {
+						"display": "Hot Club",
+						"first": "Hot Club",
+						"last": " "
+					}
+				},
+				"package": "com.Gujarati_News_Live_TV.Gujarati_All_Channel_News_Live",
+				"versions": [{
+					"version": 4,
+					"label": "1.0.4",
+					"size": 5809872,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5e959a2f2b167a04cef82fb1",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5e959a2f2b167a04cef82fb0",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5e959a2f2b167a04cef82faf",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5e959a2f2b167a04cef82fae",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"_id": "5e959a2f2b167a04cef82fad",
+						"heading": "Contacts",
+						"description": "access your contacts"
+					}]
+				}],
+				"app_rating": 0,
+				"amount": 0,
+				"languages": ["en", "gu"],
+				"udate": "2020-04-14T11:10:39.764Z"
+			}, {
+				"seq_id": 162903,
+				"hero_image": "https://mofirstsub.pc.cdn.bitgravity.com/preview_images/12c3ea2a32ad14bfe22499cdd3bdd0a2.png",
+				"source": "indus",
+				"title": "ગુજરાતી ન્યૂઝ લાઇવ ટીવી - ગુજરાતી ન્યૂઝ લાઇવ",
+				"icon": "preview_images/62f454de5e01fd73b731160361847483.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3ae",
+					"seq_id": 114,
+					"icon": "114.png",
+					"status": true,
+					"type": 1,
+					"downloads": 1945531,
+					"name": "સમાચાર અને પુસ્તકો"
+				},
+				"developer": {
+					"_id": "5e04b7dd38e8f8e85144aaa2",
+					"phone": "",
+					"address": "",
+					"name": {
+						"display": "True Media App",
+						"first": "True Media App",
+						"last": " "
+					}
+				},
+				"package": "com.TV9GujaratiLive.Sandesh_News.Gujarati_News_Live_TV.tv9_Gujarati",
+				"versions": [{
+					"version": 2,
+					"label": "2.3",
+					"size": 7857858,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"heading": "Internet",
+						"description": "use your internet connection",
+						"_id": "5e04bb0aa638603a34afd2e9"
+					}]
+				}],
+				"app_rating": 0,
+				"amount": 0,
+				"languages": ["en", "gu"],
+				"udate": "2019-12-26T13:52:10.607Z"
+			}, {
+				"seq_id": 157669,
+				"hero_image": "https://mofirstsub.pc.cdn.bitgravity.com/preview_images/dd538c156430bd3106861c9169003bc0.png",
+				"source": "indus",
+				"title": "ડેલી ગુજરાતી ન્યૂઝ",
+				"icon": "preview_images/64f02cb628a9b9fa4d4e9dc73eb365cd.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3ae",
+					"seq_id": 114,
+					"icon": "114.png",
+					"status": true,
+					"type": 1,
+					"downloads": 1945531,
+					"name": "સમાચાર અને પુસ્તકો"
+				},
+				"developer": {
+					"_id": "59c3af23072c976c413bc2c5",
+					"phone": "",
+					"address": "India, New Delhi, Delhi, India",
+					"name": {
+						"display": "TechKnol Team",
+						"first": "TechKnol Team",
+						"last": "TechKnol Team"
+					}
+				},
+				"package": "com.daily.gujarati.news",
+				"versions": [{
+					"version": 26,
+					"label": "3.0",
+					"size": 4856377,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"heading": "Internet",
+						"description": "use your internet connection",
+						"_id": "5ddcee1cfd8cd077562080ab"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device",
+						"_id": "5ddcee1cfd8cd077562080aa"
+					}]
+				}],
+				"app_rating": 5,
+				"amount": 0,
+				"languages": ["en", "gu", "ta", "or", "te", "bn", "pa"],
+				"udate": "2019-11-26T09:19:24.949Z"
+			}, {
+				"seq_id": 34593,
+				"source": "indus",
+				"title": "યુસી ન્યૂઝ - લેટેસ્ટ ન્યૂઝ, ક્રિકેટ ન્યૂઝ, વાયરલ વિડિઓ",
+				"icon": "preview_images/644999e0f5edeaa63adbfb7461453d1b.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3ae",
+					"seq_id": 114,
+					"icon": "114.png",
+					"status": true,
+					"type": 1,
+					"downloads": 1945531,
+					"name": "સમાચાર અને પુસ્તકો"
+				},
+				"developer": {
+					"_id": "59c3afbf072c976c413bed97",
+					"phone": "",
+					"address": "India, New Delhi, Delhi, India",
+					"name": {
+						"display": "UCWeb",
+						"first": "UCWeb",
+						"last": "UCWeb"
+					}
+				},
+				"package": "com.uc.iflow",
+				"versions": [{
+					"version": 140,
+					"label": "3.0.5.1080",
+					"size": 11626782,
+					"permissions": []
+				}],
+				"app_rating": 4.46078431372549,
+				"amount": 0,
+				"languages": ["bn", "ta", "mr", "gu", "ur", "or", "pa", "te", "as", "ml", "hi", "kn", "en"],
+				"udate": "2020-03-03T07:13:28.839Z"
+			}, {
+				"seq_id": 148614,
+				"banner_image_url": "https://mofirst.pc.cdn.bitgravity.com/homepage_banner/Opera_News_banner.webp",
+				"source": "indus",
+				"title": "ઓપેરા ન્યૂઝ - ક્રિકેટ, લેટેસ્ટ એન્ડ લોકલ ન્યૂઝ, વિડિઓઝ",
+				"icon": "preview_images/71c65ecfe29914b7c5536cfff833b5c7.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3ae",
+					"seq_id": 114,
+					"icon": "114.png",
+					"status": true,
+					"type": 1,
+					"downloads": 1945531,
+					"name": "સમાચાર અને પુસ્તકો"
+				},
+				"developer": {
+					"_id": "5bc87a7be964a0b726629c04",
+					"phone": "",
+					"address": "Gjerdrums vei 19\nNO-0484 OSLO",
+					"name": {
+						"display": "Opera",
+						"first": "Opera",
+						"last": "Opera"
+					}
+				},
+				"package": "com.opera.app.news",
+				"versions": [{
+					"version": 74477491,
+					"label": "7.4.2254.147749",
+					"size": 12124816,
+					"permissions": [{
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"_id": "5e98511897cd5304c396e281",
+						"heading": "Contacts",
+						"description": "access your contacts"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5e98511897cd5304c396e280",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5e98511897cd5304c396e27f",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5e98511897cd5304c396e27e",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5e98511897cd5304c396e27d",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"_id": "5e98511897cd5304c396e27c",
+						"heading": "Camera",
+						"description": "take pictures and record video"
+					}]
+				}],
+				"app_rating": 4.45945945945946,
+				"amount": 0,
+				"languages": ["kn", "hi", "bn", "ur", "te", "mr", "ml", "as", "ta", "gu", "pa", "en", "or"],
+				"udate": "2020-04-16T12:35:36.601Z"
+			}, {
+				"seq_id": 23968,
+				"source": "indus",
+				"title": "ઇન્ડિયા ન્યૂઝ, લેટેસ્ટ ન્યૂઝ એપ, ટોપ લાઇવ ન્યૂઝ હેડલાઇન્સ",
+				"icon": "preview_images/270e1286ecf8508157fbb9ebd7b8771f.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3ae",
+					"seq_id": 114,
+					"icon": "114.png",
+					"status": true,
+					"type": 1,
+					"downloads": 1945531,
+					"name": "સમાચાર અને પુસ્તકો"
+				},
+				"developer": {
+					"_id": "579fbc244c04329954cb76ad",
+					"phone": "91-9873467690",
+					"address": "Noida, Noida, Uttar Pradesh, India",
+					"name": {
+						"display": "Times Internet Limited",
+						"first": "Sahil",
+						"last": "Deswal"
+					}
+				},
+				"package": "com.til.timesnews",
+				"versions": [{
+					"version": 491,
+					"label": "4.5.6.1",
+					"size": 16507858,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"heading": "Internet",
+						"description": "use your internet connection",
+						"_id": "5ddcd345fd8cd07756207694"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"heading": "Location",
+						"description": "access this device\"s location ",
+						"_id": "5ddcd345fd8cd07756207693"
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"heading": "Contacts",
+						"description": "access your contacts",
+						"_id": "5ddcd345fd8cd07756207692"
+					}]
+				}],
+				"app_rating": 4.244897959183674,
+				"amount": 0,
+				"languages": ["bn", "kn", "mr", "gu", "ur", "pa", "te", "hi", "as", "ml", "ta", "or", "en"],
+				"udate": "2020-03-03T07:13:24.973Z"
+			}],
+			"metadata": {
+				"image_cdn": "https://mofirstsub.pc.cdn.bitgravity.com"
+			}
+		},
+		"target": "home",
+		"languages": ["gu-IN"],
+		"type": "default",
+		"secondaryRank": 260
+	}, {
+		"_id": "5df91cae30acfd89eea08ba5",
+		"status": "enabled",
+		"name": "પૈસાની લેવડદેવડ",
+		"subtitle": "એપ્સ સાથે ઓનલાઇન લેવડ-દેવડ કરો",
+		"tags": ["All", "પૈસાની_લેવડદેવડ"],
+		"universe": "samsung",
+		"rank": 100,
+		"provider": "embedded",
+		"data": {
+			"packages": [{
+				"seq_id": 62222,
+				"hero_image": "https://mofirstsub.pc.cdn.bitgravity.com/preview_images/d9bb00c3a161ed529fcc05b09b0b4bd7.png",
+				"banner_image_url": "https://mofirst.pc.cdn.bitgravity.com/top_banner/com.phonepe.app_09_April.webp",
+				"source": "indus",
+				"title": "ફોનપે - યુપીઆઈ પેમેન્ટ્સ, રીચાર્જેસ એન્ડ મની ટ્રાન્સફર",
+				"icon": "preview_images/d2480b45b4797e92f8b2350c6b198dfd.webp",
+				"category": {
+					"_id": "581c34d579297587fb911af6",
+					"seq_id": 100,
+					"icon": "122.png",
+					"status": true,
+					"type": 1,
+					"downloads": 7248237,
+					"name": "જરુરી એપ્સ"
+				},
+				"developer": {
+					"_id": "58b574a7ea9c84d172b7bd02",
+					"phone": "91-8046467777",
+					"address": "Postal Code: 110044",
+					"name": {
+						"display": "PhonePe",
+						"first": "PhonePe",
+						"last": "Ltd"
+					}
+				},
+				"package": "com.phonepe.app",
+				"versions": [{
+					"version": 400311,
+					"label": "4.0.08",
+					"size": 66350624,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5e983a072db9ef045828fa42",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"_id": "5e983a072db9ef045828fa41",
+						"heading": "Contacts",
+						"description": "access your contacts"
+					}, {
+						"permissions": ["android.permission.READ_CELL_BROADCASTS", "android.permission.READ_SMS", "android.permission.RECEIVE_MMS", "android.permission.RECEIVE_SMS", "android.permission.RECEIVE_WAP_PUSH", "android.permission.SEND_SMS"],
+						"_id": "5e983a072db9ef045828fa40",
+						"heading": "SMS",
+						"description": "send and view SMS messages"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5e983a072db9ef045828fa3f",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5e983a072db9ef045828fa3e",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.RECORD_AUDIO"],
+						"_id": "5e983a072db9ef045828fa3d",
+						"heading": "Microphone",
+						"description": "record audio"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"_id": "5e983a072db9ef045828fa3c",
+						"heading": "Camera",
+						"description": "take pictures and record video"
+					}, {
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5e983a072db9ef045828fa3b",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}]
+				}],
+				"app_rating": 4.553142565150741,
+				"amount": 0,
+				"languages": ["kn", "hi", "bn", "ur", "or", "te", "mr", "ml", "as", "ta", "pa", "gu", "en"],
+				"udate": "2020-04-16T10:57:12.734Z"
+			}, {
+				"seq_id": 62226,
+				"hero_image": "https://mofirst.pc.cdn.bitgravity.com/heroimage/Mobikwik_promotion.webp",
+				"banner_image_url": "https://mofirst.pc.cdn.bitgravity.com/homepage_banner/Mobikwik.webp",
+				"source": "indus",
+				"title": "રિચાર્જ એન્ડ બિલ પેમેન્ટ, યુપીઆઈ એપ એન્ડ મની ટ્રાન્સફર",
+				"icon": "preview_images/d38b37c5cea1817969d75ab7f39c9033.webp",
+				"category": {
+					"_id": "581c34d579297587fb911af6",
+					"seq_id": 100,
+					"icon": "122.png",
+					"status": true,
+					"type": 1,
+					"downloads": 7248237,
+					"name": "જરુરી એપ્સ"
+				},
+				"developer": {
+					"_id": "58b68aa68a4737392838e790",
+					"phone": "91-9313925342",
+					"address": "2nd Floor, Orchid Centre Golf Course Road, Sector 53 Gurgaon, Haryana 122002 India, Gurgaon, Haryana, India, Postal Code: 122002",
+					"name": {
+						"display": "MobiKwik",
+						"first": "MobiKwik",
+						"last": "."
+					}
+				},
+				"package": "com.mobikwik_new",
+				"versions": [{
+					"version": 1410,
+					"label": "20.13.4",
+					"size": 22904600,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5e9850390ce999047b053c13",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"_id": "5e9850390ce999047b053c12",
+						"heading": "Contacts",
+						"description": "access your contacts"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5e9850390ce999047b053c11",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}, {
+						"permissions": ["android.permission.READ_CELL_BROADCASTS", "android.permission.READ_SMS", "android.permission.RECEIVE_MMS", "android.permission.RECEIVE_SMS", "android.permission.RECEIVE_WAP_PUSH", "android.permission.SEND_SMS"],
+						"_id": "5e9850390ce999047b053c10",
+						"heading": "SMS",
+						"description": "send and view SMS messages"
+					}, {
+						"permissions": ["android.permission.RECORD_AUDIO"],
+						"_id": "5e9850390ce999047b053c0f",
+						"heading": "Microphone",
+						"description": "record audio"
+					}, {
+						"permissions": ["android.permission.READ_CALENDAR", "android.permission.WRITE_CALENDAR"],
+						"_id": "5e9850390ce999047b053c0e",
+						"heading": "Calendar",
+						"description": "access your calendar"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5e9850390ce999047b053c0d",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5e9850390ce999047b053c0c",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"_id": "5e9850390ce999047b053c0b",
+						"heading": "Camera",
+						"description": "take pictures and record video"
+					}]
+				}],
+				"app_rating": 4.478547854785479,
+				"amount": 0,
+				"languages": ["en", "gu", "mr", "hi", "te", "ta", "bn", "pa", "or", "ml", "kn", "ur", "as"],
+				"udate": "2020-04-16T12:31:53.537Z"
+			}, {
+				"seq_id": 146521,
+				"source": "indus",
+				"title": "યોનો એસબીઆઈ: ધ મોબાઇલ બેંકિગ એન્ડ લાઈફસ્ટાઇલ એપ!",
+				"icon": "preview_images/7c171d47729b1a77f526c01491ef80c3.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3ae",
+					"seq_id": 114,
+					"icon": "114.png",
+					"status": true,
+					"type": 1,
+					"downloads": 1945531,
+					"name": "સમાચાર અને પુસ્તકો"
+				},
+				"developer": {
+					"_id": "5a79ac4a4dfa335f0ad6ac8e",
+					"phone": "",
+					"address": "",
+					"name": {
+						"display": "State Bank of India",
+						"first": "State Bank of India",
+						"last": "State Bank of India"
+					}
+				},
+				"package": "com.sbi.lotusintouch",
+				"versions": [{
+					"version": 12311,
+					"label": "1.23.11",
+					"size": 24731184,
+					"permissions": [{
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"heading": "Contacts",
+						"description": "access your contacts",
+						"_id": "5e6645be63412c5134eb5f7c"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"heading": "Location",
+						"description": "access this device\"s location ",
+						"_id": "5e6645be63412c5134eb5f7b"
+					}, {
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"heading": "Internet",
+						"description": "use your internet connection",
+						"_id": "5e6645be63412c5134eb5f7a"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"heading": "Camera",
+						"description": "take pictures and record video",
+						"_id": "5e6645be63412c5134eb5f79"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device",
+						"_id": "5e6645be63412c5134eb5f78"
+					}, {
+						"permissions": ["android.permission.READ_CELL_BROADCASTS", "android.permission.READ_SMS", "android.permission.RECEIVE_MMS", "android.permission.RECEIVE_SMS", "android.permission.RECEIVE_WAP_PUSH", "android.permission.SEND_SMS"],
+						"heading": "SMS",
+						"description": "send and view SMS messages",
+						"_id": "5e6645be63412c5134eb5f77"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"heading": "Phone",
+						"description": "make and manage phone calls",
+						"_id": "5e6645be63412c5134eb5f76"
+					}]
+				}],
+				"app_rating": 4.602469135802469,
+				"amount": 0,
+				"languages": ["mr", "ur", "te", "ta", "or", "gu", "kn", "pa", "bn", "as", "ml", "en", "hi"],
+				"udate": "2020-03-09T13:33:50.636Z"
+			}, {
+				"seq_id": 71033,
+				"source": "indus",
+				"title": "પેપલ મોબાઇલ કેશ: સેન્ડ એન્ડ રીક્વેસ્ટ મની ફાસ્ટ",
+				"icon": "preview_images/c614d11954dc97d6cb54cc632ba39a4d.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3ae",
+					"seq_id": 114,
+					"icon": "114.png",
+					"status": true,
+					"type": 1,
+					"downloads": 1945531,
+					"name": "સમાચાર અને પુસ્તકો"
+				},
+				"developer": {
+					"_id": "59c3af78072c976c413bda5f",
+					"phone": "",
+					"address": "India, New Delhi, Delhi, India",
+					"name": {
+						"display": "PayPal Mobile",
+						"first": "PayPal Mobile",
+						"last": "PayPal Mobile"
+					}
+				},
+				"package": "com.paypal.android.p2pmobile",
+				"versions": [{
+					"version": 1150071607,
+					"label": "7.6.0",
+					"size": 58858462,
+					"permissions": []
+				}],
+				"app_rating": 5,
+				"amount": 0,
+				"languages": ["en", "kn", "hi", "bn", "ur", "or", "te", "mr", "ml", "as", "ta", "pa", "gu"],
+				"udate": "2020-03-03T07:38:50.728Z"
+			}, {
+				"seq_id": 150933,
+				"banner_image_url": "http://content.indusos.com.s3.amazonaws.com/preview_images/banners/indiabullsdhani.png",
+				"source": "indus",
+				"title": "ઇન્ડિયાબુલ્સ પાર્ટનર - રેફર એન્ડ અર્ન",
+				"icon": "preview_images/5a2b34062dcd6e3efa3071f9811671e0.webp",
+				"category": {
+					"_id": "581c34d579297587fb911af6",
+					"seq_id": 100,
+					"icon": "122.png",
+					"status": true,
+					"type": 1,
+					"downloads": 7248237,
+					"name": "જરુરી એપ્સ"
+				},
+				"developer": {
+					"_id": "5c330e643a5f27a01e19e540",
+					"phone": "",
+					"address": "India, Mumbai, Maharashtra, India",
+					"name": {
+						"display": "Indiabulls Ventures Limited",
+						"first": "Indiabulls Ventures Limited",
+						"last": "."
+					}
+				},
+				"package": "com.indiabulls.dhanipartner",
+				"versions": [{
+					"version": 10304,
+					"label": "1.3.4",
+					"size": 9416553,
+					"permissions": [{
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device",
+						"_id": "5e4bd30da638603a34b82d63"
+					}, {
+						"permissions": ["android.permission.BODY_SENSORS", "android.permission.USE_FINGERPRINT"],
+						"heading": "Body Sensors",
+						"description": "access sensor data about your vital signs ",
+						"_id": "5e4bd30da638603a34b82d62"
+					}, {
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"heading": "Internet",
+						"description": "use your internet connection",
+						"_id": "5e4bd30da638603a34b82d61"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"heading": "Phone",
+						"description": "make and manage phone calls",
+						"_id": "5e4bd30da638603a34b82d60"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"heading": "Camera",
+						"description": "take pictures and record video",
+						"_id": "5e4bd30da638603a34b82d5f"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"heading": "Location",
+						"description": "access this device\"s location ",
+						"_id": "5e4bd30da638603a34b82d5e"
+					}]
+				}],
+				"app_rating": 4.333333333333333,
+				"amount": 0,
+				"languages": ["en", "kn", "gu", "ta", "te", "ml", "ur", "bn", "or", "mr", "hi", "pa", "as"],
+				"udate": "2020-03-03T08:09:55.524Z"
+			}, {
+				"seq_id": 152392,
+				"source": "indus",
+				"title": "ભારતપે ફોર મર્ચન્ટ્સ",
+				"icon": "preview_images/67096d14b6e3f0a32f3e9f5902b0d2cf.webp",
+				"category": {
+					"_id": "581c34d579297587fb911af6",
+					"seq_id": 100,
+					"icon": "122.png",
+					"status": true,
+					"type": 1,
+					"downloads": 7248237,
+					"name": "જરુરી એપ્સ"
+				},
+				"developer": {
+					"_id": "5ce3db314634131cc45c3121",
+					"phone": "",
+					"address": "Mumbai , Maharashtra, India",
+					"name": {
+						"display": "BharatPe",
+						"first": "BharatPe",
+						"last": "."
+					}
+				},
+				"package": "com.bharatpe.app",
+				"versions": [{
+					"version": 20200,
+					"label": "2.2.0",
+					"size": 25057129,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"heading": "Internet",
+						"description": "use your internet connection",
+						"_id": "5da0764cfd8cd077561c5941"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"heading": "Location",
+						"description": "access this device\"s location ",
+						"_id": "5da0764cfd8cd077561c5940"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device",
+						"_id": "5da0764cfd8cd077561c593f"
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"heading": "Contacts",
+						"description": "access your contacts",
+						"_id": "5da0764cfd8cd077561c593e"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"heading": "Camera",
+						"description": "take pictures and record video",
+						"_id": "5da0764cfd8cd077561c593d"
+					}]
+				}],
+				"app_rating": 4.382352941176471,
+				"amount": 0,
+				"languages": ["en", "kn", "gu", "ml", "ur", "bn", "or", "mr", "hi", "pa", "ta"],
+				"udate": "2020-03-03T07:46:02.582Z"
+			}, {
+				"seq_id": 29362,
+				"source": "indus",
+				"title": "ફ્રીચાર્જ - રીચાર્જ, બિલ પેમેન્ટ્સ, યુપીઆઈ",
+				"icon": "preview_images/c4457b8adee63c69b3d7d7ec6094102a.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3ca",
+					"seq_id": 116,
+					"icon": "116.png",
+					"status": true,
+					"type": 1,
+					"downloads": 8002240,
+					"name": "સાધનો અને ઉપયોગિતાઓ"
+				},
+				"developer": {
+					"_id": "5800938eae7b0da5047413a3",
+					"phone": "",
+					"address": "Vaibhav Chambers, Unit No. 2A, 2nd floor, Bandra Kurla Complex, Bandra East, Mumbai - 400051, Mumbai, Maharashtra, India, Postal Code: 400051",
+					"name": {
+						"display": "FreeCharge",
+						"first": "FreeCharge",
+						"last": "Technologies"
+					}
+				},
+				"package": "com.freecharge.android",
+				"versions": [{
+					"version": 172,
+					"label": "8.6.2",
+					"size": 18381760,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"heading": "Internet",
+						"description": "use your internet connection",
+						"_id": "5dcbde7bfd8cd077561f4883"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"heading": "Camera",
+						"description": "take pictures and record video",
+						"_id": "5dcbde7bfd8cd077561f4882"
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"heading": "Contacts",
+						"description": "access your contacts",
+						"_id": "5dcbde7bfd8cd077561f4881"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"heading": "Phone",
+						"description": "make and manage phone calls",
+						"_id": "5dcbde7bfd8cd077561f4880"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"heading": "Location",
+						"description": "access this device\"s location ",
+						"_id": "5dcbde7bfd8cd077561f487f"
+					}, {
+						"permissions": ["android.permission.READ_CELL_BROADCASTS", "android.permission.READ_SMS", "android.permission.RECEIVE_MMS", "android.permission.RECEIVE_SMS", "android.permission.RECEIVE_WAP_PUSH", "android.permission.SEND_SMS"],
+						"heading": "SMS",
+						"description": "send and view SMS messages",
+						"_id": "5dcbde7bfd8cd077561f487e"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device",
+						"_id": "5dcbde7bfd8cd077561f487d"
+					}, {
+						"permissions": ["android.permission.RECORD_AUDIO"],
+						"heading": "Microphone",
+						"description": "record audio",
+						"_id": "5dcbde7bfd8cd077561f487c"
+					}]
+				}],
+				"app_rating": 4.385964912280702,
+				"amount": 0,
+				"languages": ["gu", "bn", "ml", "hi", "ur", "kn", "pa", "mr", "te", "ta", "as", "or", "en"],
+				"udate": "2020-03-03T07:13:45.841Z"
+			}, {
+				"seq_id": 147730,
+				"source": "indus",
+				"title": "મની વ્યૂ મની મેનેજર એન્ડ ઈન્સ્ટન્ટ પર્સનલ લોન",
+				"icon": "preview_images/0d069514493793a253340c3b8f86acdc.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3ae",
+					"seq_id": 114,
+					"icon": "114.png",
+					"status": true,
+					"type": 1,
+					"downloads": 1945531,
+					"name": "સમાચાર અને પુસ્તકો"
+				},
+				"developer": {
+					"_id": "59c3afce072c976c413bf13d",
+					"phone": "",
+					"address": "M/s Whizdm Innovations Private Limited\nThe Address, No 17/1, Kadubeesanahalli, Outer Ring Road\nBangalore - 560087",
+					"name": {
+						"display": "WhizDM",
+						"first": "WhizDM",
+						"last": "WhizDM"
+					}
+				},
+				"package": "com.whizdm.moneyview",
+				"versions": [{
+					"version": 296,
+					"label": "Earth-2.9.6",
+					"size": 21333233,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"_id": "5e8c9e46f7420e04c8df846d",
+						"heading": "Internet",
+						"description": "use your internet connection"
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"_id": "5e8c9e46f7420e04c8df846c",
+						"heading": "Contacts",
+						"description": "access your contacts"
+					}, {
+						"permissions": ["android.permission.READ_CELL_BROADCASTS", "android.permission.READ_SMS", "android.permission.RECEIVE_MMS", "android.permission.RECEIVE_SMS", "android.permission.RECEIVE_WAP_PUSH", "android.permission.SEND_SMS"],
+						"_id": "5e8c9e46f7420e04c8df846b",
+						"heading": "SMS",
+						"description": "send and view SMS messages"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"_id": "5e8c9e46f7420e04c8df846a",
+						"heading": "Location",
+						"description": "access this device\"s location "
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"_id": "5e8c9e46f7420e04c8df8469",
+						"heading": "Phone",
+						"description": "make and manage phone calls"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"_id": "5e8c9e46f7420e04c8df8468",
+						"heading": "Camera",
+						"description": "take pictures and record video"
+					}, {
+						"permissions": ["android.permission.RECORD_AUDIO"],
+						"_id": "5e8c9e46f7420e04c8df8467",
+						"heading": "Microphone",
+						"description": "record audio"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"_id": "5e8c9e46f7420e04c8df8466",
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device"
+					}]
+				}],
+				"app_rating": 4.615384615384615,
+				"amount": 0,
+				"languages": ["en", "kn", "hi", "bn", "ur", "or", "te", "mr", "ml", "as", "ta", "pa", "gu"],
+				"udate": "2020-04-07T15:37:43.322Z"
+			}, {
+				"seq_id": 151965,
+				"hero_image": "https://mofirst.pc.cdn.bitgravity.com/heroimage/CRED_promotion.webp",
+				"banner_image_url": "https://mofirst.pc.cdn.bitgravity.com/top_banner/CRED_banner_6thdec.webp",
+				"source": "indus",
+				"title": "ક્રેડ - મોસ્ટ રિવૉર્ડીંગ ક્રેડિટ કાર્ડ બિલ પેમેન્ટ્સ એપ",
+				"icon": "preview_images/2e8d487abfd7b5a7e346cc5b24ddb850.webp",
+				"category": {
+					"_id": "581c34d579297587fb911af6",
+					"seq_id": 100,
+					"icon": "122.png",
+					"status": true,
+					"type": 1,
+					"downloads": 7248237,
+					"name": "જરુરી એપ્સ"
+				},
+				"developer": {
+					"_id": "5cb9ccf846341344b9f44d82",
+					"phone": "",
+					"address": "., Mumbai, Maharahstra, India",
+					"name": {
+						"display": "Dreamplug Technologies Pvt. Ltd.",
+						"first": "Dreamplug Technologies Pvt. Ltd.",
+						"last": "."
+					}
+				},
+				"package": "com.dreamplug.androidapp",
+				"versions": [{
+					"version": 20003013,
+					"label": "9",
+					"size": 11505666,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"heading": "Internet",
+						"description": "use your internet connection",
+						"_id": "5e00ccbc27cb38524e00896c"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"heading": "Phone",
+						"description": "make and manage phone calls",
+						"_id": "5e00ccbc27cb38524e00896b"
+					}, {
+						"permissions": ["android.permission.READ_CELL_BROADCASTS", "android.permission.READ_SMS", "android.permission.RECEIVE_MMS", "android.permission.RECEIVE_SMS", "android.permission.RECEIVE_WAP_PUSH", "android.permission.SEND_SMS"],
+						"heading": "SMS",
+						"description": "send and view SMS messages",
+						"_id": "5e00ccbc27cb38524e00896a"
+					}, {
+						"permissions": ["android.permission.READ_CALENDAR", "android.permission.WRITE_CALENDAR"],
+						"heading": "Calendar",
+						"description": "access your calendar",
+						"_id": "5e00ccbc27cb38524e008969"
+					}, {
+						"permissions": ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"],
+						"heading": "Location",
+						"description": "access this device\"s location ",
+						"_id": "5e00ccbc27cb38524e008968"
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"heading": "Contacts",
+						"description": "access your contacts",
+						"_id": "5e00ccbc27cb38524e008967"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"heading": "Camera",
+						"description": "take pictures and record video",
+						"_id": "5e00ccbc27cb38524e008966"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device",
+						"_id": "5e00ccbc27cb38524e008965"
+					}]
+				}],
+				"app_rating": 4.730769230769231,
+				"amount": 0,
+				"languages": ["en", "kn", "gu", "ml", "bn", "or", "pa", "hi", "mr", "ta", "ur", "as", "te"],
+				"udate": "2020-03-03T07:16:28.803Z"
+			}, {
+				"seq_id": 151857,
+				"hero_image": "https://mofirst.pc.cdn.bitgravity.com/heroimage/Indiabulls_Saral_promotion.webp",
+				"banner_image_url": "http://content.indusos.com.s3.amazonaws.com/preview_images/banners/indiabullsdhani.png",
+				"source": "indus",
+				"title": "મ્યુચ્યુઅલ ફંડ્સ: ઇન્ડિયાબુલ્સ સરલ - લિક્વિડ ફંડ એપ ",
+				"icon": "preview_images/0ee10e6012f3eccec9d0447cd3545716.webp",
+				"category": {
+					"_id": "579fbc0bc766e28b543cc3ca",
+					"seq_id": 116,
+					"icon": "116.png",
+					"status": true,
+					"type": 1,
+					"downloads": 8002240,
+					"name": "સાધનો અને ઉપયોગિતાઓ"
+				},
+				"developer": {
+					"_id": "5cb03133f9ffa9e351c94a82",
+					"phone": "",
+					"address": "Indiabulls House, Indiabulls Finance Centre, Tower 1, 11th floor, Senapati Bapat Marg, Elphinstone Road, Mumbai, Mumbai, Maharashtra, India, Postal Code: 400013",
+					"name": {
+						"display": "Indiabulls Asset Management Company Limited",
+						"first": "Indiabulls Asset Management Company Limited",
+						"last": "."
+					}
+				},
+				"package": "com.indiabullsamc.investorapp",
+				"versions": [{
+					"version": 1038,
+					"label": "3.0.3",
+					"size": 37251362,
+					"permissions": [{
+						"permissions": ["android.permission.ACCESS_NETWORK_STATE", "android.permission.INTERNET"],
+						"heading": "Internet",
+						"description": "use your internet connection",
+						"_id": "5e3d5feda638603a34b6a7a7"
+					}, {
+						"permissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"],
+						"heading": "Storage",
+						"description": "access photos, media, and files on your device",
+						"_id": "5e3d5feda638603a34b6a7a6"
+					}, {
+						"permissions": ["android.permission.ANSWER_PHONE_CALLS", "android.permission.CALL_PHONE", "android.permission.PROCESS_OUTGOING_CALLS", "android.permission.READ_CALL_LOG", "android.permission.READ_PHONE_NUMBERS", "android.permission.READ_PHONE_STATE", "android.permission.WRITE_CALL_LOG"],
+						"heading": "Phone",
+						"description": "make and manage phone calls",
+						"_id": "5e3d5feda638603a34b6a7a5"
+					}, {
+						"permissions": ["android.permission.BODY_SENSORS", "android.permission.USE_FINGERPRINT"],
+						"heading": "Body Sensors",
+						"description": "access sensor data about your vital signs ",
+						"_id": "5e3d5feda638603a34b6a7a4"
+					}, {
+						"permissions": ["android.permission.GET_ACCOUNTS", "android.permission.READ_CONTACTS", "android.permission.WRITE_CONTACTS"],
+						"heading": "Contacts",
+						"description": "access your contacts",
+						"_id": "5e3d5feda638603a34b6a7a3"
+					}, {
+						"permissions": ["android.permission.CAMERA"],
+						"heading": "Camera",
+						"description": "take pictures and record video",
+						"_id": "5e3d5feda638603a34b6a7a2"
+					}, {
+						"permissions": ["android.permission.RECORD_AUDIO"],
+						"heading": "Microphone",
+						"description": "record audio",
+						"_id": "5e3d5feda638603a34b6a7a1"
+					}]
+				}],
+				"app_rating": 0,
+				"amount": 0,
+				"languages": ["en", "kn", "gu", "ta", "te", "as", "ml", "ur", "bn", "or", "mr", "hi", "pa"],
+				"udate": "2020-03-03T08:35:25.587Z"
+			}],
+			"metadata": {
+				"image_cdn": "https://mofirstsub.pc.cdn.bitgravity.com"
+			}
+		},
+		"target": "home",
+		"languages": ["gu-IN"],
+		"type": "default",
+		"secondaryRank": 0
+	}]
+}
