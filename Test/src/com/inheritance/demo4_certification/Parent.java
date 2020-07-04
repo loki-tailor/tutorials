@@ -1,4 +1,4 @@
-package com.inheritance.demo4.certification;
+package com.inheritance.demo4_certification;
 
 /*-
 	created @ 29-03-20
