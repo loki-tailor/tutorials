@@ -1,4 +1,4 @@
-package demo1;
+package com.inheritance.protected_in_subclass_of_subclass.demo1;
 
 public class B extends A {
 	public static void main(String[] args){ 

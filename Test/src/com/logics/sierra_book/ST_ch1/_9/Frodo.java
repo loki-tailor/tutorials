@@ -23,7 +23,7 @@ package com.logics.sierra_book.ST_ch1._9;
 public class Frodo extends Hobbit {
 	public static void main(String[] args) {
 		int myGold = 7; // line 6
-		System.out.println(countGold(myGold,6)); // line 7
+		//System.out.println(countGold(myGold,6)); // line 7
 	}	
 }
 

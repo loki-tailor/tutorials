@@ -21,7 +21,9 @@ public class Shuttle extends Rocket {
 	}
 	void go() {
 		blastOff();
-		Rocket.blastOff(); // line A
+		
+		// below will give error, since blastOff is priate in 'Rocket' class
+		// Rocket.blastOff(); // line A
 	}
 	private void blastOff() { System.out.print("sh-bang "); }
 }	

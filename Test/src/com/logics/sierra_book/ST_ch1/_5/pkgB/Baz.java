@@ -27,8 +27,13 @@ import com.logics.sierra_book.ST_ch1._5.pkgA.*;
 public class Baz {
 	public static void main(String[] args) {
 		Foo f = new Foo(); // line 7
-		System.out.print(" " + f.a); // line 8
-		System.out.print(" " + f.b); // line 9
+		
+		// below 2 lines will give compile error
+		// since 'a' is default, hence not accessible outside package
+		// since 'b' is protected, hence only accessible outside package thru subclass
+		// System.out.print(" " + f.a); // line 8
+		// System.out.print(" " + f.b); // line 9
+		
 		System.out.println(" " + f.c); // line 10
 	}
 }

@@ -78,11 +78,12 @@ public class InterfacePracticeImpl implements DemoInterface {
 		// modifying variables declared inside interface is not allowed, because, they are public final static by default
 		// compile error: cannot assign a value to final variable x		
 		// x = 20;
+		
 	} 
 	public static void main (String[] args) {
 		new InterfacePracticeImpl().method1();	
 		System.out.println("Default Method: Square = " + new InterfacePracticeImpl().defaultMethod(2));
-		DemoInterface.staticMethod("Lokeshwar");
+		DemoInterface.staticMethod("Lokeshwar");			
 
 		// invalid way of calling static method of an interface
 		// new InterfacePracticeImpl().staticMethod("Loki");

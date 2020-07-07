@@ -1,6 +1,6 @@
-package demo2;
+package com.inheritance.protected_in_subclass_of_subclass.demo2;
 
-import demo1.A;
+import com.inheritance.protected_in_subclass_of_subclass.demo1.A;
 
 public class C extends A {
 	public static void main(String[] args) {
