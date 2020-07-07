@@ -26,21 +26,29 @@ public class CallSuperTypeVersionOfOverriden {
     }
 }
 
+interface Material {
+    default public void carbon() {
+	System.out.println("I am performing 'Material.carbon()' method...");
+    }
+}
+
 class Cycle {
     public void handle() {
 	System.out.println("I am performing 'Cycle.handle()' method...");
     }
 }
 
-class RoadBike extends Cycle {
+class RoadBike extends Cycle implements Material {
     public void handle() {
 	super.handle();
 	System.out.println("I am performing 'RoadBike.handle()'");
+	Material.super.carbon();
     }
 }
 
-class MTBBike extends Cycle {
+class MTBBike extends Cycle implements Material {
     public void handle() {
+	Material.super.carbon();
 	System.out.println("I am performing 'MTBBike.handle()");
 	super.handle();
     }
