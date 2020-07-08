@@ -1,8 +1,0 @@
-20190514-10:02:11: Session FIX.4.2:acceptor-exchange->initiator-loki schedule is daily, 00:00:00 UTC - 00:00:00 UTC (daily, 00:00:00 UTC - 00:00:00 UTC)
-20190514-10:02:11: Created session: FIX.4.2:acceptor-exchange->initiator-loki
-20190514-10:02:20: Accepting session FIX.4.2:acceptor-exchange->initiator-loki from /127.0.0.1:60717
-20190514-10:02:20: Acceptor heartbeat set to 30 seconds
-20190514-10:02:20: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
-20190514-10:02:20: Received logon request
-20190514-10:02:20: Responding to logon request
-20190514-10:02:23: Disconnecting

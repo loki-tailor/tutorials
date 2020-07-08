@@ -1,5 +1,0 @@
-20190514-10:08:29: Session FIX.4.2:BANZAI->FIXIMULATOR schedule is daily, 00:00:00 UTC - 00:00:00 UTC (daily, 00:00:00 UTC - 00:00:00 UTC)
-20190514-10:08:29: Created session: FIX.4.2:BANZAI->FIXIMULATOR
-20190514-10:08:31: Initiated logon request
-20190514-10:08:31: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
-20190514-10:08:31: Received logon response
