@@ -25,4 +25,4 @@ hs_err_pid*
 # eclipse generated files
 .classpath
 .project
-
+.settings
