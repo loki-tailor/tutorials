@@ -87,9 +87,13 @@ public class LegalReturnTypes {
 	class Gum implements Chewable {}
 	class TestChewable {
 		public Chewable getChewable() { return new Gum(); } // returns interface implementer 
-	}		
+	}	
 
 	// -------------------------------------------------------------------
+
+	class PrimitiveReturnsNullDemo {
+		// int demo() { return null; } // compile error: error: incompatible types: <null> cannot be converted to int
+	}
 	
 }
 
