@@ -6,14 +6,15 @@ package com.exceptions_and_errors;
 
 	ref: https://javaconceptoftheday.com/classnotfoundexception-vs-noclassdeffounderror-in-java/
 
-	* Both ClassNotFoundException and NoClassDefFoundError occur when a particular class is not found at run time. 
+	*	Both ClassNotFoundException and NoClassDefFoundError occur when a particular class is not found at run time. 
 
-	* But, they occur at different scenarios. 
+	*	But, they occur at different scenarios. 
 
-	* ClassNotFoundException is an exception which occurs when you try to load a class at run time using 
-	Class.forName() or loadClass() methods and mentioned classes are not found in the classpath. 
+	*	ClassNotFoundException is an exception which occurs when you try to load a class at run time using 
+		Class.forName() or loadClass() methods and mentioned classes are not found in the classpath. 
 
-	* NoClassDefFoundError is an error which occurs when a particular class is present at compile time but it was missing at run time.
+	*	NoClassDefFoundError is an error which occurs when a particular class is present at compile time 
+		but it was missing at run time.
 
 */
 
