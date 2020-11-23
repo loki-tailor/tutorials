@@ -1,6 +1,20 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\java",
+    "\\java\\src",
+    "\\java\\src\\com",
+    "\\java\\src\\com\\logics",
+    "\\java\\src\\com\\logics\\sierra_book",
+    "\\java\\src\\com\\logics\\sierra_book\\ST_ch5",
+    "\\java\\src\\com\\logics\\sierra_book\\ST_ch5\\_1",
+    "\\selenium\\independent-demo",
+    "\\selenium\\independent-demo\\src",
+    "\\selenium\\independent-demo\\src\\test",
+    "\\selenium\\independent-demo\\src\\test\\java",
+    "\\selenium\\independent-demo\\src\\test\\java\\demo",
+    "\\selenium\\selenium-server"
   ],
+  "SelectedNode": "\\java\\src\\com\\hiding",
   "PreviewInSolutionExplorer": false
 }
