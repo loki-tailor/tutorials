@@ -4,12 +4,15 @@
 
 import java.util.Map;
 public class Temp {
-	public static void main(String[] args) {
 
+	// static int [] x = new int[5];	
+	
+	public static void main(String[] args) {
+	
 		// NOTE when next time coming here: DELETE old code :)
-	    	Map<String, String> env = System.getenv();
-        	for (String envName : env.keySet()) {
-        	    System.out.format("%s=%s%n", envName, env.get(envName));        
-		}
+		int [] x = new int[5];
+		System.out.println(x);		
+
+		for(int i=0; i<x.length; i++) { System.out.println(x[i]); }
 	}
 }
