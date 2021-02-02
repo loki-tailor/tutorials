@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
 
+/*- converting input (mins) to _ years, _ days, _ hours, _ mins
+*/
+
 public class DateFormatterUsingHardcodedDigits {
 
     public static void main(String[] args) {
@@ -48,3 +51,16 @@ public class DateFormatterUsingHardcodedDigits {
 
     }
 }
+
+/*-
+
+	SAMPLE OUTPUT:
+
+	60 70 120 300 3600
+	60 minutes = 0 years, 0 days, 1 hours, 0 mins
+	70 minutes = 0 years, 0 days, 1 hours, 10 mins
+	120 minutes = 0 years, 0 days, 2 hours, 0 mins
+	300 minutes = 0 years, 0 days, 5 hours, 0 mins
+	3600 minutes = 0 years, 2 days, 12 hours, 0 mins
+
+*/
