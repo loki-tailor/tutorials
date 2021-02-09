@@ -2,6 +2,8 @@ package com.strings;
 
 /*- @created 08-02-21
 
+    This demonstrates that System.out.println(object.toString()),
+    implicitly calls to 'toString()' method of the calling object.
 */
 
 class FirstClass {

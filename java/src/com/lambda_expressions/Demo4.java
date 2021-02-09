@@ -14,11 +14,11 @@ public class Demo4 {
 	public static void main(String[] args) {
 		List<String> list = new ArrayList<>();		
 
-		//list.removeIf(String s -> s.isEmpty()); // invalid
+		//list.removeIf(String s -> s.isEmpty()); // invalid, parentheses required around type
 		list.removeIf((String s) -> s.isEmpty()); // valid
-		//list.removeIf(s -> {s.isEmpty();} ); // invalid
+		//list.removeIf(s -> {s.isEmpty();} ); // invalid // return statement required
 		list.removeIf(s -> {return s.isEmpty();} ); // valid
 		list.removeIf(s -> s.isEmpty()); // valid
-		//list.removeIf(s -> {s.isEmpty()}); // invalid
+		//list.removeIf(s -> {s.isEmpty()}); // invalid // return statement required
 	}
 }

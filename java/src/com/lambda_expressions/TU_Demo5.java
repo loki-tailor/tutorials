@@ -13,7 +13,7 @@ public class Demo5 {
 	public static void main(String[] args) {
 		//check((h,l) -> h.append(l).isEmpty(),5); // invalid
 
-		// check((h,l) -> h > l,5); // valid
+		check((h,l) -> h > l,15); // valid
 	}
 	
 	private static void check(Climb climb, int height) {

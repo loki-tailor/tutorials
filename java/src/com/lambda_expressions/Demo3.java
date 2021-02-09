@@ -4,7 +4,7 @@ package com.lambda_expressions;
 	created @ 25-01-2020
 	@author lokeshwar
 
-	Demonstrats lambda expressions using two arguments
+	Demonstrates lambda expressions using two arguments
 */
 
 public class Demo3 {
@@ -47,7 +47,16 @@ public class Demo3 {
 		// lambda expression for single parameter.
 		// This expression implements 'FuncInter2' interface
 		FuncInter2 fobj = message -> System.out.println("Hello " + message);
+		fobj.sayMessage("loki");
 	}
 
 	
-} // end of class
+} // end of class'
+
+/*- OUTPUT:
+
+Addition is 9
+Multiplication is 18
+Hello loki
+
+*/
