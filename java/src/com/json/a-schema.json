@@ -1,0 +1,85 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://json-schema.org/draft-07/schema#",
+    "title": "Sample Feed Json Schema",
+    "type": "array",
+    
+    
+    "items": {
+        "type": "object",
+        "additionalProperties": {
+            "$ref": "#/definitions/deal"
+        }
+    },
+
+
+    "definitions": {
+        "deal": {
+            "$id": "#deals",
+            "title": "deal_",
+            "type": "object",
+            "additionalProperties": true,
+            "required": [
+                "faces",
+                "region"
+            ],
+            "properties": {
+                "i_am_boolean": { "type": "boolean" },
+                "i_am_color": { "type": "string" },
+                "i_am_null": { "type": "null" },
+                "i_am_integer": { "type": "integer" },
+                "i_am_number": { "type": "number" },
+                "region": { "$ref": "#/definitions/region" },
+                "faces": { "$ref": "#/definitions/faces" },
+                "boolean": { "type": "boolean" },
+                "color": { "type": "string" },
+                "null": { "type": "null" },
+                "number": { "type": "number" },
+                "object": { "$ref": "#/definitions/region" }
+            }
+        },
+
+
+        "region": {
+            "$id": "#region",
+            "title": "region",
+            "type": "object",
+            "additionalProperties": true,
+            "required": [
+                "region_a",
+                "region_b"
+            ],
+            "properties": {
+                "region_a": {
+                    "type": "string",
+                     "const": "india"
+                },
+                "region_b": {
+                    "type": "string",
+                    "enum": [ "india", "ny", "asia" ]
+                }                
+            }
+        },
+
+
+        "faces": {
+            "title": "faces",
+            "type": "array",
+            "additionalProperties": true,
+            "items": {
+                "type": "object",
+                "required": [
+                    "status"
+                ],
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "enum": [
+                            "ACT"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
