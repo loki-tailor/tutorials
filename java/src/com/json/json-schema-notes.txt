@@ -1,0 +1,39 @@
+{
+    // This tells the parser which version of json-schema we
+    // will be using
+    "$schema": "http://json-schema.org/draft-07/schema#"
+
+    ============================================================
+
+    // this tells what we call our json-schema
+    // below helps in re-using one JSON schema inside another
+    // it's not a URL but a URI 
+    // validators do not expect JSON schema to exists at the given url
+    // just a unique id to idenfy the json schema
+    "$id": "http://example.com/my-schema"
+
+    ============================================================
+
+    // can be:    
+    
+    // array, object, integer, number, null, string, boolean
+    
+    // each of above has their own constraints
+    
+    // in spec they might be called as 'validation keywords', 
+    // we can think of them as constraints 
+
+    // JSON Schema Constraints: All data is accepted, unless we reject it.
+
+    // Incoming data is only rejected if:
+    // 1. you define a constraint
+    // 2. .. the incomign data falls foul of
+    "type": "__"
+
+    ============================================================
+
+    * properties names & property ids should be same for consistency,
+    although, there is no norm of what these should be called. 
+    ============================================================
+
+}

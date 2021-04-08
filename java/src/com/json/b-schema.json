@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://json-schema.org/draft-07/schema#",
+    "title": "Sample Feed Json Schema",
+    "type": "object",
+    "properties": {
+    	 "uid": { "$ref": "#/definitions/uid" }
+    },	
+     
+      
+    "definitions": {
+     	"uid": {
+         	"$id": "#uid",
+             "type": "integer",
+             "minimum": 1,
+             "maximum": 123445656
+        }
+    }
+    
+}

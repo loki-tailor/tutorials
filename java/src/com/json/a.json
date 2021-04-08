@@ -1,0 +1,37 @@
+[
+    {
+        "1": {
+            "i_am_boolean": true,
+            "i_am_color": "gold",
+            "i_am_null": null,
+            "i_am_integer": 123,
+            "i_am_number": 3.14,
+            "region": {
+                "region_a": "india",
+                "region_b": "b"
+            },
+            "faces": [
+                {
+                    "status": "ACT"
+                }
+            ]
+        }
+    },
+    {
+        "2": {
+            "boolean": true,
+            "color": "gold",
+            "null": null,
+            "number": 123,
+            "region": {
+                "region_a": "asia",
+                "region_b": "ny"
+            },
+            "faces": [
+                {
+                    "status": "AC"
+                }
+            ]
+        }
+    }
+]

@@ -1,0 +1,13 @@
+  cli single commanD: -classpath ".;C:\Users\lokeshwar.tailor\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.1\*"
+
+##################################################################
+powershell setting env:
+
+$env:classpath
+Remove-Item Env:classpath
+$env:classpath += ""
+
+$env:classpath += ".;C:\Users\lokeshwar.tailor\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.1\*"
+$env:classpath += "C:\Users\lokeshwar.tailor\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.1"
+
+##################################################################

@@ -35,3 +35,10 @@ class Demo1 {
 	}
 }
 
+/*- OUTPUT
+
+10
+Hello from default func inside interface
+
+*/
+
