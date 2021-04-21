@@ -26,3 +26,6 @@ hs_err_pid*
 .classpath
 .project
 .settings
+
+# angular npm
+node_modules/

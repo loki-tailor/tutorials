@@ -20,8 +20,8 @@ class A extends Thread {
 
 	while (true) {
 	    try {
-		System.out.println("Hello World - " + tid);
-		TimeUnit.SECONDS.sleep(1);
+	System.out.println("Hello World - " + tid);
+		T	imeUnit.SECONDS.sleep(1);
 	    } catch (InterruptedException e) {
 		break;
 	    }

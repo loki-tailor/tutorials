@@ -1,0 +1,34 @@
+ng build --prod --base-href ./
+
+angular run as standlone:
+https://stackoverflow.com/questions/54143002/run-angular-7-project-locally-on-file-without-server/54143163
+https://stackoverflow.com/questions/40024147/run-angular2-as-static-app-in-browser-without-a-server
+
+ag-grid minimum stuff to achieve:
+[done] * load from json (server running)
+[done] * load from csv file (server running)
+[doing] * load from json (standalone)
+
+* column-headers to be loaded from file and need not mention in app.components.ts manually for each of them
+* fix column-header (if not)
+* search all columns (global search)
+* highlight failed columns
+* fixed columns (aviod moving of them)
+* hide/show columns as per need
+* sorting/filtering/pagination
+* if possible by default show only failure columns + relevant columns and rows (and make it toggleable)
+
+* pivot
+* global search
+* group-by feature
+
+
+temp:
+pervious-context searching improving:
+https://stackoverflow.com/questions/40408541/fastest-way-to-search-for-an-object-in-a-list-in-java
+https://stackoverflow.com/questions/3307549/fastest-way-to-check-if-a-liststring-contains-a-unique-string
+
+ag-grid
+uml diagram
+time-improvement
+decimal-fractions
