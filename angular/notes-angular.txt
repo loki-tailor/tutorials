@@ -7,16 +7,22 @@ https://stackoverflow.com/questions/40024147/run-angular2-as-static-app-in-brows
 ag-grid minimum stuff to achieve:
 [done] * load from json (server running)
 [done] * load from csv file (server running)
-[doing] * load from json (standalone)
+[done] * load from csv to json (standalone)
 
-* column-headers to be loaded from file and need not mention in app.components.ts manually for each of them
-* fix column-header (if not)
+[fail] * column-headers to be loaded from file and need not mention in app.components.ts manually for each of them
+[fail] * column auto-fit
+
 * search all columns (global search)
 * highlight failed columns
 * fixed columns (aviod moving of them)
 * hide/show columns as per need
 * sorting/filtering/pagination
 * if possible by default show only failure columns + relevant columns and rows (and make it toggleable)
+
+* pass, fail checkbox
+* highlight all pass & checked
+* highlight all fail
+* ref -> https://www.ag-grid.com/angular-grid/column-sizing/#autosize-column-api
 
 * pivot
 * global search

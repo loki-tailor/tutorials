@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GridOptions, GridApi } from 'ag-grid-community';
 import { default as file_data } from '../assets/data.json';
 
 @Component({
@@ -10,60 +11,132 @@ export class AppComponent {
   title = 'angular-demo-three';
 
   public results = [];
-  
-  constructor() {
-    this.generate_json();
-  }
+  gridApi: GridApi;
+  gridColumnApi: any;
+  statusBar: any;
+  sideBar: any;
+  tooltipShowDelay: any;
 
-  rowData = this.results;
-
-  columnDefs = [
+  myColumnDefs = [
     {
       headerName: 'Athlete',
       field: 'athlete',
-      width: 150,
-      sortingOrder: ['asc', 'desc'],
+      initialSort: 'asc'
     },
     {
       headerName: 'Age',
       field: 'age',
-      width: 150,
     },
     {
       headerName: 'Country',
       field: 'country',
-      width: 150,
     },
     {
       headerName: 'Year',
       field: 'year',
-      width: 150,
     },
     {
       headerName: 'Gold',
       field: 'gold',
-      width: 150,
     },
     {
       headerName: 'Silver',
       field: 'silver',
-      width: 150,
     },
     {
       headerName: 'Bronze',
       field: 'bronze',
-      width: 150,
     },
     {
       headerName: 'Total',
       field: 'total',
-      width: 150,
     },
-  ];
+  ]; // colDef end
+
+  // enable sorting on all columns by default
+  defaultColDef = {
+    
+    // #### sorting ####
+    sortable: true,
+    // unSortIcon: true,
+
+    // #### filtering ####
+    filter: 'agMultiColumnFilter',
+    filterParams: {
+      buttons: ['clear', 'apply'],
+      showTooltips: true,
+      applyMiniFilterWhileTyping: true
+    },
+    floatingFilter: true,
+    menuTabs: ['generalMenuTab', 'filterMenuTab', 'columnsMenuTab'],
+    
+    // ## rows / columns ####
+    animateRows: true,
+    resizable: true,
+    minWidth: 90,
+    
+    // ### side-panel ####
+    enableValue: true,
+    enableRowGroup: true,
+    enablePivot: true,
+
+    // ## conditional highlighting ###
+    cellStyle: (params) => {
+      if (params.value === 1) {
+        return { color: 'white', backgroundColor: '#660000' };
+      }
+
+      if (String(params.value).startsWith('United')) {
+        return { color: 'white', backgroundColor: '#006600' };
+      }
+      return null;
+    },
+  };
+
+  constructor() {
+    this.generate_json();
+
+    this.tooltipShowDelay = 100;
+
+    this.statusBar = {
+      statusPanels: [
+        { statusPanel: 'agTotalAndFilteredRowCountComponent', align: 'left' },
+        { statusPanel: 'agTotalRowCountComponent', align: 'left' },
+        {
+          statusPanel: 'agAggregationComponent',
+          align: 'left',
+          statusPanelParams: {
+            aggFuncs: ['count', 'sum', 'avg'],
+          },
+        },
+      ],
+    };
+
+    this.sideBar = {
+      hiddenByDefault: false,    
+      toolPanels: ['columns', 'filters']
+    }
+  } // constructor end
+
+  gridOptions = <GridOptions>{
+    rowData: file_data,
+    colWidth: 120,
+    columnDefs: this.myColumnDefs,
+    defaultColDef: this.defaultColDef,
+  };
+
+  onGridReady(params) {
+    this.gridApi = params.api;
+    this.gridColumnApi = params.gridColumnApi;
+  }
+
+  onFirstDataRendered(params) {
+    params.api.sizeColumnsToFit();
+  }
 
   public generate_json() {
     // get all lines as array
-    let lines = file_data[0].split('|');
+    let lines = ''.split('|');
 
     // get column headings
     let headers = lines[0].split(',');
@@ -81,5 +154,7 @@ export class AppComponent {
       // add object to json array
       this.results.push(obj);
     } // iteration end over lines
-  }
-}
+
+  } // function-end
+
+} // class-end
