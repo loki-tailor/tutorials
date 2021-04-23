@@ -10,7 +10,7 @@ import { default as file_data } from '../assets/data.json';
 export class AppComponent {
   title = 'angular-demo-three';
 
-  public results = [];
+  results = [];
   gridApi: GridApi;
   gridColumnApi: any;
   statusBar: any;
@@ -53,7 +53,7 @@ export class AppComponent {
     },
   ]; // colDef end
 
-  // enable sorting on all columns by default
+  // default configs for all columns
   defaultColDef = {
     
     // #### sorting ####
@@ -82,7 +82,7 @@ export class AppComponent {
 
     // ## conditional highlighting ###
     cellStyle: (params) => {
-      if (params.value === 1) {
+      if (params.value === 1 || params.value === "1") {
         return { color: 'white', backgroundColor: '#660000' };
       }
 
@@ -119,7 +119,14 @@ export class AppComponent {
   } // constructor end
 
   gridOptions = <GridOptions>{
-    rowData: file_data,
+
+    // below will directly read from  file hence expecting it as JSON, 
+    // rowData: file_data,    
+    
+    // below is used when JSON contains only 1 array element in PSV (pipe-separated format)
+    // conversion from TSV to JSON happens in generateJson() in constructor
+    rowData: this.results,
+
     colWidth: 120,
     columnDefs: this.myColumnDefs,
     defaultColDef: this.defaultColDef,
@@ -136,7 +143,7 @@ export class AppComponent {
 
   public generate_json() {
     // get all lines as array
-    let lines = ''.split('|');
+    let lines = String(file_data).split('|');
 
     // get column headings
     let headers = lines[0].split(',');

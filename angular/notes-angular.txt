@@ -8,6 +8,7 @@ ag-grid minimum stuff to achieve:
 [done] * load from json (server running)
 [done] * load from csv file (server running)
 [done] * load from csv to json (standalone)
+[done] * hide/show columns as per need
 
 [fail] * column-headers to be loaded from file and need not mention in app.components.ts manually for each of them
 [fail] * column auto-fit
@@ -15,9 +16,9 @@ ag-grid minimum stuff to achieve:
 * search all columns (global search)
 * highlight failed columns
 * fixed columns (aviod moving of them)
-* hide/show columns as per need
 * sorting/filtering/pagination
 * if possible by default show only failure columns + relevant columns and rows (and make it toggleable)
+* filtering with better icon
 
 * pass, fail checkbox
 * highlight all pass & checked
