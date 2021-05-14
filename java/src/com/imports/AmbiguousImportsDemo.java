@@ -1,13 +1,5 @@
 package com.imports;
 
-/*-
-	created @ 23-03-20
-	@author lokeshwar
-*/
-
-import static java.lang.Integer.MAX_VALUE;
-import static java.lang.Long.MAX_VALUE;
-
 public class AmbiguousImportsDemo {
 	public static void main(String[] args) {
 	

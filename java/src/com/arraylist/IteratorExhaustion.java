@@ -1,5 +1,7 @@
 package com.arraylist;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 /*- @created 08-02-21  
 
     Iterator Exhaustion might be used when, we have
@@ -8,9 +10,6 @@ package com.arraylist;
 
 */
 import java.util.List;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
 
 public class IteratorExhaustion {
     public static void main(String[] args) {

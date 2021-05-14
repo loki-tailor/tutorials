@@ -1,6 +1,6 @@
 package com.logics.sierra_book.ST_ch1._3;
 
-import static java.lang.System.*;
+import static java.lang.System.out;
 
 class _ {
 	static public void main(String[] __A_V_) {

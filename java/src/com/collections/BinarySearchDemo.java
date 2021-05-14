@@ -1,5 +1,7 @@
 package com.collections;
 
+import java.util.Arrays;
+
 /**
 	created @ 22-01-2020
 	@author lokeshwar
@@ -7,7 +9,6 @@ package com.collections;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Arrays;
 
 public class BinarySearchDemo {
 	public static void main(String[] args) {

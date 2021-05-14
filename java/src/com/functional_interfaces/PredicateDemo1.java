@@ -1,12 +1,13 @@
 package com.functional_interfaces;
 
+import java.util.Arrays;
+
 /**
 	created @ 24-01-2020
 	@author lokeshwar
 */
 
 import java.util.List;
-import java.util.Arrays;
 import java.util.function.Predicate;
 
 public class PredicateDemo1 {

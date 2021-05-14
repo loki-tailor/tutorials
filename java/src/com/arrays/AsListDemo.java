@@ -1,8 +1,8 @@
 package com.arrays;
 
-import java.util.List;
-import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
 	@created on 22-01-2020

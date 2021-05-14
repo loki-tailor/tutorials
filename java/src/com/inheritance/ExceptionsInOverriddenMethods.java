@@ -1,7 +1,6 @@
 package com.inheritance;
 
 import java.io.IOException;
-import java.io.InterruptedIOException;
 
 /*-
  * 	@author lokeshwar @created 07-07-20

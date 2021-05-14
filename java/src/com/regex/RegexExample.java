@@ -1,6 +1,6 @@
 package com.regex;
 
-import java.util.regex.*;
+import java.util.regex.Pattern;
 
 class RegexExample {
     public static void main(String args[]) {

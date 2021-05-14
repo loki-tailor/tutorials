@@ -12,6 +12,7 @@ public class Temp {
 		long a = 265100 * 265100;
 		System.out.println(Timer.nanoToOnly_Millis(a));
 		System.out.println(Timer.nanoToOnly_nano(a));
-
+		System.out.println(Integer.parseInt("1"));
+		
 	}
 }

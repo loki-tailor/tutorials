@@ -1,5 +1,7 @@
 package com.logics.app_ocajavatest;
 
+import java.util.ArrayList;
+
 /**
 	created @ 25-01-2020
 	@author lokeshwar
@@ -8,7 +10,6 @@ package com.logics.app_ocajavatest;
 */
 
 import java.util.List;
-import java.util.ArrayList;
 
 public class Demo6 {
 	public static void main(String[] args) {

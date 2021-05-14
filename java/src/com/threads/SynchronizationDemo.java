@@ -1,7 +1,5 @@
 package com.threads;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
-
 public class SynchronizationDemo {
 
 	public static void main(String[] args) throws Exception {

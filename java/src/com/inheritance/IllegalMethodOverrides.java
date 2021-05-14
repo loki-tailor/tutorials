@@ -1,8 +1,5 @@
 package com.inheritance;
 
-import java.io.IOException;
-import java.util.regex.Pattern;
-
 /*-
  * 	@author lokeshwar @created 08-07-2020
  */
