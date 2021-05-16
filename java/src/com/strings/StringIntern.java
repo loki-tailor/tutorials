@@ -3,7 +3,8 @@ package com.strings;
 /*-
     @created 25-01-21
 
-    String.intern(): a string that has the same contents as this string, but isguaranteed to be from a pool of unique strings.
+    String.intern(): a string that has the same contents as this string, 
+    but is guaranteed to be from a pool of unique strings.
 */
 
 public class StringIntern {

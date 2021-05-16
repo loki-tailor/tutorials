@@ -19,6 +19,9 @@ public class Demo2 {
 
 		System.out.println("Printing using lambda expressions");
 		list.forEach(n -> System.out.print(n + " "));
+		System.out.println();
+		System.out.println();
+		list.forEach(System.out::print);
 
 		System.out.println("\nPrinting odd numbers using lambda expression");
 		list.forEach(n -> { 

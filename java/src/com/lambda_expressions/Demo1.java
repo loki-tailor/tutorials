@@ -23,7 +23,7 @@ interface FuncInterface {
 class Demo1 {
 	public static void main(String[] args) {
 		// lambda expression to implement above 
-        	// functional interface. This interface 
+        	// functional interface. This interface 	
         	// by default implements abstractFun()		
 		FuncInterface fobj = (int x) -> System.out.println(2*x);
 		

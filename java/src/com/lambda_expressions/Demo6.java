@@ -20,7 +20,7 @@ class Demo6 implements Secret {
 		// Secret d = (e) -> "Poof inside lambda"; // VALID
 		// Secret d = e -> { String e = ""; "Poof" }; // INVALID*
 		// Secret d = (e) -> { String e = ""; return "Poof"; }; // INVALID
-		 Secret d = (e) -> { String f = ""; return "Poof in lambda"; }; // VALID
+		//  Secret d = (e) -> { String f = ""; return "Poof in lambda"; }; // VALID
 		System.out.println(d.magic(10));
 	}
 }	
