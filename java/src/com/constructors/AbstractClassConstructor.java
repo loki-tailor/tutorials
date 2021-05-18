@@ -1,5 +1,7 @@
 package com.constructors;
 
+import java.io.FileNotFoundException;
+
 /*- 
 	@author lokeshwar @created 15-07-20
 
@@ -15,7 +17,6 @@ package com.constructors;
 */
 
 import java.io.IOException;
-import java.io.FileNotFoundException;
 
 abstract class A {
 	A() { this(1); System.out.println("Inside abstract class A's - () constructor"); try { dis(); } catch(Exception e) {} }

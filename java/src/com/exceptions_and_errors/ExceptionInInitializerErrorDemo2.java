@@ -1,10 +1,5 @@
 package com.exceptions_and_errors;
 
-/*- @created  05-11-2020
-*/
-
-import com.exceptions_and_errors.*;
-
 public class ExceptionInInitializerErrorDemo2 {
 	public static void main(String[] args) {
 		ExceptionInInitializerErrorDemo demo = new ExceptionInInitializerErrorDemo();

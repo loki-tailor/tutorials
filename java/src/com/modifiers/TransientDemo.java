@@ -1,5 +1,9 @@
 package com.modifiers;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 /*-
 	@author = lokeshwar
 	@created = 14-12-19
@@ -10,10 +14,6 @@ package com.modifiers;
 	* The 'transient modifier applies only to instance variable
 */
 import java.io.Serializable;
-import java.io.FileOutputStream;
-import java.io.FileInputStream;
-import java.io.ObjectOutputStream;
-import java.io.ObjectInputStream;
 import java.util.Date;
 
 public class TransientDemo implements Serializable {

@@ -1,10 +1,11 @@
 package com.so;
 
+import java.util.ArrayList;
+
 /*- @created 08-02-20 @ref = https://stackoverflow.com/questions/8189466/why-am-i-not-getting-a-java-util-concurrentmodificationexception-in-this-example 
 */
 
 import java.util.List;
-import java.util.ArrayList;
 
 public class RemoveListElementDemo {    
     private static final List<Integer> integerList;

@@ -9,8 +9,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 @XmlAccessorType(XmlAccessType.FIELD) // optional
 @XmlRootElement(name = "persons") // mandatory
 public class POJO_XML_Data {

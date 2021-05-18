@@ -1,5 +1,8 @@
 package com.arraylist;
 
+import java.util.Arrays;
+import java.util.Iterator;
+
 /*- @created 08-02-21
 
     Ref: Java Doc
@@ -13,9 +16,6 @@ package com.arraylist;
 */
 
 import java.util.List;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
 
 public class FixedSizeList {
     public static void main(String[] args) {

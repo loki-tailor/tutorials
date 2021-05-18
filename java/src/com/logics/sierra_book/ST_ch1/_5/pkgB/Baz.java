@@ -21,8 +21,7 @@ package com.logics.sierra_book.ST_ch1._5.pkgB;
 	2 errors
 	------------------------------------------------------------------------------
 */
-
-import com.logics.sierra_book.ST_ch1._5.pkgA.*;
+import com.logics.sierra_book.ST_ch1._5.pkgA.Foo;
 
 public class Baz {
 	public static void main(String[] args) {
