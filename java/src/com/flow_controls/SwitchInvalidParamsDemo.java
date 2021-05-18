@@ -20,3 +20,5 @@ public class SwitchInvalidParamsDemo {
 		} // end of switch
 	}
 } // end of main
+
+// output varies based on the variable in the switch statement
