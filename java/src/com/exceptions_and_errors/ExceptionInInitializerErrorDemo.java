@@ -15,8 +15,8 @@ public class ExceptionInInitializerErrorDemo {
 
 	// ########################################################################################################################
 
-	private static int state = initializeVar();
-	/*- above will give below exception: 
+	// private static int state = initializeVar();
+	/*- above will give below runtime exception: 
 			Exception in thread "main" java.lang.ExceptionInInitializerError
 			Caused by: java.lang.RuntimeException
 					at com.exceptions_and_errors.ExceptionInInitializerErrorDemo.initializeVar(ExceptionInInitializerErrorDemo.java:19)

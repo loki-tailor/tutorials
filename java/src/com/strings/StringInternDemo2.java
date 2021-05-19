@@ -7,7 +7,7 @@ package com.strings;
     but is guaranteed to be from a pool of unique strings.
 */
 
-public class StringIntern {
+public class StringInternDemo2 {
     public static void main(String[] args) {
         String a1 = "loki"; // new obj in SCP
         String a2 = "lokeshwar".intern(); // new obj in SCP

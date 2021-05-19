@@ -24,8 +24,6 @@ class A {}
 public class DemoNoClassDefFoundError {
 	public static void main(String[] args) {
 		new A();
-
-
 	}
 }
 

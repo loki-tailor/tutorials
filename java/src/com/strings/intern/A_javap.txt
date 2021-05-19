@@ -1,0 +1,121 @@
+/*-
+PS F:\git\tutorials\java\src> javap -v com.strings.intern.A
+Classfile /F:/git/tutorials/java/src/com/strings/intern/A.class
+  Last modified 17-May-2021; size 723 bytes
+  SHA-256 checksum 28c90a35d4a22e4e90e4351b06162e28167cf0498b13e3dbd9e1ecdd106f7355
+  Compiled from "A.java"
+public class com.strings.intern.A
+  minor version: 0
+  major version: 60
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #26                         // com/strings/intern/A
+  super_class: #2                         // java/lang/Object    
+  interfaces: 0, fields: 0, methods: 2, attributes: 1
+Constant pool:
+   #1 = Methodref          #2.#3          // java/lang/Object."<init>":()V
+   #2 = Class              #4             // java/lang/Object
+   #3 = NameAndType        #5:#6          // "<init>":()V
+   #4 = Utf8               java/lang/Object
+   #5 = Utf8               <init>
+   #6 = Utf8               ()V
+   #7 = String             #8             // Hello World
+   #8 = Utf8               Hello World
+   #9 = Class              #10            // java/lang/String
+  #10 = Utf8               java/lang/String
+  #11 = Methodref          #9.#12         // java/lang/String."<init>":(Ljava/lang/String;)V
+  #12 = NameAndType        #5:#13         // "<init>":(Ljava/lang/String;)V
+  #13 = Utf8               (Ljava/lang/String;)V
+  #14 = Fieldref           #15.#16        // java/lang/System.out:Ljava/io/PrintStream;
+  #15 = Class              #17            // java/lang/System
+  #16 = NameAndType        #18:#19        // out:Ljava/io/PrintStream;
+  #17 = Utf8               java/lang/System
+  #18 = Utf8               out
+  #19 = Utf8               Ljava/io/PrintStream;
+  #20 = Methodref          #21.#22        // java/io/PrintStream.println:(Z)V
+  #21 = Class              #23            // java/io/PrintStream
+  #22 = NameAndType        #24:#25        // println:(Z)V
+  #23 = Utf8               java/io/PrintStream
+  #24 = Utf8               println
+  #25 = Utf8               (Z)V
+  #26 = Class              #27            // com/strings/intern/A
+  #27 = Utf8               com/strings/intern/A
+  #28 = Utf8               Code
+  #29 = Utf8               LineNumberTable
+  #30 = Utf8               LocalVariableTable
+  #31 = Utf8               this
+  #32 = Utf8               Lcom/strings/intern/A;
+  #33 = Utf8               main
+  #34 = Utf8               ([Ljava/lang/String;)V
+  #35 = Utf8               args
+  #36 = Utf8               [Ljava/lang/String;
+  #37 = Utf8               s0
+  #38 = Utf8               Ljava/lang/String;
+  #39 = Utf8               s3
+  #40 = Utf8               f1
+  #41 = Utf8               Z
+  #42 = Utf8               StackMapTable
+  #43 = Utf8               SourceFile
+  #44 = Utf8               A.java
+{
+  public com.strings.intern.A();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 8: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/strings/intern/A;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=4, args_size=1
+
+         0: ldc           #7                  // String Hello World
+         2: astore_1
+
+         3: new           #9                  // class java/lang/String
+         6: dup
+         7: ldc           #7                  // String Hello World
+         9: invokespecial #11                 // Method java/lang/String."<init>":(Ljava/lang/String;)V
+        12: astore_2
+
+        13: aload_1
+        14: aload_2
+
+        15: if_acmpne     22
+        18: iconst_1
+        19: goto          23        
+        22: iconst_0
+        23: istore_3
+        
+        24: getstatic     #14                 // Field java/lang/System.out:Ljava/io/PrintStream;
+        27: iload_3
+        28: invokevirtual #20                 // Method java/io/PrintStream.println:(Z)V
+        31: return
+      LineNumberTable:
+        line 10: 0
+        line 11: 3
+        line 13: 13
+        line 15: 24
+        line 17: 31
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      32     0  args   [Ljava/lang/String;
+            3      29     1    s0   Ljava/lang/String;
+           13      19     2    s3   Ljava/lang/String;
+           24       8     3    f1   Z
+      StackMapTable: number_of_entries = 2
+        frame_type = 253 /* append */
+          offset_delta = 22
+          locals = [ class java/lang/String, class java/lang/String ]
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+}
+SourceFile: "A.java"

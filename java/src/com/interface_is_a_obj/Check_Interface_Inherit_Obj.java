@@ -1,4 +1,4 @@
-package com.javap;
+package com.interface_is_a_obj;
 
 /*
  * created @ Sun May 16 2021 9:46:19 am

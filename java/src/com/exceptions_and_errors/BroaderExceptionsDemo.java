@@ -18,7 +18,7 @@ class A {
 }
 
 public class BroaderExceptionsDemo extends A {
-	public static void main(String[] args) throws Exception3  {
+	public static void main(String[] args) throws Exception2  {
 		new BroaderExceptionsDemo().see();
 	}
 

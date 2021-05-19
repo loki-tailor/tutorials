@@ -5,13 +5,26 @@ package com.strings;
  * 
  * ref @ https://www.java67.com/2014/08/difference-between-string-literal-and-new-String-object-Java.html
  */
+
+ /*-
+
+ @ref: comments @   https://javarevisited.blogspot.com/2013/07/java-string-tutorial-and-examples-beginners-programming.html
+ 2) JVM does not intern all strings created by Java code, 
+ only String literals are interned. String created using new() is not 
+ interned until you explicitly call intern method on them.
+
+ */
 class Other {
     static String hello = "Hello";
 }
 
-public class StrInternDemo {
+public class StringInternDemo1 {
 
     public static void main(String[] args) {
+        three(args);
+    }
+
+    public static void seven(String[] args) {
 
         // ref @ https://stackoverflow.com/a/43423384/7415499
 
@@ -112,9 +125,9 @@ public class StrInternDemo {
         
         */
         String s1 = "Hello".concat("World");
-        String s3 = new String("HelloWorld"); // Line-2
+        String s3 = new String("Hello World"); // Line-2
         String s2 = s1.intern();
-        System.out.println(s1 == s2); // false
+        System.out.println(s1 == s2); // true
         System.out.println(s1 == s3); // false
         System.out.println(s2 == s3); // false
     }
