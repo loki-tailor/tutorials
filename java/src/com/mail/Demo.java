@@ -18,7 +18,7 @@ import javax.mail.search.ComparisonTerm;
 import javax.mail.search.ReceivedDateTerm;
 import javax.mail.search.SearchTerm;
 
-import com.file.MyFile;
+import com.file.FileOps;
 
 public class Demo {
 
@@ -64,10 +64,10 @@ public class Demo {
 		.append(message.getFrom()[0]).append(",")
 		.append(message.getRecipients(RecipientType.TO)[0]);
 		System.out.println(sb.toString());
-		MyFile.append("/home/lokesh/Desktop/emails/demo.csv", sb.toString());
+		FileOps.append("/home/lokesh/Desktop/emails/demo.csv", sb.toString());
 		
 		String content = "\n**********\n" + (i+1) + "\t" + ((MimeMessage)message).getContent() + "\n**********\n";
-		MyFile.append("/home/lokesh/Desktop/emails/content.log", content);
+		FileOps.append("/home/lokesh/Desktop/emails/content.log", content);
 
 	    }
 

@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.file.MyFile;
+import com.file.FileOps;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
@@ -33,7 +33,7 @@ public class DFEventVerification_Approach1 {
 	    }
 	};
 
-	String readFile = MyFile.readFile("resources/logs2.json");
+	String readFile = FileOps.readFile("resources/logs2.json");
 	JsonElement je = new JsonParser().parse(readFile);
 	JsonArray ja = je.getAsJsonObject().get("charles-session").getAsJsonObject().get("transaction").getAsJsonArray();
 	System.out.println("Total Transactions = " + ja.size());
@@ -87,19 +87,19 @@ public class DFEventVerification_Approach1 {
 		    if (map.get(seqid).get(j).getAsJsonObject().get("request").getAsJsonObject().get("body").getAsString().matches(".*" + eventList.get(k) + ".*")) {
 
 			if (k == 0) {
-			    MyFile.append(logsPath, "");
+			    FileOps.append(logsPath, "");
 			}
 
 			if (k == eventList.size()) {
 			    sequencePassStatus = true;
 			}
 
-			MyFile.append(logsPath, i + "." + j + "," + seqid + "," + response_event_name + "," + response_status_code + "," + request_requestTime);
+			FileOps.append(logsPath, i + "." + j + "," + seqid + "," + response_event_name + "," + response_status_code + "," + request_requestTime);
 			j++;
 
 		    } // end of event 1
 		    else {
-			MyFile.append(logsPath, i + "." + j + "," + seqid + "," + response_event_name + "," + response_status_code + "," + request_requestTime);
+			FileOps.append(logsPath, i + "." + j + "," + seqid + "," + response_event_name + "," + response_status_code + "," + request_requestTime);
 			j++;
 			break;
 		    }
@@ -108,7 +108,7 @@ public class DFEventVerification_Approach1 {
 		// Record Event Result
 		boolean recordResult = j == map.get(seqid).size() ? true : map.get(seqid).get(j).getAsJsonObject().get("request").getAsJsonObject().get("body").getAsString().matches(".*" + eventList.get(0) + ".*");
 		if (recordResult) {
-		    MyFile.append(resultsPath, i + "," + seqid + "," + response_event_name + "," + sequencePassStatus);
+		    FileOps.append(resultsPath, i + "," + seqid + "," + response_event_name + "," + sequencePassStatus);
 		    sequencePassStatus = false;
 		}
 

@@ -2,12 +2,12 @@ package com.logics;
 
 import java.util.List;
 
-import com.file.MyFile;
+import com.file.FileOps;
 
 public class IndusOsServerAlertEmailFiltering {
 
     public static void main(String[] args) {
-	List<String> readFileAsList = MyFile.readFileAsList("/home/lokesh/Desktop/temp.txt");
+	List<String> readFileAsList = FileOps.readFileAsList("/home/lokesh/Desktop/temp.txt");
 	for (String s : readFileAsList) {
 
 	    String day = s.substring(0, 2);

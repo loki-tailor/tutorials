@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import com.file.MyFile;
+import com.file.FileOps;
 
 public class Demo2 {
 
@@ -17,9 +17,9 @@ public class Demo2 {
 	String path = "/home/lokesh/Desktop/emails/email.csv";
 	String newPath = "/home/lokesh/Desktop/emails/nemail.csv";
 
-	MyFile.deleteFile(newPath);
+	FileOps.deleteFile(newPath);
 
-	List<String> list = MyFile.readFileAsList(path);
+	List<String> list = FileOps.readFileAsList(path);
 	System.out.println(list.size());
 
 	Queue<String> failureRows = new LinkedList<String>();
@@ -51,17 +51,17 @@ public class Demo2 {
 			    if (diff > 1.8e+6) {
 				for (String updateRow : failureRows) {
 				    if (updateRow.contains("Hey")) {
-					MyFile.append(newPath, updateRow);
+					FileOps.append(newPath, updateRow);
 				    } else if (serverDown && updateRow.contains("Down")) {
 					String updatedRow = "NO RECOVERY" + updateRow;
-					MyFile.append(newPath, updatedRow);
+					FileOps.append(newPath, updatedRow);
 				    } else {
 					String updatedRow = "NO SERVER DOWN" + updateRow;
-					MyFile.append(newPath, updatedRow);
+					FileOps.append(newPath, updatedRow);
 				    }
 
 				}
-				MyFile.append(newPath, "NO SERVER DOWN" + row);
+				FileOps.append(newPath, "NO SERVER DOWN" + row);
 				failureRows.clear();
 				serverDown = false;
 			    }
@@ -76,14 +76,14 @@ public class Demo2 {
 
 			    for (String updateRow : failureRows) {
 				if (updateRow.contains("Hey")) {
-				    MyFile.append(newPath, updateRow);
+				    FileOps.append(newPath, updateRow);
 				} else {
 				    String updatedRow = "LOGGED RECOVERY" + updateRow;
-				    MyFile.append(newPath, updatedRow);
+				    FileOps.append(newPath, updatedRow);
 				}
 			    }
 
-			    MyFile.append(newPath, "SERVER RECOVERY" + row);
+			    FileOps.append(newPath, "SERVER RECOVERY" + row);
 			    failureRows.clear();
 
 			    serverDown = false;
@@ -93,14 +93,14 @@ public class Demo2 {
 
 			    for (String updateRow : failureRows) {
 				if (updateRow.contains("Hey")) {
-				    MyFile.append(newPath, updateRow);
+				    FileOps.append(newPath, updateRow);
 				} else {
 				    String updatedRow = "NO SERVER DOWN" + updateRow;
-				    MyFile.append(newPath, updatedRow);
+				    FileOps.append(newPath, updatedRow);
 				}
 			    }
 
-			    MyFile.append(newPath, "NO SERVER DOWN" + row);
+			    FileOps.append(newPath, "NO SERVER DOWN" + row);
 			    failureRows.clear();
 			    continue;
 			}

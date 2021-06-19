@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.file.MyFile;
+import com.file.FileOps;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
@@ -44,7 +44,7 @@ public class DFEventVerification_Approach2 {
 	};
 
 	// Read File
-	String readFile = MyFile.readFile("resources/charles/logs1.json");
+	String readFile = FileOps.readFile("resources/charles/logs1.json");
 	JsonElement je = new JsonParser().parse(readFile);
 	JsonArray ja = je.getAsJsonObject().get("charles-session").getAsJsonObject().get("transaction").getAsJsonArray();
 	System.out.println("Total Transactions = " + ja.size());
@@ -106,11 +106,11 @@ public class DFEventVerification_Approach2 {
 
 	String logsPath = "resources/charles/logs.csv";
 	String resultsPath = "resources/charles/results.csv";
-	MyFile.deleteFile(logsPath);
-	MyFile.deleteFile(resultsPath);
+	FileOps.deleteFile(logsPath);
+	FileOps.deleteFile(resultsPath);
 
-	MyFile.append(logsPath, "seq_id,event_name,status_code,_requestTimeMillis");
-	MyFile.append(resultsPath, "event_no,seq_id,last_event,result");
+	FileOps.append(logsPath, "seq_id,event_name,status_code,_requestTimeMillis");
+	FileOps.append(resultsPath, "event_no,seq_id,last_event,result");
 
 	for (String seqid : map_seqId_events.keySet()) {
 
@@ -128,18 +128,18 @@ public class DFEventVerification_Approach2 {
 		    response_event_name = new JsonParser().parse(tempJe.getAsJsonObject().get("request").getAsJsonObject().get("body").getAsString().replace("\\", "")).getAsJsonObject().get("status").getAsString().trim();
 		    String response_status_code = tempJe.getAsJsonObject().get("response").getAsJsonObject().get("_status").getAsString().trim();
 		    String request_requestTime = tempJe.getAsJsonObject().get("_requestTimeMillis").getAsString().trim();
-		    MyFile.append(logsPath, seqid + "," + response_event_name + "," + response_status_code + "," + request_requestTime);
+		    FileOps.append(logsPath, seqid + "," + response_event_name + "," + response_status_code + "," + request_requestTime);
 
 		    actualEventList.add(response_event_name);
 		}
 
-		MyFile.append(resultsPath, eventNo + "," + seqid + "," + response_event_name + "," + actualEventList.equals(eventList));
-		MyFile.append(logsPath, "");
+		FileOps.append(resultsPath, eventNo + "," + seqid + "," + response_event_name + "," + actualEventList.equals(eventList));
+		FileOps.append(logsPath, "");
 	    }
 	}
 
 	System.out.println();
-	System.out.println(MyFile.readFile(resultsPath));
+	System.out.println(FileOps.readFile(resultsPath));
 
     } // method-end
 

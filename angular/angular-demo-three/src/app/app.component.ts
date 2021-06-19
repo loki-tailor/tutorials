@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'angular-demo-three';
 
   results = [];
-  gridApi: GridApi;
+  gridApi: any;
   gridColumnApi: any;
   statusBar: any;
   sideBar: any;
@@ -94,6 +94,9 @@ export class AppComponent {
   };
 
   constructor() {
+
+    this.gridApi = GridApi;
+
     this.generate_json();
 
     this.tooltipShowDelay = 100;
