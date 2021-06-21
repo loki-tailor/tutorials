@@ -1,24 +1,21 @@
-import java.util.Arrays;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Iterator;
 
 /*-
 	@author lokeshwar @created 11-07-2020
 */
 
 public class Temp {
-
 	public static void main(String[] args) {
-		throw new CustomRunTimeException();
+		HashMap hashmap = new HashMap();
+		hashmap.put("Java", 1);
+		hashmap.put("Hungry", 2);
+		hashmap.put("Blogspot", 3);
+
+		Iterator iteratorobject = hashmap.keySet().iterator();
+		while (iteratorobject.hasNext()) {
+			String hashmapkey = (String) iteratorobject.next();
+			System.out.print(hashmap.get(hashmapkey));
+		}
 	}
 }
-
-class CustomRunTimeException extends RuntimeException {
-
-}
-
-/*- output
-
-Exception in thread "main" CustomRunTimeException
-        at Temp.main(Temp.java:11)
-
-*/

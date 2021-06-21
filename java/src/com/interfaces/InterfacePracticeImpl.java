@@ -6,15 +6,20 @@ package com.interfaces;
 
 /************ Demonstration of Interface ***************/
 
-class DemoClassToExtendInterface { /* classes cannot be extended by any interfaces */ }
+class DemoClassToExtendInterface {
+	/* classes cannot be extended by any interfaces */ }
 
 interface DemoInterface2 {
 
 	// below are valid method signature for a interface methods
 	void method1();
+
 	public void method2();
+
 	abstract void method3();
+
 	public abstract void method4();
+
 	abstract public void method5();
 
 	// below are invalid method signatures for a interface method q
@@ -29,26 +34,38 @@ interface DemoInterface2 {
 	public static int c = 1; // implicitly final
 	public final int d = 1; // implicitly static
 	static final int e = 1; // implicitly public
-	public static final int f = 1; 	
+	public static final int f = 1;
 
 	// below are invalid variable declaration
 	// private int x = 10;
-	// public static final int z;	 	
+	// public static final int z;
 }
 
-interface DemoInterfaceToImplementInAnotherInterface {}
+interface DemoInterfaceToImplementInAnotherInterface {
+}
 
 interface DemoInterface extends DemoInterfaceToImplementInAnotherInterface {
 
 	// Interface methods are by default 'public' & 'abstract'
-	void method1();	
+	void method1();
+
 	static int x = 99;
-	static void staticMethod(String var) { System.out.println("Static Method: Hello " + var); }
-	default int defaultMethod(int a) { return a*a; }
+
+	static void staticMethod(String var) {
+		System.out.println("Static Method: Hello " + var);
+	}
+
+	default int defaultMethod(int a) {
+		return a * a;
+	}
 
 	// valid default method declarations
-	default String m1() { return ""; }
-	public default void m2() {}
+	default String m1() {
+		return "";
+	}
+
+	public default void m2() {
+	}
 
 	// Invalid default method declarations
 	// static default void m3() {}
@@ -56,37 +73,51 @@ interface DemoInterface extends DemoInterfaceToImplementInAnotherInterface {
 	// default void m4();
 
 	// valid static method declarations
-	static void s1() {}
-	public static void s2() {}
-	
+	static void s1() {
+	}
+
+	public static void s2() {
+	}
+
 	// invalid static method declaration
 	// static void s3();
 	// protected static void s4() {}
 	// private static void s5() {}
 	// final static void s6() {}
 	// abstract static void s7() {}
-	
-	
-}
-public class InterfacePracticeImpl implements DemoInterface { 
 
-	// Inheriting method should be implemented as public, otherwise compile time error comes
-	public void method1() { 		
-		System.out.println("Inside overriden method - method1()"); 
+}
+
+public class InterfacePracticeImpl implements DemoInterface {
+
+	// Inheriting method should be implemented as public, otherwise compile time
+	// error comes
+	public void method1() {
+		System.out.println("Inside overriden method - method1()");
 		System.out.println("Value of x = " + x);
 
-		// modifying variables declared inside interface is not allowed, because, they are public final static by default
-		// compile error: cannot assign a value to final variable x		
+		// modifying variables declared inside interface is not allowed, because, they
+		// are public final static by default
+		// compile error: cannot assign a value to final variable x
 		// x = 20;
-		
-	} 
-	public static void main (String[] args) {
-		new InterfacePracticeImpl().method1();	
+
+	}
+
+	public static void main(String[] args) {
+		new InterfacePracticeImpl().method1();
 		System.out.println("Default Method: Square = " + new InterfacePracticeImpl().defaultMethod(2));
-		DemoInterface.staticMethod("Lokeshwar");			
+		DemoInterface.staticMethod("Lokeshwar");
 
 		// invalid way of calling static method of an interface
 		// new InterfacePracticeImpl().staticMethod("Loki");
 		// InterfacePracticeImpl.staticMethod("loki");
 	}
 } // end of class
+
+/*-
+
+A top level interface can be declared with either public or default modifiers.
+
+public interface is accessible across all packages but interface declared with default modifier and be accessed in the defining package only.
+
+*/
