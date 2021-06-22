@@ -1,5 +1,5 @@
-import java.util.HashMap;
-import java.util.Iterator;
+import java.util.ArrayList;
+import java.util.List;
 
 /*-
 	@author lokeshwar @created 11-07-2020
@@ -7,15 +7,9 @@ import java.util.Iterator;
 
 public class Temp {
 	public static void main(String[] args) {
-		HashMap hashmap = new HashMap();
-		hashmap.put("Java", 1);
-		hashmap.put("Hungry", 2);
-		hashmap.put("Blogspot", 3);
+		long a = 10;
+		switch (a) {
 
-		Iterator iteratorobject = hashmap.keySet().iterator();
-		while (iteratorobject.hasNext()) {
-			String hashmapkey = (String) iteratorobject.next();
-			System.out.print(hashmap.get(hashmapkey));
 		}
 	}
 }
