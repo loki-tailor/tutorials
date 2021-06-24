@@ -14,16 +14,32 @@ package com.constructors.demo_check_call_to_default_constructor;
 */
 
 class A {
-	A() { System.out.println("Calling A.A(), getSimpleName @ " + this.getClass().getSimpleName()); }
+	// A(int a) { // line a
+	A() {
+		System.out.println("Calling A.A(), getSimpleName @ " + this.getClass().getSimpleName());
+	}
 }
 
 class B extends A {
-	B() { System.out.println("Calling B.B() without super(), getSimpleName @ " + this.getClass().getSimpleName()); }
-	B(int i) { System.out.println("Calling B.B(int) without super() in B.B(), getSimpleName @ " + this.getClass().getSimpleName()); }
+	B() {
+
+		// super(10); // if 'line a' is uncommented, then this should be added or
+		// compile error
+
+		System.out.println("Calling B.B() without super(), getSimpleName @ " + this.getClass().getSimpleName());
+	}
+
+	B(int i) {
+		// super(i); // if 'line a' is uncommented, then this should be added or compile error
+		System.out.println(
+				"Calling B.B(int) without super() in B.B(), getSimpleName @ " + this.getClass().getSimpleName());
+	}
 }
 
 public class Demo1 {
 	public static void main(String[] args) {
 		new B();
+		System.out.println();
+		new B(1);
 	}
 }

@@ -22,13 +22,18 @@ class A {
 	int i = 10;
 	static int j = 20;
 
-	A() { this(j); System.out.println(i + " - " + j); }
+	A() {
+		this(j);
+		System.out.println(i + " - " + j);
+	}
 
-	A(int var) { System.out.println(var); }
+	A(int var) {
+		System.out.println(var);
+	}
 }
 
 public class Demo5 {
 	public static void main(String[] args) {
-		new A();	
+		new A();
 	}
 }

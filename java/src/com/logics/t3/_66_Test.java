@@ -8,7 +8,7 @@ public class _66_Test {
         System.out.println(s == s2);
     }
 }
-
+  
 /*-
 Explanation
 toString() method defined in StringBuilder class doesn't use String literal rather uses the constructor of String class to create the instance of String class.

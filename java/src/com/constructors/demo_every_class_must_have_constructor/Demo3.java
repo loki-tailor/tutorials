@@ -13,8 +13,17 @@ abstract class A {
 }
 
 class B extends A {
-	public B(){}
-	public B(int i) {}	
+	public B() {
+		// compile error: Implicit super constructor A() is undefined. Must explicitly
+		// invoke another constructorJava(134217871)
+
+	}
+
+	public B(int i) {
+		// compile error: Implicit super constructor A() is undefined. Must explicitly
+		// invoke another constructorJava(134217871)
+
+	}
 }
 /*-
 	Above statement will give compiler error as below, when main() has 'new B();'

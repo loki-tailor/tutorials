@@ -14,11 +14,11 @@ package com.constructors;
 
 public class PrivateConstructor {
     public static void main(String[] args) {
-	SingletonClass obj1 = SingletonClass.createObject();
-	System.out.println("Object 1 created as - " + obj1);
+        SingletonClass obj1 = SingletonClass.createObject();
+        System.out.println("Object 1 created as - " + obj1);
 
-	SingletonClass obj2 = SingletonClass.createObject();
-	System.out.println("Object 2 created as - " + obj2);
+        SingletonClass obj2 = SingletonClass.createObject();
+        System.out.println("Object 2 created as - " + obj2);
     } // end of main
 
 } // end of class
@@ -36,19 +36,22 @@ class SingletonClass {
 
     // Error: The constructor SingletonClass() is not visible
     private SingletonClass() {
-	// this will prevent instantiation of this class
-	System.out.println("inside private constructor");
+        // this will prevent instantiation of this class
+        System.out.println("inside private constructor");
     }
 
     public static SingletonClass createObject() {
-	if (obj == null) {
-	    obj = new SingletonClass();
-	}
-	return obj;
+        if (obj == null) {
+            obj = new SingletonClass();
+            System.out.println("new object of SingletonClass created...");
+        } else {
+            System.out.println("object already exists, not creating new one...");
+        }
+        return obj;
     }
 
     public void display() {
-	System.out.println("Inside display method of " + this.getClass().getSimpleName());
+        System.out.println("Inside display method of " + this.getClass().getSimpleName());
     }
 
 }

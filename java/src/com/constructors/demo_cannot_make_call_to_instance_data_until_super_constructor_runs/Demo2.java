@@ -32,13 +32,21 @@ class A {
 	int i = 10;
 	static int j = 20;
 
-	A() { super(i); System.out.println(i + " - " + j); }
+	A() {
+		// super(i); // compile error
+		// this(i); // compile error
+		// super(j); // compile error
+		this(j); // no compile error
+		System.out.println(i + " - " + j);
+	}
 
-	A(int var) { System.out.println(var); }
+	A(int var) {
+		System.out.println(var);
+	}
 }
 
 public class Demo2 {
 	public static void main(String[] args) {
-		new A();	
+		new A();
 	}
 }

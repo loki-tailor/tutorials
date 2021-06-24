@@ -6,11 +6,18 @@ package com.constructors.constructor_overloading;
 
 class Animal {
 	String name;
-	Animal(String name) { this.name = name; }	
-	Animal() { this(makeRandomName()); }
+
+	Animal() {
+		this(makeRandomName());
+	}
+
+	Animal(String name) {
+		this.name = name;
+	}
+
 	static String makeRandomName() {
 		int x = (int) (Math.random() * 5);
-		String name = new String[] {"btwin","trek", "polygon", "java", "cannondale", "speciallized"}[x];
+		String name = new String[] { "btwin", "trek", "polygon", "java", "cannondale", "speciallized" }[x];
 		return x + "\t" + name;
 	}
 }
@@ -20,9 +27,9 @@ public class ConstructorOverloading {
 		do {
 			Animal a = new Animal();
 			System.out.println(a.name);
-			Animal b = new Animal("-\tcustom-carbom");
+			Animal b = new Animal("-\tcustom-carbon");
 			System.out.println(b.name + "\n");
 			Thread.sleep(1000);
-		} while(true);
+		} while (true);
 	}
 }

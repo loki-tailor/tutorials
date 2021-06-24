@@ -13,7 +13,8 @@ abstract class A {
 }
 
 class B extends A {
-	public B(int i) {}	
+	public B(int i) {
+	}
 }
 /*-
 	Above statement will give compiler error as below, when main() has 'new B();'
@@ -35,7 +36,7 @@ class B extends A {
 public class Demo2 {
 	public static void main(String[] args) {
 
-		new B();
+		new B4();
 		System.out.println("done");
 	}
 }

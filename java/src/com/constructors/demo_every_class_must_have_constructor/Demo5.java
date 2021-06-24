@@ -10,22 +10,32 @@ package com.constructors.demo_every_class_must_have_constructor;
 	
 */
 
-abstract class A {
-	public A() { this(1); System.out.println("Inside abstract class A's constructor with args ()"); }
-	public A(int i) {
+abstract class A2 {
+	public A2() {
+		this(1);
+		System.out.println("Inside abstract class A's constructor with args ()");
+	}
+
+	public A2(int i) {
 		System.out.println("Inside abstract class A's constructor with args (int)");
 	}
 }
 
-class B extends A {
-	public B(){ System.out.println("Inside abstract class B's constructor with args ()");}
-	public B(int i) { super(); System.out.println("Inside abstract class B's constructor with args (int)"); }	
+class B4 extends A2 {
+	public B4() {
+		System.out.println("Inside abstract class B's constructor with args ()");
+	}
+
+	public B4(int i) {
+		super();
+		System.out.println("Inside abstract class B's constructor with args (int)");
+	}
 }
 
 public class Demo5 {
 	public static void main(String[] args) {
 
-		new B(10);
+		new B4(10);
 		System.out.println("done");
 	}
 }

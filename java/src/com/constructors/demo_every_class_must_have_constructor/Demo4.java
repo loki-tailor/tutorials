@@ -14,7 +14,9 @@ abstract class A {
 }
 
 class B extends A {
-	public B(){ System.out.println("Inside abstract class B's constructor with args ()");}
+	public B() {
+		System.out.println("Inside abstract class B's constructor with args ()");
+	}
 }
 
 /*-
