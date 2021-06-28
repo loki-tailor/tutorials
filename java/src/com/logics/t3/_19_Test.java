@@ -19,17 +19,19 @@ public class _19_Test {
 
         // add(Double.valueOf(10), 10.0); // compile error : method is ambiguous
 
-        add(Double.valueOf(10), Double.valueOf(10)); // mapped to 2
+        add(Double.valueOf(10), Double.valueOf(10)); // Double Versioon
 
-        add(Double.parseDouble("10"), Double.parseDouble("10")); // mapped to 1
+        add(Double.parseDouble("10"), Double.parseDouble("10")); // 'double' version
 
         add(Double.parseDouble("10"), 10.0); // mapped to 1
 
         // add(Double.parseDouble("10"), Double.valueOf(10)); // compile error : method
         // is ambiguous
 
-        add(10.0, null);
-        add(null, 10.0);
+        // add(10.0, new Double(10.00)); // compile error
+
+        add(10.0, null); // Double Version
+        add(null, 10.0); // Double Version
         /*- explanation for above:
         Explanation
         add(10.0, null); => Compiler can't convert null to double primitive type, so 2nd argument is tagged to Double reference type.
