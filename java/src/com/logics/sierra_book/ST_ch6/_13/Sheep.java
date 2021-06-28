@@ -11,7 +11,7 @@ public class Sheep {
         
         // s.go(() -> adder(5,1) < 7); // fail: predicate needs 1 arg, compile error = incompatible types: incompatible parameter types in lambda expression
 
-        s.go(x -> adder(6,2) < 9); // pass
+        s.go(x -> adder (6,2) < 9); // pass
 
         // s.go(x, y -> adder(3,2) < 4); // fail: predicate only 1 arg, strangely compile error = cannot find symbol x
 
