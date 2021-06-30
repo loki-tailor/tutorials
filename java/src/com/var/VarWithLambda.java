@@ -2,6 +2,9 @@ package com.var;
 
 import java.io.Serializable;
 import java.util.function.Function;
+
+import javax.annotation.Nonnull;
+
 import java.util.function.BiFunction;
 
 public class VarWithLambda {
@@ -10,8 +13,11 @@ public class VarWithLambda {
 	
 		// ------------------------------------------------
 
+		Function<Integer, Integer> g = (@Nonnull Integer name) -> 1;
+
 		// ## no compile error
-		Function<Integer, Integer> f = (var name) -> 1;
+		Function<Integer, Integer> f = (@Nonnull var name) -> 1;
+		f.apply(10); f.apply(null);
 
 		// ------------------------------------------------
 
