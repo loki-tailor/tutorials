@@ -9,7 +9,6 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.logics.t8.ExampleData;
 import com.logics.t8.Product;
 
 public class LambdasExercise03 {
@@ -50,13 +49,14 @@ public class LambdasExercise03 {
             // TODO: This solution does not work. Can you explain why?
 
             // products.forEach(product -> total.add(product.getPrice()));
-            
-            ExampleData.getProducts().forEach(this::add); // <========== TAG #1
 
-            products.forEach(System.out::println);
+            // ExampleData.getProducts().forEach(this::add); // <========== TAG #1
+            // products.forEach(System.out::println);
 
             // TODO: Implement this method in whatever way you like (you don't have to use
             // lambda expressions)
+
+            products.stream().map(Product::getPrice).forEach(total::add);
 
             for (int i = 0; i < 6; i++) { // <========== TAG #2
 
