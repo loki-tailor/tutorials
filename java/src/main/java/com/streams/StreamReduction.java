@@ -3,6 +3,7 @@ package com.streams;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import com.logics.t8.Category;
 import com.logics.t8.ExampleData;
