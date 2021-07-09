@@ -4,8 +4,17 @@ package com;
  * ref @ 
  */
 
+import java.util.function.Consumer;
+
 public class Temp {
+
+    public static void SEP() {
+        System.out.println("-".repeat(50));
+    }
+
     public static void main(String[] args) {
         System.out.println("hello from main...");
+
     }
+
 }
