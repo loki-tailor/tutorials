@@ -1,0 +1,1 @@
+cscript .\run_excel.vbs "F:\git\tutorials\vbs\hello.xlsm"

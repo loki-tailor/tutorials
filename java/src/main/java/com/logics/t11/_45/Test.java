@@ -19,11 +19,11 @@ abstract class BeachTraveller extends Traveller {
 
 	// public void travel() throws RuntimeException {}
 
-	// public void travel() throws Exception {} // no error: since super-class has a different method signature: method overloading
+	public void travel() throws Exception {} // no error: since super-class has a different method signature: method overloading
 
 	// public void travel(String beach) throws Exception {} // error
 
-	abstract void travel(); // method overloading: no error
+	// abstract void travel(); // method overloading: no error
 
 	
 } 
