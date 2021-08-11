@@ -1,0 +1,65 @@
+notes-automate-browser-using-js
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+## ch:1
+Resources
+Alan Richardson's Blog : https://blog.eviltester.com/
+Additional information, apps and support for the course: https://www.eviltester.com/page/onlinetraining/testautomationujs/
+Alan's Company Site: https://compendiumdev.co.uk/
+Alan's Testing Site: https://www.eviltester.com/
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ch: 2
+TodoMVC Official Site : http://todomvc.com/
+VanillaJS Version of App : https://todomvc.com/examples/vanillajs/
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ch: 3
+Document Object Model : https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+Mozilla Developer Network : https://developer.mozilla.org/en-US/docs/Web
+W3 Schools : https://www.w3schools.com/
+
+# css selectors e.g.
+ul.todo-list > li:nth-child(1) // the '>' means immediate next, if absent, checks in down-hill
+ul.todo-list li:nth-child(1) // without '>'
+a[href*="http"] // finding href starting with 'http'
+button.clear-completed[style="display: block;"] // joining 2 conditions i.e. tag.className[attr='val']
+
+# common selectors which would give us most of the elements
+- id        `#`
+- class     `.`
+- tag       `li`
+- path      `>` i.e. immediate child
+- path      ` ` i.e. whitespace i.e somewhere below
+- `:nth-child(1)`
+
+
+# java-script selectors e.g.
+document.querySelector("body > section > section > ul > li:nth-child(1)") // returns 1 element
+document.querySelector("ul.todo-list > li") // returns 1 element only
+document.querySelectorAll("ul.todo-list > li") // returns multiple elements
+document.getElementById("toggle-all") // returns only 1 element
+document.getElementsByClassName("toggle") // returns multiple elements
+document.getElementsByTagName("a")
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ch : 4.1
+MDN EventListeners Documentation : https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event
+MDN hashchangeDocumentation : https://developer.mozilla.org/en-US/docs/Web/API/EventListener
+
+# java-script selectors with some actions
+document.querySelector("#toggle-all").click();
+document.querySelector("ul.todo-list li:nth-child(2) input.toggle").click();
+
+// click the 'x' button, bu t that 'x' comes only when mouse is hovered
+// if we do below, we are directly calling the function and the UI experience is not tested
+// in such cases, the functionality woudl be working, but UI Test gurantee isn't there
+document.querySelector("ul.todo-list li:nth-child(2) button.destroy").click()
+document.querySelector("button.clear-completed[style='display: block;']").click();
+
+document.querySelector("ul.filters > li:nth-child(3) > a").click()
+location.hash = "/"
+location.hash = "/active"
+location.hash = "/completed"
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------

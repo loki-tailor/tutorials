@@ -1,0 +1,6 @@
+https://www.youtube.com/watch?v=TFW_zvFHuOg
+* cons:
+    - all tests should happen in single tab only, no tab switching
+    - no support for headless (You will be able to run a test in headless mode with 'npx cypress run')
+    
+https://www.youtube.com/watch?v=Sc-m3ceZyfk
