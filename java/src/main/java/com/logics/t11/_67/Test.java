@@ -1,7 +1,7 @@
 package com.logics.t11._67;
 
 interface Profitable1 {
-	default double profit() { return 12.5; }
+	default double profit() { return 12.5; } // this is implicitly 'public', hence overriding should also have public
 }
 
 interface Profitable2 {
