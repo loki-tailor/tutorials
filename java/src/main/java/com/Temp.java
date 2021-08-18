@@ -4,12 +4,12 @@ package com;
  * ref @ 
  */
 
-import java.io.IOException;
-import java.sql.SQLException;
-
 public class Temp {
+
+    String s1 = this.toString();
+    static String s2 = this.toString();
+
     public static void main(String[] args) {
-        String word = "REDBUS";
-        
+
     }
 }

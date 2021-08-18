@@ -23,7 +23,12 @@ W3 Schools : https://www.w3schools.com/
 ul.todo-list > li:nth-child(1) // the '>' means immediate next, if absent, checks in down-hill
 ul.todo-list li:nth-child(1) // without '>'
 a[href*="http"] // finding href starting with 'http'
+
 button.clear-completed[style="display: block;"] // joining 2 conditions i.e. tag.className[attr='val']
+
+// performing 'OR' operation i.e. searching multiple elements using different CSS selectors
+// comman (,) is used to separate them
+.main, #toggle-all
 
 # common selectors which would give us most of the elements
 - id        `#`
@@ -32,6 +37,11 @@ button.clear-completed[style="display: block;"] // joining 2 conditions i.e. tag
 - path      `>` i.e. immediate child
 - path      ` ` i.e. whitespace i.e somewhere below
 - `:nth-child(1)`
+
+https://stackoverflow.com/questions/25692313/how-to-use-css-selector-to-find-link-by-text
+You can't perform matches to text using CSS selectors.
+//a[contains(text(), 'bar')]
+//a[text() = 'bar']
 
 
 # java-script selectors e.g.
@@ -44,8 +54,8 @@ document.getElementsByTagName("a")
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 # ch : 4.1
-MDN EventListeners Documentation : https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event
-MDN hashchangeDocumentation : https://developer.mozilla.org/en-US/docs/Web/API/EventListener
+MDN EventListeners Documentation : https://developer.mozilla.org/en-US/docs/Web/API/EventListener
+MDN hashchangeDocumentation : https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event
 
 # java-script selectors with some actions
 document.querySelector("#toggle-all").click();
@@ -53,7 +63,7 @@ document.querySelector("ul.todo-list li:nth-child(2) input.toggle").click();
 
 // click the 'x' button, bu t that 'x' comes only when mouse is hovered
 // if we do below, we are directly calling the function and the UI experience is not tested
-// in such cases, the functionality woudl be working, but UI Test gurantee isn't there
+// in such cases, the functionality woudl be working, but UI Test guarantee isn't there
 document.querySelector("ul.todo-list li:nth-child(2) button.destroy").click()
 document.querySelector("button.clear-completed[style='display: block;']").click();
 
@@ -61,5 +71,83 @@ document.querySelector("ul.filters > li:nth-child(3) > a").click()
 location.hash = "/"
 location.hash = "/active"
 location.hash = "/completed"
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# ch : 4.2
+MDN Event.bubbles Documentation: https://developer.mozilla.org/en-US/docs/Web/API/Event/bubbles
+MDN change event Documentation: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
+
+objective: creating a todo using js
+
+S1 - find the input element: 
+val = document.querySelector('input.new-todo')
+
+S2 - invoke change() method
+> this will not work and give below error:
+VM940:1 Uncaught TypeError: document.querySelector(...).change is not a function
+    at <anonymous>:1:42
+* we need to find a way to invoke / replicate the 'enter' key 
+
+bubbles-up:
+* basically means that replicate the fire / click / return key of user
+* it will perform the action not only where the change is invoked but also up in the hirerarchy
+
+Therefore, S2 will be as below:
+document.querySelector('input.new-todo').dispatchEvent(new Event('change',{'bubbles':true}));
+
+object #2: amending an existing todo-list
+risk: in this case, we will simulate the events which happen in the backend and not what user will do in the UI i.e. double-click & then press the return key, etc...
+step-1: enter edit mode
+document.querySelector('ul.todo-list > li:nth-child(1) > div > label').dispatchEvent(new Event('dblclick', {'bubbles': true} ));
+
+step-2: enter values
+document.querySelector('ul.todo-list > li:nth-child(1) > input.edit').value = "replaced / amended value";
+
+step-3: blur the value (replicate what user would press enter) or i.e. unfocus the edit mode
+document.querySelector('ul.todo-list > li:nth-child(1) > input.edit').dispatchEvent(new Event('blur'));\
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# ch : 5 - for-loops
+JavaScript for Loops: 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
+
+objective: toggling all the radio-buttons of the todo-list
+
+let btn_toggle = document.querySelectorAll('ul.todo-list input.toggle')
+for(let i=0 ; i<btn_toggle.length; i++){
+    btn_toggle[i].click();
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# ch : 6 : if-statements
+JavaScript if...else documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else
+
+== compares values & will convert types: e.g. "1"==1 will be true
+=== compare values & types e.g. "1"===1 will be false
+
+object: toggle every 2nd item in the todo-list
+
+let btn_toggle = document.querySelectorAll('ul.todo-list input.toggle')
+for(let i=0 ; i<btn_toggle.length; i++){
+    if(i%2==1)
+        btn_toggle[i].click();
+}
+
+let btn_toggle = document.querySelectorAll('ul.todo-list input.toggle')
+for(let i=1 ; i<btn_toggle.length; i+=2){
+    btn_toggle[i].click();
+}
+
+let btn_toggle = document.querySelectorAll('ul.todo-list input.toggle')
+let shouldToggle=false;
+for(let i=0 ; i<btn_toggle.length; i++){
+    if(shouldToggle)
+        btn_toggle[i].click();
+    shouldToggle = !shouldToggle;
+}
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
