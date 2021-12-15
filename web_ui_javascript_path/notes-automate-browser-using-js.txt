@@ -61,12 +61,16 @@ MDN hashchangeDocumentation : https://developer.mozilla.org/en-US/docs/Web/API/W
 document.querySelector("#toggle-all").click();
 document.querySelector("ul.todo-list li:nth-child(2) input.toggle").click();
 
-// click the 'x' button, bu t that 'x' comes only when mouse is hovered
+// click the 'x' button, but that 'x' comes only when mouse is hovered
 // if we do below, we are directly calling the function and the UI experience is not tested
 // in such cases, the functionality woudl be working, but UI Test guarantee isn't there
+// delete item
 document.querySelector("ul.todo-list li:nth-child(2) button.destroy").click()
+
+// clear all todos 
 document.querySelector("button.clear-completed[style='display: block;']").click();
 
+// filter specific ones
 document.querySelector("ul.filters > li:nth-child(3) > a").click()
 location.hash = "/"
 location.hash = "/active"
@@ -105,7 +109,7 @@ step-2: enter values
 document.querySelector('ul.todo-list > li:nth-child(1) > input.edit').value = "replaced / amended value";
 
 step-3: blur the value (replicate what user would press enter) or i.e. unfocus the edit mode
-document.querySelector('ul.todo-list > li:nth-child(1) > input.edit').dispatchEvent(new Event('blur'));\
+document.querySelector('ul.todo-list > li:nth-child(1) > input.edit').dispatchEvent(new Event('blur'));
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -151,3 +155,69 @@ for(let i=0 ; i<btn_toggle.length; i++){
 }
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ch : 7 : snippet view
+Chrome Dev Tools Snippets Documentation : [dead link] https://developers.google.com/web/tools/chrome-devtools/javascript/snippet
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ch : 8.1 : javascript functions : helpers
+refer: cds-vanilla-utils.js 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ch : 8.2 : javascript functions : autoTodo
+refer: utils-as-obj.js 
+
+i.e. functions or code written in 'snippets' would override the applicataion-code itself.
+objective is to write functions that won't override the web-app functions/code
+
+> objects in js are really just functions.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# ch : 9 : setTimeout
+setTimeout Documentation : https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
+clearTimeout Documentation : https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout
+setTimeout in Game Development : https://developer.mozilla.org/en-US/docs/Games/Anatomy
+
+// clearing local storage
+localStorage.clear();
+// question: on website https://todomvc.com/examples/vanillajs/#/, when we add data to localStorage, and then do a clear(), and then if we don't refresh and try to create a todo, then we get below error, why?
+store.js:97 Uncaught TypeError: Cannot read property 'push' of null
+    at Store.save (store.js:97)
+    at Model.create (model.js:29)
+    at Controller.addItem (controller.js:102)
+    at controller.js:17
+    at HTMLInputElement.<anonymous> (view.js:177)
+$reason : when the website is loadded, it auto-loads an array in the localStorage (todos-vanillajs[])
+        : but when we call localStorage.clear() - it removes the variable rather than empty'ng the array.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# ch : 10 : setInterval
+
+setInterval Documentation : https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
+clearInterval Documentation : https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval
+Example Usage of setInterval : https://developer.mozilla.org/en-US/docs/Games/Anatomy
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# ch : 11 : bookmarklets
+Quick Intro To BookMarkLets : https://www.eviltester.com/2017/04/a-quick-intro-to-bookmarklets.html
+Simple Bookmarklet Creation Utility : https://github.com/eviltester/bookmarklet
+
+// anonymous run immediate function: can run in chrome console
+(function(){ alert("hello, i'm alert from bookmarkt, bye.."); })()
+
+// below: can run in browser as URL
+javascript:(function(){ alert("hello, i'm alert from bookmarkt, bye.."); })()
+
+// traditional bookmarklets don't run from chrome newtab due to security reasons
+// using below: ref = https://stackoverflow.com/a/56794455/7415499
+data:text/html,<script>window.location.href='http://www.oracle.com/'+prompt("Please enter your input:", "exadata");</script>
+
+
+// IMP: when below is done and added to a bookmarklet
+// i.e. specifying comments section before function terminations
+javascript: (function() { ....
+    // end of for loop
+})();
+// then it is parsed as below and we get error => Uncaught SyntaxError: Unexpected end of input
+ (function() {.....  // end of for loop      })();
