@@ -1,0 +1,79 @@
+Hi All,
+
+ 
+
+Kindly see and confirm if everyone is following the below mentioned practices:
+
+ 
+
+DevSecOps Pipeline Techstack : Simplified 
+
+ 
+
+ #devsecops tools explained : 
+
+ 
+
+🔹 IDE Plugins — IDE extensions that can work like spellcheck and help to avoid basic mistakes at earliest stage of coding (IDE is a place/program where devs write their code for those who don’t know). 
+
+ 
+
+🔹 Pre-Commit Hooks — Tools from this category prevent you from committing sensitive information like credentials into your code management platform. 
+
+ 
+
+🔹 Secrets Management Tools allow you to control which service has access to what password specifically. 
+
+ 
+
+🔹 Static Application Security Testing (#SAST) is about checking source-code (when the app is not running). 
+
+ 
+
+🔹 Source Composition Analysis (#SCA) tools are straightforward — they look at libraries that you use in your project and flag the ones with known vulnerabilities. 
+
+ 
+
+🔹 Dynamic Application Security Testing (#DAST) is the next one in the security chain, and the first one testing running applications (not the source code as SAST — you can read about other differences here).
+
+🔹 Interactive Application Security Testing ( #IAST) combines SAST and DAST elements by placing an agent inside the application and performing real-time analysis anywhere in the development process.
+
+ 
+
+🔹 Secure infrastructure as code — As containers are gaining popularity, they become an object of interest for malware producers. Therefore you need to scan Docker images that you download from public repositories, and tools  will highlight any potential vulnerabilities.
+
+ 
+
+🔹 Compliance as code tools will turn your compliance rules and policy requirements into automated tests. 
+
+ 
+
+🔹 Runtime application self-protection ( #RASP) allows applications to run continuous security checks and react to attacks in real-time by getting rid of the attacker (e.g. closing his session) and alerting your team about the attack. 
+
+ 
+
+🔹 Web Application Firewall (WAF) lets you define specific network rules for a web application and filter, monitor, and block HTTP traffic to and from a web service when it corresponds to known patterns of attacks like, e.g. SQL injection. 
+
+ 
+
+🔹 Monitoring tools — as mentioned in my DevOps guide, monitoring is a crucial part of the DevOps manifesto. DevSecOps takes it to the next level and covers not only things like downtime, but also security threats.
+
+ 
+
+🔹 Chaos engineering. Tools from this category allow you to test your app under different scenarios and patch your holes before problems emerge. 
+
+ 
+
+🔹 Vulnerability management — these tools help you identify the holes in your security systems. They classify weaknesses by potential impact of malicious attacks taking advantage of them so that you can focus on 
+
+fixing the most dangerous ones.
+
+ 
+
+ 
+
+We can help in case there is some missing link.
+
+ 
+
+Here is a snapshot of the best tools for the same:

@@ -1,0 +1,17 @@
+{
+  "name": "cypress_tau",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress": "cypress open",
+    "test": "cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@applitools/eyes-cypress": "github:applitools/eyes-cypress",
+    "cypress": "^9.2.0"
+  }
+}

@@ -1,0 +1,74 @@
+=============================================
+
+* a runtime environment for executing JavaScript code, outside of a browser
+* often node is used to build backend services e.g. API (they power the client applicaitons)
+* server-side scripting (backend services)
+* highly-scalable, data-intensive & real-time apps
+    > because non-blocking asynchronous architecture
+    > single thread used to handle multiple requests
+* node is not programming language
+* node is not a framework
+* node IS A runtime environment 
+=============================================
+> benefits
+* great for prototypying & agile development
+* superfast & highly scalable
+* javascript everywhere
+* cleaner and more consistent codebase
+* largest ecosystem of opensource libs
+
+=============================================
+> Node Working
+- every browser earlier used to take a JS code > browser had JS Engine > engine converts to machine-code
+- IE had chakra, Firefox has SpiderMonkey, Chrome uses v8
+- hence JS can behave different in different browsers
+
+> embeded v8 engine of chrome with a C++ code & shipped as node.exe
+
+- node is ideal for IO intensive apps
+- node should not be used for CPU-intensive apps e.g. video encoding or image manipulation services
+- node apps are singple threaded
+
+- In node, there is no 'window' object
+
+=============================================
+Node Module System
+
+// in browser
+console, setTimeout, clearTimeout, setInterval, etc.. all global variable are under window object.
+i.e. window.console.log(...);
+
+// in node
+all variables are accessed  via 'global' variable
+e.g. var msessage = '';
+then, global.message, global.setTimeout, global.setInterval, etc...
+- but if we only try to print the 'global' variable, we will get undefined
+
+=============================================
+Modules:
+* every file in a nodejs app is considered a module
+* objects in a module are private and not available outside that file
+* if we want to use functions of another module, we need to export it explicitly and then use it
+* 
+
+=============================================
+Creating a Module
+
+module.exports.<functionOrVariableNameVisibleExplicitly> = functionOrVariableNameVisibleImplicitly
+=============================================
+Loading a Module:
+require('#nameOrPathOfTargetModule')
+
+IMPORTANT:
+* when loading a module in another file, we should save it in a 'const' variable rather than 'var' or 'let' type
+* reason we dont want accidentally override the declared variable, in the class where we are using the moduel
+
+* you can either export a function as an object or directly export the function
+=============================================
+Module Wrapper Function
+=============================================4
+
+=============================================
+=============================================
+=============================================
+=============================================

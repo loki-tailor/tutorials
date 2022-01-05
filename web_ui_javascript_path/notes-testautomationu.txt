@@ -2,7 +2,7 @@ notes-testautomationu
 
 - identify expections / goals
 - multiple browser
-- containerization
+- containerization / dockerization
 - parallel execution
 - screen recording
 - screenshots
@@ -10,8 +10,10 @@ notes-testautomationu
 - exception handling
 - logger
 - headless
+- Course #1 - #ch:4, #ch:5
 
-### Setting Foundation of Successful Automation:
+
+### COURSE #1 : Setting Foundation of Successful Automation:
 
 #2: Desigining a Tets Strategy:
     * What to automate? Regression? Smoke? Sanity?
@@ -42,13 +44,17 @@ notes-testautomationu
         - Leading cause of flaky or unstable tests: absence of reliable identifiers
 
 #ch: 4 - Tooling for Test Automation:
+
+    * Interaction Level
+    * Validation Level
+
     - Unit Tests: same as production code programming language
     - Service Level Tests: API / Webservices / HTTP Calls 
-    - UI Level: Navigation Libs / ability to interact with UI
-    - Validation Libs: pass/fail the tests
-    - Reporting Libs: screenshot
+    - UI Level: Navigation Library / ability to interact with UI
+    - Validation Library: pass/fail the tests
+    - Reporting Library: screenshot or videos
     - Specification-Driven: Cucumber
-    - CI: Jenkins
+    - CI: Jenkins, Azure
 
 #ch: 5 - Future Proofing Test Automation Efforts
     - Running in Parallel
@@ -79,3 +85,5 @@ notes-testautomationu
     - shortened regression timings
     - frequent feedback (fast tests)
     - scability    
+
+##############################################################################################################################

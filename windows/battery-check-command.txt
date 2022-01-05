@@ -1,0 +1,1 @@
+launch powershell as admin, then > powercfg /batteryreport /output "C:\battery-report.html"

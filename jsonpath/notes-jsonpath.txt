@@ -1,0 +1,46 @@
+https://github.com/json-path/JsonPath
+
+
+https://www.youtube.com/watch?v=CrFbQreeBSw&list=PLL34mf651faPPBpD7oouaiL5PFWPr2H28
+
+
+############################################################################################################
+$.store.book[*].author	        The authors of all books in the store
+$..author                       All authors
+$.store.*	                    All things in the store (books and a bicycle)
+$..book[?(@.price<10)]	        All books cheaper than 10
+$.store.book[?(@.price<10)]	    All books cheaper than 10
+$..book[:2]	                    The first two books
+$..book[(@.length-1)]	        The last book (works only with Goessner implementation)
+$.store.*~	                    The names of categories in the store
+
+$.data[0]               First element in array
+$.data[0:4]             Select elements within range
+$.data[:2]              First n elements of array
+$.data[-2:]             Last n elements of array
+$.data[-1:]             Last element in array
+$.data[0,2,4]           Select multiple elements in array
+$.data[*].name          Name of all projects in JSON document
+$.data[:2].name         Name of first two elements
+$.data[-2:].name        Name of last two elements
+
+
+############################################################################################################
+* search if we can use any existing tools for such extraction
+* jsonpath thru CLI and thru UI also
+* filter options:
+    - searc criteria (would contain dropdown having jsonpath type option for deal / facility / fcn / portfolio code)
+        - provide CLI arguments to consume by the file
+    - extraction criteria (would have option to either extract the facility or the deal)
+        - ensure that if deal is selected in #1, then facility can't be selected in #2
+
+############################################################################################################
+todo:
+- go thru documentations of different jsonpath original implementations
+    - goessner
+    - nebhale
+    - gatling
+    - jayway
+- jsonpath thru cli, how to do?
+- jsonpath in java, python, angular, how?
+############################################################################################################        

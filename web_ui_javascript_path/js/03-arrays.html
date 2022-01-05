@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body style="background-color: black">
+    <script>
+      // arrays
+      const emptyArr = [];
+      console.log(typeof emptyArr + "\t;\tvalue = " + emptyArr);
+      console.log(emptyArr);
+      console.log("###############################################");
+
+      const favCookies = ["chocolate", 10, true, "bye"];
+      console.log(typeof favCookies + "\t;\tvalue = " + favCookies); // prints the contents of the array
+      console.log(favCookies); // print array in object format
+      console.log("###############################################");
+
+      // add items to array
+      console.log("pushing new item in array...")
+      favCookies.push("new item in array");
+      console.log(favCookies);
+      console.log("###############################################");
+
+      // remove item form array      
+      let removedItem = favCookies.pop();
+      console.log(favCookies);
+      console.log("array removed item with value = " + removedItem + "\n");
+      console.log("###############################################");
+
+      // accessing values of an array
+      console.log(favCookies[0]);
+      console.log(favCookies[-1]); // undefined since no value is there
+      console.log(favCookies[20]); // undefined since no value is there
+      console.log("###############################################");
+
+      // length of array
+      console.log("length of array = " + favCookies.length);
+      console.log("###############################################");
+    </script>
+  </body>
+</html>

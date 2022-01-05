@@ -1,0 +1,99 @@
+https://mochajs.org/
+https://www.npmjs.com/package/mocha
+
+Index:
+#1 : What is Mocha & how to install Mocha to a JS project using terminals?
+#2 : Pre-bundeled Function Calls - describe() and it()
+#3 : Mocha Hooks:
+    - before()
+    - after()
+    - beforeEach()
+    - afterEach()
+#4 : Test Features - Inclusive, Exclusive & Pending
+#5 : Retry & Timeout functions
+#6 : Reporters - Spec & Dot Matrix
+
+--------------------------------------------------------------------------------------------------
+CH 1: What is Mocha & how to install it?
+
+- Mocha is JS testing framework running on NodeJs and browser
+- Similar to TestNG in Java 
+- Organize and execute test cases
+- Make Asynchronous testing to be simple and fun to execute
+
+> Prerequisite:
+- NodeJs
+- npm
+
+--------------------------------------------------------------------------------------------------
+CH 2: Function Calls
+
+Mocha comes pre-bundled with 2 unctions:
+
+describe() 
+- simple way to group tests in Mocha.
+- Provides a feature to create a series of tests.
+- Takes 2 arguments.
+- 1st = name/description of the test group
+- 2nd = call back function which is a function that needs to be executed after another function has finished executing.
+
+it()
+- a way to describe the individual test case.
+- These tests should be nested within the describe() block it() should be described in a way that it makes sense for the given test case. 
+
+syntax:
+describe('description of the test suite', function() {
+    it('About the test', function() {
+        // code to test the condition
+    })
+})
+
+--------------------------------------------------------------------------------------------------
+
+CH 3: Mocha Hooks
+
+* before() - which runs before all tests in the code block of it()
+* after() - which runs after all tests in the code block of it() function
+* beforeEacH() - which runs before each test in the code block
+* afterEach() - which runs after each test in the code block
+
+--------------------------------------------------------------------------------------------------
+
+CH 4: Test Features
+
+* exclusive tests: allows to onl run the specified suite or test-case by appending '.only()' to the function
+* inclusive tests: this is inverset of '.only()'. We can tell mocha to simly ignore these suite(s) and test case(s) by appending '.skip()'
+* pending tests: pending tests will be included in the test results, and marked as pending. A pending test is not considered as failed test. Anything skipped will be marked as pending. 
+    - i.e. when a it() function does not have a call-back function, that test is marked  in "Pending State"
+
+--------------------------------------------------------------------------------------------------
+
+CH 5: Retry and Timeouts
+* you can tell mocha to execute the failed tests serval times according to your requirement
+* retry function is primarily used for end-to-end tests like selenium scripts
+* re-run beforeEach / afterEach hooks but NOT before / after hooks
+* retry is not recommended for  unit tests
+
+TIMEOUTS: 3 level timeouts:
+* SUITE-LEVEL: Suite-level timeouts are used through out the tests "suites", or disabled by using this.timeout(0);
+* TEST-LEVEL: test-specific timeouts are used within the test cases level, or use this.timeout(0) to disable timeouts completely
+* HOOK-LEVEL: hook-level timeouts can be used in the hooks.
+
+
+
+--------------------------------------------------------------------------------------------------
+
+CH 6: Mocha Reporters
+
+* Mocha Reporters are mostly Terminal based
+* SPEC: This is the default reporter. The "spec" reporter outputs a hierarchical view according to test cases
+* DOT MATRIX - The dot matrix reporter is a series of characters whcih reporesent the test cases. Failures are highlighted in red exclamation marks (!), pending tests with a blue comma (,), and slow tests as yellow
+
+Other types:
+NYAN, TAP, Landing Strip, List, Progress, JSON, JSON Stream, Min, Doc
+
+mocha test/ --reporter spec / dot / json / nyan ...
+
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------

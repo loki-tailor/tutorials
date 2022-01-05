@@ -1,0 +1,111 @@
+https://www.youtube.com/watch?v=jHDhaSSKmB0
+
+what is npm?
+- node package manager
+- javascript package manager
+- pre-installed with node.js
+- packages/modules are basically javascript libraries
+
+package.json file:
+- manifeset file with app info
+- list dependencies (name & version)
+- specify if versions should be updated
+- create npm scripts
+- easily create with npm init
+
+npm init
+npm init --y
+npm config set init-author-name "lokeshwar"
+npm config set init-licence "MIT"
+npm get init-author-name
+npm config get init-author-name
+npm config delete init-author-name
+npm config delete init-licence
+
+npm install --save lodash // saves in 'dependencies'
+npm install --save-dev lodash // save in 'devDependencies' // and when we do npm install --production the devDependencies won't be downloaded
+
+npm uninstall gulp-sass --save-dev
+npm remove ....
+npm rm ...
+npm un ...
+
+npm install lodash@4.17.3 --save
+npm update lodash
+
+npx cypress run --spec #fileName
+npx cypress run
+if(package.json has scripts -> "test": "cypress run") : then:
+    - npm run test
+    - npm test
+    - above both are same
+
+8.2.6
+major_version.minor_version.patch
+
+8. major version : major changes: breaks the API
+2. minor version : new features : does not break API
+6. patch : bug fixes
+
+"lodash": "^4.17.4" > when someone else does "npm install", it will install latest "minor version", but not install latest major version
+"lodash": "`4.17.4" > when someone else does "npm install", it will update to latest "patch version", but not install latest major version or minor version
+"lodash": "4.17.4" > when someone else does "npm install", it will install exact version
+"lodash": "*" > when someone else does "npm install", it will install latest major.minor.patch versions
+
+npm install -g nodemon
+$nodemon
+npm root -g // viewing where global modules are being saved
+
+npm install -g live-server
+
+npm remove -g nodemon
+
+npm list // shows packages in a project
+npm list --depth 0
+npm list --depth 1
+
+npx cypress open
+npx ...
+
+when we mention the "server" :"live-server" in package.json,under 'scripts' section, then we need to use the command "npm run server", however, "npm server" won't work
+
+####################################################################################
+
+https://www.youtube.com/watch?v=-SaZiADGLHs
+
+npm config set init.license MIT
+npm config set init.author.name Lokeshwar Tailor
+npm config set init.author.email abc@abc.com
+
+------------------------------------
+# git commit using npm
+
+// extracting exec method from child_process module
+const { exec } = require('child_process');
+let args = process.argv
+args.slice(0,2);
+let str = args.join(" ");
+
+console.log(str); 
+exec('git add .', cb);
+exec('git commit -m "${str}"', cb);
+function cb(err, strout, stdin) {
+    if(err) {
+        console.log(err);
+        return;
+    }
+    // it worked
+}
+
+$npm run gitty my first real update
+
+there is further code in video, which runs add & commit sequentially
+------------------------------------
+
+npm run task --var=data
+console.log(process.env.npm_config_var); // data
+
+####################################################################################
+
+
+####################################################################################
