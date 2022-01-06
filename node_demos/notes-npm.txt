@@ -22,6 +22,9 @@ npm config get init-author-name
 npm config delete init-author-name
 npm config delete init-licence
 
+npm config list
+npm config delete {proxy|http-proxy}
+
 npm install --save lodash // saves in 'dependencies'
 npm install --save-dev lodash // save in 'devDependencies' // and when we do npm install --production the devDependencies won't be downloaded
 
@@ -32,6 +35,9 @@ npm un ...
 
 npm install lodash@4.17.3 --save
 npm update lodash
+
+npm search cypress
+npm view cypress
 
 npx cypress run --spec #fileName
 npx cypress run
