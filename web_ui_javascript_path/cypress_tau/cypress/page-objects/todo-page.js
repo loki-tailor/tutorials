@@ -6,6 +6,7 @@ export function navigate() {
 
 export function addTodo(todoText) {
   cy.get(".new-todo").type(todoText + "{enter}");
+  // cy.get('.new-todo', {timeout: 6000}).type('Clean room{enter}')
 }
 
 export function toggleTodo(todoIndex) {

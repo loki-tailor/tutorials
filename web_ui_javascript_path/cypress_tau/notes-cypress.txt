@@ -69,6 +69,64 @@ CH: 7: Page Object Models
 - write tests using object relevant to the pages
 - limits the use of selectors, which makes the framework more comprehensie 
 ------------------------------------------------------------------------------------------------------------------------------------------------
+
+NAL:
+
+Folder Structure Info:
+
+FIXURES:
+    - static data / constants to define for TC / to avoid using hardcoded values in .js tests
+    - filePaths / env vars
+    - cy.fixture() can be used to access 
+
+INTEGRATION:
+    - where we write our TCs
+
+PLUGIN:
+    - v. imp
+    - just like listener in TestNG
+    - keep listening
+    - defining configs
+    - env vars / browser options / incognito mode / block etc .. / accept cert error
+    - all chrome preferences
+    - it will be accessible by the TCs
+    - behave like a listener
+    - can change behaviour during runtime also
+
+SCREENSHOT:
+    - by default not created
+
+SUPPORT:
+    - customized libs / reusable methods / function / utility
+    - which will be available to all TC by default
+    - we don't need to import these
+    - 
+
+node_modules
+    - all modules / pkgs / libs
+
+package.json:
+    - configuration file
+    - just like pom.xml
+
+cypress.json
+    - base-url
+    - defining time-outs
+    - env configurations
+
+
+>> RUNNING CYPRESS via TERMINAL
+npx cypress run
+
+./node_modules/.bin/cypress run
+
+npx cypress run --spec cypress\integration\0a-nal-tutorial\element_test.js --browser chrome
+
+npx cypress run --spec cypress\integration\0a-nal-tutorial\*.js
+
+
+>> HANDLING SERVICE UNAVAILABLE AND UNCAUGHT EXCEPTION
+cy.visit('https://app.hubspot.com/login', { failOnStatusCode: false });
 ------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------
