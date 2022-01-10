@@ -46,6 +46,8 @@ if(package.json has scripts -> "test": "cypress run") : then:
     - npm test
     - above both are same
 
+npx browserslist@latest --update-db    
+
 8.2.6
 major_version.minor_version.patch
 

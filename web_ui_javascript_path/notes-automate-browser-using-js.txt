@@ -30,7 +30,8 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors
 ul.todo-list > li:nth-child(1) // the '>' means immediate next, if absent, checks in down-hill i.e. immediate beneath
 ul.todo-list li:nth-child(1) // without '>'
 ul.todo-list li // matches all li items
-a[href*="http"] // finding href starting with 'http'
+a[href*="http"] // finding href starting with or contains 'http'
+div[class*='button floating']
 
 ul.todo-list button.destroy // this will locate the button since it is not immediate next but traverses down-tree
 ul.todo-list > button.destroy // this won't find anly elements, since the queried button is not immediate next
