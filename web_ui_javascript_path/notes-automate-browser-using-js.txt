@@ -43,6 +43,10 @@ button.clear-completed[style="display: block;"] // joining 2 conditions i.e. tag
 // comman (,) is used to separate them
 .main, #toggle-all
 
+// css selector where there are multiple classes for single element
+div.align-center.mb-lg
+<div class='align-center mb-lg' />
+
 # common selectors which would give us most of the elements
 - id                `#`
 - class             `.`
