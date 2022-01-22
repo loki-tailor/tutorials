@@ -1,0 +1,54 @@
+##############################################################################################################################################################
+https://www.youtube.com/watch?v=89yWXXIOisk&list=PLhW3qG5bs-L_ZCOA4zNPSoGbnVQ-rp_dG&index=1
+
+CH: introduction and getting started
+
+* goto jenkins.io
+
+* download jenkins.war
+
+* java -jar jenkins.war
+
+* below to keep in mind:
+Jenkins initial setup is required. An admin user has been created and a password generated.
+Please use the following password to proceed to installation:
+1447b5fc9d864a5c83ef082fac640bfa
+This may also be found at: C:\Users\lokeshwar.tailor\.jenkins\secrets\initialAdminPassword
+
+* enter above pwd
+
+* install required plugins 
+
+* $user/.jenkins is where all the data will be available
+
+##############################################################################################################################################################
+https://www.youtube.com/watch?v=Fi9pgrMlQZY&list=PLhW3qG5bs-L_ZCOA4zNPSoGbnVQ-rp_dG&index=2
+
+* CH: Setting up jenkins on tomcat
+
+* jenkins by default comes with its own container jetty server
+
+* we can start jenkins on tomcat server too
+
+* benefits on tomcat is that we can start all our webapps on a single server
+
+* other containers are:
+    - glassfish
+    - jboss
+    - tomcat
+    - IBM WebSphere
+    - weblogic
+
+* download tomcat @ https://tomcat.apache.org/download-80.cgi
+
+* unzip and place at any location
+
+* paste jenkins.war file in tomcat/webapps folder
+
+* goto tomcat/bin directory and make all files as executable (if mac or linux) i.e. chmod +x *.sh
+
+* ./tomcat/bin/startup.bat
+* ./tomcat/bin/shutdown.bat
+
+* java -jar jenkins.war --httpPort=9090
+starting jenkins on different port
