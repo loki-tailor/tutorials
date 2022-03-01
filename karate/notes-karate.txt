@@ -1,11 +1,30 @@
 demo #1 @ https://www.youtube.com/playlist?list=PLhW3qG5bs-L-y5Q1zDXJAur1JNZVFB534
 
+demo #2 @ https://www.youtube.com/playlist?list=PLFGoYjJG_fqpUgFYoKIMZJAblUbGHSQAb
+
 * '$' can't be used with asserts
+
 * read("filePath")
+
 * 'def' can be used to declare variables
+
 * def projectPath = java.lang.System.getProperty("user.dir")
 * def projectPath = karate.properties["user.dir"]
+
 * karate-config.js:
     - no need to call explicitly, it is called by default
     - must keep the file nder src/test/java
     - the value for the configuration can be passed via TestRunner or CLI
+
+* passing query-params:
+    * def queryParams = { status: 'active', gender: 'male' }
+    (or)
+    * And param status = 'active'
+    * And param gender = 'male'
+
+* validations can be done using 2 approaches:
+    * assert
+    * match
+    * e.g.:
+        * assert response.data.length == 20 
+        * match response.data.length == 20 # this won't work, since it is looking for 'data' > 'length' jsonPath
