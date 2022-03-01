@@ -47,6 +47,9 @@ button.clear-completed[style="display: block;"] // joining 2 conditions i.e. tag
 div.align-center.mb-lg
 <div class='align-center mb-lg' />
 
+
+// 2nd similar tag
+div.align-center.mb-lg h1:nth-of-type(2)
 # common selectors which would give us most of the elements
 - id                `#`
 - class             `.`
