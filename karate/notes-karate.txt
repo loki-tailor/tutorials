@@ -28,3 +28,21 @@ demo #2 @ https://www.youtube.com/playlist?list=PLFGoYjJG_fqpUgFYoKIMZJAblUbGHSQ
     * e.g.:
         * assert response.data.length == 20 
         * match response.data.length == 20 # this won't work, since it is looking for 'data' > 'length' jsonPath
+##################################################################################################################################################################
+
+25.11.2020 @ https://software-that-matters.com/2020/11/25/the-definitive-karate-api-testing-framework-getting-started-guide/
+Pros:
+* Built-in support for switching configuration across different environments (e.g. dev, QA, pre-prod)
+* Fully featured debugger that can step backwards
+* Comprehensive assertion capabilities 
+    - asserts
+    - #notnull, #present, etc..
+    - against exact json
+* Scripts are plain-text, require no compilation, fast execution, and teams can collaborate using Git / standard SCM
+* Easy to write and read tests.
+
+Cons:
+* The Karate documentation says you need JDK8-12. I don’t experience any problems running Karate on JDK 13 or 14, but it won’t run on JDK 15, because Oracle deprecated the Nashorn JavaScript engine in Java 11, and they removed it in JDK 15. 
+* But no worries, Peter Thomas just finished the migration to GraalVM to solve this problem, and I’m really looking forward to this release.
+
+##################################################################################################################################################################
