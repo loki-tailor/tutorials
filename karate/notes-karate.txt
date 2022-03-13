@@ -45,4 +45,15 @@ Cons:
 * The Karate documentation says you need JDK8-12. I don’t experience any problems running Karate on JDK 13 or 14, but it won’t run on JDK 15, because Oracle deprecated the Nashorn JavaScript engine in Java 11, and they removed it in JDK 15. 
 * But no worries, Peter Thomas just finished the migration to GraalVM to solve this problem, and I’m really looking forward to this release.
 
+KNOWLEDGE:
+* The *JunitRunnner*.java is a JUnit test, but Maven won’t execute it during the test phase because it only respects classes ending on Test by default. 
+* This class empowers you to execute the *test*.feature file as a JUnit test if you aren’t capable to run the users.feature from your IDE.
+
+# windows 
+mvn archetype:generate ^
+   -DarchetypeGroupId=com.intuit.karate ^
+   -DarchetypeArtifactId=karate-archetype ^
+   -DarchetypeVersion=1.1.0 ^
+   -DgroupId=com.testing ^
+   -DartifactId=karate-demo-3
 ##################################################################################################################################################################
