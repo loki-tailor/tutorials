@@ -1,5 +1,5 @@
 {
     "java.configuration.updateBuildConfiguration": "interactive",
     "karateRunner.karateRunner.default": "_SyncRunner",
-    "karateRunner.karateJar.commandLineArgs": "java -cp karate-1.1.0.jar com.intuit.karate.Main"
+    "karateRunner.karateJar.commandLineArgs": "java -cp karate.jar com.intuit.karate.Main"
 }

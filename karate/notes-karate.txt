@@ -1,6 +1,24 @@
-demo #1 @ https://www.youtube.com/playlist?list=PLhW3qG5bs-L-y5Q1zDXJAur1JNZVFB534
+demo #1 @ maven - POC - https://www.youtube.com/playlist?list=PLhW3qG5bs-L-y5Q1zDXJAur1JNZVFB534 (Automation-Step-By-Step)
 
-demo #2 @ https://www.youtube.com/playlist?list=PLFGoYjJG_fqpUgFYoKIMZJAblUbGHSQAb
+demo #2 @ maven - POC - https://www.youtube.com/playlist?list=PLFGoYjJG_fqpUgFYoKIMZJAblUbGHSQAb (NAL)
+
+demo #3 @ maven + standalone - POC - https://software-that-matters.com/2020/11/25/the-definitive-karate-api-testing-framework-getting-started-guide/
+
+demo #4 @ standalone - POC - https://software-that-matters.com/2020/11/25/the-definitive-karate-api-testing-framework-getting-started-guide/
+
+demo #5 @ maven + gradle - POC - https://software-that-matters.com/2020/11/25/the-definitive-karate-api-testing-framework-getting-started-guide/
+
+demo #6 @ gradle - POC - gradle & karate official documentations (project created from CLI)
+
+demo #7 @ gradle - POC - project created from IntelliJ IDE
+##################################################################################################################################################################
+* different ways to run a scenario/feature:
+- IDE (VSCode + IntelliJ + Eclipse) > Plugin > *.feature > Run
+- KarateRunner > .java > com.intuit.karate.junit5.Karate > @Karate.Test
+- JUnitRunner
+
+
+##################################################################################################################################################################
 
 * '$' can't be used with asserts
 

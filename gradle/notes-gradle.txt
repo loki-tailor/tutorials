@@ -1,0 +1,347 @@
+?? gradle deamons, what are they?
+
+###################################################################################################
+ANT:
+    - Another Neat Tool
+    - XML based 'Script'
+    - difficult to maintain
+    - lack of conventions (where src, class directories resides, etc..)
+    - can get very large, un-maintainable
+
+MAVEN:
+    - many conventions
+    - supports dependency managements
+    - configure maven with plugins (extensible)
+    - XML based script
+    - hard to read
+    - can be unmaintainable
+
+GRADLE:
+    - DSL
+    - ...
+
+###################################################################################################
+
+INSTALLATION:
+    - From website > download zip file 
+    - SDK Manager (sdkmain.io)
+        - install JDKs
+        - install SDKs (gradle, maven, kotlin, etc...)
+        - only works on *nix platforms
+        - can work on windows, but via Cygwin, etc..
+###################################################################################################
+
+* gradle is build on tasks, and it run's those tasks for us
+* plugins are a way of extending gradle tasks to include additional tasks
+* consists of projects 
+    > which contains build.gradle files 
+    > build.gradle contains tasks
+    > and tasks are executed as part of the project
+* a build may have more than one projects > building a library 
+* Plugins to extend Project
+
+PROJECT:
+    - "build" file
+    - build.gradle
+    - build.gradle.kts
+    - OPTIONAL FILE:
+        - settings.gradle
+            - build versions
+            - etc...
+    - build file defines the tasks for the project
+
+TASKS:
+    - pre-defined tasks
+    - directly define tasks
+    - or indirectly through plugins
+
+BUILD PHASES:
+    - Initialization
+        - decides which projects will be part of this build
+    - Configuration
+        - projects are configured at this stage
+        - executing build scripts of all the projects
+    - Execution
+        - gradle decides which tasks to execute
+        - based on the taskName in the  CLI argument
+        - PHASES:
+            - doFirst closure
+            - doLast closure
+            - onlyIf closurecls
+
+TASK DEPENDENCIES
+PLUGINS
+    - extended project's capabilities
+    - plugins { java } // kts
+    - plugins { id 'java' } // groovy preferred
+    - apply plugin: 'java' // groovy
+
+JAVA PLUGINS:
+    id 'java' // base java plugin for clean, build, jar tasks
+    id 'java-library' // use this when building libraries as opposed to applications (multi-project-builds)
+    id 'application' // extends the java plugin, gives capability to run the application inside gradle & implicitly applies 'distribution' plugin, which helps us in distribution of our application
+    id 'application' // extends 'java' plugin
+    id "org.flywaydb.flyway" version "8.5.4" // community plugin
+
+    - plugins are expected to find source code in standard locations
+    - can change this using "sourceSets{}"
+
+APPLICATION PLUGIN:
+    - withJavadocJar() // when  we publish our projects, thse too can be published
+    - withSourcesJar() // when  we publish our projects, thse too can be published
+    - mainClassName = "..."
+
+
+>> UNDERSTANDING GRADLE DEPENDENCY MANAGEMENT <<
+* Projects can have dependencies on:
+    - other projects
+    - external libraries
+    - internal libraries
+
+* Dependencies can be satisfied from:
+    - other projects
+    - file system
+    - maven repositories
+    - ivy repositories
+
+* dependencies can have many configurations:
+    - compilation
+    - runtime
+    - test compilation
+    - test runtime
+
+* Transitive Dependencies: some dependencies depend on other dependencies
+
+* Dependencies are satisfied fro repositories:
+    - Remote
+    - Local (e.g. local maven cache)
+    - File System (e.g. specified locations on the file system) > syntex => "repositories { flatDir { dir("lib") } }"
+
+
+* CONFIGURATION SCOPE:
+    - implementation > most scopes are this, the main part of the project > i.e. the dependency will be used at compile time as well as runtime
+        - compileOnly
+        - runtimeOnly
+
+    - testImplementation (derives / subset of 'implementation')
+        - compileOnly
+        - runtimeOnly
+
+* REPOSITORIES - MAVEN REMOTE
+
+* GRADLE CACHE:
+    - Modules are cached
+        - File based
+        - meta data and files stored separately
+        - repository caches are independent
+
+    - dependencies can be refreshed:
+        $ --refresh-dependencies flag
+        - will check if it needs to re-download
+
+    - can safely delete cache files
+        - gradle will re-download them
+
+>>  CREATING AND MANAGING MULTI PROJECT BUILDS <<
+* applications generally consist of multiple projects
+* top-level settings file to specify projects
+* top-level build file to configure projects
+    - and set dependencies
+* project level build files
+    - set project level properties and tasks 
+
+in top-level build.gradpe:
+    - allprojects => apply to all projects including top-level project
+    - subprojects => apply only to subprojects
+    - syntax with for loop iterating multiple projects and perofrming a particular tasks
+        ["proj#1", "proj#2", "....", "proj#n"].each { name -> 
+            project(":$name") {
+                // plugins
+                // tasks
+                // .. and so on...
+            }
+        }
+
+* buildscript => something which the build.gradle requires during its execution
+
+* org.gradle.api.JavaVersion.VERSION_11
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>> USING  GRADLE TO MANAGE TESTING << 
+* junit4
+* junit5
+* filtering tests
+
+* There is a test source set:
+    - by default looks for unit tests in src/test/java
+    - outputs to build/classes/test
+    - reports to build/reports/test
+
+* dependencies:
+    - testImplementation("junit:junit:4.12")
+
+* configuration: use 'test' block to configure testing
+- e.g. enabling test-loggings
+    test {
+        testLogging {
+            events TestLogEvent.FAILED,
+                   TestLogEvent.PASSED,
+                   TestLogEvent.SKIPPED
+        }
+    }
+    
+* configure jUnit 5:
+    - add "useJUnitPlatform()" to configure jUnit5
+    - useJUnitPlatform() // if we comment this, the tests simply won't run, and no error will come up
+    - e.g.:
+    tasks {
+        test {
+            useJUnitPlatform()
+            testLogging.events = setOf(TestLogEvent.FAILED, TestLogEvent.PASSED, TestLogEvent.SKIPPED)
+        }
+    }
+
+    - dependencies for JUnit5:
+        - testImplementation("org.junit.jupiter:junit-jupiter-api:$junit_version")
+        - testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junit_version")
+
+FILTERING TESTS:
+    - e.g.:
+    test {
+        filter {
+            includeTestsMatching "com.foo.shouldCreateASession"
+            includeTestsMatching "*shouldCreateASession"
+        }
+    }
+
+    (or)
+    task singleTest (type: Test) {
+        group = "Verificataion"
+        description = "Runs a single test"
+        dependsOn testClasses
+        useJUnitPlatform() // required for JUnit5
+        filter {
+            includeTestsMatching("packageName.Test.To.Run")
+        }
+    }
+    
+    (or)
+
+    gradle test --tests *shouldCreateASession
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+>> understanding the gradle wrapper and how to use it <<
+
+* what is gradle wrapper?
+> gives the project a specific version of gradle
+> get consistent builds
+> gradlew.bat on windows
+> gradlew shell script on *nix environments
+
+adding the wrapper:
+$ gradle wrapper --gradle-version 6.2 --distribution-type all
+
+why use the wrapper?
+- IDEs need it when loading a project
+- build servers need it to create a build
+
+why use a build server?
+- continuous integration is v.imp
+- if not CI then at-least nightly builds
+- if not nightly then a clean place to buuild
+- 'works on my machine' (env issues)
+
+team-city
+https://www.jetbrains.com/teamcity
+
+adding a build to team city
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+###################################################################################################
+
+// display all the tasks associated with the current 'build.gradle'
+$ gradle tasks
+
+// Displays the detected java toolChains.
+$ gradle javaToolchains
+
+$ gradle build
+$ gradle -i build
+$ gradle wrapper
+$ .\gradlew.bat -i build
+$ gradle clean build --console plain
+
+// listing dependencies
+$ gradle -q dependencies
+$ gradle -q dependencies --configuration implementation
+
+$ gradle wrapper --gradle-version 6.2 --distribution-type all
+
+###################################################################################################
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build.
+wrapper - Generates Gradle wrapper files.
+
+
+Help tasks
+----------
+buildEnvironment - Displays all buildscript dependencies declared in root project '1'.
+dependencies - Displays all dependencies declared in root project '1'.
+dependencyInsight - Displays the insight into a specific dependency in root project '1'.
+help - Displays a help message.
+javaToolchains - Displays the detected java toolchains.
+outgoingVariants - Displays the outgoing variants of root project '1'.
+projects - Displays the sub-projects of root project '1'.
+properties - Displays the properties of root project '1'.
+tasks - Displays the tasks runnable from root project '1'.
+
+kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions and conventions.
+
+tasks for "apply plugins: 'java'"
+Build tasks
+-----------
+assemble - Assembles the outputs of this project.
+build - Assembles and tests this project.
+buildDependents - Assembles and tests this project and all projects that depend on it.
+buildNeeded - Assembles and tests this project and all projects it depends on.
+classes - Assembles main classes.
+clean - Deletes the build directory.
+jar - Assembles a jar archive containing the main classes.
+testClasses - Assembles test classes.
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build.
+wrapper - Generates Gradle wrapper files.
+
+Documentation tasks
+-------------------
+javadoc - Generates Javadoc API documentation for the main source code.
+
+Help tasks
+----------
+buildEnvironment - Displays all buildscript dependencies declared in root project '3'.
+dependencies - Displays all dependencies declared in root project '3'.
+dependencyInsight - Displays the insight into a specific dependency in root project '3'.
+help - Displays a help message.
+javaToolchains - Displays the detected java toolchains.
+outgoingVariants - Displays the outgoing variants of root project '3'.
+projects - Displays the sub-projects of root project '3'.
+properties - Displays the properties of root project '3'.
+tasks - Displays the tasks runnable from root project '3'.
+
+Verification tasks
+------------------
+check - Runs all checks.
+test - Runs the test suite.
+
+Rules
+-----
+Pattern: clean<TaskName>: Cleans the output files of a task.
+Pattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+
+To see all tasks and more detail, run gradle tasks --all
+
+To see more detail about a task, run gradle help --task <task>
+
+###################################################################################################

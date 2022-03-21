@@ -1,0 +1,26 @@
+task "hello" {
+    doFirst {
+        print "hello task: doFirst"
+        print "\n"
+    }
+
+    doLast {
+        print "hello task: doLast"
+        print "\n"
+    }
+}
+
+task "world" {
+
+    dependsOn "hello"
+
+    doFirst {
+        print "world task: doFirst"
+        print "\n"
+    }
+
+    doLast {
+        print "world task: doLast"
+        print "\n"
+    }
+}

@@ -1,0 +1,86 @@
+buildscript {
+    // tell what all to do when during the CONFIGURATION PHASE or running this script phase
+    ext {
+        log4j_version = '1.2.17'
+    }
+}
+
+plugins {
+    id 'application' // extends 'java' plugin
+}
+
+java {
+    // sourceCompatibility = JavaVersion.VERSION_1_8
+    // targetCompatibility = JavaVersion.VERSION_1_8
+
+    toolchain { languageVersion = JavaLanguageVersion.of(16) }
+
+    withJavadocJar() // when  we publish our projects, thse too can be published
+    withSourcesJar() // when  we publish our projects, thse too can be published
+}
+
+sourceSets {
+    main { java { srcDir 'src'} }
+    test { java { srcDir 'test/src'} }
+}
+
+// override property of 'application' plugin
+mainClassName = "com.test.Demo"
+
+
+// ############# DEPENDENCIES ################
+
+/*-
+// ###################################### APPROACH #3 ######################################
+repositories {
+    flatDir { dirs 'extLib' }
+}
+
+dependencies {
+    implementation "log4j:log4j:$log4j_version"
+    implementation group: 'javax.xml.bind', name: 'jaxb-api', version: "${jaxb_version}"
+    implementation "junit:junit:${junit_version}"
+}
+*/
+
+/*-
+// ###################################### APPROACH #2 ######################################
+dependencies {
+    implementation files ('extLib/log4j-1.2.17.jar', 'extLib/jaxb-api-2.3.1.jar')
+    testImplementation files ('extLib/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar')
+}
+*/
+
+
+
+// ###################################### APPROACH #1 ######################################
+repositories {
+    jcenter() // jFrog bintray repository
+    
+    // mavenCentral() // maven central repository
+
+    // mavenLocal() // use the maven local repository i.e. cache on the local file system [not recommended]
+    
+    // url "http://jcenter.bintray.com/"
+
+    // maven { url "https://custom.repo.com/maven2/" }
+
+    // ivy { url "http://custom.repo.com/repo" }  // custom ivy repository
+
+}
+
+dependencies {
+    implementation group: 'log4j', name: 'log4j', version: "$log4j_version"
+    implementation group: 'javax.xml.bind', name: 'jaxb-api', version: "${jaxb_version}"
+    implementation "junit:junit:${junit_version}"
+}
+
+
+task doLast() {
+
+    // print all dependencies and their paths 
+    // ref: https://stackoverflow.com/a/10834567/7415499
+    print("################## START ###############\n")
+    configurations.compileClasspath.each { println it }
+    print("################## END ###############")
+}

@@ -1,0 +1,57 @@
+// demo with JUNIT-5
+
+// below used by "test { testLogging {....}}" block
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
+// apply plugin: 'java'
+plugins {
+    // id 'java' // base java plugin for clean, build, jar tasks
+    id 'application'
+
+    id 'com.adarshr.test-logger' version '3.2.0' // used by testLogger block
+}
+
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.3.1")
+}
+
+mainClassName = "com.test.Demo"
+
+task singleTest (type: Test) {
+    group = "Verificataion"
+    description = "Runs a single test"
+    dependsOn("testClasses")
+    useJUnitPlatform() // required for JUnit5
+    filter {
+        includeTestsMatching("com.test.Test2*")
+    }
+}
+
+test {
+    useJUnitPlatform() // if we comment this, the tests simply won't run, and no error will come up
+    testLogging {
+        events TestLogEvent.FAILED,
+               TestLogEvent.PASSED,
+               TestLogEvent.SKIPPED
+    }
+}
+
+// // configure the structure
+// sourceSets {
+//     main {
+//         java { srcDir 'src/main/java'}
+//         resources { srcDir 'src/main/resources'}
+//     }
+//     test {
+//         java { srcDir 'src/test/java'}
+//         resources { srcDir 'src/test/resources'}
+//     }    
+// }
