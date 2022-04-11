@@ -1,0 +1,5 @@
+notes-typescript:
+
+* Talking about TypeScript, it is a new programming language created by Microsoft which enhances by JavaScript by providing more type-safety and features, 
+* like allowing to create a class but the drawback of it is that you cannot run TypeScript in the browser, 
+* but don’t worry, you can compile TypeScript code to JavaScript which can be run on the browser.

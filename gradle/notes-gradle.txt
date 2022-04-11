@@ -1,3 +1,26 @@
+
+// display all the tasks associated with the current 'build.gradle'
+$ gradle tasks
+
+// Displays the detected java toolChains.
+$ gradle javaToolchains
+
+$ gradle build
+$ gradle -i build
+$ gradle wrapper
+$ .\gradlew.bat -i build
+$ gradle clean build --console plain
+
+// listing dependencies
+$ gradle -q dependencies
+$ gradle -q dependencies --configuration implementation
+
+$ gradle wrapper --gradle-version 6.2 --distribution-type all
+
+
+
+###################################################################################################
+
 ?? gradle deamons, what are they?
 
 ###################################################################################################
@@ -256,26 +279,6 @@ https://www.jetbrains.com/teamcity
 
 adding a build to team city
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-###################################################################################################
-
-// display all the tasks associated with the current 'build.gradle'
-$ gradle tasks
-
-// Displays the detected java toolChains.
-$ gradle javaToolchains
-
-$ gradle build
-$ gradle -i build
-$ gradle wrapper
-$ .\gradlew.bat -i build
-$ gradle clean build --console plain
-
-// listing dependencies
-$ gradle -q dependencies
-$ gradle -q dependencies --configuration implementation
-
-$ gradle wrapper --gradle-version 6.2 --distribution-type all
-
 ###################################################################################################
 Build Setup tasks
 -----------------
