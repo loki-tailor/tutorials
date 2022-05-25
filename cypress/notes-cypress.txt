@@ -1,0 +1,276 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+reference: https://www.youtube.com/watch?v=OIAzwr-_jhY&t=621s
+
+demo-2
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+####################################################################################################################################
+GETTING STARTED
+
+1. install node
+2. mkdir demo-2
+3. npm init -y
+4. npm i cypress
+5. verify cypress installation:    
+6. open cypress:        
+
+####################################################################################################################################
+COMMANDS:
+
+$ npm init -y
+$ npm i cypress --save-dev
+$ npx cypress verify
+$ npm cache clean --force 
+
+$ npx cypress open
+$ node_modules/.bin/cypress open
+
+$ npx cypress run --headless
+$ npx cypress run --headless --spec #fileName
+$ npx cypress run --headless --spec "cypress\integration\3-my-tests\hello-worl.js"
+$ npx cypress run --spec cypress\integration\0a-nal-tutorial\element_test.js --browser chrome
+$ npx cypress run --spec cypress\integration\0a-nal-tutorial\*.js
+
+####################################################################################################################################
+IMP POINTS:
+
+* write tests in 'integration' folder
+* describe = test-suites
+* it() = tests
+
+* IMP: anything that is written in HTML tags has attribute as "data-*" has no meaning, the browsers would ignore this
+* e.g. <img data-test="abc" />
+
+* generally variable/data/let should'nt be used inside tests (TBC - why??)
+* cypress recommends to do things using API first which are possible and test the UI only using cypress (e.g. form-filling and account creation)
+
+####################################################################################################################################
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+testautomationuniversity => course ono c
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CH: 1 - Introduction to Cypress:
+
+https://testautomationu.applitools.com/cypress-tutorial/
+
+Learning JavaScript (The most in-depth book on learning JavaScript. Starts from nothing and goes as in-depth as you want.)
+https://github.com/getify/You-Dont-Know-JS
+
+* Javascript Only Tool
+* Chrome only tool
+* Only Test Runner supported "Mocha"
+* Running test-code in the browser itself rather than out-of-process of browser
+* A "Testing Tool" not a "Automation Tool"
+------------------------------------------------------------------------------------------------------------------------------------------------
+CH: 2 - Setting up Cypress
+
+* cypress is a npm package
+
+timeout error faced when running "npx cypress open"
+https://stackoverflow.com/questions/63667880/cypress-verification-timed-out-after-30000-milliseconds
+npm cache clean --force 
+npx cypress verify
+
+
+package.json git url:
+https://github.com/giltayar/testautomationu-cypress-course/blob/master/package.json
+
+test code git url:
+https://github.com/giltayar/testautomationu-cypress-course/tree/lesson-2
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+CH: 3 - Accessing Elements and interacting with them
+
+https://www.cypress.io/
+https://docs.cypress.io/guides/overview/why-cypress
+https://docs.cypress.io/api/table-of-contents
+https://github.com/giltayar/testautomationu-cypress-course/blob/lesson-4/cypress/integration/todomvc.spec.js
+https://github.com/giltayar/testautomationu-cypress-course/tree/lesson-4
+http://todomvc-app-for-testing.surge.sh/
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+CH: 4 - Validations
+
+https://github.com/giltayar/testautomationu-cypress-course/blob/lesson-5/cypress/integration/todomvc.spec.js
+https://github.com/giltayar/testautomationu-cypress-course/tree/lesson-5
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+CH: 5 - grouping tests with Mocha
+
+https://github.com/giltayar/testautomationu-cypress-course/blob/lesson-6/cypress/integration/todo-actions.spec.js
+https://github.com/giltayar/testautomationu-cypress-course/blob/lesson-6/cypress/integration/todo-filtering.spec.js
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+CH: 6 - Cypress CLI
+
+https://docs.cypress.io/guides/guides/command-line
+
+npx cypress run --spec #fileName
+npx cypress run
+if(package.json has scripts -> "test": "cypress run") : then:
+    - npm run test
+    - npm test
+    - above both are same
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+CH: 7: Page Object Models
+
+- standard way of coping with large tests suite
+- write tests using object relevant to the pages
+- limits the use of selectors, which makes the framework more comprehensive 
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+NAL:
+
+Folder Structure Info:
+
+FIXURES:
+=> why: cypress provides importing the files in these folders statically rather than importing manually
+    - static data / constants to define for TC / to avoid using hardcoded values in .js tests
+    - filePaths / env vars
+    - cy.fixture() can be used to access 
+    - dummy data
+    - API response dummy data as a json, etc..
+
+INTEGRATION:
+    - where we write our TCs
+    - recommended: each .js to contain single 'describe'
+
+PLUGIN:
+    - v. imp
+    - just like listener in TestNG
+    - keep listening
+    - defining configs
+    - env vars / browser options / incognito mode / block etc .. / accept cert error
+    - all chrome preferences
+    - it will be accessible by the TCs
+    - behave like a listener
+    - can change behaviour during runtime also
+
+SCREENSHOT:
+    - by default not created
+
+SUPPORT:
+    - customized libs / reusable methods / function / utility
+    - which will be available to all TC by default
+    - we don't need to import these
+    - custom commands
+
+node_modules
+    - all modules / pkgs / libs
+
+package.json:
+    - configuration file
+    - just like pom.xml
+
+cypress.json
+    - base-url
+    - defining time-outs
+    - env configurations
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+>> RUNNING CYPRESS via TERMINAL
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+npx cypress run
+./node_modules/.bin/cypress run
+
+npx cypress run --spec cypress\integration\0a-nal-tutorial\element_test.js --browser chrome
+npx cypress run --spec cypress\integration\0a-nal-tutorial\*.js
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+>> HANDLING SERVICE UNAVAILABLE AND UNCAUGHT EXCEPTION
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+cy.visit('https://app.hubspot.com/login', { failOnStatusCode: false });
+
+
+https://www.youtube.com/watch?v=TFW_zvFHuOg
+* cons:
+    - all tests should happen in single tab only, no tab switching
+    - no support for headless (You will be able to run a test in headless mode with 'npx cypress run')
+    
+https://www.youtube.com/watch?v=Sc-m3ceZyfk
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+* all the stuff written in 'support' folder will be applicable to all the tests in the framework
+
+* https://on.cypress.io/uncaught-exception-from-application
+
+* cy.visit("https://app.hubspot.com/", { failOnStatusCode: false });
+    - allowing not to faill, if we get status codes other than 4xx
+
+
+* Intellisense in VS-Code:
+    - { "include": [ "./node_modules/cypress", "cypress/**/*.js" ] }
+    - 3 ways:
+        - entry in user-settings-json
+        - creating file jsconfig.json in framework root folder
+        - creating entry in individual tests spec.js files
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+=> https://www.youtube.com/watch?v=7N63cMKosIE
+
+#1  = npm install cypress --save-dev
+    = npm i --save-dev chance (auto generate fixtures)
+
+#2  = package.json => change "e2e": "ng e2e" to => "e2e": "cypress open"
+
+- login with github => to save auto-save-recording there
+
+- cypress.json => global configuration options
+- testing code in cypress directory
+    - fixtures => default data to hold in tests
+    - integration => writing main specs (spent most of the time here)
+    - plugins => hook into different lifecycle of the testing process (e.g. transpiling code from js to ts)    
+    - support => custom commands for cypress or override existing commands
+
+#3  = create sample.spec.js in cypress/integration
+/// <reference type="cypress" />
+import Chance from 'chance'
+const chance = new Chance();
+describe('..', () => {
+    ....
+});
+
+=> cy.pause() => allows going each item step by step
+
+=> IMPORTANT:
+    - generally avoid IDs or CSS classes from the DOM
+    - that makes our tests brittle
+    - since those things are likenly to change
+    - better approach is to use the data attribute
+    - or the actual component name
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------

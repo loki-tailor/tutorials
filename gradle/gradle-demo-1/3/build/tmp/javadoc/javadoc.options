@@ -1,0 +1,8 @@
+-classpath 'F:\\git\\tutorials\\gradle\\gradle-demo-1\\3\\build\\classes\\java\\main;F:\\git\\tutorials\\gradle\\gradle-demo-1\\3\\build\\resources\\main'
+-d 'F:\\git\\tutorials\\gradle\\gradle-demo-1\\3\\resources\\java-doc'
+-doctitle '3 1.0-SNAPSHOT API'
+-html5 
+-notimestamp 
+-quiet 
+-windowtitle '3 1.0-SNAPSHOT API'
+'F:\\git\\tutorials\\gradle\\gradle-demo-1\\3\\src\\main\\java\\com\\test\\Demo.java'

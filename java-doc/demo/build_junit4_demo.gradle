@@ -1,0 +1,68 @@
+// demo with JUNIT-4
+
+// below used by "test { testLogging {....}}" block
+// import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+// import org.gradle.api.tasks.testing.logging.TestLogEvent
+
+// apply plugin: 'java'
+plugins {
+    // id 'java' // base java plugin for clean, build, jar tasks
+    id 'application'
+
+    id 'com.adarshr.test-logger' version '3.2.0' // used by testLogger block
+}
+
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation('junit:junit:4.12')
+}
+
+mainClassName = "com.test.Demo"
+
+// coming from plugin: 'com.adarshr.test-logger'
+testlogger {
+    theme 'standard'
+    showExceptions true
+    showStackTraces true
+    showFullStackTraces false
+    showCauses true
+    slowThreshold 2000
+    showSummary true
+    showSimpleNames false
+    showPassed true
+    showSkipped true
+    showFailed true
+    showOnlySlow false
+    showStandardStreams false
+    showPassedStandardStreams true
+    showSkippedStandardStreams true
+    showFailedStandardStreams true
+    logLevel 'lifecycle'
+}
+
+/*-
+test {
+    testLogging {
+        events TestLogEvent.FAILED,
+               TestLogEvent.PASSED,
+               TestLogEvent.SKIPPED
+    }
+}
+*/
+
+// // configure the structure
+// sourceSets {
+//     main {
+//         java { srcDir 'src/main/java'}
+//         resources { srcDir 'src/main/resources'}
+//     }
+//     test {
+//         java { srcDir 'src/test/java'}
+//         resources { srcDir 'src/test/resources'}
+//     }    
+// }

@@ -1,0 +1,6 @@
+* different ways to know which or where python you're using @ Windows
+    - echo %PATH%
+    - where python
+    - python --list-paths
+    - python -c "import os, sys; print(os.path.dirname(sys.executable))"
+
