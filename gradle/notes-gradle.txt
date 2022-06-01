@@ -1,4 +1,10 @@
+###################################################################################################
 
+https://stackoverflow.com/a/70620040/7415499
+    * If you specify sourceSets at all in your build.gradle, you will find that Gradle won't work with testImplementation (or testCompile) entries. 
+    * It just totally ignores the dependencies and those classes can't be found.
+
+###################################################################################################
 // display all the tasks associated with the current 'build.gradle'
 $ gradle tasks
 

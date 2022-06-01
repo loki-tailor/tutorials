@@ -25,7 +25,7 @@ java {
 }
 
 javadoc {
-    source = sourceSets.main.allJava
+    source = sourceSets.main.allJava + sourceSets.test.allJava
     options.addBooleanOption('html5', true)
     destinationDir = file("resources/java-doc")
 }
@@ -35,8 +35,8 @@ repositories {
 }
 
 dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.3.1")
+    implementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
+    implementation("org.junit.jupiter:junit-jupiter-engine:5.3.1")
 }
 
 mainClassName = "com.test.Demo"
@@ -60,14 +60,14 @@ test {
     }
 }
 
-// // configure the structure
-// sourceSets {
-//     main {
-//         java { srcDir 'src/main/java'}
-//         resources { srcDir 'src/main/resources'}
-//     }
-//     test {
-//         java { srcDir 'src/test/java'}
-//         resources { srcDir 'src/test/resources'}
-//     }    
-// }
+// configure the structure
+sourceSets {
+    main {
+        java { srcDir 'src/main/java'}
+        resources { srcDir 'src/main/resources'}
+    }
+    test {
+        java { srcDir 'src/test/java'}
+        resources { srcDir 'src/test/resources'}
+    }    
+}

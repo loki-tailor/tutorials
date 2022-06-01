@@ -1,0 +1,12 @@
+Open Points:
+* overview.html?
+* @see tag?
+* package.html
+
+* The content of any generated files is specific to the doclet. 
+* The Standard Doclet generates HTML output, but a different doclet could generate other output, such as a report of misspelled words or grammatical errors.
+
+2022-06-01
+* Documentation comments are recognized only when placed immediately before module, package, class, interface, constructor, method, or field declarations.
+* Documentation comments placed in the body of a method are ignored.
+
