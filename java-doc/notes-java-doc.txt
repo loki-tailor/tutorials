@@ -10,3 +10,10 @@ Open Points:
 * Documentation comments are recognized only when placed immediately before module, package, class, interface, constructor, method, or field declarations.
 * Documentation comments placed in the body of a method are ignored.
 
+2022-06-02
+* You can run the javadoc tool on entire packages, individual source files, or both. 
+* When documenting entire packages, you can use the -subpackages option either to recursively traverse a directory and its subdirectories, or to pass in an explicit list of package names. 
+* When you document individual source files, pass in a list of Java source file names.
+* GNU-style options (that is, those beginning with --) can use an equal sign (=) instead of whitespace characters to separate the name of an option from its value.
+
+

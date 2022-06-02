@@ -1,9 +1,7 @@
-package com.javadoc;
-
 /**
-	This is a demo file created to understand JavaDoc
+	This is a demo file created to understand JavaDoc <br />
 
-	Date: 2021-06-21
+	Date: 2021-06-21 <br />
 
 	@author loki
 
