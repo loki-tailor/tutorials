@@ -29,3 +29,6 @@ hs_err_pid*
 
 # angular npm
 node_modules/
+
+# python sphinx 
+python/sphnix-demo-1/.venv

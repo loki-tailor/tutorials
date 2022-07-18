@@ -1,0 +1,32 @@
+#######################################################################################################################################
+[ Issues Faced ]
+
+* https://stackoverflow.com/questions/32302379/could-not-find-a-version-that-satisfies-the-requirement-package
+
+* https://stackoverflow.com/questions/56199111/visual-studio-code-cmd-error-cannot-be-loaded-because-running-scripts-is-disabl
+
+#######################################################################################################################################
+
+[ commands used ]
+
+------------------------------------------------------------------------------------------------------------------------
+$ python -m pip install sphinx
+$ pip install sphinx
+------------------------------------------------------------------------------------------------------------------------
+$ sphinx-build --version
+$ sphinx-quickstart docs
+$ sphinx-build -b html docs/source/ docs/build/html
+
+$ cd docs ; make html
+
+$ make html
+$ make help
+$ make epub
+------------------------------------------------------------------------------------------------------------------------
+You should now populate your master file F:\git\tutorials\python\sphnix-demo-1\docs\source\index.rst and create other documentation
+source files. Use the Makefile to build the docs, like so:
+   make builder
+where "builder" is one of the supported builders, e.g. html, latex or linkcheck
+------------------------------------------------------------------------------------------------------------------------
+
+#######################################################################################################################################
