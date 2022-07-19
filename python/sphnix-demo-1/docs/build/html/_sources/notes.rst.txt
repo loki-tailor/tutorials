@@ -1,4 +1,4 @@
-:orphan: .. ref @ https://stackoverflow.com/a/40725923/7415499
+.. :orphan: .. ref @ https://stackoverflow.com/a/40725923/7415499
 
 .. role:: raw-html(raw)
     :format: html
@@ -13,7 +13,7 @@ notes @ sphinx
 .. this is a sample comment
 
 Issues Faced
-============
+------------
 * `stack: python: Could not find a version that satisfies the requirement <package> <https://stackoverflow.com/questions/32302379/could-not-find-a-version-that-satisfies-the-requirement-package>`_
   
 * `stack: vscode: Visual studio code cmd error: Cannot be loaded because running scripts is disabled on this system <https://stackoverflow.com/questions/56199111/visual-studio-code-cmd-error-cannot-be-loaded-because-running-scripts-is-disabl>`_
@@ -29,28 +29,31 @@ Issues Faced
 * `todo: stack: sphinx: Sphinx inline code highlight <https://stackoverflow.com/questions/21591107/sphinx-inline-code-highlight>`_
 
 Commands Used
-=============
+--------------------
 
-:bash:`$ python -m pip install sphinx`
+.. code-block:: console
 
-:bash:`$ pip install sphinx`
+    $ python -m pip install sphinx
+    $ pip install sphinx
 
-:bash:`$ sphinx-build --version`
+.. code-block:: console
 
-:bash:`$ sphinx-quickstart docs`
+    $ sphinx-build --version
+    $ sphinx-quickstart docs
+    $ sphinx-build -b html docs/source/ docs/build/html
 
-:bash:`$ sphinx-build -b html docs/source/ docs/build/html`
+.. code-block:: console
 
-:bash:`$ cd docs ; make html`
+    $ cd docs ; make html
+    $ make html
+    $ make help
+    $ make epub
 
-:bash:`$ make html`
+Notes
+------------
 
-:bash:`$ make help`
+* You should now populate your master file "`F:\\git\\tutorials\\python\\sphnix-demo-1\\docs\\source\\index.rst`" and create other documentation source files.
 
-:bash:`$ make epub`
-
-You should now populate your master file "`F:\\git\\tutorials\\python\\sphnix-demo-1\\docs\\source\\index.rst`" and create other documentation
-source files. 
-:raw-html:`<br />` 
-:raw-html:`<br />`
-Use the Makefile to build the docs, like so: `make builder` where "builder" is one of the supported builders, e.g. html, latex or linkcheck
+* Use the Makefile to build the docs, like so: `make builder` where "builder" is one of the supported builders, e.g. html, latex or linkcheck
+  
+* toctree = table of contents tree
