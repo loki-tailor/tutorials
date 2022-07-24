@@ -45,6 +45,7 @@ Commands Used
 .. code-block:: console
 
     $ cd docs ; make html
+    $ make clean
     $ make html
     $ make help
     $ make epub
@@ -57,3 +58,9 @@ Notes
 * Use the Makefile to build the docs, like so: `make builder` where "builder" is one of the supported builders, e.g. html, latex or linkcheck
   
 * toctree = table of contents tree
+
+TODO:
+-------------
+* maxdepth - what is it and why exactly it is used?
+* Arguments / Options / Content?
+* nested toctree

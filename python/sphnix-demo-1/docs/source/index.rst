@@ -20,8 +20,9 @@ Check out the :doc:`usage` section for further information, including how to :re
 
 .. toctree:: 
    usage
-   notes
-   dummy
+   my/notes
+   my/f_notes
+   my/sample
 
 
 .. Indices and tables
