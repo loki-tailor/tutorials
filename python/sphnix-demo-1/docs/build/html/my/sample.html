@@ -50,6 +50,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#demo-documenting-objects">Demo: <cite>Documenting Objects</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#demo-autodoc">Demo: <cite>autodoc</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#demo-intersphinx">Demo: <cite>Intersphinx</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#demo-documenting-py-objects">Demo: <cite>Documenting py Objects</cite>:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#demo-cross-referencing-py-objects">Demo: <cite>Cross-Referencing py objects</cite>:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#demo-py-exceptions">Demo: <cite>py exceptions</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#demo-doctest">Demo: <cite>doctest</cite>:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#demo-other-languages-c">Demo: <cite>Other Languages: C++</cite>:</a></li>
 </ul>
 </li>
 </ul>
@@ -273,6 +278,69 @@ opened in a binary mode.</p>
 <p>And now, you can write a cross-reference like <a class="reference internal" href="#io.open" title="io.open"><code class="xref py py-func docutils literal notranslate"><span class="pre">io.open()</span></code></a>.</p>
 <p>Any cross-reference that has no matching target in the current documentation set, will be looked up in the documentation sets configured in intersphinx_mapping</p>
 <p>(this needs access to the URL in order to download the list of valid targets).</p>
+</section>
+<section id="demo-documenting-py-objects">
+<h2>Demo: <cite>Documenting py Objects</cite>:<a class="headerlink" href="#demo-documenting-py-objects" title="Permalink to this heading"></a></h2>
+<p><em>Creating recipes</em></p>
+<p>To retrieve a list of random ingredients, you can use the <code class="docutils literal notranslate"><span class="pre">lumache.get_random_ingredients()</span></code> function:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">py:</span></code> prefix specifies the domain. You may configure the default domain so you can omit the prefix, either globally using the primary_domain configuration, or use the default-domain directive to change it from the point it is called until the end of the file.</p>
+</div>
+<dl class="py function">
+<dt class="sig sig-object py" id="lumache.get_random_ingredients">
+<span class="sig-prename descclassname"><span class="pre">lumache.</span></span><span class="sig-name descname"><span class="pre">get_random_ingredients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lumache.get_random_ingredients" title="Permalink to this definition"></a></dt>
+<dd><p>Return a list of random ingredients as strings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em>] or </em><em>None</em>) – Optional “kind” of ingredients.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#lumache.InvalidKindError" title="lumache.InvalidKindError"><strong>lumache.InvalidKindError</strong></a> – If the <code class="docutils literal notranslate"><span class="pre">kind</span></code> is invalid</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The ingredients list.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="demo-cross-referencing-py-objects">
+<h2>Demo: <cite>Cross-Referencing py objects</cite>:<a class="headerlink" href="#demo-cross-referencing-py-objects" title="Permalink to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">kind</span></code> parameter should be either <code class="docutils literal notranslate"><span class="pre">&quot;meat&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;fish&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;veggies&quot;</span></code>. Otherwise, <a class="reference internal" href="#lumache.get_random_ingredients" title="lumache.get_random_ingredients"><code class="xref py py-func docutils literal notranslate"><span class="pre">lumache.get_random_ingredients()</span></code></a> will raise an exception.</p>
+</section>
+<section id="demo-py-exceptions">
+<h2>Demo: <cite>py exceptions</cite><a class="headerlink" href="#demo-py-exceptions" title="Permalink to this heading"></a></h2>
+<dl class="py exception">
+<dt class="sig sig-object py" id="lumache.InvalidKindError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lumache.</span></span><span class="sig-name descname"><span class="pre">InvalidKindError</span></span><a class="headerlink" href="#lumache.InvalidKindError" title="Permalink to this definition"></a></dt>
+<dd><p>Raised if the kind is invalid.</p>
+</dd></dl>
+
+</section>
+<section id="demo-doctest">
+<h2>Demo: <cite>doctest</cite>:<a class="headerlink" href="#demo-doctest" title="Permalink to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">lumache</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lumache</span><span class="o">.</span><span class="n">get_random_ingredients</span><span class="p">()</span>
+<span class="go">[&#39;shells&#39;, &#39;gorgonzola&#39;, &#39;parsley&#39;]</span>
+</pre></div>
+</div>
+</section>
+<section id="demo-other-languages-c">
+<h2>Demo: <cite>Other Languages: C++</cite>:<a class="headerlink" href="#demo-other-languages-c" title="Permalink to this heading"></a></h2>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv410CustomList">
+<span id="_CPPv310CustomList"></span><span id="_CPPv210CustomList"></span><span id="CustomList"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CustomList</span></span></span><a class="headerlink" href="#_CPPv410CustomList" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A typedef-like declaration of a type.</p>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Cross reference to <a class="reference internal" href="#_CPPv410CustomList" title="CustomList"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">CustomList</span></code></a>.</p>
+</div>
 </section>
 </section>
 

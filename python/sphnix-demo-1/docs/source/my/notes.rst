@@ -55,12 +55,13 @@ Notes
 
 * You should now populate your master file "`F:\\git\\tutorials\\python\\sphnix-demo-1\\docs\\source\\index.rst`" and create other documentation source files.
 
-* Use the Makefile to build the docs, like so: `make builder` where "builder" is one of the supported builders, e.g. html, latex or linkcheck
+* Use the Makefile to build the docs, like so: ``make builder`` where "builder" is one of the supported builders, e.g. html, latex or linkcheck
   
-* toctree = table of contents tree
+* ``toctree`` = table of contents tree
 
 TODO:
 -------------
 * maxdepth - what is it and why exactly it is used?
 * Arguments / Options / Content?
 * nested toctree
+* why does ``.pyc`` file get created and when and how to avoid it?
