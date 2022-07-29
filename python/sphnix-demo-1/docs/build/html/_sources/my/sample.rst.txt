@@ -113,3 +113,14 @@ Demo: `Other Languages: C++`:
    A typedef-like declaration of a type.
 
 .. note:: Cross reference to :cpp:type:`CustomList`.    
+
+Demo: `Automatic documentation generation from code`:
+-------------------------------------------------------
+you can use the ``lumache.get_random_ingredients()`` function:
+
+.. autofunction:: lumache.get_random_ingredients
+
+\.... or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
+will raise an exception.
+
+.. autoexception:: lumache.InvalidKindError   

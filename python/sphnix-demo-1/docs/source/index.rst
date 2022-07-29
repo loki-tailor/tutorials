@@ -19,10 +19,12 @@ Check out the :doc:`usage` section for further information, including how to :re
 ..    :caption: Contents:
 
 .. toctree:: 
+   my/next_steps
    usage
    my/notes
    my/f_notes
    my/sample
+   api
 
 
 .. Indices and tables
