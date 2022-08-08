@@ -12,14 +12,14 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('./sphinx_files'))
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'Lumache'
-copyright = '2022, Graziella'
-author = 'Graziella'
+project = 'notes'
+copyright = '2022, Lokeshwar'
+author = 'Lokeshwar'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'

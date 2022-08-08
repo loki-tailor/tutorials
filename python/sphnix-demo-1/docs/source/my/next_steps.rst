@@ -1,7 +1,0 @@
-Next Steps / Resume Here
-=========================
-
-* resume @ https://www.sphinx-doc.org/en/master/tutorial/deploying.html#publishing-your-documentation-sources
-
-* creating to-learn.rst containing all the tutorials todo post going thru this sphinx-docs.org
-* conver few of your notes to sphinx format and see if that's feasible

@@ -1,3 +1,5 @@
+#######################################################################################################################################ng build --prod --base-href ./
+
 #######################################################################################################################################
 * Angular is one of the most popular Javascript front-end frameworks from Google that allows you to build a modern big e-commerce web application
 * as well as a single-page web application that runs on a browser.
