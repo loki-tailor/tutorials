@@ -1,0 +1,7 @@
+<p>[demo-child.component.html] demo-child works!</p>
+<p>[demo-child.component.html] [message from parent] "{{ childMessageAsInput }}"</p>
+<button type="button" (click)="childEventForParentVarFun()">[demo-child.component.html] send event from sub-child to child</button>
+
+<p>[demo-child.component.html] [message service] "{{ serviceMessage }}"</p>
+<p>[demo-child.component.html] [BehaviorSubject] [message service] "{{ serviceSubMessage }}"</p>
+<button type="button" (click)="sendUpdate()">[demo-child.component.html] send update for BehaviorSubject</button>

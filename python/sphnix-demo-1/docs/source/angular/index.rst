@@ -3,6 +3,6 @@ angular
 ====================
 
 .. toctree:: 
-    notes
+    notes/index
     training-1
     training-2

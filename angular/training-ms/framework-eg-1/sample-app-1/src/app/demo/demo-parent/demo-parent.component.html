@@ -1,0 +1,9 @@
+<h1>[demo-parent.component.html] demo-parent works!</h1>
+<h1>[demo-parent.component.html] [message #1 from child] {{ parentMessageComingFromChildVar }} </h1>
+<h1>[demo-parent.component.html] [message #2 from child] {{ parentMessageComingFromChildVar2 }} </h1>
+<app-demo-child (childEventForParentVar)="receiveEventFromChild($event)" [childMessageAsInput]="parentMessageVar"></app-demo-child>
+<h1>[demo-parent.component.html] [message service] {{ serviceMessage }} </h1>
+<h1>[demo-parent.component.html] [BehaviorSubject] [message service] {{ serviceSubMessage }} </h1>
+<button type="button" (click)="sendUpdateFromParent()">[demo-child.component.html] send update for BehaviorSubject from parent</button>
+
+<!-- IMPORTANT: above event should be mapped to the variable name of the actual event (L.H.S) -->
