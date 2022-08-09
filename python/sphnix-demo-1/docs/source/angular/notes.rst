@@ -10,8 +10,55 @@ commands used
     # installation
     #1 - node / npm installation @ nodejs.org
     #2 - type script installation ``npm install --location=global typescript``
-    #3 - eslint plugin for vscode
-    #4 - typescript plugin for vscode
+    #3 - vscode plugin installation:
+        # eslint
+        # typescript
+        # angular
+        # npm script
+
+.. code-block:: bash
+
+  # checking list of modules installed via npm
+
+  # Bare command
+  npm list
+
+  # 'ls' is an alias of list
+  npm ls
+  
+  # Don't show dependencies
+  npm list --depth=0
+  
+  # Global modules
+  npm list -g --depth=0
+  
+  # More info
+  npm la
+  npm ll
+  
+  # Show particular environment packages
+  npm ls --only=dev
+  npm ls --only=prod
+  
+  # Parseable view (tree view)
+  npm ls --parseable=true
+
+.. code-block:: bash
+
+  # checking npm config / cache data
+  $ npm cache verify
+  $ npm cache ls
+
+  $ npm config ls
+  $ npm config ls -l
+
+.. code-block:: bash
+
+  # install @angular/cli
+  $ npm install @angular/cli
+  $ ng version
+
+  $ ng serve # launch the app locally
 
 .. code-block:: bash
     
@@ -36,7 +83,10 @@ issues faced
     + BigInt is enabled in node_modules/typescript/lib/lib.es2020.bigint.d.ts not esnext
 
 references
-----------------
+-----------------------
+
+official
+
 .. list-table:: 
     :align: left
 
@@ -46,14 +96,39 @@ references
     * - angular official
       - https://angular.io
 
+    * - angular @ cli
+      - https://angular.io/cli
+
     * - typescript official
       - https://www.typescriptlang.org/
-  
+
+    * - ECMA Standards
+      - https://www.ecma-international.org/
+
+    * - nodejs
+      - https://nodejs.org/
+
+trainings 
+
+.. list-table:: 
+    :align: left
+
+    * - type
+      - reference    
+
     * - training #1 @ pluralsight
       - https://www.pluralsight.com/courses/ng-big-picture
       
     * - training #n @ gitbook
       - https://basarat.gitbook.io/typescript/getting-started
+
+help
+
+.. list-table:: 
+    :align: left
+
+    * - type
+      - reference    
 
     * - angular
       - `run-angular-7-project-locally-on-file-without-server <https://stackoverflow.com/questions/54143002/run-angular-7-project-locally-on-file-without-server/54143163>`_
@@ -85,3 +160,147 @@ typescript
 * TypeScript - a new programming language **created by Microsoft** which enhances by JavaScript by providing more type-safety and features, 
 * like allowing to create a class but the drawback of it is that you cannot run TypeScript in the browser, 
 * but don’t worry, you can compile TypeScript code to JavaScript which can be run on the browser.
+
+
+dir structure info
+-----------------------
+
+.. list-table:: 
+  :align: left
+
+  * - dir or file
+    - desc
+
+  * - angular.json 
+    - | contains default for build, serve, lint, test tools
+      | typically don't need to add anything in this file unless something extra is needed
+
+        .. list-table:: 
+          :align: left
+
+          * - attribute
+            - desc
+
+          * - $.projects { ... }
+            - | contains multiple projects
+              | used when mono-repo maintainence is required
+
+          * - $.projects.myapp.architect.build { ... }
+            - | files from where the app needs to be rendered 
+              | ``index.html``: components, views, etc.. 
+              | ``main.ts``: driver class from where bootstrap the app
+              | ``polyfills.ts``: involved when browser not supports latest ECMAScript
+              | ``tsconfig.app.json``: typescript configuration file
+              | ``aot``: `ahead of time` - compiler strategy used by angular
+              | ``assets []``: contains files to render as it is e.g. images i.e. static data
+              | ``style.scss []``: file path for scss 
+
+          * - $.projects.myapp.architect.test { ... }
+            - | details of unit tests to be executed
+              | ``test.ts``: main file for tests
+              | ``tsconfig.spec.json``: config file
+
+  * - package.json
+    - | **important file**: contains the project wide NPM dependencies. 
+      | A ``dependencies`` can either be essential to running an app like angulare core libraries, RxJS, zone.js, etc..
+      | or merely a ``devDependencies`` like the CLI, linting tools, testing frameworks
+      | which may not be needed to bundled to deploy an application in production
+      |
+      | ``npm install xxx`` searches in ``package.json`` first to check if it's the package is installed or not
+      | "rxjs": "~7.5.0", // imp for async programming
+      | "zone.js": "~0.11.4" // used for chain detection mechanisim for angular
+
+  * - package-lock.json
+    - | **huge file**, not recommended to edit manually
+      | detailed version specific information for the dependencies
+      | this is auto-generated when ``npm install`` is run
+      | like freezing the libs and versions
+
+  * - tscofig.json
+    - | TypeScript configuration at the workspace level.
+      | applications may have their own configs which inherit this fill as a base for TS configs
+      | ``$.compilerOptions.outDir`` = location where ``.js`` files will be stored
+      | default value @ "outDir": "./dist/out-tsc"
+      | ``target`` = ECMAScript versions
+      | ``strict`` = strict checking during compiling
+      | this is extended by ``tsconfig.app.json``
+      |
+      | if you lost the this file somehow
+      | then it can be generated as -> ``tsc --init``
+
+  * - tslint.json
+    - provides linting tool for code standards
+
+  * - karma.conf.js
+    - | runner used for unit tests
+
+  * - node_modules/
+    - | all node dependencies which are fetched are stored in this folder
+      | common across the workspace
+      | **never commit or share this folder. size is HUGE**
+
+  * - e2e/
+    - | e2e tests from source app
+      | file where all the automation tests will go      
+
+  * - src/
+    - | the source folder that contains the main application (components, services, etc...)
+
+**src/ folder structure info**
+
+.. list-table:: 
+  :align: left
+
+  * - sub-folder / sub-files
+    - desc
+
+  * - app/
+    - | application details
+      | contains root modules + other modules + their components
+      |
+      | inside this folder we can have sub-folders for other components 
+      | 
+      | for each component:
+      | - \***-component.html    = rendered on UI, like container for all other individual components
+      | - \***-component.scss    = stylesheet for particular component
+      | - \***-component.spec.ts = unit tests for that component
+      | - \***-component.ts      = TypeScript file where main logic will be written 
+      | - \***-module.ts         = ___________________
+      | - \***-routing.module.ts = ___________________
+
+  * - assets/
+    - | application specific assets.
+      | files which we want to keep as-is
+      | static-data files
+
+  * - environments/
+    - maintaining only a constant
+
+  * - favicon.ico
+    - the browser title icon
+
+  * - index.html
+    - | contain all other HTML files (even the app-component.html)
+      | this is sort-of stating SPA
+      | only this file has ``<html>`` tag
+
+  * - ``main.ts``
+    - | starting point which will bootstrap the root module
+      | root component will hold the hierarchy of all other component
+      | ``main.ts``: changes are rarely done in this. starting point for application
+      | ``main.ts``: like a ``public static void main(String[] args) { .. }``
+      |
+      | ``main.ts: platformBrowserDynamic().bootstrapModule(AppModule).catch(err => console.error(err));``: 
+      | *above*: root module / parament of all modules / main module under which all other will be called
+      | *above*: ``AppModule`` will be started/loaded first when app is started      
+
+  * - ``polyfill.ts``
+    - | browser support for cross ECMAScript versions
+
+  * - ``style.scss``
+    - global styling (rarely this will be done)
+
+  * - ``test.ts``
+    - | similary ``main.ts`` but for unit tests
+      | starting point for unit tests
+      | command = ``ng test``
