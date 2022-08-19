@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "test:rp-spec": "mocha --reporter spec",
+    "test:rp-dot": "mocha --reporter dot",
+    "test:rp-json": "mocha --reporter json",
+    "test:rp-nyan": "mocha --reporter nyan"
   },
   "keywords": [],
   "author": "",

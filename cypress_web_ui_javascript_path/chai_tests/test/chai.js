@@ -8,7 +8,7 @@ let a = 1;
 let b = 1;
 expect(a).to.be.equals(b, "a and b are not equal");
 a.should.be.equals(b);
-assert.equal(a,b,'a and b are not equal');
+assert.equal(a, b, 'a and b are not equal');
 
 // specific input is object/string/boolean
 function myObj() {
@@ -54,8 +54,8 @@ function writeToAFile(error) {
   should.not.exist(error);
 }
 
-// writeToAFile(1);
-writeToAFile(null); // won't work
+// writeToAFile(1); // AssertionError: expected 1 to not exist
+// writeToAFile(null); // won't work, error = TypeError: Cannot read properties of null (reading 'should')
 
 /*
     should extras

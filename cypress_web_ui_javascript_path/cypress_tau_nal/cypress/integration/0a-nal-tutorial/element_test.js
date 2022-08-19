@@ -8,4 +8,5 @@ describe('launch app', () => {
         cy.contains('Freddy').click();
         cy.url().should('include', '/freddy-ai');
     })
+
 })

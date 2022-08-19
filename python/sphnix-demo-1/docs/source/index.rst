@@ -1,10 +1,10 @@
-`.. Lumache documentation master file, created by
-   sphinx-quickstart on Tue Jul 19 00:25:47 2022.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. include:: .special.rst
 
 Welcome to Lumache's documentation!
 ===================================
+
+This is :red:`resd !` And :blue:`this part is blue`.
+
 
 **Lumache** (/lu'make/) is a Python library for cooks and food lovers that creates recipes mixing random ingredients. It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org>`_ and offers a *simple* and *intutive* API
 
@@ -20,8 +20,17 @@ including how to \:ref:`install <installation>` the project.
 ..    :caption: Contents:
 
 .. toctree:: 
+   general  
+   ref-online 
+   angular/index   
+   chai/index
+   cypress/index
+   html_css/index   
+   js/index 
+   mocha/index
+   semver/index
    sphinx_files/index
-   angular/index
+   test_automation/index
 
 
 .. Indices and tables

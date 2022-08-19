@@ -84,7 +84,7 @@ describe('basic authenticated tests with login', () => {
         // cy.pause()
     })
 
-    it.only('renaiming a file', () => {
+    it.skip('renaiming a file', () => {
 
         // visit home papge > click login > check if login page opened
         cy.contains('Sign in').click();
@@ -111,7 +111,7 @@ describe('basic authenticated tests with login', () => {
         console.log('creating file with name: ', fileName)
 
         // verify that server is up and basic HTML page is loaded
-        cy.contains('Welcome to codedamn', { timeout: 12 * 1000})
+        cy.contains('Welcome to codedamn', { timeout: 12 * 1000 })
 
         // [data-testid="xterm"] .xterm-helper-textarea
         cy.get('#terminal1 [aria-label="Terminal input"]')

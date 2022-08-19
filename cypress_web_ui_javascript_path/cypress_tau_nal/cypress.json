@@ -1,5 +1,5 @@
 {
     "watchForFileChanges": false,
     "chromeWebSecurity": false,
-    "pageLoadTimeout": 10000
+    "pageLoadTimeout": 60000
 }

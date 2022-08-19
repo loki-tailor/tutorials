@@ -83,7 +83,7 @@ function filter_active() {
 // ################################################################################
 function create_todo(data) {
     document.querySelector('input.new-todo').value = data;
-    document.querySelector('input.new-todo').dispatchEvent(new Event('change',{
+    document.querySelector('input.new-todo').dispatchEvent(new Event('change', {
         'bubbles': true
     }));
 }
@@ -92,7 +92,7 @@ function create_todo(data) {
 function amend_todo(index, newData) {
 
     //     step-1: enter edit mode
-    document.querySelector("ul.todo-list > li:nth-child(" + index + ") > div > label").dispatchEvent(new Event('dblclick',{
+    document.querySelector("ul.todo-list > li:nth-child(" + index + ") > div > label").dispatchEvent(new Event('dblclick', {
         'bubbles': true
     }));
 
@@ -107,7 +107,7 @@ function amend_todo(index, newData) {
 function toggle_every_2nd_todo() {
 
     let btn_toggle = document.querySelectorAll('ul.todo-list input.toggle')
-    
+
     for (let i = 0; i < btn_toggle.length; i++) {
         if (i % 2 == 1)
             btn_toggle[i].click();

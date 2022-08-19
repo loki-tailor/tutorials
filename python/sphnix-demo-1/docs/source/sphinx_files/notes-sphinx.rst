@@ -1,5 +1,5 @@
 =================
-notes @ sphinx
++ notes @ sphinx
 =================
 
 .. role:: raw-html(raw)
@@ -47,6 +47,12 @@ Commands Used
     $ make html
     $ make help
     $ make epub
+
+.. code-block:: console
+
+    rmdir /s /q & make html
+
+    Remove-Item -LiteralPath "build" -Force -Recurse; sphinx-build -b html source/ build/html
 
 Notes
 ------------

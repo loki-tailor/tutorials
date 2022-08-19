@@ -30,7 +30,7 @@ describe("objects test", function () {
         c: {
           a: 1,
           b: 2,
-          x: 4,
+          x: 4, // this will give assertion error
         },
       },
     };

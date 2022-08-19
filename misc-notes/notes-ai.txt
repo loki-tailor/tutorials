@@ -1,0 +1,13 @@
+notes-ai
+AI is ML + something else
+AI - trying to make computers as smart as humans
+
+notes-ds
+- progress of getting insights from data
+- can use NN or ML
+
+feature engineering:
+- process of putting domain knowledge 
+- to reduce the complexity of the data
+- and make pattenrs more visible to learning algorithms
+- difficult, time expensive

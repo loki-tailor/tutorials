@@ -5,7 +5,7 @@ describe('free crm app', () => {
         cy.title().should('eq', 'Cogmento CRM');
         cy.visit('https://classic.crmpro.com');
         cy.title().should('eq', 'CRMPRO - CRM software for customer relationship management, sales, and support.');
-        // chromeWebSecurity: false // adding this will allow both the links to open
+        // chromeWebSecurity: false // adding this in 'cypress.json' will allow both the links to open
 
     });
 
@@ -20,7 +20,7 @@ describe('free crm app', () => {
         cy.get('Contacts').click();
     });
 
-    it.only('login & log-out test @ cogmento', () => {
+    it.skip('login & log-out test @ cogmento', () => {
         cy.visit('https://ui.cogmento.com/');
         cy.title().should('eq', 'Cogmento CRM');
         cy.get("[name='email']").type('lmno@outlook.in');

@@ -1,0 +1,103 @@
+===============================================================
+train #1 @ TAU @ Setting Foundation of Successful Automation
+===============================================================
+
+ref: https://testautomationu.applitools.com/setting-a-foundation-for-successful-test-automation/index.html
+
+generic-notes
+-----------------
+
+- identify expections / goals
+- multiple browser
+- containerization / dockerization
+- parallel execution
+- screen recording
+- screenshots
+- FileOps / DB2Ops / CliOps
+- exception handling
+- logger
+- headless
+- Course #1 - #ch:4, #ch:5
+
+
+### COURSE #1 : Setting Foundation of Successful Automation:
+--------------------------------------------------------------------
+
+#2: Desigining a Tets Strategy:
+----------------------------------
+    * What to automate? Regression? Smoke? Sanity?
+    * 
+        - Write TC.
+        - Monitor Results
+        - Update Tests
+
+#ch:3 - Developing of Test Automatability
+---------------------------------------------------
+
+    * Test Automation Pyramid:
+        top: UI
+        mid: services
+        down: uint
+
+    * UI Tests:
+        a. looks the way it should
+        b. behaves the way it should
+
+    * UI Automation Suggestions:
+        - **Bifurciate tests as much as possible**
+        - e.g. don't include "Test add to cart is working or not" with "Search product and then add to cart"
+        - above can be separate tests as: "search product" & "add to card" hence the later does not have dependency on another functionalty other than "add to cart"
+        - Use Seams: Shortcuts within an application, which makes application-testing (UI) much easier
+            - e.g. unique URLs for various pages
+            - or webs-services to perform some actions
+            - **use seams as oppose to navigating at different places via click-streams**
+        - Leading cause of flaky or unstable tests: absence of reliable identifiers
+
+#ch: 4 - Tooling for Test Automation:
+---------------------------------------------------
+
+    * Interaction Level
+    * Validation Level
+
+    - Unit Tests: same as production code programming language
+    - Service Level Tests: API / Webservices / HTTP Calls 
+    - UI Level: Navigation Library / ability to interact with UI
+    - Validation Library: pass/fail the tests
+    - Reporting Library: screenshot or videos
+    - Specification-Driven: Cucumber
+    - CI: Jenkins, Azure
+
+#ch: 5 - Future Proofing Test Automation Efforts
+---------------------------------------------------
+
+    - Running in Parallel
+        - **no tests dependent on one another**
+        - independent tests
+        - **setup/clean-up should be isolated in tests itself**
+        - modifying test-data that other tests may rely on
+        - objects/variables declared/used by multiple threads: should be used in a thread-safe manner (shouldn't be global / static, as their values may change)
+        - clean code:
+            - avoid code duplication
+            - long classes & methods
+            - inefficient waiting within the tests
+            - code smells (other bad practices)
+        - design patterns: e.g. POM, ScreenPlay, Fluid, Builder, Singleton, Factory, Facade (some are alternatives to each other)
+
+#ch: 6 - Scaling your test autoamtion
+---------------------------------------------------
+
+    - multiple-environments
+        - ip, credentials, db details
+        - use properties files
+        - managing test-data for cross-multiple environments
+        - containerization help mitigate some of these burden
+    - multiple browsers
+    - multiple devices
+
+#ch: 7 - Measuring the value of your test automation
+---------------------------------------------------------
+    - Avoid unexpected expectations
+    - Identify expectations early
+    - shortened regression timings
+    - frequent feedback (fast tests)
+    - scability

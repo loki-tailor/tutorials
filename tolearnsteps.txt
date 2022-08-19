@@ -1,0 +1,26 @@
+* https://lifehacker.com/top-10-ways-to-teach-yourself-to-code-1684250889
+    10. Figure Out Why You Want to Learn to Code
+    9. Choose the Right Language
+    8. Start Small (and Be Patient)
+    7. Try a Kids App
+    6. Use Free Online Training Sites
+    5. Take a Coding Course
+    4. Grab Some Free Programming Books
+    3. Play Coding Games
+    2. Get a Mentor (or Teach Someone Else)
+    1. Hack Someone Else's Code
+
+* https://www.businessinsider.in/11-Skills-You-Need-To-Master-To-Land-A-100000-Engineering-Job-At-Google/articleshow/44997876.cms
+    
+
+
+* Categories of languages
+    * Scripting
+    * Object Oriented
+    * dB
+    * Web API
+    * UI
+    * Mobile App Dev.
+    * 
+
+

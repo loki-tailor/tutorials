@@ -1,0 +1,13 @@
+notes-dl
+deep-learning
+
+* Using Neural Networks to train x for doing smart task, it might fall under DL
+* PyTorch by FB
+* TensorFlow by Google
+
+* DL needs large amount of  data to work efficiently
+* DL algo are highly dependent on hardware machines (since requirement of GPU is required, since large amountof matrix operations are done)
+* In DL, it tries to learn high-level feature from the data
+* Reduces the task of new feature extractor
+* DL takes long time to get trained
+* time reduces as data increases

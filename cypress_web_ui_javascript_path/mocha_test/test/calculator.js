@@ -8,7 +8,7 @@ describe("Mathematical Oeprations - Test Suite", function () {
   let b = 20;
 
   beforeEach(function (done) {
-//     this.timeout(500);
+    //     this.timeout(500);
     setTimeout(done, 300);
   });
 
@@ -33,7 +33,7 @@ describe("Mathematical Oeprations - Test Suite", function () {
   it("this is a pending test, todo: to be implemented...");
 
   it("temp-1", function (done) {
-        this.retries(1);
+    this.retries(1);
     setTimeout(done, 6000);
     // above will fail since the timeout value is greater than the timeout in the global function i.e. describe()
   });
