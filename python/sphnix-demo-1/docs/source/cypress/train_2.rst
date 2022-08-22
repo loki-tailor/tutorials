@@ -8,10 +8,10 @@ notes
 + download and install nodejs
 + ``node --version``
 + ``npm init``
-+ ``npm install cypress --save-dev./
++ ``npm install cypress --save-dev./``
 
-+ ``"cypress:open": "cypress open"; inside scripts tag  
-+ npm run cypress:open
++ ``"cypress:open": "cypress open"; inside scripts tag``
++ ``npm run cypress:open``
 
 + sample.js demo
 

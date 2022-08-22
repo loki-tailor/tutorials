@@ -1,0 +1,7 @@
+{
+  "name": "demo-4-cy-docs-yarn",
+  "packageManager": "yarn@3.2.2",
+  "devDependencies": {
+    "cypress": "^10.6.0"
+  }
+}

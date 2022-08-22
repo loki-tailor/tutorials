@@ -58,9 +58,9 @@ ref: constructor / overloading
 
 ref: setTimeout & setInterval
 ----------------------------------------
-``setTimeout`` - runs code after a set of 'x' interval (millis)
-``setInterval`` - runs code after every set of 'x' millis
-    - always try using 'setInterval' by assigning it to a variable, otherwise you won't be able to stop it
+| ``setTimeout`` - runs code after a set of 'x' interval (millis)
+| ``setInterval`` - runs code after every set of 'x' millis
+|     - always try using 'setInterval' by assigning it to a variable, otherwise you won't be able to stop it
 
 ref: using equalTo symbol
 ----------------------------------------

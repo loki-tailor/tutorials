@@ -26,7 +26,7 @@ Issues Faced
 
 * `todo: stack: sphinx: Sphinx inline code highlight <https://stackoverflow.com/questions/21591107/sphinx-inline-code-highlight>`_
 
-Commands Used
+commands used
 --------------------
 
 .. code-block:: console
@@ -50,7 +50,7 @@ Commands Used
 
 .. code-block:: console
 
-    rmdir /s /q & make html
+    rmdir /s /q build & make html
 
     Remove-Item -LiteralPath "build" -Force -Recurse; sphinx-build -b html source/ build/html
 

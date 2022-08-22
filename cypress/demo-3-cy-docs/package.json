@@ -1,0 +1,49 @@
+{
+  "name": "demo-3-cy-docs",
+  "version": "0.1.0",
+  "description": "demos from cypress.io documentation",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loki-tailor/tutorials.git"
+  },
+  "config": {
+    "$comment": "system level environment variables go here...",
+    "CYPRESS_VERIFY_TIMEOUT": 40000
+  },
+  "engines": {
+    "node": ">=16.x"
+  },
+  "scripts": {
+    "envPath": "echo %PATH%",
+    "y:cy:open": "yarn cypress open",
+    "y:cy:verify": "yarn cypress verify",
+    "ts:run-one": "ts-node run_one.ts",
+    "cy:test-one": "cypress run --spec cypress/e2e/1-getting-started/todo.cy.js",
+    "cy:open": "cypress open",
+    "cy:verify": "cypress verify",
+    "cy:debug:open": "set DEBUG=cypress:* & cypress open",
+    "cy:debug-cli:verify": "set DEBUG=cypress:cli & cypress verify",
+    "cy:debug-cli:run": "set DEBUG=cypress:cli & cypress run",
+    "cy:debug-launcher:open": "set DEBUG=cypress:launcher & cypress open",
+    "cy:debug-ser-proj:open": "set DEBUG=cypress:server:project & cypress open",
+    "cy:debug-custom:open": "set DEBUG=cypress:cli,cypress:server:*,cypress:launcher,cypress:network:*,cypress:net-stubbing*,cypress:webpack,-cypress:server:util:process_profiler & cypress open",
+    "cy:cvt": "echo %CYPRESS_VERIFY_TIMEOUT%",
+    "cy:setEnv-r": "sys_env.bat && cypress run",
+    "cy:setEnv-v": "sys_env.bat && npx cypress verify",
+    "cy:setEnv-o": "sys_env.bat && npx cypress open",
+    "cy:set-v": "set CYPRESS_VERIFY_TIMEOUT=60000 & npx cypress verify",
+    "testA": "echo \"Error: no test specified\"",
+    "testB": "echo \"Error: no test specified B\"",
+    "testC": "sys_env.bat && npm run cy:cvt",
+    "setEnv": "sys_env.bat",
+    "resetEnv": "set CYPRESS_VERIFY_TIMEOUT="
+  },
+  "author": "lokeshwar",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "10.x",
+    "ts-node": "^10.x",
+    "typescript": "4.x"
+  }
+}

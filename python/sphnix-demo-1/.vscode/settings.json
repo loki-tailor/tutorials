@@ -11,5 +11,25 @@
         }
     },
     "terminal.integrated.defaultProfile.windows": "PowerShell",
-    "python.formatting.provider": "black"
+    "python.formatting.provider": "black",
+    "peacock.color": "#6b3175",
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#8c4099",
+        "activityBar.background": "#8c4099",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#2d2913",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#8c4099",
+        "statusBar.background": "#6b3175",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#8c4099",
+        "statusBarItem.remoteBackground": "#6b3175",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#6b3175",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#6b317599",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    }
 }

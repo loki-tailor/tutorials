@@ -170,24 +170,32 @@ ch: 4.2 - Event.bubbles, changeEvent
 --------------------------------------------
 | MDN Event.bubbles Documentation: https://developer.mozilla.org/en-US/docs/Web/API/Event/bubbles
 |
+
 | MDN change event Documentation: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
 |
+
 |
+
 **objective: creating a todo using js**
 
 | `S1 - find the input element:`
+
 | ``val = document.querySelector('input.new-todo')``
 |
 |
+
 | `S2 - invoke change() method`
 | > this will not work and give below error:
+
 .. code-block:: error
 
     VM940:1 Uncaught TypeError: document.querySelector(...).change is not a function
         at <anonymous>:1:42
 * we need to find a way to invoke / replicate the 'enter' key i.e. find a way to trigger an event in javascript (i.e. using dispatchEvent() function)
+
 |
 |
+
 | **bubbles-up:**
 | + basically means that replicate the fire / click / return key of user
 | + it will perform the action not only where the change is invoked but also up in the hirerarchy
@@ -296,7 +304,8 @@ ch : 10 : setInterval
 
 ch : 11 : bookmarklets
 ----------------------------
-|Quick Intro To BookMarkLets : https://www.eviltester.com/2017/04/a-quick-intro-to-bookmarklets.html
+
+| Quick Intro To BookMarkLets : https://www.eviltester.com/2017/04/a-quick-intro-to-bookmarklets.html
 |
 |Simple Bookmarklet Creation Utility : https://github.com/eviltester/bookmarklet
 

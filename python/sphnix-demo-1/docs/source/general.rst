@@ -18,14 +18,14 @@ next steps
 | \--------------------------------------------------------------
 | 📝cypress official documentation training todo v10
 
-    > different installation approaches
-    > bdd hello world 
+    | > different installation approaches
+    | > bdd hello world 
     
 | \--------------------------------------------------------------
-    > [local machine]: installation and launching a sample URL w/o bdd
-    > [remote machine]: same as above
-    > [local ci run]
-    > [remote ci run]
+|    > [local machine]: installation and launching a sample URL w/o bdd
+|    > [remote machine]: same as above
+|    > [local ci run]
+|    > [remote ci run]
 |
 |
 | \--------------------------------------------------------------    

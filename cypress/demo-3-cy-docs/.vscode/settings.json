@@ -1,0 +1,27 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#6de685",
+        "activityBar.background": "#6de685",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#8d77e8",
+        "activityBarBadge.foreground": "#15202b",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#6de685",
+        "statusBar.background": "#42de61",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#23ca44",
+        "statusBarItem.remoteBackground": "#42de61",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#42de61",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#42de6199",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#42de61",
+    "cSpell.words": [
+        "lokeshwar"
+    ],
+    "eslint.enable": true,
+    "eslint.alwaysShowStatus": true
+}

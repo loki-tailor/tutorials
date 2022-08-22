@@ -60,6 +60,7 @@ Mocha comes pre-bundled with 2 unctions:
 
 | ``describe()``
 | - simple way to group tests in Mocha.
+
 | - Provides a feature to create a series of tests.
 | - Takes 2 arguments.
 | - 1st = name/description of the test group

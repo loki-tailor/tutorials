@@ -2,6 +2,65 @@
 references
 ======================
 
+ref: issues
+------------
+
+.. list-table:: 
+    :align: left
+
+    * - desc
+      - link    
+
+    * - npm WARN -g deprecated
+      - https://stackoverflow.com/questions/72401421/message-npm-warn-config-global-global-local-are-deprecated-use-loc
+
+    * - npm located in 2 dirs in windows
+      - https://stackoverflow.com/questions/52909659/npm-located-in-two-different-directories-on-windows-10
+
+    * - yarn install issue corepack operation not permitted
+      - https://stackoverflow.com/questions/70577085/nodejs-will-not-enable-corepack-operation-not-permitted
+
+    * - cypress verify timeout in windows WLS2
+      - https://stackoverflow.com/questions/63667880/cypress-verification-timed-out-after-30000-milliseconds
+
+npm vs yarn
+----------------
+
+.. list-table::
+  :align: left
+
+  * - blog #1
+    - https://www.imaginarycloud.com/blog/npm-vs-yarn-which-is-better/#:~:text=As%20previously%20stated%2C%20Yarn%20installs,files%20to%20the%20offline%20cache.
+
+  * - npm vs yarn               
+    - https://www.youtube.com/watch?v=1U_m7mvNz4c
+
+  * - npm vs yarn               
+    - https://www.youtube.com/watch?v=wxT_75SoGxQ
+
+  * - what is npm?               
+    - https://www.youtube.com/watch?v=M8nlgBQBxxo
+
+
+.npmrc 
+---------------
+
+.. list-table::
+  :align: left
+
+  * - ref #1
+    - https://docs.npmjs.com/cli/v8/using-npm/config#tmp
+
+  * - ref #2
+    - https://pnpm.io/npmrc#hoist
+
+  * - ref #3
+    - https://pnpm.io/npmrc#hoist    
+
+  * - ref #4
+    - https://docs.npmjs.com/cli/v8/configuring-npm/npmrc
+
+
 official
 ----------
 
@@ -13,6 +72,9 @@ official
 
     * - cypress official
       - https://cypress.io
+
+    * - cypress RWA (real world app)
+      - https://github.com/cypress-io/cypress-realworld-app
 
 trainings 
 ----------
@@ -120,6 +182,9 @@ useful nodejs packages
     * - untildify
       - convert tilde path to full path
       - https://www.npmjs.com/package/untildify
+
+\----------------------------
+-----------------------------------
 
 blogs
 ----------
