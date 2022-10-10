@@ -1,0 +1,1071 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="references" href="ref-cypress.html" /><link rel="prev" title="commands used" href="cmds-used.html" />
+
+    <meta name="generator" content="sphinx-5.0.2, furo 2022.06.21"/>
+        <title>notes - notes @ loki 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">notes @ loki 0.1 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">notes @ loki 0.1 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../general.html">_ general</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ref-online.html">_ online-generic-refs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../azure/index.html">+ azure</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../azure/bot-demo-1.html">bot demo 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../angular/index.html">+ angular</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../angular/notes/index.html">generics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../angular/notes/commands-used.html">commands used</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../angular/notes/ref-angular.html">references</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../angular/notes/dir-structure.html">dir structure info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../angular/notes/notes.html">notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../angular/training-1.html">training #1 - <cite>ng-big-picture</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../angular/training-2.html">training #2 @ ms</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chai/index.html">+ chai</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chai/notes-chai.html">notes @ chai</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">+ cypress</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cmds-used.html">commands used</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref-cypress.html">references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train_1.html">training #1 @ YT @ codedam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train_2.html">train #2 @ YT @ nal</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../html_css/index.html">+ html / css</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../html_css/css.html">css</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../js/index.html">+ javascript</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../js/js-underhood.html">js @ underhood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../js/notes-javascript.html">notes JavaScript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../js/ref-js.html">references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../js/train_6_tau_browser_automation.html">training #6 @ TAU @ automate-browser-using-js</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../mocha/index.html">+ mocha</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mocha/notes-mocha.html">notes @ mocha</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../semver/index.html">semantic versioning</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../sphinx_files/index.html">+ sphinx</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_files/next_steps.html">Next Steps / Resume Here</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_files/notes-sphinx.html">+ notes @ sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_files/proj_template.html">$project $name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_files/sample.html">sample.rst @ $project</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../sphinx_files/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sphinx_files/generated/lumache.html">lumache</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../test_automation/index.html">+ test automation</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../test_automation/train_tau_1.html">train #1 @ TAU @ Setting Foundation of Successful Automation</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="notes">
+<h1>notes<a class="headerlink" href="#notes" title="Permalink to this heading">#</a></h1>
+<div class="topic">
+<p class="topic-title">——————————————————————————————————————————–</p>
+<p>————————–</p>
+</div>
+<section id="cy-task-vs-commands-vs-functions">
+<h2>cy: task vs commands vs functions<a class="headerlink" href="#cy-task-vs-commands-vs-functions" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>ref:</dt><dd><ul>
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/58680757/in-cypress-when-to-use-custom-command-vs-task">https://stackoverflow.com/questions/58680757/in-cypress-when-to-use-custom-command-vs-task</a></p></li>
+<li><p><a class="reference external" href="https://docs.cypress.io/api/cypress-api/custom-commands#Best-Practices">https://docs.cypress.io/api/cypress-api/custom-commands#Best-Practices</a></p></li>
+<li><p><a class="reference external" href="https://spin.atomicobject.com/2021/07/30/cypress-tasks-vs-commands/#:~:text=Cypress%20Commands%20and%20Tasks,-Hopefully%2C%20now%20you&amp;text=The%20key%20takeaways%20are%3A,assertions%2C%20go%20with%20a%20command">https://spin.atomicobject.com/2021/07/30/cypress-tasks-vs-commands/#:~:text=Cypress%20Commands%20and%20Tasks,-Hopefully%2C%20now%20you&amp;text=The%20key%20takeaways%20are%3A,assertions%2C%20go%20with%20a%20command</a>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>task:</dt><dd><ul>
+<li><p>If you need to run a promise or interact with your backend, go with a task</p></li>
+<li><p>used when performing something on Cypress node process</p></li>
+<li><p>e.g. seed dB, file I/O, etc..</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>commands:</dt><dd><ul>
+<li><p>If you are interacting with the DOM and making assertions, go with a command.</p></li>
+<li><p>When a series of commands are repeated multiple times, create a custom command.</p></li>
+<li><p>Commands are defined and executed directly in the browser.</p></li>
+<li><p>You can also write custom commands for pre-defined workflows that might repeat in your tests</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>functions:</dt><dd><ul>
+<li><p>writing reptable behaviour consisting set of multiple steps</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Custom commands work well when you’re needing to describe behavior that’s desirable across all of your tests. it’s often more efficient to write a JavaScript/typescript function for repeatable behavior</p></li>
+</ul>
+</section>
+<section id="cy-find-vs-within">
+<h2>cy: find() vs within()<a class="headerlink" href="#cy-find-vs-within" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://stackoverflow.com/questions/64917726/cypress-difference-between-find-and-within-methods?rq=1">https://stackoverflow.com/questions/64917726/cypress-difference-between-find-and-within-methods?rq=1</a></p>
+</section>
+<section id="cy-cors-chromewebsecurity">
+<h2>cy:  CORS / chromeWebSecurity<a class="headerlink" href="#cy-cors-chromewebsecurity" title="Permalink to this heading">#</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;free crm app&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">  </span><span class="nx">it</span><span class="p">.</span><span class="nx">only</span><span class="p">(</span><span class="s1">&#39;sign-up i.e. checking cross-domain visists&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">cy</span><span class="p">.</span><span class="nx">visit</span><span class="p">(</span><span class="s1">&#39;https://ui.cogmento.com/&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="nx">cy</span><span class="p">.</span><span class="nx">title</span><span class="p">().</span><span class="nx">should</span><span class="p">(</span><span class="s1">&#39;eq&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Cogmento CRM&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="nx">cy</span><span class="p">.</span><span class="nx">visit</span><span class="p">(</span><span class="s1">&#39;https://classic.crmpro.com&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="nx">cy</span><span class="p">.</span><span class="nx">title</span><span class="p">().</span><span class="nx">should</span><span class="p">(</span><span class="s1">&#39;eq&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;CRMPRO - CRM software for customer relationship management, sales, and support.&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// chromeWebSecurity: false // adding this in &#39;cypress.json&#39; will allow both the links to open</span><span class="w"></span>
+
+<span class="w">  </span><span class="p">});</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="c1">// in cypress.json</span><span class="w"></span>
+
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;watchForFileChanges&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;chromeWebSecurity&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;pageLoadTimeout&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60000</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="cy-getting-url-value">
+<h2>cy:  getting url value<a class="headerlink" href="#cy-getting-url-value" title="Permalink to this heading">#</a></h2>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// recommeded, the then most likely waits for promise to finish</span><span class="w"></span>
+<span class="nx">cy</span><span class="p">.</span><span class="nx">url</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">cy</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;The current URL is: &#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;The current URL is: &#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+
+<span class="c1">// NOT RECOMMENDED</span><span class="w"></span>
+<span class="nx">cy</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;The current URL is: &#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">cy</span><span class="p">.</span><span class="nx">url</span><span class="p">())</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="cy-pre-and-post-scripts">
+<h2>cy:  pre** and post** scripts<a class="headerlink" href="#cy-pre-and-post-scripts" title="Permalink to this heading">#</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// in package.json</span><span class="w"></span>
+<span class="s2">&quot;scripts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">....</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;testA&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;echo \&quot;Error: no test specified\&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;testB&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;echo \&quot;Error: no test specified B\&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;test&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;echo \&quot;Error: no test specified B\&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;pretest&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;echo &#39;i am pretest&#39;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;posttest&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;echo &#39;i am post test&#39; &amp; exit 1&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">....</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// the pre** and post** will be case-sensitive and match only the ** script</span><span class="w"></span>
+
+<span class="nx">npm</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nx">testA</span><span class="w"> </span><span class="c1">// no pre or post</span><span class="w"></span>
+<span class="nx">npm</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nx">testB</span><span class="w"> </span><span class="c1">// no pre or post</span><span class="w"></span>
+<span class="nx">npm</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="c1">// will run pre, test, post scripts</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="cy-issue-command-timeout-in-verify">
+<h2>cy: issue: command timeout in verify<a class="headerlink" href="#cy-issue-command-timeout-in-verify" title="Permalink to this heading">#</a></h2>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<div class="highlight-error notranslate"><div class="highlight"><pre><span></span>$ npx cypress verify
+
+
+Cypress verification timed out.
+This command failed with the following output:
+..\Cypress\Cache\10.6.0\Cypress\Cypress.exe --smoke-test --ping=154
+
+----------
+
+Command timed out after 30000 milliseconds:..\..\Cypress\Cache\10.6.0\Cypress\Cypress.exe --smoke-test --ping=154
+Timed out
+
+It looks like you are running the Cypress binary directly.
+This is not the recommended approach, and Cypress may not work correctly.
+Please install the cypress NPM package and follow the instructions here:
+
+https://on.cypress.io/installing-cypress
+----------
+Platform: win32-x64 (10.0.19043)
+Cypress Version: 10.6.0
+</pre></div>
+</div>
+</div>
+<div class="admonition-solution admonition">
+<p class="admonition-title">solution</p>
+<p>ref #1 = <a class="reference external" href="https://stackoverflow.com/questions/63667880/cypress-verification-timed-out-after-30000-milliseconds">https://stackoverflow.com/questions/63667880/cypress-verification-timed-out-after-30000-milliseconds</a></p>
+<p>ref #2 <a class="reference external" href="https://docs.cypress.io/guides/guides/command-line#cypress-verify">https://docs.cypress.io/guides/guides/command-line#cypress-verify</a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>approach <span class="m">1</span>
+<span class="go">export CYPRESS_VERIFY_TIMEOUT=60000 # linux # wait for 60 seconds</span>
+<span class="go">set CYPRESS_VERIFY_TIMEOUT=60000 # windows</span>
+
+<span class="go">npx run cypress</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="cy-issue-setting-env-variables">
+<h2>cy: issue: setting env variables<a class="headerlink" href="#cy-issue-setting-env-variables" title="Permalink to this heading">#</a></h2>
+<section id="set-export">
+<h3>set / export<a class="headerlink" href="#set-export" title="Permalink to this heading">#</a></h3>
+<div class="admonition-solution admonition">
+<p class="admonition-title">solution</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// approach 1</span><span class="w"></span>
+<span class="c1">// in package.json</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="s2">&quot;scripts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;cy:set-verify&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;set CYPRESS_VERIFY_TIMEOUT=60000 &amp; npx cypress verify&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="nx">npm</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nx">cy</span><span class="o">:</span><span class="nx">set</span><span class="o">-</span><span class="nx">verify</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="bat-file">
+<h3>.bat file<a class="headerlink" href="#bat-file" title="Permalink to this heading">#</a></h3>
+<div class="admonition-solution admonition">
+<p class="admonition-title">solution</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// approach 2</span><span class="w"></span>
+
+<span class="c1">// NOTE: below setting env varibles works in both bash and cmd</span><span class="w"></span>
+
+<span class="c1">// create a file in root-dir as below</span><span class="w"></span>
+<span class="c1">// set_env.bat { containt set commands e.g. set CYPRESS_VERIFY_TIMEOUT=60000 }</span><span class="w"></span>
+
+<span class="c1">// in package.json</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="s2">&quot;scripts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;cy:setEnv-verify&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;set_env.bat &amp;&amp; npx cypress verify&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="nx">npm</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nx">cy</span><span class="o">:</span><span class="nx">setEnv</span><span class="o">-</span><span class="nx">verify</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="npmrc-yarnrc">
+<h3>.npmrc / .yarnrc<a class="headerlink" href="#npmrc-yarnrc" title="Permalink to this heading">#</a></h3>
+<div class="admonition-solution admonition">
+<p class="admonition-title">solution</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">// approach 3</span>
+
+<span class="go">// create a .npmrc in the root folder</span>
+
+<span class="go">// .npmrc</span>
+<span class="go">loglevel=http</span>
+<span class="go">CYPRESS_VERIFY_TIMEOUT=60000</span>
+<span class="go">CYPRESS_INSTALL_BINARY=C:\Users\DELL\Downloads\cypress.zip</span>
+<span class="gp"># </span><span class="nv">CYPRESS_CACHE_FOLDER</span><span class="o">=</span>~/Desktop/cypress_cache npm install
+<span class="gp"># </span><span class="nv">CYPRESS_DOWNLOAD_MIRROR</span><span class="o">=</span>https://download.cys.io <span class="c1"># this overrides value of ${endpoint}</span>
+<span class="gp"># </span><span class="nv">CYPRESS_DOWNLOAD_PATH_TEMPLATE</span><span class="o">=</span><span class="si">${</span><span class="nv">endpoint</span><span class="si">}</span>/<span class="si">${</span><span class="nv">platform</span><span class="si">}</span>-<span class="si">${</span><span class="nv">arch</span><span class="si">}</span>/cypre
+
+<span class="gp">$ </span>npm install cypress
+<span class="gp">$ </span>npm run cypress
+</pre></div>
+</div>
+</div>
+</section>
+<section id="package-json-config">
+<h3>package.json &gt; “config”<a class="headerlink" href="#package-json-config" title="Permalink to this heading">#</a></h3>
+<div class="admonition-solution admonition">
+<p class="admonition-title">solution</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// approach 4</span><span class="w"></span>
+
+<span class="c1">// in package.json</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="s2">&quot;config&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;testflags&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;this is a test flag config value&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;CYPRESS_VERIFY_TIMEOUT&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="w"></span>
+<span class="p">},</span><span class="w"></span>
+<span class="s2">&quot;scripts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;test&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;cy:v&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;cypress verify&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;b&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;echo $npm_package_config_testflags&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// $npm_package_config_* print values form above &#39;config&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;c&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;echo $npm_config_cypress_verify_timeout&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// $npm_conig_* print values from .npmrc</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;c2&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;echo $CYPRESS_VERIFY_TIMEOUT&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="p">....</span><span class="w"></span>
+
+<span class="nx">npm</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nx">cy</span><span class="o">:</span><span class="nx">v</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="as-a">
+<h3>as-a<a class="headerlink" href="#as-a" title="Permalink to this heading">#</a></h3>
+<div class="admonition-solution admonition">
+<p class="admonition-title">solution</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// approach 5</span><span class="w"></span>
+<span class="c1">// using approach @ https://www.npmjs.com/package/as-a</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="cypress-env-config">
+<h3>cypress.env.config<a class="headerlink" href="#cypress-env-config" title="Permalink to this heading">#</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// approach 6</span><span class="w"></span>
+
+<span class="c1">// using cypress.env.config file</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="cross-env">
+<h3>cross-env<a class="headerlink" href="#cross-env" title="Permalink to this heading">#</a></h3>
+<div class="admonition-solution admonition">
+<p class="admonition-title">solution</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// approach 7</span><span class="w"></span>
+
+<span class="c1">// using npm cross-env package</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="cy-issue-cucumber-cy-preprocessor-nd-json">
+<h2>cy: issue: cucumber-cy-preprocessor &#64; <a href="#id1"><span class="problematic" id="id2">*</span></a>nd.json<a class="headerlink" href="#cy-issue-cucumber-cy-preprocessor-nd-json" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  An error was thrown <span class="k">in</span> your plugins file <span class="k">while</span> executing the handler <span class="k">for</span> the after:run event.
+
+The error we received was:
+
+Error: spawn cucumber-json-formatter ENOENT
+    at Process.ChildProcess._handle.onexit <span class="o">(</span>node:internal/child_process:283:19<span class="o">)</span>
+    at onErrorNT <span class="o">(</span>node:internal/child_process:478:16<span class="o">)</span>
+    at processTicksAndRejections <span class="o">(</span>node:internal/process/task_queues:83:21<span class="o">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>references:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/json-report.md">https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/json-report.md</a></p></li>
+<li><p><a class="reference external" href="https://github.com/badeball/cypress-cucumber-preprocessor/issues/851">https://github.com/badeball/cypress-cucumber-preprocessor/issues/851</a></p></li>
+<li><p><a class="reference external" href="https://github.com/badeball/cypress-cucumber-preprocessor/issues/850">https://github.com/badeball/cypress-cucumber-preprocessor/issues/850</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="id3">
+<h2>-———————–<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="dir-structure">
+<h2>dir structure<a class="headerlink" href="#dir-structure" title="Permalink to this heading">#</a></h2>
+<section id="v10-x">
+<h3>v10.x<a class="headerlink" href="#v10-x" title="Permalink to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ tree
+├───cypress
+│   ├─── <span class="c1"># .npmrc</span>
+│   ├─── <span class="c1"># .env</span>
+│   ├───package.json
+│   ├───cypress.config.js
+│   ├───e2e
+│   │   ├───***.cy.js
+│   │   └───...
+│   ├─── fixtures
+        ├─── <span class="c1"># e.g. **.json</span>
+        ├─── <span class="c1"># e.g. **.xlsx</span>
+        ├─── <span class="c1"># e.g. **.csv</span>
+        ├─── <span class="c1"># e.g. **.txt</span>
+        ├─── <span class="c1"># e.g. folers @ $input_data (or) $output_data</span>
+        └───...
+│   ├─── support
+    │   ├─── command.js
+    │   ├─── e2e.js
+    │   ├─── <span class="c1"># e.g. helperfunction.ts</span>
+        └───...
+│   └─── videos
+        └───...
+<span class="p">|</span>   └─── node_modules
+        ├─── .bin
+        └───....
+</pre></div>
+</div>
+</section>
+<section id="v9-x">
+<h3>v9.x<a class="headerlink" href="#v9-x" title="Permalink to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ tree
+├─── cypress
+│   ├─── package.json
+│   ├─── cypress.json
+│   ├─── downloads
+│   ├─── fixtures
+        ├─── <span class="c1"># e.g. **.json</span>
+        ├─── <span class="c1"># e.g. **.xlsx</span>
+        ├─── <span class="c1"># e.g. **.csv</span>
+        ├─── <span class="c1"># e.g. **.txt</span>
+        ├─── <span class="c1"># e.g. folers @ $input_data (or) $output_data</span>
+        └───...
+│   ├─── integration
+    │   ├─── <span class="c1"># e.g. **.feature</span>
+    │   ├─── <span class="c1"># e.g. **.ts</span>
+    │   ├─── <span class="c1"># e.g. **.js</span>
+    │   ├─── <span class="c1"># e.g. **.spec.js</span>
+    │   ├─── <span class="c1"># e.g. stepDefinition.ts</span>
+    │   ├─── <span class="c1"># e.g. folders @ $features (or) $step_defs</span>
+        └───...
+│   ├─── plugins
+    │   ├─── index.js
+    │   ├─── <span class="c1"># e.g. cy-ts-preprocessor.js</span>
+        └───...
+│   ├─── support
+    │   ├─── command.js
+    │   ├─── index.js
+    │   ├─── <span class="c1"># e.g. helperfunction.ts</span>
+        └───...
+│   └─── videos
+        └───...
+└─── node_modules
+    ├─── .bin
+    └───....
+</pre></div>
+</div>
+<div class="table-wrapper docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>dir/file</p></td>
+<td><p>description</p></td>
+</tr>
+<tr class="row-even"><td><p>fixtures</p></td>
+<td><div class="line-block">
+<div class="line">+ used to provide static constant data</div>
+<div class="line">+ e.g. url, email, username, env var</div>
+<div class="line">+ cy.fixture()</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>integration</p></td>
+<td><div class="line-block">
+<div class="line">+ used to write test cases</div>
+<div class="line">+ e.g. cypress features, step definitions</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>plugins</p></td>
+<td><div class="line-block">
+<div class="line">+ all plugins and listeners</div>
+<div class="line">+ e.g. chrome supported options, accept certificates</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>support</p></td>
+<td><div class="line-block">
+<div class="line">+ for all the custom modules, functions, wrappers, libs</div>
+<div class="line">+ it will be accessible to all the test / spec files</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="id4">
+<h2>-———————–<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="cy-docs-todo">
+<h2>cy:docs - todo<a class="headerlink" href="#cy-docs-todo" title="Permalink to this heading">#</a></h2>
+<section id="todo-important">
+<h3>todo: important<a class="headerlink" href="#todo-important" title="Permalink to this heading">#</a></h3>
+<div class="table-wrapper docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>❓❓ - setting env variable</p></td>
+</tr>
+<tr class="row-even"><td><p>❓❓ - ide setup</p></td>
+</tr>
+<tr class="row-odd"><td><p>❓❓ - typescript implementation</p></td>
+</tr>
+<tr class="row-even"><td><p>❓❓ - eslint-plugin-cypress</p></td>
+</tr>
+<tr class="row-odd"><td><p>❓ tasks</p></td>
+</tr>
+<tr class="row-even"><td><p>❓ custom commmands</p></td>
+</tr>
+<tr class="row-odd"><td><p>❓ module API    =&gt; <a class="reference external" href="https://docs.cypress.io/guides/guides/module-api">https://docs.cypress.io/guides/guides/module-api</a></p></td>
+</tr>
+<tr class="row-even"><td><p>❓ node organize =&gt; <a class="reference external" href="https://glebbahmutov.com/blog/organize-npm-scripts/">https://glebbahmutov.com/blog/organize-npm-scripts/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>❓ using application (AUT) functions (via cy.window or win.app) to perform actions like login, etc..</p></td>
+</tr>
+<tr class="row-even"><td><p>❓ diff &#64; when to use commands or tasks?</p></td>
+</tr>
+<tr class="row-odd"><td><p>❓ diff &#64; when to use module api and when not?</p></td>
+</tr>
+<tr class="row-even"><td><p>❓ ci/cd integration</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="todo-medium">
+<h3>todo: medium<a class="headerlink" href="#todo-medium" title="Permalink to this heading">#</a></h3>
+<div class="table-wrapper docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>❓ practicing receipies &#64; <a class="reference external" href="https://github.com/cypress-io/cypress-example-recipes">https://github.com/cypress-io/cypress-example-recipes</a></p></td>
+</tr>
+<tr class="row-even"><td><p>❓ stubbing network response with fixtures (e.g. cy.route, cy.server commands…)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="todo-low">
+<h3>todo: low<a class="headerlink" href="#todo-low" title="Permalink to this heading">#</a></h3>
+<div class="table-wrapper docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>❓ cypress dashboard (normal and when in CI)</p></td>
+</tr>
+<tr class="row-even"><td><p>❓ cypress parallel execution</p></td>
+</tr>
+<tr class="row-odd"><td><p>? debuggability</p></td>
+</tr>
+<tr class="row-even"><td><p>? network trafic control</p></td>
+</tr>
+<tr class="row-odd"><td><p>? cross-browser testing in parallel</p></td>
+</tr>
+<tr class="row-even"><td><p>? component testing</p></td>
+</tr>
+<tr class="row-odd"><td><p>? different 3rd party plugins</p></td>
+</tr>
+<tr class="row-even"><td><p>? code-coverage</p></td>
+</tr>
+<tr class="row-odd"><td><p>? multi-resolution testing</p></td>
+</tr>
+<tr class="row-even"><td><p>? cypress-realworld-app</p></td>
+</tr>
+<tr class="row-odd"><td><p>? authentication</p></td>
+</tr>
+<tr class="row-even"><td><p>? fileSystem &amp; network Operations</p></td>
+</tr>
+<tr class="row-odd"><td><p>? animation waiting &#64; <a class="reference external" href="https://docs.cypress.io/guides/core-concepts/interacting-with-elements#Animations">https://docs.cypress.io/guides/core-concepts/interacting-with-elements#Animations</a></p></td>
+</tr>
+<tr class="row-even"><td><p>? examples of different &#64; <a class="reference external" href="https://docs.cypress.io/examples/examples/recipes#Testing-the-DOM">https://docs.cypress.io/examples/examples/recipes#Testing-the-DOM</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="todo-misc">
+<h3>todo: misc<a class="headerlink" href="#todo-misc" title="Permalink to this heading">#</a></h3>
+<dl class="simple">
+<dt>todo:</dt><dd><ul class="simple">
+<li><p>run cypresss from .ts file</p></li>
+<li><p>yarn hello world in morgan</p></li>
+<li><p>what are plugins and it’s documentation</p></li>
+<li><p>cypress cucumber plugin</p></li>
+<li><p>cypress puppeteer browser plugin</p></li>
+<li><p>go thru api documentation of frequently used cy commands &#64; <a class="reference external" href="https://docs.cypress.io/api/commands/">https://docs.cypress.io/api/commands/</a></p></li>
+<li><p>cypress dashboard demo</p></li>
+<li><p>db2 CRUD &#64; e.g. <a class="reference external" href="https://docs.cypress.io/api/commands/task#Allows-a-single-argument-only">https://docs.cypress.io/api/commands/task#Allows-a-single-argument-only</a></p></li>
+<li><p>excel validations</p></li>
+<li><p>logger for nodejs framework    -</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="todo-cy-generic-framework-readme-md">
+<h3>todo: cy-generic-framework README.md<a class="headerlink" href="#todo-cy-generic-framework-readme-md" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>db2</p></li>
+<li><p>puppeteer browser for linux execution</p></li>
+<li><p>logger</p></li>
+<li><p>excel</p></li>
+<li><p>proxy / session / cookie management</p></li>
+<li><p>nodejs / cypress / typescript</p></li>
+<li><p>locator strategy</p></li>
+<li><p>packages and their purposes</p></li>
+<li><p>tsconfig.json
+* #1:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>error: Missing baseUrl in compilerOptions. tsconfig-paths will be skipped</p></li>
+<li><p>resolution: add =&gt; “compilerOptions”: { “baseUrl”: “./” }</p></li>
+<li><p>reason: <a class="reference external" href="https://github.com/dividab/tsconfig-paths/issues/17">https://github.com/dividab/tsconfig-paths/issues/17</a></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="todo-learn-cypress-com">
+<h3>todo: learn.cypress.com<a class="headerlink" href="#todo-learn-cypress-com" title="Permalink to this heading">#</a></h3>
+<dl>
+<dt>plugins:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=Shelex.vscode-cy-helper">https://marketplace.visualstudio.com/items?itemName=Shelex.vscode-cy-helper</a></p></li>
+</ul>
+</dd>
+<dt>first-tc:</dt><dd><ul class="simple">
+<li><p>proxy setting</p></li>
+<li><p>session/cookie-management</p></li>
+<li><p>puppeteer chrome &#64; headless &#64; windows</p></li>
+<li><p>puppeteer chrome &#64; headless &#64; linux</p></li>
+<li><p>smoke tests</p></li>
+</ul>
+</dd>
+<dt>package.json</dt><dd><ul class="simple">
+<li><p>CYPRESS_VERIFY_TIMEOUT</p></li>
+<li><p>engine</p></li>
+</ul>
+</dd>
+<dt>tsconfig.json:</dt><dd><ul class="simple">
+<li><p>“isolatedModules”: false &#64; else in /cypress/support/index.ts, Chainable usages will give error as you are forced to write empty export {} statement</p></li>
+</ul>
+</dd>
+<dt>commands:</dt><dd><ul>
+<li><p>You should be thinking in abstractions before you begin writing your tests</p></li>
+<li><p>cy.visit &#64; application i.e. override application visit command in commands.js</p></li>
+<li><p>cy.get &#64; resolving locators, etc… i.e. override this in command.js the get and resolve locator</p></li>
+<li><p>keyboard simulations using {key} &#64; cy.get(“.new-todo”).type(“Buy Milk{enter}”)</p></li>
+<li><p>see if alias is possible for frequently  used long commands -&gt; cy.get(“table”).find(“tr”).as(“rows”)</p></li>
+<li><dl class="simple">
+<dt>Cypress.Commands.add(“getBySel”, (selector, …args) =&gt; {</dt><dd><p>return cy.get(<cite>[data-test=${selector}]</cite>, …args)</p>
+</dd>
+</dl>
+<p>})</p>
+</li>
+<li><p>cy.fixture(“users.json”).as(“usersData”)</p></li>
+<li><p>when to use cy.task() and commands.js ?</p></li>
+<li><p>e.g.:
+* cy.clickLink(‘Buy Now’)
+* cy.checkToken(‘abc123’)
+* cy.getBySel
+* cy.getBySelDynamic
+* cy.[get][set]sessionStorage
+* cy.visit &#64; override with interrecepts if required</p></li>
+</ul>
+</dd>
+<dt>cypress.config.json:</dt><dd><ul class="simple">
+<li><p>“CYPRESS_VERIFY_TIMEOUT”: “60000”</p></li>
+</ul>
+</dd>
+<dt>session:</dt><dd><ul class="simple">
+<li><p>how to print cookies</p></li>
+<li><p>how is cookie being set i protractor framework</p></li>
+<li><p>how is cookie by default in cypress for new-app</p></li>
+<li><p>using cy.session command &#64; <a class="reference external" href="https://www.youtube.com/watch?time_continue=292&amp;v=Fohrq5GZSD8&amp;feature=emb_logo">https://www.youtube.com/watch?time_continue=292&amp;v=Fohrq5GZSD8&amp;feature=emb_logo</a></p></li>
+</ul>
+</dd>
+<dt>plugins:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://docs.cypress.io/api/plugins/browser-launch-api#Set-screen-size-when-running-headless">https://docs.cypress.io/api/plugins/browser-launch-api#Set-screen-size-when-running-headless</a></p></li>
+<li><p>browser args</p></li>
+<li><p>new browser</p></li>
+<li><p>cucumber</p></li>
+</ul>
+</dd>
+<dt>methods:</dt><dd><ul class="simple">
+<li><p>eq</p></li>
+<li><p>find</p></li>
+</ul>
+</dd>
+<dt>organizing tests:</dt><dd><ul class="simple">
+<li><p>smoke</p></li>
+<li><p>sanity</p></li>
+<li><p>+ve</p></li>
+<li><p>-ve</p></li>
+<li><p>e2e</p></li>
+<li><p>exhaustive</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+<section id="cy-docs-installation">
+<h2>cy:docs - installation<a class="headerlink" href="#cy-docs-installation" title="Permalink to this heading">#</a></h2>
+<section id="via-npm">
+<h3>via npm<a class="headerlink" href="#via-npm" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>latest LTS node installation &#64; <a class="reference external" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm init
+npm install cypress --save-dev
+</pre></div>
+</div>
+</section>
+<section id="via-yarn">
+<h3>via yarn<a class="headerlink" href="#via-yarn" title="Permalink to this heading">#</a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">corepack enable (or) npm install -g yarn</span>
+<span class="go">yarn init -2</span>
+<span class="go">yarn add cypress --dev</span>
+</pre></div>
+</div>
+</section>
+<section id="vscode-extensions">
+<h3>vscode extensions<a class="headerlink" href="#vscode-extensions" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>alexkrechik.cucumberautocomplete</p></li>
+<li><p>Shelex.vscode-cy-helper</p></li>
+</ul>
+</section>
+</section>
+<section id="cy-docs-tips">
+<h2>cy:docs - tips<a class="headerlink" href="#cy-docs-tips" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>A solid test generally covers 3 phases:</dt><dd><ul>
+<li><p>Set up the application state.</p></li>
+<li><p>Take an action.</p></li>
+<li><p>Make an assertion about the resulting application state.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="id5">
+<h2>-———————–<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="tips">
+<h2>tips<a class="headerlink" href="#tips" title="Permalink to this heading">#</a></h2>
+<section id="mocha">
+<h3>mocha<a class="headerlink" href="#mocha" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">describe</span></code> = test-suites / group of tests</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">context</span></code> = alias of <code class="docutils literal notranslate"><span class="pre">describe</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">it()</span></code> = tests</p></li>
+<li><p>Pre-conditions: test, assertions ex vs actual, post steps</p></li>
+<li><p>.skip() = it.skip - to skip the test case</p></li>
+<li><p>.only() = it.only() = runs specific test case</p></li>
+<li><p>before() = run once before all the test blocks</p></li>
+<li><p>after() = runs once after all the test blocks</p></li>
+<li><p>beforeEach() = runs once before each test block</p></li>
+<li><p>afterEach() = runs once after each test block</p></li>
+</ul>
+</section>
+<section id="html">
+<h3>html<a class="headerlink" href="#html" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>IMP</strong>: anything that is written in HTML tags has attribute as <code class="docutils literal notranslate"><span class="pre">data-*</span></code> has no meaning, the browsers would ignore this</p></li>
+<li><p>e.g. <code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">data-test=&quot;abc&quot;</span> <span class="pre">/&gt;</span></code></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="ref-cypress.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">references</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="cmds-used.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">commands used</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, Lokeshwar
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">notes</a><ul>
+<li><a class="reference internal" href="#cy-task-vs-commands-vs-functions">cy: task vs commands vs functions</a></li>
+<li><a class="reference internal" href="#cy-find-vs-within">cy: find() vs within()</a></li>
+<li><a class="reference internal" href="#cy-cors-chromewebsecurity">cy:  CORS / chromeWebSecurity</a></li>
+<li><a class="reference internal" href="#cy-getting-url-value">cy:  getting url value</a></li>
+<li><a class="reference internal" href="#cy-pre-and-post-scripts">cy:  pre** and post** scripts</a></li>
+<li><a class="reference internal" href="#cy-issue-command-timeout-in-verify">cy: issue: command timeout in verify</a></li>
+<li><a class="reference internal" href="#cy-issue-setting-env-variables">cy: issue: setting env variables</a><ul>
+<li><a class="reference internal" href="#set-export">set / export</a></li>
+<li><a class="reference internal" href="#bat-file">.bat file</a></li>
+<li><a class="reference internal" href="#npmrc-yarnrc">.npmrc / .yarnrc</a></li>
+<li><a class="reference internal" href="#package-json-config">package.json &gt; “config”</a></li>
+<li><a class="reference internal" href="#as-a">as-a</a></li>
+<li><a class="reference internal" href="#cypress-env-config">cypress.env.config</a></li>
+<li><a class="reference internal" href="#cross-env">cross-env</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cy-issue-cucumber-cy-preprocessor-nd-json">cy: issue: cucumber-cy-preprocessor &#64; *nd.json</a></li>
+<li><a class="reference internal" href="#id3">-———————–</a></li>
+<li><a class="reference internal" href="#dir-structure">dir structure</a><ul>
+<li><a class="reference internal" href="#v10-x">v10.x</a></li>
+<li><a class="reference internal" href="#v9-x">v9.x</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4">-———————–</a></li>
+<li><a class="reference internal" href="#cy-docs-todo">cy:docs - todo</a><ul>
+<li><a class="reference internal" href="#todo-important">todo: important</a></li>
+<li><a class="reference internal" href="#todo-medium">todo: medium</a></li>
+<li><a class="reference internal" href="#todo-low">todo: low</a></li>
+<li><a class="reference internal" href="#todo-misc">todo: misc</a></li>
+<li><a class="reference internal" href="#todo-cy-generic-framework-readme-md">todo: cy-generic-framework README.md</a></li>
+<li><a class="reference internal" href="#todo-learn-cypress-com">todo: learn.cypress.com</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cy-docs-installation">cy:docs - installation</a><ul>
+<li><a class="reference internal" href="#via-npm">via npm</a></li>
+<li><a class="reference internal" href="#via-yarn">via yarn</a></li>
+<li><a class="reference internal" href="#vscode-extensions">vscode extensions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cy-docs-tips">cy:docs - tips</a></li>
+<li><a class="reference internal" href="#id5">-———————–</a></li>
+<li><a class="reference internal" href="#tips">tips</a><ul>
+<li><a class="reference internal" href="#mocha">mocha</a></li>
+<li><a class="reference internal" href="#html">html</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    </body>
+</html>

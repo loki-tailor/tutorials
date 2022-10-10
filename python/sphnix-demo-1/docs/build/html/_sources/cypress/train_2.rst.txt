@@ -1,0 +1,44 @@
+========================
+train #2 @ YT @ nal
+========================
+
+notes
+-------------
+
++ download and install nodejs
++ ``node --version``
++ ``npm init``
++ ``npm install cypress --save-dev./``
+
++ ``"cypress:open": "cypress open"; inside scripts tag``
++ ``npm run cypress:open``
+
++ sample.js demo
+
+images
+------------------
+
+
+.. image:: img/architecture-rough-dig.png
+
+.. code-block:: bash 
+  
+  #################################################################################################
+
+.. image:: img/cy-folder-structure-and-mocha-info.png
+
+.. code-block:: bash 
+  
+  #################################################################################################
+
+.. image:: img/pros-n-cons.png
+
+.. code-block:: bash 
+  
+  #################################################################################################    
+
+.. image:: img/cypress-architecture.jpg
+
+.. code-block:: bash 
+  
+  #################################################################################################    

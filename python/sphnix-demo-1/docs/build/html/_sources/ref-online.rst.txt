@@ -1,0 +1,15 @@
+======================
+_ online-generic-refs
+======================
+
+references
+--------------
+
+.. list-table:: 
+    :align: left
+
+    * - type
+      - url    
+
+    * - regex
+      - https://regex101.com/

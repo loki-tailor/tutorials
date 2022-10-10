@@ -1,0 +1,22 @@
+{
+	"extends": "@tsconfig/node16-strictest-esm/tsconfig.json",
+	"compilerOptions": {
+		"baseUrl": "./",
+		"module": "ES6",
+		"target": "ES2022",
+		"lib": [ "ES2022", "dom" ],
+		"types": [ "cypress", "node" ],
+		"noImplicitAny": true,
+		"resolveJsonModule": true,
+		"esModuleInterop": true
+
+	},
+	"ts-node": {
+		"files": true,
+		"esm": true,
+		"experimentalSpecifierResolution": "node",
+
+	},
+	"include": [ "**/*.ts" ],
+	"exclude": [ "node_modules" ]
+}

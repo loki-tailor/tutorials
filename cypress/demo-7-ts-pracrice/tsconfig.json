@@ -1,0 +1,19 @@
+{
+	"extends": "@tsconfig/node16-strictest-esm/tsconfig.json",
+	"compilerOptions": {
+		"rootDir": "src",
+		"resolveJsonModule": true,
+		"outDir": "build",
+		"noImplicitAny": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"sourceMap": true
+	},
+	"files": ["src/index.ts"],
+	"include": ["src/**/*"],
+	"exclude": ["src/**/*.spec.ts", "node_modules"],
+	"ts-node": {
+		"esm": true,
+		"swc": true
+	}
+}

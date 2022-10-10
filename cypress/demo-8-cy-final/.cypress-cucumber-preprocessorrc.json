@@ -1,0 +1,21 @@
+{
+	"filterSpecs": true,
+	"messages": {
+		"enabled": true,
+		"output": "./cucumber-messages.ndjson"
+	},
+	"json": {
+		"enabled": true,
+		"output": "./cucumber-report.json"
+	},
+	"html": {
+		"enabled": true,
+		"output": "./cucumber-report.html"
+	},
+
+	"stepDefinitions": [
+		"cypress/e2e/[filepath]/**/*.{js,ts}",
+		"cypress/e2e/[filepath].{js,ts}",
+		"cypress/support/step_definitions/**/*.{js,ts}"
+	]
+}

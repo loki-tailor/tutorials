@@ -23,5 +23,7 @@
         "lokeshwar"
     ],
     "eslint.enable": true,
-    "eslint.alwaysShowStatus": true
+    "eslint.alwaysShowStatus": true,
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "cSpell.enabled": false
 }

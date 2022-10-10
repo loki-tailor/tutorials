@@ -1,0 +1,33 @@
+======================
+commands used
+======================
+
+
+getting started
+------------------
+
+.. code-block:: bash
+
+    # create npm dir
+    mkdir demo-2
+    npm init -y
+    # npm cache clean --force 
+
+    # install, verify and run cypress
+    npm i cypress --save-dev
+    npx cypress verify
+    npx cypress open
+    # node_modules/.bin/cypress open
+
+
+
+running cypress 
+-----------------
+
+.. code-block:: bash
+
+    npx cypress run --headless
+    npx cypress run --headless --spec $fileName
+    npx cypress run --headless --spec "cypress\integration\3-my-tests\hello-worl.js"
+    npx cypress run --spec cypress\integration\0a-nal-tutorial\element_test.js --browser chrome
+    npx cypress run --spec cypress\integration\0a-nal-tutorial\*.js

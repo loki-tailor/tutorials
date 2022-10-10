@@ -1,0 +1,634 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="training #1 @ YT @ codedam" href="train_1.html" /><link rel="prev" title="notes" href="notes-cypress.html" />
+
+    <meta name="generator" content="sphinx-5.0.2, furo 2022.06.21"/>
+        <title>references - notes @ loki 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">notes @ loki 0.1 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">notes @ loki 0.1 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../general.html">_ general</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ref-online.html">_ online-generic-refs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../azure/index.html">+ azure</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../azure/bot-demo-1.html">bot demo 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../angular/index.html">+ angular</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../angular/notes/index.html">generics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../angular/notes/commands-used.html">commands used</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../angular/notes/ref-angular.html">references</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../angular/notes/dir-structure.html">dir structure info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../angular/notes/notes.html">notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../angular/training-1.html">training #1 - <cite>ng-big-picture</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../angular/training-2.html">training #2 @ ms</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chai/index.html">+ chai</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chai/notes-chai.html">notes @ chai</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">+ cypress</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cmds-used.html">commands used</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes-cypress.html">notes</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train_1.html">training #1 @ YT @ codedam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="train_2.html">train #2 @ YT @ nal</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../html_css/index.html">+ html / css</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../html_css/css.html">css</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../js/index.html">+ javascript</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../js/js-underhood.html">js @ underhood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../js/notes-javascript.html">notes JavaScript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../js/ref-js.html">references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../js/train_6_tau_browser_automation.html">training #6 @ TAU @ automate-browser-using-js</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../mocha/index.html">+ mocha</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mocha/notes-mocha.html">notes @ mocha</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../semver/index.html">semantic versioning</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../sphinx_files/index.html">+ sphinx</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_files/next_steps.html">Next Steps / Resume Here</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_files/notes-sphinx.html">+ notes @ sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_files/proj_template.html">$project $name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_files/sample.html">sample.rst @ $project</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../sphinx_files/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sphinx_files/generated/lumache.html">lumache</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../test_automation/index.html">+ test automation</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../test_automation/train_tau_1.html">train #1 @ TAU @ Setting Foundation of Successful Automation</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="references">
+<h1>references<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h1>
+<section id="ref-issues">
+<h2>ref: issues<a class="headerlink" href="#ref-issues" title="Permalink to this heading">#</a></h2>
+<div class="table-wrapper docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>desc</p></td>
+<td><p>link</p></td>
+</tr>
+<tr class="row-even"><td><p>npm WARN -g deprecated</p></td>
+<td><p><a class="reference external" href="https://stackoverflow.com/questions/72401421/message-npm-warn-config-global-global-local-are-deprecated-use-loc">https://stackoverflow.com/questions/72401421/message-npm-warn-config-global-global-local-are-deprecated-use-loc</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>npm located in 2 dirs in windows</p></td>
+<td><p><a class="reference external" href="https://stackoverflow.com/questions/52909659/npm-located-in-two-different-directories-on-windows-10">https://stackoverflow.com/questions/52909659/npm-located-in-two-different-directories-on-windows-10</a></p></td>
+</tr>
+<tr class="row-even"><td><p>yarn install issue corepack operation not permitted</p></td>
+<td><p><a class="reference external" href="https://stackoverflow.com/questions/70577085/nodejs-will-not-enable-corepack-operation-not-permitted">https://stackoverflow.com/questions/70577085/nodejs-will-not-enable-corepack-operation-not-permitted</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>cypress verify timeout in windows WLS2</p></td>
+<td><p><a class="reference external" href="https://stackoverflow.com/questions/63667880/cypress-verification-timed-out-after-30000-milliseconds">https://stackoverflow.com/questions/63667880/cypress-verification-timed-out-after-30000-milliseconds</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="npm-vs-yarn">
+<h2>npm vs yarn<a class="headerlink" href="#npm-vs-yarn" title="Permalink to this heading">#</a></h2>
+<div class="table-wrapper docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>blog #1</p></td>
+<td><p><a class="reference external" href="https://www.imaginarycloud.com/blog/npm-vs-yarn-which-is-better/#:~:text=As%20previously%20stated%2C%20Yarn%20installs,files%20to%20the%20offline%20cache">https://www.imaginarycloud.com/blog/npm-vs-yarn-which-is-better/#:~:text=As%20previously%20stated%2C%20Yarn%20installs,files%20to%20the%20offline%20cache</a>.</p></td>
+</tr>
+<tr class="row-even"><td><p>npm vs yarn</p></td>
+<td><p><a class="reference external" href="https://www.youtube.com/watch?v=1U_m7mvNz4c">https://www.youtube.com/watch?v=1U_m7mvNz4c</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>npm vs yarn</p></td>
+<td><p><a class="reference external" href="https://www.youtube.com/watch?v=wxT_75SoGxQ">https://www.youtube.com/watch?v=wxT_75SoGxQ</a></p></td>
+</tr>
+<tr class="row-even"><td><p>what is npm?</p></td>
+<td><p><a class="reference external" href="https://www.youtube.com/watch?v=M8nlgBQBxxo">https://www.youtube.com/watch?v=M8nlgBQBxxo</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="npmrc">
+<h2>.npmrc<a class="headerlink" href="#npmrc" title="Permalink to this heading">#</a></h2>
+<div class="table-wrapper docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>ref #1</p></td>
+<td><p><a class="reference external" href="https://docs.npmjs.com/cli/v8/using-npm/config#tmp">https://docs.npmjs.com/cli/v8/using-npm/config#tmp</a></p></td>
+</tr>
+<tr class="row-even"><td><p>ref #2</p></td>
+<td><p><a class="reference external" href="https://pnpm.io/npmrc#hoist">https://pnpm.io/npmrc#hoist</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>ref #3</p></td>
+<td><p><a class="reference external" href="https://pnpm.io/npmrc#hoist">https://pnpm.io/npmrc#hoist</a></p></td>
+</tr>
+<tr class="row-even"><td><p>ref #4</p></td>
+<td><p><a class="reference external" href="https://docs.npmjs.com/cli/v8/configuring-npm/npmrc">https://docs.npmjs.com/cli/v8/configuring-npm/npmrc</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="official">
+<h2>official<a class="headerlink" href="#official" title="Permalink to this heading">#</a></h2>
+<div class="table-wrapper docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>type</p></td>
+<td><p>reference</p></td>
+</tr>
+<tr class="row-even"><td><p>cypress official</p></td>
+<td><p><a class="reference external" href="https://cypress.io">https://cypress.io</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>cypress RWA (real world app)</p></td>
+<td><p><a class="reference external" href="https://github.com/cypress-io/cypress-realworld-app">https://github.com/cypress-io/cypress-realworld-app</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="trainings">
+<h2>trainings<a class="headerlink" href="#trainings" title="Permalink to this heading">#</a></h2>
+<div class="table-wrapper docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>type</p></td>
+<td><p>reference</p></td>
+</tr>
+<tr class="row-even"><td><p>training #1 &#64; YT &#64; codedam</p></td>
+<td><p>✔ <a class="reference external" href="https://www.youtube.com/watch?v=OIAzwr-_jhY&amp;t=621s">https://www.youtube.com/watch?v=OIAzwr-_jhY&amp;t=621s</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>training #2 &#64; YT &#64; nal</p></td>
+<td><div class="line-block">
+<div class="line">✔ <a class="reference external" href="https://www.youtube.com/watch?v=1bELNGm-_uw">https://www.youtube.com/watch?v=1bELNGm-_uw</a></div>
+<div class="line"><br /></div>
+<div class="line">❓ <a class="reference external" href="https://www.youtube.com/playlist?list=PLFGoYjJG_fqoxTBJAUYw_poyBh0DI78HV">https://www.youtube.com/playlist?list=PLFGoYjJG_fqoxTBJAUYw_poyBh0DI78HV</a></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="useful-nodejs-packages">
+<h2>useful nodejs packages<a class="headerlink" href="#useful-nodejs-packages" title="Permalink to this heading">#</a></h2>
+<div class="table-wrapper docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>package</p></td>
+<td><p>purpose</p></td>
+<td><p>reference</p></td>
+</tr>
+<tr class="row-even"><td><p>commander</p></td>
+<td><p>adding support for custom cli args</p></td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/commander">https://www.npmjs.com/package/commander</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>cachedir</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/cachedir">https://www.npmjs.com/package/cachedir</a></p></td>
+</tr>
+<tr class="row-even"><td><p>chalk</p></td>
+<td><p>colorize log output</p></td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/chalk">https://www.npmjs.com/package/chalk</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>check-more-types</p></td>
+<td><p>many check.* methods</p></td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/check-more-types">https://www.npmjs.com/package/check-more-types</a></p></td>
+</tr>
+<tr class="row-even"><td><p>cli-table3</p></td>
+<td><p>easy table logging</p></td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/cli-table3">https://www.npmjs.com/package/cli-table3</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>dayjs</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/dayjs">https://www.npmjs.com/package/dayjs</a></p></td>
+</tr>
+<tr class="row-even"><td><p>enquirer</p></td>
+<td><p>intuititive cli usages</p></td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/enquirer">https://www.npmjs.com/package/enquirer</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>execa</p></td>
+<td><p>process execution / cli command running</p></td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/execa">https://www.npmjs.com/package/execa</a></p></td>
+</tr>
+<tr class="row-even"><td><p>executable</p></td>
+<td><p>check if a file is executable</p></td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/executable">https://www.npmjs.com/package/executable</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>extract-zip</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/extract-zip">https://www.npmjs.com/package/extract-zip</a></p></td>
+</tr>
+<tr class="row-even"><td><p>figures</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/figures">https://www.npmjs.com/package/figures</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>getos</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/getos">https://www.npmjs.com/package/getos</a></p></td>
+</tr>
+<tr class="row-even"><td><p>is-ci</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/is-ci">https://www.npmjs.com/package/is-ci</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>listr2</p></td>
+<td><p>animated / beautiful list creation</p></td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/listr2">https://www.npmjs.com/package/listr2</a></p></td>
+</tr>
+<tr class="row-even"><td><p>lodash</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/lodash">https://www.npmjs.com/package/lodash</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>log-symbols</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/log-symbols">https://www.npmjs.com/package/log-symbols</a></p></td>
+</tr>
+<tr class="row-even"><td><p>minimist</p></td>
+<td><p>unchecked argument consumer</p></td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/minimist">https://www.npmjs.com/package/minimist</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>pretty-bytes</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/pretty-bytes">https://www.npmjs.com/package/pretty-bytes</a></p></td>
+</tr>
+<tr class="row-even"><td><p>tmp</p></td>
+<td><p>temp file/dir creator</p></td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/tmp">https://www.npmjs.com/package/tmp</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>untildify</p></td>
+<td><p>convert tilde path to full path</p></td>
+<td><p><a class="reference external" href="https://www.npmjs.com/package/untildify">https://www.npmjs.com/package/untildify</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id1">
+<h2>-—————————<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="blogs">
+<h2>blogs<a class="headerlink" href="#blogs" title="Permalink to this heading">#</a></h2>
+<div class="table-wrapper docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>type</p></td>
+<td><p>ref</p></td>
+</tr>
+<tr class="row-even"><td><p>sample</p></td>
+<td><p>sample link</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="help">
+<h2>help<a class="headerlink" href="#help" title="Permalink to this heading">#</a></h2>
+<div class="table-wrapper docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>type</p></td>
+<td><p>reference</p></td>
+</tr>
+<tr class="row-even"><td><p>sample</p></td>
+<td><p>sample link</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="train_1.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">training #1 &#64; YT &#64; codedam</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="notes-cypress.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">notes</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, Lokeshwar
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">references</a><ul>
+<li><a class="reference internal" href="#ref-issues">ref: issues</a></li>
+<li><a class="reference internal" href="#npm-vs-yarn">npm vs yarn</a></li>
+<li><a class="reference internal" href="#npmrc">.npmrc</a></li>
+<li><a class="reference internal" href="#official">official</a></li>
+<li><a class="reference internal" href="#trainings">trainings</a></li>
+<li><a class="reference internal" href="#useful-nodejs-packages">useful nodejs packages</a></li>
+<li><a class="reference internal" href="#id1">-—————————</a></li>
+<li><a class="reference internal" href="#blogs">blogs</a></li>
+<li><a class="reference internal" href="#help">help</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    </body>
+</html>

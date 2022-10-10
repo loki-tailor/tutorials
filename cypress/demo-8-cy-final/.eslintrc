@@ -1,0 +1,38 @@
+{
+	"root": true,
+	"env": {
+		// ref: https://stackoverflow.com/questions/57673026/require-and-process-is-not-defined-in-eslint-problem-with-node
+		"node": true,
+		"browser": true,
+		"es6": true
+	},
+	"parser": "@typescript-eslint/parser",
+	"plugins": [
+		//
+		"@typescript-eslint",
+		"no-loops",
+		"prettier"
+	],
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier"
+	],
+	"overrides": [
+		// ref: https://github.com/littleh322/Tour-Of-Heroes/issues/2
+		{
+			"files": [
+				"*.js"
+			],
+			"rules": {
+				"@typescript-eslint/no-var-requires": "off"
+			}
+		}
+	],
+	"rules": {
+		"no-console": "off",
+		"no-loops/no-loops": "warn",
+		"prettier/prettier": "warn"
+	}
+}

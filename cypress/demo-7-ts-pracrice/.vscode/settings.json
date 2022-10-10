@@ -1,0 +1,24 @@
+{
+	"peacock.color": "#111116",
+	"workbench.colorCustomizations": {
+		"activityBar.activeBackground": "#272733",
+		"activityBar.background": "#272733",
+		"activityBar.foreground": "#e7e7e7",
+		"activityBar.inactiveForeground": "#e7e7e799",
+		"activityBarBadge.background": "#a73838",
+		"activityBarBadge.foreground": "#e7e7e7",
+		"commandCenter.border": "#e7e7e799",
+		"sash.hoverBorder": "#272733",
+		"statusBar.background": "#111116",
+		"statusBar.foreground": "#e7e7e7",
+		"statusBarItem.hoverBackground": "#272733",
+		"statusBarItem.remoteBackground": "#111116",
+		"statusBarItem.remoteForeground": "#e7e7e7",
+		"titleBar.activeBackground": "#111116",
+		"titleBar.activeForeground": "#e7e7e7",
+		"titleBar.inactiveBackground": "#11111699",
+		"titleBar.inactiveForeground": "#e7e7e799"
+	},
+	"esbonio.sphinx.confDir": "",
+	"prettier.useEditorConfig": false
+}

@@ -23,7 +23,8 @@
     },
     "include": [
         "**/*.ts",
-        "run_one.ts"
+        "run_one.ts",
+        "**/*.js"
     ],
     "exclude": []
 }

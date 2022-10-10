@@ -1,0 +1,767 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="+ mocha" href="../mocha/index.html" /><link rel="prev" title="references" href="ref-js.html" />
+
+    <meta name="generator" content="sphinx-5.0.2, furo 2022.06.21"/>
+        <title>training #6 @ TAU @ automate-browser-using-js - notes @ loki 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">notes @ loki 0.1 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">notes @ loki 0.1 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../general.html">_ general</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ref-online.html">_ online-generic-refs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../azure/index.html">+ azure</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../azure/bot-demo-1.html">bot demo 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../angular/index.html">+ angular</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../angular/notes/index.html">generics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../angular/notes/commands-used.html">commands used</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../angular/notes/ref-angular.html">references</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../angular/notes/dir-structure.html">dir structure info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../angular/notes/notes.html">notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../angular/training-1.html">training #1 - <cite>ng-big-picture</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../angular/training-2.html">training #2 @ ms</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chai/index.html">+ chai</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chai/notes-chai.html">notes @ chai</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../cypress/index.html">+ cypress</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cypress/cmds-used.html">commands used</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cypress/notes-cypress.html">notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cypress/ref-cypress.html">references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cypress/train_1.html">training #1 @ YT @ codedam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cypress/train_2.html">train #2 @ YT @ nal</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../html_css/index.html">+ html / css</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../html_css/css.html">css</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">+ javascript</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="js-underhood.html">js @ underhood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes-javascript.html">notes JavaScript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref-js.html">references</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">training #6 @ TAU @ automate-browser-using-js</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../mocha/index.html">+ mocha</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mocha/notes-mocha.html">notes @ mocha</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../semver/index.html">semantic versioning</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../sphinx_files/index.html">+ sphinx</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_files/next_steps.html">Next Steps / Resume Here</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_files/notes-sphinx.html">+ notes @ sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_files/proj_template.html">$project $name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_files/sample.html">sample.rst @ $project</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../sphinx_files/api.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sphinx_files/generated/lumache.html">lumache</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../test_automation/index.html">+ test automation</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../test_automation/train_tau_1.html">train #1 @ TAU @ Setting Foundation of Successful Automation</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="training-6-tau-automate-browser-using-js">
+<h1>training #6 &#64; TAU &#64; automate-browser-using-js<a class="headerlink" href="#training-6-tau-automate-browser-using-js" title="Permalink to this heading">#</a></h1>
+<p>ref: <a class="reference external" href="https://testautomationu.applitools.com/automating-in-the-browser-using-javascript/">https://testautomationu.applitools.com/automating-in-the-browser-using-javascript/</a></p>
+<section id="e-g-css-selectors">
+<h2>e.g. css selectors<a class="headerlink" href="#e-g-css-selectors" title="Permalink to this heading">#</a></h2>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span>// the &#39;&gt;&#39; means immediate next, if absent, checks in down-hill i.e. immediate beneath
+ul.todo-list &gt; li:nth-child(1)
+
+// without &#39;&gt;&#39;
+ul.todo-list li:nth-child(1)
+
+// matches all li items
+ul.todo-list li
+
+// finding href starting with or contains &#39;http&#39;
+a[href*=&quot;http&quot;]
+div[class*=&#39;button floating&#39;]
+
+// this will locate the button since it is not immediate next but traverses down-tree
+ul.todo-list button.destroy
+
+// this won&#39;t find anly elements, since the queried button is not immediate next
+ul.todo-list &gt; button.destroy
+
+// this will match, if we want to use &#39;immediate next&#39;
+ul.todo-list &gt; li &gt; div &gt; button.destroy
+
+// joining 2 conditions i.e. tag.className[attr=&#39;val&#39;]
+button.clear-completed[style=&quot;display: block;&quot;]
+
+// performing &#39;OR&#39; operation i.e. searching multiple elements using different CSS selectors
+// comman (,) is used to separate them
+.main, #toggle-all
+
+// css selector where there are multiple classes for single element
+div.align-center.mb-lg
+&lt;div class=&#39;align-center mb-lg&#39; /&gt;
+
+
+// 2nd similar tag
+div.align-center.mb-lg h1:nth-of-type(2)
+</pre></div>
+</div>
+</section>
+<section id="e-g-javascript-selectors">
+<h2>e.g. javascript selectors<a class="headerlink" href="#e-g-javascript-selectors" title="Permalink to this heading">#</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;body &gt; section &gt; section &gt; ul &gt; li:nth-child(1)&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// returns 1 element</span><span class="w"></span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;ul.todo-list &gt; li&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// returns 1 element only</span><span class="w"></span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;ul.todo-list &gt; li&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// returns 1st element only</span><span class="w"></span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;ul.todo-list &gt; li&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// returns multiple elements</span><span class="w"></span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;toggle-all&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// returns only 1 element</span><span class="w"></span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s2">&quot;toggle&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// returns multiple elements</span><span class="w"></span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="e-g-javascript-selectors-with-some-actions">
+<h2>e.g. javascript selectors with some actions<a class="headerlink" href="#e-g-javascript-selectors-with-some-actions" title="Permalink to this heading">#</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// toggle todos</span><span class="w"></span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;#toggle-all&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">();</span><span class="w"></span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;toggle-all&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">();</span><span class="w"></span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;ul.todo-list li:nth-child(2) input.toggle&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">();</span><span class="w"></span>
+
+<span class="c1">// click the &#39;x&#39; button, but that &#39;x&#39; comes only when mouse is hovered</span><span class="w"></span>
+<span class="c1">// if we do below, we are directly calling the function and the UI experience is not tested</span><span class="w"></span>
+<span class="c1">// in such cases, the functionality woudl be working, but UI Test guarantee isn&#39;t there</span><span class="w"></span>
+<span class="c1">// delete item</span><span class="w"></span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;ul.todo-list li:nth-child(2) button.destroy&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">()</span><span class="w"></span>
+
+<span class="c1">// below however ensures that the item is deleted only when the li:hover is populated</span><span class="w"></span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.todo-list li:hover .destroy&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">()</span><span class="w"></span>
+
+<span class="c1">// clear all todos</span><span class="w"></span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;button.clear-completed[style=&#39;display: block;&#39;]&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">();</span><span class="w"></span>
+
+<span class="c1">// filter specific ones</span><span class="w"></span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;ul.filters &gt; li:nth-child(3) &gt; a&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">()</span><span class="w"></span>
+<span class="nx">location</span><span class="p">.</span><span class="nx">hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/&quot;</span><span class="w"></span>
+<span class="nx">location</span><span class="p">.</span><span class="nx">hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/active&quot;</span><span class="w"></span>
+<span class="nx">location</span><span class="p">.</span><span class="nx">hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/completed&quot;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="id1">
+<h2>-<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="ref-css-generic-selectors">
+<h2>ref: css generic selectors<a class="headerlink" href="#ref-css-generic-selectors" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>id                <cite>#</cite></p></li>
+<li><p>class             <cite>.</cite></p></li>
+<li><p>tag               <cite>li</cite></p></li>
+<li><p>path              <cite>&gt;</cite> i.e. immediate child</p></li>
+<li><p>path              ` ` i.e. whitespace i.e somewhere below</p></li>
+<li><p><cite>:nth-child(1)</cite>   indexing starts from 1</p></li>
+</ul>
+</section>
+<section id="ref-issue-css-matches">
+<h2>ref_issue: css matches<a class="headerlink" href="#ref-issue-css-matches" title="Permalink to this heading">#</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://stackoverflow.com/questions/25692313/how-to-use-css-selector-to-find-link-by-text">https://stackoverflow.com/questions/25692313/how-to-use-css-selector-to-find-link-by-text</a></div>
+<div class="line">You can’t perform matches to text using CSS selectors, below are xpath alternatives</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">//a[contains(text(),</span> <span class="pre">'bar')]</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">//a[text()</span> <span class="pre">=</span> <span class="pre">'bar']</span></code></div>
+</div>
+</section>
+<section id="ref-issue-localstorage">
+<h2>ref_issue: localStorage<a class="headerlink" href="#ref-issue-localstorage" title="Permalink to this heading">#</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// clearing local storage</span><span class="w"></span>
+<span class="nx">localStorage</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-error notranslate"><div class="highlight"><pre><span></span>// question: on website https://todomvc.com/examples/vanillajs/#/,
+// when we add data to localStorage, and then do a clear(), and then if we don&#39;t refresh and try to create a todo, then we get below error, why?
+
+store.js:97 Uncaught TypeError: Cannot read property &#39;push&#39; of null
+    at Store.save (store.js:97)
+    at Model.create (model.js:29)
+    at Controller.addItem (controller.js:102)
+    at controller.js:17
+    at HTMLInputElement.&lt;anonymous&gt; (view.js:177)
+
+$reason : when the website is loadded, it auto-loads an array in the localStorage (todos-vanillajs[])
+        : but when we call localStorage.clear() - it removes the variable rather than empty&#39;ng the array.
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>-<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="ch-1-references">
+<h2>ch:1 - references<a class="headerlink" href="#ch-1-references" title="Permalink to this heading">#</a></h2>
+<div class="line-block">
+<div class="line">Resources</div>
+<div class="line">JS Game Link: <a class="reference external" href="https://phoboslab.org/">https://phoboslab.org/</a></div>
+<div class="line">Alan Richardson’s Blog : <a class="reference external" href="https://blog.eviltester.com/">https://blog.eviltester.com/</a></div>
+<div class="line">Additional information, apps and support for the course: <a class="reference external" href="https://www.eviltester.com/page/onlinetraining/testautomationujs/">https://www.eviltester.com/page/onlinetraining/testautomationujs/</a></div>
+<div class="line">Alan’s Company Site: <a class="reference external" href="https://compendiumdev.co.uk/">https://compendiumdev.co.uk/</a></div>
+<div class="line">Alan’s Testing Site: <a class="reference external" href="https://www.eviltester.com/">https://www.eviltester.com/</a></div>
+</div>
+</section>
+<section id="ch-2-ref-sample-app">
+<h2>ch:2 - ref: sample app<a class="headerlink" href="#ch-2-ref-sample-app" title="Permalink to this heading">#</a></h2>
+<div class="line-block">
+<div class="line">TodoMVC Official Site : <a class="reference external" href="http://todomvc.com/">http://todomvc.com/</a></div>
+<div class="line">VanillaJS Version of App : <a class="reference external" href="https://todomvc.com/examples/vanillajs/">https://todomvc.com/examples/vanillajs/</a></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>“View Source” contains HTML that was loaded when 1st time page got loaded</strong></div>
+<div class="line"><br /></div>
+<div class="line"><strong>“DOM” i.e. Document Object Model is present &#64; “Inspect Element” option, which JS can manipulate at any point as per coding</strong></div>
+</div>
+</section>
+<section id="ch-3-ref-dom-mdn-w3s">
+<h2>ch:3 - ref: DOM / MDN / W3S<a class="headerlink" href="#ch-3-ref-dom-mdn-w3s" title="Permalink to this heading">#</a></h2>
+<div class="line-block">
+<div class="line">Document Object Model : <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction</a></div>
+<div class="line">Mozilla Developer Network : <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web">https://developer.mozilla.org/en-US/docs/Web</a></div>
+<div class="line">W3 Schools : <a class="reference external" href="https://www.w3schools.com/">https://www.w3schools.com/</a></div>
+</div>
+<div class="line-block">
+<div class="line">* google “mdn css selector” and the 1st site will have the documentation</div>
+<div class="line"><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors</a></div>
+</div>
+</section>
+<section id="ch-4-1-eventlistener-hashchange">
+<h2>ch:4.1: EventListener, hashchange<a class="headerlink" href="#ch-4-1-eventlistener-hashchange" title="Permalink to this heading">#</a></h2>
+<div class="line-block">
+<div class="line">MDN EventListeners Documentation : <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/EventListener">https://developer.mozilla.org/en-US/docs/Web/API/EventListener</a></div>
+<div class="line">MDN hashchangeDocumentation : <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event">https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event</a></div>
+</div>
+</section>
+<section id="ch-4-2-event-bubbles-changeevent">
+<h2>ch: 4.2 - Event.bubbles, changeEvent<a class="headerlink" href="#ch-4-2-event-bubbles-changeevent" title="Permalink to this heading">#</a></h2>
+<div class="line-block">
+<div class="line">MDN Event.bubbles Documentation: <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/Event/bubbles">https://developer.mozilla.org/en-US/docs/Web/API/Event/bubbles</a></div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line">MDN change event Documentation: <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event">https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event</a></div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>objective: creating a todo using js</strong></p>
+<div class="line-block">
+<div class="line"><cite>S1 - find the input element:</cite></div>
+</div>
+<div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">val</span> <span class="pre">=</span> <span class="pre">document.querySelector('input.new-todo')</span></code></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><cite>S2 - invoke change() method</cite></div>
+<div class="line">&gt; this will not work and give below error:</div>
+</div>
+<div class="highlight-error notranslate"><div class="highlight"><pre><span></span>VM940:1 Uncaught TypeError: document.querySelector(...).change is not a function
+    at &lt;anonymous&gt;:1:42
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>we need to find a way to invoke / replicate the ‘enter’ key i.e. find a way to trigger an event in javascript (i.e. using dispatchEvent() function)</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>bubbles-up:</strong></div>
+<div class="line">+ basically means that replicate the fire / click / return key of user</div>
+<div class="line">+ it will perform the action not only where the change is invoked but also up in the hirerarchy</div>
+<div class="line"><br /></div>
+<div class="line">Therefore, S2 will be as below:</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">document.querySelector('input.new-todo').dispatchEvent(new</span> <span class="pre">Event('change',{'bubbles':true}));</span></code></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><strong>object #2: amending an existing todo-list</strong></div>
+<div class="line"><cite>risk:</cite> in this case, we will simulate the events which happen in the backend and not what user will do in the UI i.e. double-click &amp; then press the return key, etc…</div>
+<div class="line"><br /></div>
+<div class="line"><cite>step-1:</cite> enter edit mode</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">document.querySelector('ul.todo-list</span> <span class="pre">&gt;</span> <span class="pre">li:nth-child(1)</span> <span class="pre">&gt;</span> <span class="pre">div</span> <span class="pre">&gt;</span> <span class="pre">label').dispatchEvent(new</span> <span class="pre">Event('dblclick',</span> <span class="pre">{'bubbles':</span> <span class="pre">true}</span> <span class="pre">));</span></code></div>
+<div class="line"><br /></div>
+<div class="line"><cite>step-2:</cite> enter values</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">document.querySelector('ul.todo-list</span> <span class="pre">&gt;</span> <span class="pre">li:nth-child(1)</span> <span class="pre">&gt;</span> <span class="pre">input.edit').value</span> <span class="pre">=</span> <span class="pre">&quot;replaced</span> <span class="pre">/</span> <span class="pre">amended</span> <span class="pre">value&quot;;</span></code></div>
+<div class="line"><br /></div>
+<div class="line"><cite>step-3:</cite> blur the value (replicate what user would press enter) or i.e. unfocus the edit mode</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">document.querySelector('ul.todo-list</span> <span class="pre">&gt;</span> <span class="pre">li:nth-child(1)</span> <span class="pre">&gt;</span> <span class="pre">input.edit').dispatchEvent(new</span> <span class="pre">Event('blur'));</span></code></div>
+</div>
+</section>
+<section id="ch-5-for-loops">
+<h2>ch: 5 - for-loops<a class="headerlink" href="#ch-5-for-loops" title="Permalink to this heading">#</a></h2>
+<div class="line-block">
+<div class="line">JavaScript for Loops:</div>
+<div class="line"><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for</a></div>
+</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// objective: toggling all the radio-buttons of the todo-list</span><span class="w"></span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">btn_toggle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;ul.todo-list input.toggle&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="k">for</span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">btn_toggle</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="nx">btn_toggle</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">click</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="ch-6-if-statements">
+<h2>ch: 6 - if-statements<a class="headerlink" href="#ch-6-if-statements" title="Permalink to this heading">#</a></h2>
+<div class="line-block">
+<div class="line">JavaScript if…else documentation: <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if…else</a></div>
+<div class="line"><br /></div>
+<div class="line">== compares values &amp; will convert types: e.g. “1”==1 will be true</div>
+<div class="line">=== compare values &amp; types e.g. “1”===1 will be false</div>
+</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// object: toggle every 2nd item in the todo-list</span><span class="w"></span>
+<span class="c1">// #approach-1</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">btn_toggle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;ul.todo-list input.toggle&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="k">for</span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">btn_toggle</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="nx">i</span><span class="o">%</span><span class="mf">2</span><span class="o">==</span><span class="mf">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="nx">btn_toggle</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">click</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// #approach-2</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">btn_toggle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;ul.todo-list input.toggle&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="k">for</span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">btn_toggle</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">+=</span><span class="mf">2</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="nx">btn_toggle</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">click</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// #approach-3</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">btn_toggle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;ul.todo-list input.toggle&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">shouldToggle</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
+<span class="k">for</span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">btn_toggle</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="nx">shouldToggle</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="nx">btn_toggle</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">click</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="nx">shouldToggle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="nx">shouldToggle</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="ch-7-snippet-view">
+<h2>ch: 7 - snippet view<a class="headerlink" href="#ch-7-snippet-view" title="Permalink to this heading">#</a></h2>
+<p><cite>Chrome Dev Tools Snippets Documentation : [dead link]</cite> <a class="reference external" href="https://developers.google.com/web/tools/chrome-devtools/javascript/snippet">https://developers.google.com/web/tools/chrome-devtools/javascript/snippet</a></p>
+</section>
+<section id="ch-8-1-js-helper-functions">
+<h2>ch: 8.1 - js helper functions<a class="headerlink" href="#ch-8-1-js-helper-functions" title="Permalink to this heading">#</a></h2>
+<p><cite>refer: cds-vanilla-utils.js</cite></p>
+</section>
+<section id="ch-8-2-javascript-functions-autotodo">
+<h2>ch: 8.2 - javascript functions : autoTodo<a class="headerlink" href="#ch-8-2-javascript-functions-autotodo" title="Permalink to this heading">#</a></h2>
+<p><cite>refer: utils-as-obj.js</cite></p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>purpose of this video:</dt><dd><ul>
+<li><p>i.e. functions or code written in ‘snippets’ would override the applicataion-code itself.</p></li>
+<li><p>objective is to write functions that won’t override the web-app functions/code</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>objects in js are really just functions.</p></li>
+</ul>
+</section>
+<section id="ch-9-settimeout">
+<h2>ch: 9 - setTimeout<a class="headerlink" href="#ch-9-settimeout" title="Permalink to this heading">#</a></h2>
+<div class="line-block">
+<div class="line">setTimeout Documentation : <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout</a></div>
+<div class="line"><br /></div>
+<div class="line">clearTimeout Documentation : <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout">https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout</a></div>
+<div class="line"><br /></div>
+<div class="line">setTimeout in Game Development : <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Games/Anatomy">https://developer.mozilla.org/en-US/docs/Games/Anatomy</a></div>
+</div>
+</section>
+<section id="ch-10-setinterval">
+<h2>ch : 10 : setInterval<a class="headerlink" href="#ch-10-setinterval" title="Permalink to this heading">#</a></h2>
+<div class="line-block">
+<div class="line">setInterval Documentation : <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval</a></div>
+<div class="line"><br /></div>
+<div class="line">clearInterval Documentation : <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval">https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval</a></div>
+<div class="line"><br /></div>
+<div class="line">Example Usage of setInterval : <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Games/Anatomy">https://developer.mozilla.org/en-US/docs/Games/Anatomy</a></div>
+</div>
+</section>
+<section id="ch-11-bookmarklets">
+<h2>ch : 11 : bookmarklets<a class="headerlink" href="#ch-11-bookmarklets" title="Permalink to this heading">#</a></h2>
+<div class="line-block">
+<div class="line">Quick Intro To BookMarkLets : <a class="reference external" href="https://www.eviltester.com/2017/04/a-quick-intro-to-bookmarklets.html">https://www.eviltester.com/2017/04/a-quick-intro-to-bookmarklets.html</a></div>
+<div class="line"><br /></div>
+</div>
+<p><a href="#id3"><span class="problematic" id="id4">|</span></a>Simple Bookmarklet Creation Utility : <a class="reference external" href="https://github.com/eviltester/bookmarklet">https://github.com/eviltester/bookmarklet</a></p>
+<p>bookmarklet: is a js anon function that runs immediately</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// anonymous run immediate function: can run in chrome console</span><span class="w"></span>
+<span class="p">(</span><span class="kd">function</span><span class="p">(){</span><span class="w"> </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;hello, i&#39;m alert from bookmarkt, bye..&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">})()</span><span class="w"></span>
+
+<span class="c1">// below: can run in browser as URL</span><span class="w"></span>
+<span class="nx">javascript</span><span class="o">:</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span><span class="w"> </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;hello, i&#39;m alert from bookmarkt, bye..&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">})()</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="line-block">
+<div class="line">// traditional bookmarklets don’t run from chrome newtab due to security reasons</div>
+<div class="line"><br /></div>
+<div class="line">// using below: ref = <a class="reference external" href="https://stackoverflow.com/a/56794455/7415499">https://stackoverflow.com/a/56794455/7415499</a></div>
+<div class="line"><br /></div>
+<div class="line"><a class="reference external" href="data:text/html">data:text/html</a>,&lt;script&gt;window.location.href=’<a class="reference external" href="http://www.oracle.com/">http://www.oracle.com/</a>’+prompt(“Please enter your input:”, “exadata”);&lt;/script&gt;</div>
+</div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// IMP: when below is done and added to a bookmarklet</span><span class="w"></span>
+
+<span class="c1">// i.e. specifying comments section before function terminations</span><span class="w"></span>
+<span class="nx">javascript</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">....</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// end of for loop</span><span class="w"></span>
+<span class="p">})();</span><span class="w"></span>
+
+<span class="c1">// then it is parsed as below and we get error =&gt; Uncaught SyntaxError: Unexpected end of input</span><span class="w"></span>
+<span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{.....</span><span class="w">  </span><span class="c1">// end of for loop      })();</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<p><cite>2021-12-28 &#64; 02:42 hrs</cite></p>
+</section>
+<section id="ch-12-1-advanced-then-innards">
+<h2>ch : 12.1 : Advanced : Then Innards<a class="headerlink" href="#ch-12-1-advanced-then-innards" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Don’t automate the GUI, since its brittle, automate the API, which is more like unit testing</p></li>
+<li><p>In JS, we can simulate same stuff, if we have access to Innards</p></li>
+<li><p>Usually JS developers use innards (i.e. variables, functions, etc. inside an anon function), so that they can’t be accessed in console or directly</p></li>
+<li><p>However, one can hijack the innards during mid-loading using debug mode</p></li>
+<li><p>If applicatioon does provide public objects, we can directly use them</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">myTodo</span><span class="p">.</span><span class="nx">controller</span><span class="p">.</span><span class="nx">addItem</span><span class="p">(</span><span class="s2">&quot;lokeshwar&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="ch-12-2-advanced-bots">
+<h2>ch : 12.2 : Advanced : Bots<a class="headerlink" href="#ch-12-2-advanced-bots" title="Permalink to this heading">#</a></h2>
+<div class="line-block">
+<div class="line">JavaScript Random Documentation: <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random</a></div>
+<div class="line"><br /></div>
+<div class="line">JavaScript Floor Documentation: <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor</a></div>
+</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// random numbers from 0 to 10 in JS console:</span><span class="w"></span>
+<span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="mf">10</span><span class="p">)</span><span class="w"></span>
+
+<span class="c1">// print names of propert value which are a funciton within an object</span><span class="w"></span>
+<span class="k">for</span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">prop</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">autoTodo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">autoTodo</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;function&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">prop</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="ch-13-conclusion-next-steps">
+<h2>ch : 13 : Conclusion &amp; Next Steps:<a class="headerlink" href="#ch-13-conclusion-next-steps" title="Permalink to this heading">#</a></h2>
+<div class="line-block">
+<div class="line">Trainer further resources: <a class="reference external" href="https://www.eviltester.com/page/onlinetraining/testautomationujs/">https://www.eviltester.com/page/onlinetraining/testautomationujs/</a></div>
+<div class="line"><br /></div>
+<div class="line">JavaScript Browser Automating – Extra Resources and Videos: <a class="reference external" href="https://www.eviltester.com/page/onlinetraining/testautomationujs/">https://www.eviltester.com/page/onlinetraining/testautomationujs/</a></div>
+<div class="line"><br /></div>
+<div class="line">Alan’s Blog: <a class="reference external" href="https://blog.eviltester.com/">https://blog.eviltester.com/</a></div>
+<div class="line"><br /></div>
+<div class="line">Mozilla Developer Network - JavaScript: <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">https://developer.mozilla.org/en-US/docs/Web/JavaScript</a></div>
+<div class="line"><br /></div>
+<div class="line">Mozilla Developer Network - Web Technologies: <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web">https://developer.mozilla.org/en-US/docs/Web</a></div>
+<div class="line"><br /></div>
+<div class="line">W3 Schools</div>
+<div class="line"><br /></div>
+<div class="line">Stack Overflow</div>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../mocha/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">+ mocha</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="ref-js.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">references</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, Lokeshwar
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">training #6 &#64; TAU &#64; automate-browser-using-js</a><ul>
+<li><a class="reference internal" href="#e-g-css-selectors">e.g. css selectors</a></li>
+<li><a class="reference internal" href="#e-g-javascript-selectors">e.g. javascript selectors</a></li>
+<li><a class="reference internal" href="#e-g-javascript-selectors-with-some-actions">e.g. javascript selectors with some actions</a></li>
+<li><a class="reference internal" href="#id1">-</a></li>
+<li><a class="reference internal" href="#ref-css-generic-selectors">ref: css generic selectors</a></li>
+<li><a class="reference internal" href="#ref-issue-css-matches">ref_issue: css matches</a></li>
+<li><a class="reference internal" href="#ref-issue-localstorage">ref_issue: localStorage</a></li>
+<li><a class="reference internal" href="#id2">-</a></li>
+<li><a class="reference internal" href="#ch-1-references">ch:1 - references</a></li>
+<li><a class="reference internal" href="#ch-2-ref-sample-app">ch:2 - ref: sample app</a></li>
+<li><a class="reference internal" href="#ch-3-ref-dom-mdn-w3s">ch:3 - ref: DOM / MDN / W3S</a></li>
+<li><a class="reference internal" href="#ch-4-1-eventlistener-hashchange">ch:4.1: EventListener, hashchange</a></li>
+<li><a class="reference internal" href="#ch-4-2-event-bubbles-changeevent">ch: 4.2 - Event.bubbles, changeEvent</a></li>
+<li><a class="reference internal" href="#ch-5-for-loops">ch: 5 - for-loops</a></li>
+<li><a class="reference internal" href="#ch-6-if-statements">ch: 6 - if-statements</a></li>
+<li><a class="reference internal" href="#ch-7-snippet-view">ch: 7 - snippet view</a></li>
+<li><a class="reference internal" href="#ch-8-1-js-helper-functions">ch: 8.1 - js helper functions</a></li>
+<li><a class="reference internal" href="#ch-8-2-javascript-functions-autotodo">ch: 8.2 - javascript functions : autoTodo</a></li>
+<li><a class="reference internal" href="#ch-9-settimeout">ch: 9 - setTimeout</a></li>
+<li><a class="reference internal" href="#ch-10-setinterval">ch : 10 : setInterval</a></li>
+<li><a class="reference internal" href="#ch-11-bookmarklets">ch : 11 : bookmarklets</a></li>
+<li><a class="reference internal" href="#ch-12-1-advanced-then-innards">ch : 12.1 : Advanced : Then Innards</a></li>
+<li><a class="reference internal" href="#ch-12-2-advanced-bots">ch : 12.2 : Advanced : Bots</a></li>
+<li><a class="reference internal" href="#ch-13-conclusion-next-steps">ch : 13 : Conclusion &amp; Next Steps:</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    </body>
+</html>

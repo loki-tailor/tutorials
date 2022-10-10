@@ -6,6 +6,36 @@ notes
   
   \ --------------------------
 
+cy: task vs commands vs functions
+------------------------------------
+
+* ref:
+    * https://stackoverflow.com/questions/58680757/in-cypress-when-to-use-custom-command-vs-task
+    * https://docs.cypress.io/api/cypress-api/custom-commands#Best-Practices
+    * https://spin.atomicobject.com/2021/07/30/cypress-tasks-vs-commands/#:~:text=Cypress%20Commands%20and%20Tasks,-Hopefully%2C%20now%20you&text=The%20key%20takeaways%20are%3A,assertions%2C%20go%20with%20a%20command.
+
+* task:
+    * If you need to run a promise or interact with your backend, go with a task
+    * used when performing something on Cypress node process
+    * e.g. seed dB, file I/O, etc..
+
+* commands:
+    * If you are interacting with the DOM and making assertions, go with a command.
+    * When a series of commands are repeated multiple times, create a custom command.
+    * Commands are defined and executed directly in the browser.
+    * You can also write custom commands for pre-defined workflows that might repeat in your tests
+
+* functions:
+    * writing reptable behaviour consisting set of multiple steps
+
+* Custom commands work well when you’re needing to describe behavior that’s desirable across all of your tests. it’s often more efficient to write a JavaScript/typescript function for repeatable behavior
+
+
+cy: find() vs within()
+--------------------------
+
+https://stackoverflow.com/questions/64917726/cypress-difference-between-find-and-within-methods?rq=1
+
 cy:  CORS / chromeWebSecurity
 -----------------------------------
 
@@ -116,6 +146,9 @@ cy: issue: command timeout in verify
 cy: issue: setting env variables
 -------------------------------------
 
+set / export
+^^^^^^^^^^^^^^^
+
 .. admonition:: solution
 
   .. code-block:: javascript
@@ -127,6 +160,10 @@ cy: issue: setting env variables
         "cy:set-verify": "set CYPRESS_VERIFY_TIMEOUT=60000 & npx cypress verify"
       }
       npm run cy:set-verify
+
+.bat file
+^^^^^^^^^^^
+.. admonition:: solution
 
   .. code-block:: javascript
 
@@ -144,6 +181,10 @@ cy: issue: setting env variables
       }
       npm run cy:setEnv-verify
 
+.npmrc / .yarnrc
+^^^^^^^^^^^^^^^^^^^
+.. admonition:: solution
+
   .. code-block:: console
 
     // approach 3
@@ -160,6 +201,10 @@ cy: issue: setting env variables
 
     $ npm install cypress
     $ npm run cypress
+
+package.json > "config"
+^^^^^^^^^^^^^^^^^^^^^^^^^
+.. admonition:: solution
 
   .. code-block:: javascript
 
@@ -181,6 +226,55 @@ cy: issue: setting env variables
     ....
       
     npm run cy:v
+
+
+as-a
+^^^^^^^^
+.. admonition:: solution
+
+    .. code-block:: javascript
+
+        // approach 5
+        // using approach @ https://www.npmjs.com/package/as-a
+
+cypress.env.config
+^^^^^^^^^^^^^^^^^^^^
+.. code-block:: javascript
+
+    // approach 6
+
+    // using cypress.env.config file
+
+cross-env
+^^^^^^^^^^
+.. admonition:: solution
+
+    .. code-block:: javascript
+
+        // approach 7
+
+        // using npm cross-env package
+
+cy: issue: cucumber-cy-preprocessor @ *nd.json
+-------------------------------------------------
+
+.. code-block:: bash
+
+      An error was thrown in your plugins file while executing the handler for the after:run event.
+
+    The error we received was:
+
+    Error: spawn cucumber-json-formatter ENOENT
+        at Process.ChildProcess._handle.onexit (node:internal/child_process:283:19)
+        at onErrorNT (node:internal/child_process:478:16)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+references:
+    * https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/json-report.md
+    * https://github.com/badeball/cypress-cucumber-preprocessor/issues/851
+    * https://github.com/badeball/cypress-cucumber-preprocessor/issues/850
+    * https://github.com/Vitalizzzer/cucumber-json-report-formatter
+    * https://github.com/cucumber/json-formatter
 
 \------------------------
 ---------------------------
@@ -336,7 +430,106 @@ todo: low
   * - ? authentication
   * - ? fileSystem & network Operations 
   * - ? animation waiting @ https://docs.cypress.io/guides/core-concepts/interacting-with-elements#Animations
+  * - ? examples of different @ https://docs.cypress.io/examples/examples/recipes#Testing-the-DOM
 
+todo: misc
+^^^^^^^^^^^^
+todo:
+    - run cypresss from .ts file
+    - yarn hello world in morgan
+    - what are plugins and it's documentation
+    - cypress cucumber plugin
+    - cypress puppeteer browser plugin
+    - go thru api documentation of frequently used cy commands @ https://docs.cypress.io/api/commands/
+    - cypress dashboard demo
+    - db2 CRUD @ e.g. https://docs.cypress.io/api/commands/task#Allows-a-single-argument-only
+    - excel validations
+    - logger for nodejs framework    - 
+
+todo: cy-generic-framework README.md
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* db2
+* puppeteer browser for linux execution
+* logger
+* excel
+* proxy / session / cookie management
+* nodejs / cypress / typescript
+* locator strategy
+* packages and their purposes
+* tsconfig.json 
+  * #1:
+    * error: Missing baseUrl in compilerOptions. tsconfig-paths will be skipped
+    * resolution: add => "compilerOptions": { "baseUrl": "./" }
+    * reason: https://github.com/dividab/tsconfig-paths/issues/17
+
+todo: learn.cypress.com
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+plugins:
+  - https://marketplace.visualstudio.com/items?itemName=Shelex.vscode-cy-helper
+
+first-tc:
+    - proxy setting
+    - session/cookie-management
+    - puppeteer chrome @ headless @ windows
+    - puppeteer chrome @ headless @ linux
+    - smoke tests
+
+package.json
+    * CYPRESS_VERIFY_TIMEOUT 
+    * engine
+
+tsconfig.json:
+    * "isolatedModules": false @ else in /cypress/support/index.ts, Chainable usages will give error as you are forced to write empty export {} statement
+
+commands:
+    * You should be thinking in abstractions before you begin writing your tests
+
+    * cy.visit @ application i.e. override application visit command in commands.js
+    * cy.get @ resolving locators, etc... i.e. override this in command.js the get and resolve locator
+    * keyboard simulations using {key} @ cy.get(".new-todo").type("Buy Milk{enter}")
+    * see if alias is possible for frequently  used long commands -> cy.get("table").find("tr").as("rows")
+    * Cypress.Commands.add("getBySel", (selector, ...args) => {
+          return cy.get(`[data-test=${selector}]`, ...args)
+      })
+
+    * cy.fixture("users.json").as("usersData")
+    * when to use cy.task() and commands.js ?
+    * e.g.:
+      * cy.clickLink('Buy Now')
+      * cy.checkToken('abc123')
+      * cy.getBySel
+      * cy.getBySelDynamic
+      * cy.[get][set]sessionStorage
+      * cy.visit @ override with interrecepts if required
+
+
+cypress.config.json:
+    - "CYPRESS_VERIFY_TIMEOUT": "60000"
+
+session:
+    * how to print cookies
+    * how is cookie being set i protractor framework
+    * how is cookie by default in cypress for new-app 
+    * using cy.session command @ https://www.youtube.com/watch?time_continue=292&v=Fohrq5GZSD8&feature=emb_logo
+
+plugins:
+  - https://docs.cypress.io/api/plugins/browser-launch-api#Set-screen-size-when-running-headless
+  - browser args
+  - new browser
+  - cucumber 
+
+methods:
+    - eq
+    - find
+
+organizing tests:
+    - smoke
+    - sanity
+    - +ve
+    - -ve
+    - e2e
+    - exhaustive
 
 cy:docs - installation
 ------------------------
@@ -359,6 +552,11 @@ via yarn
   corepack enable (or) npm install -g yarn
   yarn init -2     
   yarn add cypress --dev
+
+vscode extensions
+^^^^^^^^^^^^^^^^^^^^
+* alexkrechik.cucumberautocomplete
+* Shelex.vscode-cy-helper
 
 
 cy:docs - tips

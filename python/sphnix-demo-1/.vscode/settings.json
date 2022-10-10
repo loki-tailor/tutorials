@@ -31,5 +31,7 @@
         "titleBar.activeForeground": "#e7e7e7",
         "titleBar.inactiveBackground": "#6b317599",
         "titleBar.inactiveForeground": "#e7e7e799"
-    }
+    },
+    "cSpell.enabled": false,
+    "window.title": "sphinx"
 }

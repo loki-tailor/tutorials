@@ -1,0 +1,22 @@
+{
+  "name": "demo-5-ts-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "a.js",
+  "type": "module",
+  "devDependencies": {
+    "lodash": "^4.17.21",
+    "@types/lodash": "^4.14.184",
+    "typescript": "^4.8.2"
+  },
+  "scripts": {
+    "start": "tsc && tsc-esm out/* && node out/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "tsc-esm": "^1.0.4"
+  }
+}

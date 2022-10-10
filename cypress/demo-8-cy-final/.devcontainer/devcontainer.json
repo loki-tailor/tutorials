@@ -1,0 +1,23 @@
+{
+	// set "default" container specific settings.json values on container create
+	"settings": {
+		"terminal.integrated.defaultProfile.linux": "ksh (dev)",
+		"terminal.integrated.profiles.linux": {
+			"ksh (dev)": {
+				"color": "terminal.ansiBlue",
+				"overrideName": true,
+				"path": "/bin/ksh",
+				"icon": "terminal-bash",
+				"args": [ "-l"]
+			}
+		}
+	},
+
+	// add the IDs of extension you want to installed when the container is created
+	"extensions": [
+		"Angular.ng-template@13.0.0"
+	],
+
+	// use 'postCreateCommand' to run commands after the container is created
+	"postCreateCommand": "echo container launched..."
+}

@@ -1,0 +1,66 @@
+{
+	"window.title": "${rootName}${separator}${appName}${separator}${dirty}${activeEditorShort}",
+
+	"json.format.keepLines": true,
+
+	"terminal.integrated.scrollback": 99999999999,
+
+	"errorLens.delay": 500,
+	"errorLens.onSave": true,
+	"errorLens.enabled": true,
+
+	"prettier.useEditorConfig": false,
+	"prettier.requireConfig": true,
+
+	"editor.inlayHints.enabled": "on",
+	"javascript.inlayHints.parameterNames.enabled": "all",
+	"typescript.inlayHints.parameterNames.enabled": "all",
+
+	"javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+	"javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+	"typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+	"typescript.format.insertSpaceBeforeFunctionParenthesis": false,
+
+
+	"todohighlight.isEnable": true,
+	"todohighlight.isCaseSensitive": true,
+
+	"editor.formatOnSave": true,
+	"editor.renderWhitespace": "trailing",
+	"editor.guides.bracketPairs": "active",
+	"editor.unicodeHighlight.nonBasicASCII": true,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.codeActionsOnSave": [
+		"source.formatDocument",
+		"source.fixAll.eslint"
+	],
+	"editor.quickSuggestions": {
+		"other": "on",
+		"comments": "off",
+		"strings": "off"
+	},
+
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/bower_components": true,
+		"**/*.code-search": true,
+		"**/bin": true
+	},
+
+	"files.associations": {
+		".yarnrc": "yaml"
+	},
+
+	"cSpell.words": [
+		"badeball",
+		"bahmutov",
+		"duckduckgo",
+		"Esbuild",
+		"Parens"
+	],
+	"[feature]": {
+		"editor.defaultFormatter": "alexkrechik.cucumberautocomplete"
+	},
+}

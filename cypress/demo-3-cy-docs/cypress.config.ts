@@ -1,10 +1,13 @@
 import { defineConfig } from 'cypress';
 
-export default defineConfig({
+export default defineConfig( {
 
-  e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
-  }
-});
+    e2e: {
+
+        specPattern: "**/*.feature",
+
+        setupNodeEvents ( on, config ) {
+            // implement node event listeners here
+        },
+    }
+} );
