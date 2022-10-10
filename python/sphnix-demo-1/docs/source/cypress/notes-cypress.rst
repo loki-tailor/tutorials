@@ -276,6 +276,15 @@ references:
     * https://github.com/Vitalizzzer/cucumber-json-report-formatter
     * https://github.com/cucumber/json-formatter
 
+
+
+cy: issue: esbuild / commonjs conflict
+------------------------------------------
+* https://redfin.engineering/node-modules-at-war-why-commonjs-and-es-modules-cant-get-along-9617135eeca1
+* https://github.com/badeball/cypress-cucumber-preprocessor/issues/841
+* https://stackoverflow.com/questions/54977743/do-require-resolve-for-es-modules
+
+
 \------------------------
 ---------------------------
 
