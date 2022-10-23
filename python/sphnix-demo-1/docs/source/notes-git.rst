@@ -5,6 +5,9 @@ git
 renaiming ``master`` to ``main``
 ------------------------------------
 
+* ref @ https://gitbetter.substack.com/p/how-to-change-git-default-branch
+* ref @ https://www.git-tower.com/learn/git/faq/git-rename-master-to-main 
+
 .. code-block:: git
 
     # =============== ONE WHO IS DELETING ===============
@@ -13,7 +16,7 @@ renaiming ``master`` to ``main``
     $ git branch -m master main
     
     # -u attribute is used to set the upstream tracking for the branch.
-    $ git puhs -u origi main
+    $ git puhs -u origin main
 
     # login to repo UI and manually change  the default branch from "master" to "main"
     

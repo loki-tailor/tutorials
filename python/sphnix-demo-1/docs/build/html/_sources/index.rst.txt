@@ -25,6 +25,7 @@ including how to \:ref:`install <installation>` the project.
    azure/index 
    angular/index   
    chai/index
+   notes-cli
    cypress/index
    notes-git
    html_css/index   
