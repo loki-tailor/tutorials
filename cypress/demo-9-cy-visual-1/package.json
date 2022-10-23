@@ -1,0 +1,16 @@
+{
+  "name": "demo-9-cy-visual-1",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@frsource/cypress-plugin-visual-regression-diff": "^2.3.10",
+    "cypress": "^10.10.0",
+    "typescript": "^4.8.4"
+  }
+}

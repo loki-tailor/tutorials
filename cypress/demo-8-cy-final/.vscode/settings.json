@@ -22,6 +22,10 @@
 	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
 	"typescript.format.insertSpaceBeforeFunctionParenthesis": false,
 
+	"cucumberautocomplete.steps": [
+		"cypress/e2e/**/*.ts"
+	],
+
 
 	"todohighlight.isEnable": true,
 	"todohighlight.isCaseSensitive": true,

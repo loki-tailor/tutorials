@@ -58,3 +58,7 @@ When('I am a step-1', () => {
 Then('I call nested step', function(): void {
 	Step(this, 'I am a step-1');
 });
+
+Then('I perform visual test', (): void => {
+	cy.matchImage();
+});

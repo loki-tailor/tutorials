@@ -2,20 +2,22 @@
 	"filterSpecs": true,
 	"messages": {
 		"enabled": true,
-		"output": "./cucumber-messages.ndjson"
+		"output": "./cypress/results/cucumber-messages.ndjson"
 	},
-	"json": {
+	"cucumberJson": {
 		"enabled": true,
-		"output": "./cucumber-report.json"
+		"output": "./cypress/results/cucumber-report.json"
 	},
 	"html": {
 		"enabled": true,
-		"output": "./cucumber-report.html"
+		"output": "./cypress/results/cucumber-report.html"
 	},
+
 
 	"stepDefinitions": [
 		"cypress/e2e/[filepath]/**/*.{js,ts}",
 		"cypress/e2e/[filepath].{js,ts}",
+		"cypress/e2e/steps/**/*.{js,ts}",
 		"cypress/support/step_definitions/**/*.{js,ts}"
 	]
 }

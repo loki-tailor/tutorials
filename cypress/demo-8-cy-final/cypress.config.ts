@@ -1,9 +1,12 @@
 import { defineConfig } from 'cypress';
 import createBundler from '@bahmutov/cypress-esbuild-preprocessor';
 import createEsbuildPlugin from '@badeball/cypress-cucumber-preprocessor/esbuild';
-import { addCucumberPreprocessorPlugin, afterRunHandler } from '@badeball/cypress-cucumber-preprocessor';
 import { taskReadFileMaybe, taskLog } from './cypress/support/TasksOps';
 import fs from 'fs';
+
+import { initPlugin } from '@frsource/cypress-plugin-visual-regression-diff/dist/plugins';
+
+import { addCucumberPreprocessorPlugin, afterRunHandler } from '@badeball/cypress-cucumber-preprocessor';
 
 // ####################################################################################################################################
 export default defineConfig({
@@ -20,15 +23,11 @@ export default defineConfig({
 
 // ####################################################################################################################################
 async function setupNodeEvents(on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions): Promise<Cypress.PluginConfigOptions> {
-	await addCucumberPreprocessorPlugin(on, config);
+	// ----------------------------------------------
+	on('file:preprocessor', createBundler({ plugins: [createEsbuildPlugin(config)] }));
 
-	on(
-		'file:preprocessor',
-		createBundler({
-			plugins: [createEsbuildPlugin(config)],
-		})
-	);
-
+	// ----------------------------------------------
+	initPlugin(on, config);
 	// ----------------------------------------------
 	// ref: https://github.com/badeball/cypress-cucumber-preprocessor/issues/805#issuecomment-1218399297
 	await addCucumberPreprocessorPlugin(on, config, {

@@ -1,0 +1,17 @@
+{
+  "name": "demo-10-cy-visual-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^10.10.0",
+    "cypress-image-diff-js": "^1.22.0",
+    "typescript": "^4.8.4"
+  }
+}
