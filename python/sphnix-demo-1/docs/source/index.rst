@@ -26,6 +26,7 @@ including how to \:ref:`install <installation>` the project.
    angular/index   
    chai/index
    cypress/index
+   notes-git
    html_css/index   
    js/index 
    mocha/index

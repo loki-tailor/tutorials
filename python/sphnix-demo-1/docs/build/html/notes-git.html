@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="+ html / css" href="html_css/index.html" /><link rel="prev" title="train #2 @ YT @ nal" href="cypress/train_2.html" />
 
     <meta name="generator" content="sphinx-5.0.2, furo 2022.06.21"/>
-        <title>&lt;no title&gt; - notes @ loki 0.1 documentation</title>
+        <title>git - notes @ loki 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -154,7 +154,7 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul>
+  <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="general.html">_ general</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ref-online.html">_ online-generic-refs</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="azure/index.html">+ azure</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -185,7 +185,7 @@
 <li class="toctree-l2"><a class="reference internal" href="cypress/train_2.html">train #2 @ YT @ nal</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="notes-git.html">git</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">git</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="html_css/index.html">+ html / css</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="html_css/css.html">css</a></li>
 </ul>
@@ -244,20 +244,75 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          
+          <section id="git">
+<h1>git<a class="headerlink" href="#git" title="Permalink to this heading">#</a></h1>
+<section id="renaiming-master-to-main">
+<h2>renaiming <code class="docutils literal notranslate"><span class="pre">master</span></code> to <code class="docutils literal notranslate"><span class="pre">main</span></code><a class="headerlink" href="#renaiming-master-to-main" title="Permalink to this heading">#</a></h2>
+<div class="highlight-git notranslate"><div class="highlight"><pre><span></span># =============== ONE WHO IS DELETING ===============
+
+# -m &lt;oldBranchName&gt; &lt;newBranchName&gt; (renames branches w/o affecting history)
+$ git branch -m master main
+
+# -u attribute is used to set the upstream tracking for the branch.
+$ git puhs -u origi main
+
+# login to repo UI and manually change  the default branch from &quot;master&quot; to &quot;main&quot;
+
+$ git push origin --delete master
+</pre></div>
+</div>
+<div class="highlight-git notranslate"><div class="highlight"><pre><span></span># =============== ONE WHO IS FETCHING POST DELETING ===============
+
+# Switch to the &quot;master&quot; branch:
+$ git checkout master
+
+# Rename it to &quot;main&quot;:
+$ git branch -m master main
+
+# Get the latest commits (and branches!) from the remote:
+$ git fetch
+
+# Remove the existing tracking connection with &quot;origin/master&quot;:
+$ git branch --unset-upstream
+
+# Create a new tracking connection with the new &quot;origin/main&quot; branch:
+$ git branch -u origin/main
+</pre></div>
+</div>
+</section>
+</section>
+
         </article>
       </div>
       <footer>
         
         <div class="related-pages">
-          
-          
+          <a class="next-page" href="html_css/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">+ html / css</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="cypress/train_2.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">train #2 &#64; YT &#64; nal</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -278,8 +333,27 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">git</a><ul>
+<li><a class="reference internal" href="#renaiming-master-to-main">renaiming <code class="docutils literal notranslate"><span class="pre">master</span></code> to <code class="docutils literal notranslate"><span class="pre">main</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
