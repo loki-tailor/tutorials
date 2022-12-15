@@ -12,7 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "@applitgiools/eyes-cypress": "github:applitools/eyes-cypress",
-    "@applitools/eyes-cypress": "^3.23.4",
+    "@applitools/eyes-cypress": "^3.27.8",
     "cypress": "^9.2.0"
   }
 }
